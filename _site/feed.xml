@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://carlesloriente.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://carlesloriente.github.io/" rel="alternate" type="text/html" /><updated>2019-09-14T11:13:06+02:00</updated><id>https://carlesloriente.github.io/feed.xml</id><title type="html">Notes on cloud infrastructure</title><author><name>Carles Loriente</name></author><entry><title type="html">AWS Switch role between accounts (Administrator access)</title><link href="https://carlesloriente.github.io/github/aws/gist/2019/09/13/aws-switch-role-between-accounts.html" rel="alternate" type="text/html" title="AWS Switch role between accounts (Administrator access)" /><published>2019-09-13T20:10:45+02:00</published><updated>2019-09-13T20:10:45+02:00</updated><id>https://carlesloriente.github.io/github/aws/gist/2019/09/13/aws-switch-role-between-accounts</id><content type="html" xml:base="https://carlesloriente.github.io/github/aws/gist/2019/09/13/aws-switch-role-between-accounts.html">&lt;p&gt;&lt;strong&gt;Log the AWS Console with the account that you want to be the accessed account&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Select IAM -&amp;gt; Roles, create a new role, attach the policy “AdministratorAccess”, fill in role name (e.g: Admin) and description.&lt;/p&gt;
+
+&lt;p&gt;Select the previously created role, click “Trust relationships”, edit trust relationship, paste the following policy:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/69d9aa0ee17675def577727fd5829459.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;Log the AWS Console with the account that you want to be the accessing account&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Click in your user id, select switch role, fill in with the Account name and role (from accessed account), click switch role and that’s it.&lt;/p&gt;</content><author><name>Carles Loriente</name></author><summary type="html">Log the AWS Console with the account that you want to be the accessed account</summary></entry></feed>
