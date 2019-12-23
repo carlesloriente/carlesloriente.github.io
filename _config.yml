@@ -32,4 +32,4 @@ plugins:
   - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
 
 # Build settings
-theme:              jekyll-theme-clean-blog
+#theme:              jekyll-theme-clean-blog
