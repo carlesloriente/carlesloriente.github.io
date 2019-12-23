@@ -1,4 +1,4 @@
-# Website created using template Start Boostrap - Clean Blog Jekyll
+# Website created using Start Bootstrap - Clean Blog Jekyll and Jekyll
 
 # [Start Bootstrap - Clean Blog Jekyll](https://startbootstrap.com/template-overviews/clean-blog-jekyll/) - Official Jekyll Version
 
