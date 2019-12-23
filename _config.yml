@@ -18,7 +18,7 @@ google_analytics:   UA-147965228-1 # out your google-analytics code
 disqus:
     # Leave shortname blank to disable comments site-wide.
     # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
-    shortname: 4421358
+    shortname: notes-on-cloud-infrastructure
 
     # Build settings
 markdown:           kramdown
