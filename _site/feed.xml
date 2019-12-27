@@ -1,4 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-27T20:21:17+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Notes on cloud infrastructure</title><subtitle>A collection of small pieces of code</subtitle><author><name>Carles Loriente</name></author><entry><title type="html">Fedora Fix touchpad MSI Prestige</title><link href="http://localhost:4000/fedora/msi/2019/12/23/fedora-fix-touchpad-msi-prestige.html" rel="alternate" type="text/html" title="Fedora Fix touchpad MSI Prestige" /><published>2019-12-23T10:10:45+01:00</published><updated>2019-12-23T10:10:45+01:00</updated><id>http://localhost:4000/fedora/msi/2019/12/23/fedora-fix-touchpad-msi-prestige</id><content type="html" xml:base="http://localhost:4000/fedora/msi/2019/12/23/fedora-fix-touchpad-msi-prestige.html">&lt;p&gt;Seems that there is a problem in the latest versions of Fedora, when the computer wakes up after sleep mode or hibernate mode, the MSI Prestige touchpad freezes and didn’t respond until OS is restarted.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-27T20:25:25+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Notes on cloud infrastructure</title><subtitle>A collection of small pieces of code</subtitle><author><name>Carles Loriente</name></author><entry><title type="html">Create swap file in linux</title><link href="http://localhost:4000/linux/swap/2019/12/26/create-swap-file.html" rel="alternate" type="text/html" title="Create swap file in linux" /><published>2019-12-26T10:43:45+01:00</published><updated>2019-12-26T10:43:45+01:00</updated><id>http://localhost:4000/linux/swap/2019/12/26/create-swap-file</id><content type="html" xml:base="http://localhost:4000/linux/swap/2019/12/26/create-swap-file.html">&lt;p&gt;You can create a swap file executing:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/db66b16449cfc54b883e347686673878.js&quot;&gt; &lt;/script&gt;</content><author><name>Carles Loriente</name></author><summary type="html">You can create a swap file executing:</summary></entry><entry><title type="html">Using ephemeral volumes in EC2</title><link href="http://localhost:4000/aws/ec2/2019/12/25/using-aws-ec2-ephemeral-volumes.html" rel="alternate" type="text/html" title="Using ephemeral volumes in EC2" /><published>2019-12-25T08:43:45+01:00</published><updated>2019-12-25T08:43:45+01:00</updated><id>http://localhost:4000/aws/ec2/2019/12/25/using-aws-ec2-ephemeral-volumes</id><content type="html" xml:base="http://localhost:4000/aws/ec2/2019/12/25/using-aws-ec2-ephemeral-volumes.html">&lt;p&gt;In some of the AWS EC2 instances you can use an ephemeral volume, be careful with the data you plan to store in it, when the instance is restarted, stopped or terminated all the data is permanently deleted&lt;/p&gt;
+
+&lt;p&gt;You can check the (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html “complete list”) of EC2 instances with ephemeral volumes and his types.&lt;/p&gt;
+
+&lt;p&gt;Some of them will require to install an additinal package to use it.&lt;/p&gt;
+
+&lt;p&gt;For this example we are going to launch a g4dn.xlarge with CentOS 7 using the AWS Console, as you can see in “Step 7: Review Instance Launch”&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/instance-storage-disk.jpg&quot; alt=&quot;Storage&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There are two volumes, one EBS and one Ephemeral.&lt;/p&gt;
+
+&lt;p&gt;Connect to the instance using SSH and use the df-h command to view the volumes that are formatted and mounted.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/df-h.jpg&quot; alt=&quot;df -h&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Use the lsblk to view any volumes that were mapped at launch but not formatted and mounted&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/lsblk.jpg&quot; alt=&quot;lsblk&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see, the name of the ephemeral volume is nvme1n1, so we can move forward and format and mount it, but before that we are going to install the package nvme-cli.&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/5dbd6acf64090bba9593146185c11183.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Now we can use the ephemeral storage mounted at /mnt/ephemeral, e.g: for swapping/caching purposes (don’t to do that on EBS Volumes, cost and IOPS will be affected).&lt;/p&gt;</content><author><name>Carles Loriente</name></author><summary type="html">In some of the AWS EC2 instances you can use an ephemeral volume, be careful with the data you plan to store in it, when the instance is restarted, stopped or terminated all the data is permanently deleted</summary></entry><entry><title type="html">Fedora Fix touchpad MSI Prestige</title><link href="http://localhost:4000/fedora/msi/2019/12/23/fedora-fix-touchpad-msi-prestige.html" rel="alternate" type="text/html" title="Fedora Fix touchpad MSI Prestige" /><published>2019-12-23T10:10:45+01:00</published><updated>2019-12-23T10:10:45+01:00</updated><id>http://localhost:4000/fedora/msi/2019/12/23/fedora-fix-touchpad-msi-prestige</id><content type="html" xml:base="http://localhost:4000/fedora/msi/2019/12/23/fedora-fix-touchpad-msi-prestige.html">&lt;p&gt;Seems that there is a problem in the latest versions of Fedora, when the computer wakes up after sleep mode or hibernate mode, the MSI Prestige touchpad freezes and didn’t respond until OS is restarted.&lt;/p&gt;
 
 &lt;p&gt;There are several ways to fix that.&lt;/p&gt;
 
