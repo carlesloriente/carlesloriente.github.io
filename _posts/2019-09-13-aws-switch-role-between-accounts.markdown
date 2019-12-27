@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "AWS Switch role between accounts (Administrator access)"
 date:   2019-09-13 20:10:45 +0200
-categories: github aws gist
+categories: aws iam
 background: '/assets/images/bg-post.jpg'
 ---
 
