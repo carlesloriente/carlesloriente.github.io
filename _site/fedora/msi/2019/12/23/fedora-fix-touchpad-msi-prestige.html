@@ -8,11 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>
-    About Me - Notes on cloud infrastructure
+    Fedora Fix touchpad MSI Prestige - Notes on cloud infrastructure
     
   </title>
 
-  <meta name="description" content="A collection of small pieces of code">
+  <meta name="description" content="Seems that there is a problem in the latest versions of Fedora, when the computer wakes up after sleep mode or hibernate mode, the MSI Prestige touchpad free...">
 
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="/assets/vendor/fontawesome-free/css/all.min.css">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/about.html">
+  <link rel="canonical" href="http://localhost:4000/fedora/msi/2019/12/23/fedora-fix-touchpad-msi-prestige.html">
   <link rel="alternate" type="application/rss+xml" title="Notes on cloud infrastructure" href="/feed.xml">
 
 </head>
@@ -60,17 +60,22 @@
 
   <!-- Page Header -->
 
-<header class="masthead" style="background-image: url('/assets/images/bg-about.jpg')">
+<header class="masthead" style="background-image: url('/assets/images/bg-post.jpg')">
   
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h1>About Me</h1>
+          <div class="post-heading">
+            <h1>Fedora Fix touchpad MSI Prestige</h1>
             
-            <span class="subheading">This is what I do.</span>
-            
+            <span class="meta">Posted by
+              <a href="#">Carles Loriente</a>
+              on December 23, 2019 &middot; <span class="reading-time" title="Estimated read time">
+  
+   1 min  read </span>
+
+            </span>
           </div>
         </div>
       </div>
@@ -81,11 +86,49 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
 
-        <p>More than 10 years of experience leading the infrastructure and technology behind software projects.</p>
-<p>Over the past five years, has helped lead Interiorvista establishing and directing the strategic and tactical goals, policies, and procedures. New and innovative systems and services continue to differentiate Interiorvista from the competitors. While partnering closely with the board to drive tech innovation, creating a cost-benefit analysis as well as supporting a detailed definition of data requirements and departmental workflows.</p>
-<p>Managing the day-to-day operations of the information technology department including directing staff, who support administrative computing, networking, user services, telecommunications and other information technology functions.</p>
-<p>Highly experienced in software deployment, cloud computing, software development, system architecture and ITIL processes.
-Skilled in Amazon Web Services (AWS), Python, Ruby, Bash scripting and PHP.</p>
+        <p>Seems that there is a problem in the latest versions of Fedora, when the computer wakes up after sleep mode or hibernate mode, the MSI Prestige touchpad freezes and didn’t respond until OS is restarted.</p>
+
+<p>There are several ways to fix that.</p>
+
+<p>**Create an alias inside your .bashrc files</p>
+
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/cc701a468c7e402e757a2d2198bcfafd.js"> </script>
+
+<p>Everytime your computer wakes up you can call from terminal ‘fixtouchpad’.</p>
+
+
+        <hr>
+
+        <div class="clearfix">
+
+          
+            
+                <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://localhost:4000/fedora/msi/2019/12/23/fedora-fix-touchpad-msi-prestige.html';
+      this.page.identifier = 'notes-on-cloud-infrastructure';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://notes-on-cloud-infrastructure.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            
+          
+
+          
+          <a class="btn btn-primary float-left" href="/aws/iam/2019/09/13/aws-switch-role-between-accounts.html" data-toggle="tooltip" data-placement="top" title="AWS Switch role between accounts (Administrator access)">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+
+        </div>
 
       </div>
     </div>

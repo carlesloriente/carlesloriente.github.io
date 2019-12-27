@@ -12,7 +12,7 @@
     
   </title>
 
-  <meta name="description" content="">
+  <meta name="description" content="A collection of small pieces of code">
 
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -134,6 +134,15 @@
       <div class="col-lg-8 col-md-10 mx-auto">
         <ul class="list-inline text-center">
           
+          <li class="list-inline-item">
+            <a href="mailto:mjvgwpej">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
           
           <li class="list-inline-item">
             <a href="https://twitter.com/godarthvader">
@@ -206,7 +215,7 @@
           $this = $("#sendMessageButton");
           $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
           $.ajax({
-            url: "//formspree.io/{{ site.email }}",
+            url: "//formspree.io/mjvgwpej",
             type: "POST",
             data: {
               name: name,
@@ -230,6 +239,9 @@
               $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>");
               $('#success > .alert-success').append("<strong>Your message has been sent. </strong>");
               $('#success > .alert-success').append('</div>');
+              //$('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>");
+              //$('#success > .alert-danger').append($("<strong>").text("Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!"));
+              //$('#success > .alert-danger').append('</div>');
               //clear all fields
               $('#contactForm').trigger("reset");
             },
