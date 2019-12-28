@@ -7,6 +7,6 @@ categories: linux swap
 background: '/assets/images/bg-post.jpg'
 ---
 
-You can create a swap file executing:
+Create a swap file executing the following script.
 
 {% gist db66b16449cfc54b883e347686673878 %}

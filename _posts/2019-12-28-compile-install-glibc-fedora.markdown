@@ -7,6 +7,6 @@ categories: fedora glibc
 background: '/assets/images/bg-fedora.jpg'
 ---
 
-You can compile GLIBC in CentOS executing the following script:
+Download and compile GLIBC 2.18 in CentOS executing the following script.
 
 {% gist ab3387e7d035ed400dc2816873e9089e %}
