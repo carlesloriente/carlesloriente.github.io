@@ -10,5 +10,3 @@ background: '/assets/images/bg-post.jpg'
 You can create a swap file executing:
 
 {% gist db66b16449cfc54b883e347686673878 %}
-
-
