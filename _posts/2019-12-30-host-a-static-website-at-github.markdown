@@ -50,6 +50,6 @@ git push -u origin master
 
 **References**
 
-![Jekyll](https://jekyllrb/)<br/>
-![Clean Blog - Jekyll](https://startbootstrap.com/themes/clean-blog-jekyll/)<br/>
+![Jekyll](https://jekyllrb/)
+![Clean Blog - Jekyll](https://startbootstrap.com/themes/clean-blog-jekyll/)
 ![Getting started with GitHub Pages](https://help.github.com/en/github/working-with-github-pages/getting-started-with-github-pages)
