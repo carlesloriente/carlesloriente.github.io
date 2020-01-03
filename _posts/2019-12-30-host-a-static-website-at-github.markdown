@@ -7,7 +7,7 @@ categories: website github
 background: '/assets/images/aws_logo.jpg'
 ---
 
-(https://github.com/ "GitHub") provides hosting for software development version control using Git. If you don't have an account go and create one (/assets/images/its-free.png " it's free").
+[GitHub](https://github.com/) provides hosting for software development version control using Git. If you don't have an account go and create one [it's free"](/assets/images/its-free.png).
 
 **Which type of website can host GitHub**
 Take in mind that we are going to store a website in a Git repo, so don't expect advaced functionaIlities beyond some javascript and images.
@@ -26,7 +26,7 @@ You can host a:
 
 ![New repo](/assets/images/repo-created.png)
 
-3. Download the ![zip file](https://github.com/hostwebsite/hostwebsite.github.io/archive/master.zip) containing the required files.
+3. Download the [zip file](https://github.com/hostwebsite/hostwebsite.github.io/archive/master.zip) containing the required files.
 
 4. Unzip the file
 
