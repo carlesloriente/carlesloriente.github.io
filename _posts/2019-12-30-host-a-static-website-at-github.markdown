@@ -4,7 +4,7 @@ comments: true
 title:  "Host a static website for free using Github Pages"
 date:   2019-12-30 12:23:45 +0200
 categories: website github
-background: '/assets/images/aws_logo.jpg'
+background: '/assets/images/bg-github.jpg'
 ---
 
 [GitHub](https://github.com/) provides hosting for software development version control using Git. If you don't have an account go and create one [it's free"](/assets/images/its-free.png).
