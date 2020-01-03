@@ -7,7 +7,7 @@ categories: website github
 background: '/assets/images/bg-github.jpg'
 ---
 
-[GitHub](https://github.com/) provides hosting for software development version control using Git. If you don't have an account go and create one [it's free"](/assets/images/its-free.png).
+[GitHub](https://github.com/) provides hosting for software development version control using Git. If you don't have an account go and create one [it's free"](/assets/images/its-free.png){:target="_blank"}.
 
 **Which type of website can host GitHub**
 Take in mind that we are going to store a website in a Git repo, so don't expect advaced functionaIlities beyond some javascript and images.
