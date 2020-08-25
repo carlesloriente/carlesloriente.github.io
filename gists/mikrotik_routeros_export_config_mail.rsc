@@ -1,0 +1,2 @@
+/export file=export
+/tool e-mail send to="REPLACEME@WITHYOURMAIL.COM" subject=([/system identity get name] . " Export " . [/system clock get date]) body="([/system clock get date] configuration file)" file=export.rsc
