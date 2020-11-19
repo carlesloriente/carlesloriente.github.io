@@ -10,3 +10,5 @@ background: '/assets/images/bg-post.jpg'
 Create a swap file executing the following script.
 
 {% gist db66b16449cfc54b883e347686673878 %}
+
+If you want to automount the swap file on boot, add to /etc/fstab <code>/swapfile swap swap defaults 0 0</code>
