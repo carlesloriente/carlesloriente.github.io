@@ -21,6 +21,6 @@ Save the script to your $HOME folder and execute it in shell using the command: 
 
 When the script has finished the message "Please reboot the system" will appear on your terminal, please reboot it. After that your IKEv2 connection will be configured, you can start the connection using shell typing in "start_vpn" (without quotes), or stop it typing in "stop_vpn" (without quotes).
 
-** Related articles
+# Related articles
 
 [Configure a VPN server using IKEv2 IPSec with certificates on Mikrotik RouterOS](https://carlesloriente.github.io/routeros/mikrotik/vpn/2021/04/23/configure-vpn-server-ikev2-ipsec-with-certificates-mikrotik-routeros.html) 
