@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title:  "Configure a VPN server using IKEv2 IPSec with certificates on Mikrotik RouterOS"
-date:   2020-08-02 12:43:23 +0200
+date:   2021-04-23 14:43:23 +0200
 categories: routeros mikrotik vpn
 background: '/assets/images/bg-mikrotik.jpg'
 ---
