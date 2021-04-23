@@ -31,7 +31,6 @@ Then you can use the following commands in routeros to create the user certifica
 {% gist 94a203608009ee1bb3c6c335317e11a6 %}
 
 The next step is download the certificates (e.g. using winbox) to your computer and set up the VPN connection.
-
-** Related articles
+## Related articles
 
 [Configure a IKEv2 RoadWarrior VPN connection using p12 certificate on Fedora 31+](https://carlesloriente.github.io/fedora/vpn/ikev2/2021/04/24/configure-ikev2-vpn-connection-fedora.html) 
