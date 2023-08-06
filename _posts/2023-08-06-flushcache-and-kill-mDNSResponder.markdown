@@ -15,3 +15,5 @@ Background header image created using [Dream Studio by stability.ai](https://dre
 
 *Prompt*:
 > Create an image portraying a Clear local cache memory using the command line interface in macos computer
+
+[Download Full size image 2K](/assets/images/dreamstudio/2K/2023-08-06-flushcache-and-kill-mDNSResponder.png){:target="_blank"}
