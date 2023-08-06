@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "Clear local cache using terminal"
 date:   2023-08-06 12:53:45 +0200
-categories: macos cli clear flushcache mDNSResponder
+categories: clear flushcache mDNSResponder
 background: '/assets/images/dreamstudio/2023-08-06-flushcache-and-kill-mDNSResponder.jpg'
 ---
 

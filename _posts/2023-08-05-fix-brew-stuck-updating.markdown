@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "Fix Brew stuck/hangs updating in MacOs"
 date:   2023-08-05 10:53:45 +0200
-categories: brew macos silicon update cli
+categories: fix brew update stuck cli
 background: '/assets/images/dreamstudio/2023-08-05-fix-brew-stuck-updating.jpg'
 ---
 
