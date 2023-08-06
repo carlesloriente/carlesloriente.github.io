@@ -1,0 +1,54 @@
+#Local dev env and testing
+cfn-templates/parameters.local
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+# logs
+*.log
+/.coverage
+/.coverage.*
+
+# Compiled and bin files
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info*.terraform.lock.hcl
+build/
+dist/
+
+# Ignored Terraform 
+.terraform/
+*gitignore*.tf
+
+# SSH Keys
+*.pem
+
+# Backup temp files
+*.bak
+*.swp
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+/.cache
+/.pytest_cache
+/.mypy_cache
+
+# Ignore Mac files
+.DS_Store
+.AppleDouble
+.LSOverride
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Ignored IDE files
+.vscode
+.idea/.vscode/
