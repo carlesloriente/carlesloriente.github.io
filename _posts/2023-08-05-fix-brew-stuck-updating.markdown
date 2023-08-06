@@ -4,7 +4,7 @@ comments: true
 title:  "Fix Brew stuck/hangs updating in MacOs"
 date:   2023-08-05 10:53:45 +0200
 categories: brew macos silicon update cli
-background: '/assets/images/dreamstudio/2023-08-06-flushcache-and-kill-mDNSResponder.jpg'
+background: '/assets/images/dreamstudio/2023-08-05-fix-brew-stuck-updating.jpg'
 ---
 
 Small bash script to fix [Brew (hombrebrew)](https://brew.sh/index) stuck updating.
