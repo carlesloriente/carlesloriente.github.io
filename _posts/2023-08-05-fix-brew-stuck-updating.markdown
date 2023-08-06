@@ -13,5 +13,5 @@ Small bash script to fix [Brew (hombrebrew)](https://brew.sh/index) stuck updati
 
 Background header image created using [Dream Studio by stability.ai](https://dreamstudio.ai).
 
-*Prompt*
+*Prompt*:
 > Create an illustration of fixing Brew updating in MacOs

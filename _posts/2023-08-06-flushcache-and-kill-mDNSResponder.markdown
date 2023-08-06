@@ -13,6 +13,5 @@ Commands to clear local cache using the terminal.
 
 Background header image created using [Dream Studio by stability.ai](https://dreamstudio.ai).
 
-*Prompt*
-
+*Prompt*:
 > Create an image portraying a Clear local cache memory using the command line interface in macos computer
