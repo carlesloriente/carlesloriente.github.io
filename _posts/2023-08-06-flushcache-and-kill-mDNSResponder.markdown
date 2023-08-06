@@ -7,9 +7,13 @@ categories: clear flushcache mDNSResponder
 background: '/assets/images/dreamstudio/2023-08-06-flushcache-and-kill-mDNSResponder.jpg'
 ---
 
-Commands to clear local cache using the terminal.
+The local cache contains files and data that your system has saved to speed up certain processes, but sometimes, you want to ensure you're seeing the most up-to-date version, which clearing the cache can help with.
 
+*Mac*:
 {% gist 1cf094165955b85617cd917573df65e1 %}
+
+*Linux*:
+<code>sudo /etc/init.d/nscd restart</code>
 
 Background header image created using [Dream Studio by stability.ai](https://dreamstudio.ai){:target="_blank"}.
 
