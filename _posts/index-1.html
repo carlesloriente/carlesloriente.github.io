@@ -1,0 +1,8 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>"AWS Switch role between accounts (Administrator access)" </title></head><body>
+<p><strong>Log the AWS Console with the account that you want to be the accessed account</strong></p>
+<p>Select IAM -&gt; Roles, create a new role, attach the policy "AdministratorAccess", fill in role name (e.g: Admin) and description.</p>
+<p>Select the previously created role, click "Trust relationships", edit trust relationship, paste the following policy:</p>
+<p>{% gist 69d9aa0ee17675def577727fd5829459 %}</p>
+<p><strong>Log the AWS Console with the account that you want to be the accessing account</strong></p>
+<p>Click in your user id, select switch role, fill in with the Account name and role (from accessed account), click switch role and that's it.</p>
+</body></html>
