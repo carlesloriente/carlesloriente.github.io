@@ -1,3 +1,8 @@
+
+[![CarlesLoriente - carlesloriente.github.io](https://img.shields.io/static/v1?label=carlesloriente&message=carlesloriente.github.io&color=blue&logo=github)](https://github.com/carlesloriente/carlesloriente.github.io)
+[![stars - Awesome-Repo-Template](https://img.shields.io/github/stars/carlesloriente/carlesloriente.github.io?style=social)](https://github.com/v/carlesloriente.github.io)
+[![forks - carlesloriente.github.io](https://img.shields.io/github/forks/carlesloriente/carlesloriente.github.io?style=social)](https://github.com/carlesloriente/carlesloriente.github.io)
+
 # Website created using Start Bootstrap - Clean Blog Jekyll and Jekyll
 
 # [Start Bootstrap - Clean Blog Jekyll](https://startbootstrap.com/template-overviews/clean-blog-jekyll/) - Official Jekyll Version
