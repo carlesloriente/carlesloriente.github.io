@@ -1,8 +1,18 @@
-<script src="{{"/assets/vendor/jquery/jquery.min.js" | relative_url }}"></script>
-<script src="{{"/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" | relative_url }}"></script>
-<script src="{{"/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js" | relative_url }}"></script>
+<script type="text/javascript" src="{{"/assets/vendor/jquery/jquery.min.js" | relative_url }}"></script>
+<script type="text/javascript" src="{{"/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" | relative_url }}"></script>
+<script type="text/javascript" src="{{"/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js" | relative_url }}"></script>
 
-<script src="{{"/assets/scripts.js" | relative_url }}"></script>
+<script type="text/javascript" src="{{"/assets/scripts.js" | relative_url }}"></script>
+
+<script type="text/javascript" src="{{"/assets/vendor/ko-fi/Widget_2.js" | relative_url }}"></script>
+<script>
+  kofiWidgetOverlay.draw('carlesloriente', {
+    'type': 'floating-chat',
+    'floating-chat.donateButton.text': 'Donate',
+    'floating-chat.donateButton.background-color': '#5bc0de',
+    'floating-chat.donateButton.text-color': '#323842'
+  });
+</script>
 
 {% if page.url contains 'contact' %}
   <!-- Form Validation -->
