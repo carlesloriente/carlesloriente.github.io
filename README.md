@@ -12,15 +12,15 @@ Enjoy! 😃
 
 # Website created using Start Bootstrap - Clean Blog Jekyll and Jekyll
 
-# [Start Bootstrap - Clean Blog Jekyll](https://startbootstrap.com/template-overviews/clean-blog-jekyll/) - Official Jekyll Version
+# [Start Bootstrap - Clean Blog Jekyll](https://startbootstrap.com/theme/clean-blog-jekyll) - Official Jekyll Version
 
-[Clean Blog Jekyll](http://startbootstrap.com/template-overviews/clean-blog-jekyll/) is a stylish, responsive blog theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features a blog homepage, about page, contact page, and an example post page along with a working contact form powered by [Formspree](https://formspree.io/).
+[Clean Blog Jekyll](https://startbootstrap.com/theme/clean-blog-jekyll) is a stylish, responsive blog theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features a blog homepage, about page, contact page, and an example post page along with a working contact form powered by [Formspree](https://formspree.io/).
 
 ## Preview
 
-[![Clean Blog (Jekyll) Preview](https://startbootstrap.com/assets/img/screenshots/themes/clean-blog-jekyll.png)](http://blackrockdigital.github.io/startbootstrap-clean-blog-jekyll/)
+[![Clean Blog (Jekyll) Preview](https://startbootstrap.com/assets/img/screenshots/themes/clean-blog-jekyll.png)](https://startbootstrap.com/previews/clean-blog-jekyll)
 
-**[View Live Preview](http://blackrockdigital.github.io/startbootstrap-clean-blog-jekyll/)**
+**[View Live Preview](https://startbootstrap.com/previews/clean-blog-jekyll)**
 
 ## Installation & Setup
 
@@ -68,9 +68,9 @@ background: '/PATH_TO_IMAGE'
 ---
 ```
 
-For reference, look at the [demo repository](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll) to see how the files are set up.
+For reference, look at the [demo repository](https://github.com/startbootstrap/startbootstrap-clean-blog-jekyll) to see how the files are set up.
 
-5. Add the form to the `contact.html` page. Add the following code to your `contact.html` page:
+1. Add the form to the `contact.html` page. Add the following code to your `contact.html` page:
 ```
 <form name="sentMessage" id="contactForm" novalidate>
   <div class="control-group">
@@ -117,7 +117,7 @@ Make sure you have the `email` setting in your `_config.yml` file set to a worki
 
 When using the core files, the demo images, posts, and pages are all included with the download. After following the instructions below, you can then go and change the content of the pages and posts.
 
-1. [Download](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll/archive/master.zip) or Clone the repository.
+1. [Download](https://github.com/startbootstrap/startbootstrap-clean-blog-jekyll/archive/gh-pages.zip) or Clone the repository.
 2. Update the following configuration settings in your `_config.yml` file:
    - `baseurl`
    - `url`
@@ -133,7 +133,7 @@ When using the core files, the demo images, posts, and pages are all included wi
 
 ## Bugs and Issues
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll/issues) here on GitHub!
+Have a bug or an issue with this template? [Open a new issue](https://github.com/startbootstrap/startbootstrap-clean-blog-jekyll/issues) here on GitHub!
 
 ## About
 
@@ -152,4 +152,4 @@ Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework 
 
 ## Copyright and License
 
-Copyright 2013-2019 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll/blob/gh-pages/LICENSE) license.
+Copyright 2013-2019 Blackrock Digital LLC. Code released under the [MIT](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll/blob/master/LICENSE) license.
