@@ -3,7 +3,8 @@ description:        A collection of small pieces of code
 author:             Carles Loriente
 baseurl:            ""
 #url:                "http://localhost:4000"
-url:                "https://carlesloriente.github.io"
+#url:                "https://carlesloriente.github.io"
+url:                "https://www.notesoncloudcomputing.com"
 formemail:          "mjvgwpej"
 
 # Social Profiles
