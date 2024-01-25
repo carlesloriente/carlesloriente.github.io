@@ -4,7 +4,7 @@ comments: true
 title:  "Clear local cache using terminal"
 date:   2023-08-06 12:53:45 +0200
 categories: clear flushcache mDNSResponder
-background: '/assets/images/dreamstudio/2023-08-06-flushcache-and-kill-mDNSResponder.jpg'
+background: '/assets/images/2023-08-06-flushcache-and-kill-mDNSResponder.webp'
 ---
 
 The local cache contains files and data that your system has saved to speed up certain processes, but sometimes, you want to ensure you're seeing the most up-to-date version, which clearing the cache can help with.

@@ -4,7 +4,7 @@ comments: true
 title:  "Using ephemeral volumes in EC2"
 date:   2019-12-25 09:43:45 +0200
 categories: aws ec2
-background: '/assets/images/go.webp'
+background: '/assets/images/bg-aws-logo.webp'
 ---
 
 In some of the AWS EC2 instances you can use an ephemeral volume, be careful with the data you plan to store in it, when the instance is restarted, stopped or terminated all the data is permanently deleted
