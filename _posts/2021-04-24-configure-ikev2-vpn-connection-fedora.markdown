@@ -4,7 +4,7 @@ comments: true
 title:  "Configure a IKEv2 RoadWarrior VPN connection using p12 certificate on Fedora 31+"
 date:   2021-04-24 12:43:23 +0200
 categories: fedora vpn ikev2
-background: '/assets/images/bg-fedora.jpg'
+background: '/assets/images/bg-fedora.webp'
 ---
 
 Using the following script you can install all the libraries needed for IKEv2 IPSec VPNs and configure a roadwarrior connection.

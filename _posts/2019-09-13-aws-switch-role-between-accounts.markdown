@@ -4,7 +4,7 @@ comments: true
 title:  "AWS Switch role between accounts (Administrator access)"
 date:   2019-09-13 20:10:45 +0200
 categories: aws iam
-background: '/assets/images/bg-post.jpg'
+background: '/assets/images/bg-post.webp'
 ---
 
 **Log the AWS Console with the account that you want to be the accessed account**

@@ -4,7 +4,7 @@ comments: true
 title:  "Delete submodule Git"
 date:   2019-12-29 10:53:23 +0200
 categories: git
-background: '/assets/images/bg-git.jpg'
+background: '/assets/images/bg-git.webp'
 ---
 
 How to delete a Git submodule.
