@@ -30,16 +30,28 @@ The primary goal of this script is to provide a hassle-free method for signing k
 #### How to
 
 *Clone the repository*:
-<code>git clone https://github.com/carlesloriente/sign-kernel-modules-secureboot</code>
+
+```bash
+git clone https://github.com/carlesloriente/sign-kernel-modules-secureboot
+```
 
 *Navigate to the downloaded content*:
-<code>cd sign-kernel-modules-secureboot</code>
+
+```bash
+cd sign-kernel-modules-secureboot
+```
 
 *Add execution permissions to the script*:
-<code>chmod +x signing-kernel-modules.sh</code>
+
+```bash
+chmod +x signing-kernel-modules.sh
+```
 
 *Run the script with sudo*:
-<code>sudo ./signing-kernel-modules.sh</code>
+
+```bash
+sudo ./signing-kernel-modules.sh
+```
 
 #### Contribution and Support
 
