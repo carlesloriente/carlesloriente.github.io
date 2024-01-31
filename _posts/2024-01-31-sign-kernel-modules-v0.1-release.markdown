@@ -19,4 +19,4 @@ I'm excited to announce the release of sign-kernel-modules-secureboot v0.1, the 
 
 ## Changelog
 
-For a detailed list of changes, please refer to the [changelog](https://github.com/carlesloriente/sign-kernel-modules-secureboot/compare/alpha...v0.1).
+For a detailed list of changes, please refer to the [changelog](https://github.com/carlesloriente/sign-kernel-modules-secureboot/releases/tag/v0.1).
