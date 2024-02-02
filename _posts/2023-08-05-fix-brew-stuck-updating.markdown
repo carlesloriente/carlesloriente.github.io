@@ -17,4 +17,4 @@ Background header image created using [Dream Studio by stability.ai](https://dre
 *Prompt*:
 > Create an illustration of fixing Brew updating in MacOs
 
-[Download Full size image 2K](/assets/images/dreamstudio/2K/Fix-Brew-stuck-updating.png){:target="_blank"}
+[Download Full size image 2K](/assets/images/dreamstudio/2K/Fix-Brew-stuck-updating.webp){:target="_blank"}
