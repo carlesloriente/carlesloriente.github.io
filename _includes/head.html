@@ -26,7 +26,7 @@
   <meta name="twitter:creator" content="@godarthvader" />
   <meta property="og:url" content="{{ page.url | absolute_url }}" />
   <meta property="og:title" content="{{ page.title }}" />
-  <meta property="og:description" content="{{ page.content | markdownify | strip_html | strip_newlines | truncatewords: 30 }}" />
+  <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
   <meta property="og:image" content="{{ page.background | absolute_url }}" />
   <meta property="og:type" content="article" />
 </head>
