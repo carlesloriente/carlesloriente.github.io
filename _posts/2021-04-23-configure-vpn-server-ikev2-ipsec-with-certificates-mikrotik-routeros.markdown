@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Configure a VPN server using IKEv2 IPSec with certificates on Mikrotik RouterOS"
+title:  "VPN server using IKEv2 IPSec with certificates on RouterOS"
 date:   2021-04-23 14:43:23 +0200
 categories: routeros mikrotik vpn
 background: '/assets/images/bg-mikrotik.webp'
@@ -33,4 +33,4 @@ Then you can use the following commands in routeros to create the user certifica
 The next step is download the certificates (e.g. using winbox) to your computer and set up the VPN connection.
 ## Related articles
 
-[Configure a IKEv2 RoadWarrior VPN connection using p12 certificate on Fedora 31+](https://carlesloriente.github.io/fedora/vpn/ikev2/2021/04/24/configure-ikev2-vpn-connection-fedora.html) 
+[IKEv2 RoadWarrior VPN connection using p12 certificate on Fedora 31+](https://carlesloriente.github.io/fedora/vpn/ikev2/2021/04/24/configure-ikev2-vpn-connection-fedora.html) 
