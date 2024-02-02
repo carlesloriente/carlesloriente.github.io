@@ -33,7 +33,7 @@ layout: default
         {% for post in site.posts limit : 5 %}
 
         <article class="post-preview">
-          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" hreflang="en">
             <h2 class="post-title">{{ post.title }}</h2>
             {% if post.subtitle %}
             <h3 class="post-subtitle">{{ post.subtitle }}</h3>
@@ -58,7 +58,7 @@ layout: default
 
         <!-- Pager -->
         <div class="clearfix">
-          <a class="btn btn-primary float-right" href="{{"/posts/" | relative_url }}">View All Notes &rarr;</a>
+          <a class="btn btn-primary float-right" href="{{"/posts/" | relative_url }}" hreflang="en">View All Notes &rarr;</a>
         </div>
 
       </div>
