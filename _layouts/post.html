@@ -4,7 +4,7 @@ layout: default
 
 <!-- Page Header -->
 {% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+<header class="masthead" fetchpriority="low" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
   {% else %}
   <header class="masthead">
     {% endif %}
@@ -37,8 +37,8 @@ layout: default
         <hr>
         <div class="text-center">
           <p><mark>Found a snippet that saved your day?</mark> Consider <a href="https://ko-fi.com/S6S1O2GTU" target="_blank">dropping a tip!</a></p>     
-          <script  src="{{"/assets/vendor/ko-fi/Widget_2.js" | relative_url }}"></script>
-          <script >kofiwidget2.init("Buy me a coffee", "#176391", "S6S1O2GTU");kofiwidget2.draw();</script>
+          <script type="text/javascript" src="{{"/assets/vendor/ko-fi/Widget_2.js" | relative_url }}"></script>
+          <script type="text/javascript">kofiwidget2.init("Buy me a coffee", "#176391", "S6S1O2GTU");kofiwidget2.draw();</script>
         </div>
         
         <hr>
