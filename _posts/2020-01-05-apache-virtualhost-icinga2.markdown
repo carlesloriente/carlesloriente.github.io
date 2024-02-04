@@ -11,4 +11,4 @@ background: '/assets/images/bg-icinga2.webp'
 
 You can configure to use Apache and Icinga2 using the following Virtualhost.
 
-{% gist e208a167ac882f30ee745659d8ae9f21 %}
+{% gist carlesloriente/e208a167ac882f30ee745659d8ae9f21 icinga_apache_vhost.conf %}

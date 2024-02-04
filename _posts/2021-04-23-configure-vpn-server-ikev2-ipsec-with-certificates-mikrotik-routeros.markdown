@@ -18,7 +18,7 @@ Before use it, please replace the following values:
 - vpn.yourdomain.com with the VPN hostname
 - 1.1.1.1 with the vpn IP
 
-{% gist 70fbc993e867f838f8d476097d372518 %}
+{% gist carlesloriente/70fbc993e867f838f8d476097d372518 mikrotik_routeros_vpn-ikev2-ipsec.rsc %}
 
 Then you can use the following commands in routeros to create the user certificates, please remember to replace using your own values
 
@@ -28,7 +28,7 @@ Then you can use the following commands in routeros to create the user certifica
 - USERNAME with the username of the VPN connection
 - YOURPASSPHRASE with the passphrase of this certificate
 
-{% gist 94a203608009ee1bb3c6c335317e11a6 %}
+{% gist carlesloriente/94a203608009ee1bb3c6c335317e11a6 mikrotik-routeros_create-ipsec-ikev2-certificates_vpn_users.rsc %}
 
 The next step is download the certificates (e.g. using winbox) to your computer and set up the VPN connection.
 ## Related articles
