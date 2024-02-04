@@ -9,4 +9,4 @@ background: '/assets/images/bg-mikrotik.webp'
 
 If you have some hardware from Mikrotik, or use some virtual/cloud appliance that runs RouterOS, this little script could be very handy, exports and send by email the device configuration.
 
-{% gist e83e61f883fab90c2ea9e16d08df7413 %}
+{% gist carlesloriente/e83e61f883fab90c2ea9e16d08df7413 mikrotik-routeros_export-config-file-and-sent-email.rsc %}
