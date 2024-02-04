@@ -52,4 +52,4 @@ git push -u origin master
 
 [Jekyll](https://jekyllrb.com/)<br/>
 [Clean Blog - Jekyll](https://startbootstrap.com/themes/clean-blog-jekyll/)<br/>
-[Getting started with GitHub Pages](https://help.github.com/en/github/working-with-github-pages/getting-started-with-github-pages)
+[Getting started with GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages)
