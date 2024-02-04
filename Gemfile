@@ -1,13 +1,12 @@
 source "https://rubygems.org"
 
-gem "faraday-retry", "~> 2.2"
-gem "jekyll", "~> 4.3.3"
+gem "jekyll", "~> 3.9.3"
 
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.17"
+  gem "jekyll-feed", "~> 0.15.1"
   gem "jekyll-paginate", "~> 1.1.0"
-  gem "jekyll-sitemap"
-  gem "jekyll-gist"
+  gem "jekyll-sitemap", "~> 1.4.0"
+  gem "jekyll-gist", "~> 1.5.0"
 end
 
 # Disabled for github-pages
