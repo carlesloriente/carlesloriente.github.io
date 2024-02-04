@@ -26,6 +26,8 @@ brew reinstall cask
 brew update-reset -d -v
 </pre>
 
+Download GitHub Gist [fix_brew_stuck_updating.bash](https://gist.github.com/carlesloriente/d565db45a60dd91a41be5bb9eb68079c){:target="_blank"}
+
 Background header image created using [Dream Studio by stability.ai](https://dreamstudio.ai){:target="_blank"}.
 
 *Prompt*:
