@@ -1,11 +1,12 @@
-  <script type="text/javascript" src="{{"/assets/vendor/jquery/jquery.min.js" | relative_url }}"></script>
-  <script type="text/javascript" src="{{"/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" | relative_url }}"></script>
-  <script type="text/javascript" src="{{"/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js" | relative_url }}"></script>
-  <script type="text/javascript" src="{{"/assets/scripts.js" | relative_url }}"></script>
+<script type="text/javascript" src="{{"/assets/vendor/jquery/jquery.min.js" | relative_url }}"></script>
+<script type="text/javascript" src="{{"/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" | relative_url }}"></script>
+<script type="text/javascript" src="{{"/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js" | relative_url }}"></script>
+
+<script type="text/javascript" src="{{"/assets/scripts.js" | relative_url }}"></script>
 
 {% if page.url contains 'contact' %}
   <!-- Form Validation -->
-  <script type="text/javascript" src="{{"/assets/vendor/startbootstrap-clean-blog/js/jqBootstrapValidation.js" | relative_url }}"></script>
+  <script src="{{"/assets/vendor/startbootstrap-clean-blog/js/jqBootstrapValidation.js" | relative_url }}"></script>
   <!-- Send Form -->
   <script>
     $(function () {
@@ -84,5 +85,3 @@
     });
   </script>
 {% endif %}
-
-  <script type="text/javascript" id="dsq-count-scr" src="//{{ site.disqus.shortname }}.disqus.com/count.js" async></script>

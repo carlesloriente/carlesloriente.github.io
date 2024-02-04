@@ -13,6 +13,6 @@ There are several ways to fix that.
 
 **Create an alias inside your .bashrc files
 
-{% gist carlesloriente/cc701a468c7e402e757a2d2198bcfafd fedora-fix-touchpad_msi-prestige.sh %}
+{% gist cc701a468c7e402e757a2d2198bcfafd %}
 
 Everytime your computer wakes up you can call from terminal 'fixtouchpad'.

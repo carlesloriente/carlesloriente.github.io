@@ -9,7 +9,7 @@ background: '/assets/images/bg-aws-logo.webp'
 
 You can install the AWS grid Nvidia drivers on EC2 Instances type G3 and G4 running CentOS using the following script:
 
-<script src="https://gist.github.com/carlesloriente/2dc56c44afc4b8604f231d083268033f.js"></script>
+{% gist 2dc56c44afc4b8604f231d083268033f %}
 
 Follow the installer instructions, when finished, check it using:
 

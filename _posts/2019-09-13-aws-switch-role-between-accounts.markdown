@@ -13,7 +13,7 @@ Select IAM -> Roles, create a new role, attach the policy "AdministratorAccess",
 
 Select the previously created role, click "Trust relationships", edit trust relationship, paste the following policy:
 
-{% gist carlesloriente/69d9aa0ee17675def577727fd5829459 %}
+{% gist 69d9aa0ee17675def577727fd5829459 %}
 
 **Log the AWS Console with the account that you want to be the accessing account**
 

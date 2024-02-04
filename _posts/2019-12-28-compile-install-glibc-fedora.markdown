@@ -9,4 +9,4 @@ background: '/assets/images/bg-fedora.webp'
 
 Download and compile GLIBC 2.18 in CentOS executing the following script.
 
-<script src="https://gist.github.com/carlesloriente/ab3387e7d035ed400dc2816873e9089e.js"></script>
+{% gist ab3387e7d035ed400dc2816873e9089e %}

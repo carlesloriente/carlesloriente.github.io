@@ -22,7 +22,7 @@ tools:
 - name: PHP
   description: A popular general-purpose scripting language that is especially suited
     to web development
-  website_url: https://www.php.net/
+  website_url: http://www.php.net/
   open_source: true
   hosted_saas: false
   category: Languages & Frameworks
@@ -58,7 +58,7 @@ tools:
   last_updated_on: 2019-09-14 09:18:41.000000000 Z
 - name: jQuery
   description: The Write Less, Do More, JavaScript Library.
-  website_url: https://jquery.com/
+  website_url: http://jquery.com/
   version: 3.5.0
   license: MIT
   open_source: true
@@ -72,7 +72,7 @@ tools:
   last_updated_on: 2020-08-25 10:43:04.000000000 Z
 - name: Git
   description: Fast, scalable, distributed revision control system
-  website_url: https://git-scm.com/
+  website_url: http://git-scm.com/
   open_source: true
   hosted_saas: false
   category: Build, Test, Deploy
@@ -94,7 +94,7 @@ tools:
   last_updated_on: 2019-09-14 09:18:41.000000000 Z
 - name: gulp
   description: The streaming build system
-  website_url: https://gulpjs.com/
+  website_url: http://gulpjs.com/
   version: 4.0.2
   license: MIT
   open_source: true
@@ -145,7 +145,7 @@ tools:
   detection_source: Repo Metadata
 - name: jekyll-feed
   description: A Jekyll plugin to generate an Atom feed of your Jekyll posts
-  package_url: https://rubygems.org/gems/jekyll-feed
+  package_url: https://rubygems.org/jekyll-feed
   version: '0.6'
   license: MIT
   open_source: true
@@ -159,7 +159,7 @@ tools:
   last_updated_on: 2019-12-23 10:06:48.000000000 Z
 - name: jekyll-paginate
   description: Built-in Pagination Generator for Jekyll
-  package_url: https://rubygems.org/gems/jekyll-paginate
+  package_url: https://rubygems.org/jekyll-paginate
   version: 1.1.0
   license: MIT
   open_source: true
@@ -173,7 +173,7 @@ tools:
   last_updated_on: 2019-12-23 10:06:48.000000000 Z
 - name: jekyll-sitemap
   description: Automatically generate a sitemap.xml for your Jekyll site
-  package_url: https://rubygems.org/gems/jekyll-sitemap
+  package_url: https://rubygems.org/jekyll-sitemap
   license: MIT
   open_source: true
   hosted_saas: false
@@ -187,7 +187,7 @@ tools:
 - name: tzinfo-data
   description: TZInfo::Data contains data from the IANA Time Zone database packaged
     as Ruby modules for use with TZInfo
-  package_url: https://rubygems.org/gems/tzinfo-data
+  package_url: https://rubygems.org/tzinfo-data
   license: MIT
   open_source: true
   hosted_saas: false
@@ -200,7 +200,7 @@ tools:
   last_updated_on: 2019-09-14 09:18:41.000000000 Z
 - name: browser-sync
   description: Live CSS Reload &amp; Browser Syncing
-  package_url: https://www.npmjs.com/package/browser-sync
+  package_url: https://www.npmjs.com/browser-sync
   version: 2.26.14
   license: Apache-2.0
   open_source: true
@@ -214,7 +214,7 @@ tools:
   last_updated_on: 2021-04-23 11:33:27.000000000 Z
 - name: font-awesome
   description: The iconic font and CSS framework
-  package_url: https://www.npmjs.com/package/font-awesome
+  package_url: https://www.npmjs.com/font-awesome
   version: 4.7.0
   license: OFL-1.1,MIT
   open_source: true

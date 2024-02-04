@@ -15,7 +15,7 @@ Requirements:
 - P12 User Certificate with passphrase
 - Your Fedora OS should be in english language 
 
-<script src="https://gist.github.com/carlesloriente/4496fa54e444456435ec7e7e897a28e3.js"></script>
+{% gist 4496fa54e444456435ec7e7e897a28e3 %}
 
 Save the script to your $HOME folder and execute it in shell using the command: sudo sh configure-and-setup-ikev2.sh 
 
@@ -23,4 +23,4 @@ When the script has finished the message "Please reboot the system" will appear 
 
 ## Related articles
 
-[Configure a VPN server using IKEv2 IPSec with certificates on Mikrotik RouterOS](https://www.notesoncloudcomputing.com/routeros/mikrotik/vpn/2021/04/23/configure-vpn-server-ikev2-ipsec-with-certificates-mikrotik-routeros.html)
+[Configure a VPN server using IKEv2 IPSec with certificates on Mikrotik RouterOS](https://carlesloriente.github.io/routeros/mikrotik/vpn/2021/04/23/configure-vpn-server-ikev2-ipsec-with-certificates-mikrotik-routeros.html) 
