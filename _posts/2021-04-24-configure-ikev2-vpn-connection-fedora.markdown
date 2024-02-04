@@ -23,4 +23,4 @@ When the script has finished the message "Please reboot the system" will appear 
 
 ## Related articles
 
-[Configure a VPN server using IKEv2 IPSec with certificates on Mikrotik RouterOS](https://carlesloriente.github.io/routeros/mikrotik/vpn/2021/04/23/configure-vpn-server-ikev2-ipsec-with-certificates-mikrotik-routeros.html){:target="_blank"}
+[Configure a VPN server using IKEv2 IPSec with certificates on Mikrotik RouterOS](https://www.notesoncloudcomputing.com/routeros/mikrotik/vpn/2021/04/23/configure-vpn-server-ikev2-ipsec-with-certificates-mikrotik-routeros.html){:target="_blank"}
