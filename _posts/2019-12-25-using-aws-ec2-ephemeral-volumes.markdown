@@ -29,6 +29,6 @@ Use the lsblk to view any volumes that were mapped at launch but not formatted a
 
 As you can see, the name of the ephemeral volume is nvme1n1, so we can move forward and format and mount it, but before that we are going to install the package nvme-cli.
 
-{% gist carlesloriente/5dbd6acf64090bba9593146185c11183 format-and-mount-nvme-volumes.sh %}
+<script src="https://gist.github.com/carlesloriente/5dbd6acf64090bba9593146185c11183.js"></script>
 
 Now we can use the ephemeral storage mounted at /mnt/ephemeral, e.g: for swapping/caching purposes (don't to do that on EBS Volumes, cost and IOPS will be affected).

@@ -18,7 +18,7 @@ Before use it, please replace the following values:
 - vpn.yourdomain.com with the VPN hostname
 - 1.1.1.1 with the vpn IP
 
-{% gist carlesloriente/70fbc993e867f838f8d476097d372518 mikrotik_routeros_vpn-ikev2-ipsec.rsc %}
+<script src="https://gist.github.com/carlesloriente/70fbc993e867f838f8d476097d372518.js"></script>
 
 Then you can use the following commands in routeros to create the user certificates, please remember to replace using your own values
 

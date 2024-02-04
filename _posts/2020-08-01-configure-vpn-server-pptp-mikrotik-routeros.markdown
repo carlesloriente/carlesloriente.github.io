@@ -9,4 +9,4 @@ background: '/assets/images/bg-mikrotik.webp'
 
 The following file (rsc) for Mikrotik RouterOS v6.45+ configures an VPN usign PPTP
 
-{% gist carlesloriente/3ba0d4e9902cd517c76415786fca11cd mikrotik_routeros_vpn-pptp.rsc %}
+<script src="https://gist.github.com/carlesloriente/3ba0d4e9902cd517c76415786fca11cd.js"></script>

@@ -15,7 +15,7 @@ Requirements:
 - P12 User Certificate with passphrase
 - Your Fedora OS should be in english language 
 
-{% gist carlesloriente/4496fa54e444456435ec7e7e897a28e3 fedora-configure-and-setup-ikev2.sh %}
+<script src="https://gist.github.com/carlesloriente/4496fa54e444456435ec7e7e897a28e3.js"></script>
 
 Save the script to your $HOME folder and execute it in shell using the command: sudo sh configure-and-setup-ikev2.sh 
 
