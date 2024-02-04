@@ -10,9 +10,11 @@ venv/*
 tsconfig.json
 
 # Temporary files
+.gem
 *.tar.gz
 *.zip
 *.box
+.sass-cache
 *~
 .idea/
 .project
@@ -30,6 +32,5 @@ _site/*
 
 # Exception
 !**/.gitkeep
-
 
 node_modules

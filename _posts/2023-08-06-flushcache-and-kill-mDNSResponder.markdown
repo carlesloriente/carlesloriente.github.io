@@ -10,6 +10,7 @@ background: '/assets/images/2023-08-06-flushcache-and-kill-mDNSResponder.webp'
 The local cache contains files and data that your system has saved to speed up certain processes, but sometimes, you want to ensure you're seeing the most up-to-date version, which clearing the cache can help with.
 
 *Mac*:
+
 ```bash
 #!/bin/bash
 
@@ -21,7 +22,10 @@ sleep 2;
 Download GitHub Gist [fedora-configure-and-setup-ikev2.sh](https://gist.github.com/carlesloriente/1cf094165955b85617cd917573df65e1){:target="_blank"}
 
 *Linux*:
-<code>sudo /etc/init.d/nscd restart</code>
+
+```bash
+sudo /etc/init.d/nscd restart
+```
 
 Background header image created using [Dream Studio by stability.ai](https://dreamstudio.ai){:target="_blank"}.
 
