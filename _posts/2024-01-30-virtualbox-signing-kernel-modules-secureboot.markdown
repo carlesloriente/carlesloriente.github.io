@@ -11,7 +11,7 @@ background: '/assets/images/bg-virtualbox.webp'
 
 Secure Boot is a security feature in modern systems, but it can pose challenges when dealing with kernel modules. For those (like me) who have struggled with signing kernel modules for use with VirtualBox, I have good news: An automated script that simplifies the entire process and ensures smooth integration.
 
-### Introducing: [sign-kernel-modules-secureboot script](https://github.com/carlesloriente/sign-kernel-modules-secureboot)
+### Introducing: [sign-kernel-modules-secureboot script](https://github.com/carlesloriente/sign-kernel-modules-secureboot){:target="_blank"}
 
 #### Purpose
 

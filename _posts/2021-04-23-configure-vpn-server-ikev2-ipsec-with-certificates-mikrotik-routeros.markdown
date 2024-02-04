@@ -14,11 +14,11 @@ Before use it, please replace the following values:
 - CA.yourdomain.com with the CA domain
 - YOURSTATE with the state (optional)
 - YOURORG with the name of the organization
-- YOURCOUNTRY with the country code (https://www.iban.com/country-codes)
+- YOURCOUNTRY with the country code (https://www.iban.com/country-codes){:target="_blank"}
 - vpn.yourdomain.com with the VPN hostname
 - 1.1.1.1 with the vpn IP
 
-{% gist 70fbc993e867f838f8d476097d372518 %}
+{% gist carlesloriente/70fbc993e867f838f8d476097d372518 %}
 
 Then you can use the following commands in routeros to create the user certificates, please remember to replace using your own values
 
@@ -28,9 +28,9 @@ Then you can use the following commands in routeros to create the user certifica
 - USERNAME with the username of the VPN connection
 - YOURPASSPHRASE with the passphrase of this certificate
 
-{% gist 94a203608009ee1bb3c6c335317e11a6 %}
+{% gist carlesloriente/94a203608009ee1bb3c6c335317e11a6 %}
 
 The next step is download the certificates (e.g. using winbox) to your computer and set up the VPN connection.
 ## Related articles
 
-[IKEv2 RoadWarrior VPN connection using p12 certificate on Fedora 31+](https://carlesloriente.github.io/fedora/vpn/ikev2/2021/04/24/configure-ikev2-vpn-connection-fedora.html) 
+[IKEv2 RoadWarrior VPN connection using p12 certificate on Fedora 31+](https://carlesloriente.github.io/fedora/vpn/ikev2/2021/04/24/configure-ikev2-vpn-connection-fedora.html){:target="_blank"}

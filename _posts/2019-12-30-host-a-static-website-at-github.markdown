@@ -7,7 +7,7 @@ categories: website github
 background: '/assets/images/bg-github.webp'
 ---
 
-[GitHub](https://github.com/) provides hosting for software development version control using Git. If you don't have an account go and create one [it's free"](/assets/images/its-free.png){:target="_blank"}.
+[GitHub](https://github.com/){:target="_blank"} provides hosting for software development version control using Git. If you don't have an account go and create one [it's free"](/assets/images/its-free.png){:target="_blank"}.
 
 **Which type of website can host GitHub**
 Take in mind that we are going to store a website in a Git repo, so don't expect advaced functionaIlities beyond some javascript and images.
@@ -50,6 +50,6 @@ git push -u origin master
 
 **References**
 
-[Jekyll](https://jekyllrb.com/)<br/>
-[Clean Blog - Jekyll](https://startbootstrap.com/themes/clean-blog-jekyll/)<br/>
-[Getting started with GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages)
+[Jekyll](https://jekyllrb.com/){:target="_blank"}<br/>
+[Clean Blog - Jekyll](https://startbootstrap.com/themes/clean-blog-jekyll/){:target="_blank"}<br/>
+[Getting started with GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages){:target="_blank"}
