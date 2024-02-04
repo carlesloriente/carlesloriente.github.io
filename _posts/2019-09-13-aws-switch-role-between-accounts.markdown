@@ -13,7 +13,23 @@ Select IAM -> Roles, create a new role, attach the policy "AdministratorAccess",
 
 Select the previously created role, click "Trust relationships", edit trust relationship, paste the following policy:
 
-{% gist carlesloriente/69d9aa0ee17675def577727fd5829459 %}
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::ACCESSED_ACCOUNT_ID:root"
+      },
+      "Action": "sts:AssumeRole",
+      "Condition": {}
+    }
+  ]
+}
+```
+
+Download GitHub Gist [IAM Policy account accessed ](https://gist.github.com/carlesloriente/69d9aa0ee17675def577727fd5829459){:target="_blank"}
 
 **Log the AWS Console with the account that you want to be the accessing account**
 

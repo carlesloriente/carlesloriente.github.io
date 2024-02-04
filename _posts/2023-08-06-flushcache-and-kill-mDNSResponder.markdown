@@ -10,7 +10,15 @@ background: '/assets/images/2023-08-06-flushcache-and-kill-mDNSResponder.webp'
 The local cache contains files and data that your system has saved to speed up certain processes, but sometimes, you want to ensure you're seeing the most up-to-date version, which clearing the cache can help with.
 
 *Mac*:
-{% gist carlesloriente/1cf094165955b85617cd917573df65e1 %}
+```bash
+#!/bin/bash
+
+sudo dscacheutil -flushcache;
+sudo killall -HUP mDNSResponder;
+sleep 2;
+```
+
+Download GitHub Gist [fedora-configure-and-setup-ikev2.sh](https://gist.github.com/carlesloriente/1cf094165955b85617cd917573df65e1){:target="_blank"}
 
 *Linux*:
 <code>sudo /etc/init.d/nscd restart</code>

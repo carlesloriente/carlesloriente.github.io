@@ -29,6 +29,14 @@ Use the lsblk to view any volumes that were mapped at launch but not formatted a
 
 As you can see, the name of the ephemeral volume is nvme1n1, so we can move forward and format and mount it, but before that we are going to install the package nvme-cli.
 
-{% gist carlesloriente/5dbd6acf64090bba9593146185c11183 %}
+```bash
+sudo yum -y install nvme-cli;
+sudo mkfs.xfs /dev/nvme1n1;
+sudo mkdir -p /mnt/ephemeral;
+sudo mount /dev/nvme1n1 /mnt/ephemeral;
+sudo chown centos:centos /mnt/ephemeral;
+```
+
+Download GitHub Gist [format-and-mount-nvme-volumes.sh](https://gist.github.com/carlesloriente/5dbd6acf64090bba9593146185c11183){:target="_blank"}
 
 Now we can use the ephemeral storage mounted at /mnt/ephemeral, e.g: for swapping/caching purposes (don't to do that on EBS Volumes, cost and IOPS will be affected).

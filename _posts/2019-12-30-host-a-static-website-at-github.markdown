@@ -34,7 +34,7 @@ You can host a:
 
 6. Initialize a local Git repo and push it contents to GitHub
 
-```
+```bash
 git init
 git add README.md
 git commit -m "first commit"
