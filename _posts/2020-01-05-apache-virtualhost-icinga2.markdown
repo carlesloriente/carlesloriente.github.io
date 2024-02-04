@@ -10,5 +10,3 @@ background: '/assets/images/bg-icinga2.webp'
 [Icinga2](https://icinga.com/docs/icinga-2/latest/doc/01-about/) is a very cool monitoring tool, we have used it in several projects with satisfactory results. You can practically monitor anything that is needed. Local or remote infrastructure, baremetal or virtual, etc.
 
 You can configure to use Apache and Icinga2 using the following Virtualhost.
-
-<script src="https://gist.github.com/carlesloriente/e208a167ac882f30ee745659d8ae9f21.js"></script>

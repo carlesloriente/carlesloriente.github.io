@@ -1,5 +1,5 @@
 <!--
-&lt;--- Readme.md Snippet without images Start ---&gt;
+<--- Readme.md Snippet without images Start --->
 ## Tech Stack
 carlesloriente/carlesloriente.github.io is built on the following main stack:
 
@@ -14,9 +14,9 @@ carlesloriente/carlesloriente.github.io is built on the following main stack:
 
 Full tech stack [here](/techstack.md)
 
-&lt;--- Readme.md Snippet without images End ---&gt;
+<--- Readme.md Snippet without images End --->
 
-&lt;--- Readme.md Snippet with images Start ---&gt;
+<--- Readme.md Snippet with images Start --->
 ## Tech Stack
 carlesloriente/carlesloriente.github.io is built on the following main stack:
 
@@ -31,7 +31,7 @@ carlesloriente/carlesloriente.github.io is built on the following main stack:
 
 Full tech stack [here](/techstack.md)
 
-&lt;--- Readme.md Snippet with images End ---&gt;
+<--- Readme.md Snippet with images End --->
 -->
 <div align="center">
 
