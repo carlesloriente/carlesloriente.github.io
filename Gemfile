@@ -7,6 +7,8 @@ group :jekyll_plugins do
   gem "jekyll-paginate", "~> 1.1.0"
   gem "jekyll-sitemap", "~> 1.4.0"
   gem "jekyll-gist", "~> 1.5.0"
+  gem "jekyll-seo-tag", "~> 2.8.0"
+  gem "jekyll-github-metadata", "~> 2.13.0"
 end
 
 # Disabled for github-pages

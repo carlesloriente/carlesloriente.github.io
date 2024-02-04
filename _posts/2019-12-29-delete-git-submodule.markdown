@@ -9,6 +9,6 @@ background: '/assets/images/bg-git.webp'
 
 How to delete a Git submodule.
 
-{%gist carlesloriente/dfe339351c15ba784428d5a993f29f19 delete-git-submodule.sh%}
+{% gist carlesloriente/dfe339351c15ba784428d5a993f29f19 delete-git-submodule.sh %}
 
 Remember to commit and push your changes to the repo.
