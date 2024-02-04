@@ -10,6 +10,7 @@ background: '/assets/images/2023-08-06-flushcache-and-kill-mDNSResponder.webp'
 The local cache contains files and data that your system has saved to speed up certain processes, but sometimes, you want to ensure you're seeing the most up-to-date version, which clearing the cache can help with.
 
 *Mac*:
+
 <script src="https://gist.github.com/carlesloriente/1cf094165955b85617cd917573df65e1.js"></script>
 
 *Linux*:
