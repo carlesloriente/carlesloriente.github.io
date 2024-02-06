@@ -37,4 +37,4 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
-exclude: [resume.html, README.md, LICENSE, SECURITY.md, techstack.md]
+exclude: [resume.html, README.md, LICENSE, SECURITY.md, techstack.md, yandex_f833f55647ca1132.html]
