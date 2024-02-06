@@ -5,7 +5,7 @@ layout: default
 {% if page.content %}
 <meta name="description" content="{{ page.excerpt | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   {% else %}
-  <meta name="description" content="{{ page.title }}">
+  <meta name="description" content="{{ page.title | escape }}">
 {% endif %}
 
 <!-- Page Header -->

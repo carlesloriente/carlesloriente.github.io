@@ -10,7 +10,17 @@ Enjoy! 😃
 
 ---
 
-# Website created using Start Bootstrap - Clean Blog Jekyll and Jekyll
+# Notes on Cloud Computing
+
+A collection of curated opinions and code snippets on cloud tech. Bridging knowledge and implementation for enthusiasts and professionals alike
+
+## Preview
+
+[![Notes on Cloud Computing (Jekyll) Preview](https://www.notesoncloudcomputing.com/assets/images/screenshot.png)](https://www.notesoncloudcomputing.com)
+
+**[View Live Website](https://www.notesoncloudcomputing.com)**
+
+To create the [Notes on Cloud Computing](https://www.notesoncloudcomputing.com) website, I relied on these resources:
 
 # [Start Bootstrap - Clean Blog Jekyll](https://startbootstrap.com/theme/clean-blog-jekyll) - Official Jekyll Version
 

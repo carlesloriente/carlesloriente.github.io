@@ -1,11 +1,16 @@
 title:              Notes on cloud computing
-description:        A collection of curated opinions and code snippets on cloud tech. Bridging knowledge and implementation for enthusiasts and professionals alike
 author:             Carles Loriente
-baseurl:            ""
-#url:                "http://localhost:4000"
-#url:                "https://carlesloriente.github.io"
 url:                "https://www.notesoncloudcomputing.com"
+#baseurl:            ""
+#url:                "http://localhost:4000"
+
+description:        A collection of curated opinions and code snippets on cloud tech. Bridging knowledge and implementation for enthusiasts and professionals alike
+
+encoding:           "utf-8"
+locale:             "en-US"
+lang:               "en"
 formemail:          "mjvgwpej"
+permalink:          pretty
 
 # Social Profiles
 twitter_username:   godarthvader
@@ -15,21 +20,21 @@ instagram_username:
 linkedin_username:  carles-loriente
 
 # Add your google-analytics ID here to activate google analytics
-google_analytics:   G-YZN6D91Z4N # out your google-analytics code
+google_analytics:   G-YZN6D91Z4N
 
 # Disqus Comments
+# Leave shortname blank to disable comments site-wide.
+# Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
 disqus:
-    # Leave shortname blank to disable comments site-wide.
-    # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
     shortname: notes-on-cloud-infrastructure
 
-    # Build settings
+# Build settings
 markdown:           kramdown
 paginate:           10
 paginate_path:      "/posts/page:num/"
 plugins:
   - jekyll-feed
   - jekyll-paginate
-  - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
+  - jekyll-sitemap
 
 exclude: [resume.html, README.md, LICENSE, SECURITY.md, techstack.md]
