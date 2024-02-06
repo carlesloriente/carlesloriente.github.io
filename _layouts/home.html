@@ -45,7 +45,7 @@ layout: default
             {% if post.author %}
             {{ post.author }}
             {% else %}
-            {{ site.author }}
+            <a href="/about.html" hreflang="en" aria-label="Author">{{ site.author }}</a>
             {% endif %}
             on
             {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
