@@ -69,7 +69,7 @@
           {% endif %}
         </ul>
         <p class="copyright text-muted">Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }}</p>
-        <p>Build with [Jekyll](https://jekyllrb.com) {% if project_version %}</p>
+        <p>Build with [Jekyll](https://jekyllrb.com) {% if project_version %}{{ project_version }}{% endif %}</p>
         <p>Proudly hosted by <a href="https://github.com"><img src="/assets/images/github_logo.png" width="100" height="30" alt="GitHub • Social coding"></a>
       </div>
     </div>
