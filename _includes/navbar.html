@@ -1,7 +1,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
   <div class="container">
-    <a class="navbar-brand" hreflang="en" href="{{"/" | relative_url }}">{{ site.title | escape }}</a>
+    <a class="navbar-brand" hreflang="{{ site.lang }}" href="{{"/" | relative_url }}">{{ site.title | escape }}</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       Menu
       <i class="fa fa-bars"></i>
@@ -9,25 +9,25 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" hreflang="en" href="{{"/" | relative_url }}" aria-label="{{ site.title }} Home">Home</a>
+          <a class="nav-link" hreflang="{{ site.lang }}" href="{{"/" | relative_url }}" aria-label="{{ site.title }} Home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" hreflang="en" href="{{"/about.html" | relative_url }}" aria-label="{{ site.title }} About">About</a>
+          <a class="nav-link" hreflang="{{ site.lang }}" href="{{"/about/" | relative_url }}" aria-label="{{ site.title }} About">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" hreflang="en" href="{{ "/posts/index.html" | relative_url }}" aria-label="{{ site.title }} Notes">Notes</a>
+          <a class="nav-link" hreflang="{{ site.lang }}" href="{{ "/posts/index.html" | relative_url }}" aria-label="{{ site.title }} Notes">Notes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" hreflang="en" href="{{ "/gallery.html" | relative_url }}" aria-label="{{ site.title }} Gallery of images">Gallery</a>
+          <a class="nav-link" hreflang="{{ site.lang }}" href="{{ "/gallery/" | relative_url }}" aria-label="{{ site.title }} Gallery of images">Gallery</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" hreflang="en" href="{{"/contact.html" | relative_url }}" aria-label="{{ site.title }} Contact form">Contact</a>
+          <a class="nav-link" hreflang="{{ site.lang }}" href="{{"/contact/" | relative_url }}" aria-label="{{ site.title }} Contact form">Contact</a>
         </li>
         <li class="nav-item">
-          <a href="https://github.com/carlesloriente/carlesloriente.github.io" target="_blank" hreflang="en" rel="noreferrer" class="nx-p-2 nx-text-current"><img alt="NotesOnCloudComputing Github repo stars" src="https://img.shields.io/github/stars/carlesloriente/carlesloriente.github.io?style=social"></a>
+          <a href="https://github.com/carlesloriente/carlesloriente.github.io" target="_blank" hreflang="{{ site.lang }}" rel="noreferrer" class="nx-p-2 nx-text-current"><img alt="NotesOnCloudComputing Github repo stars" src="https://img.shields.io/github/stars/carlesloriente/carlesloriente.github.io?style=social"></a>
         </li>
         <li>
-          <a href='https://ko-fi.com/S6S1O2GTU' target='_blank' hreflang="en"><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/brandasset/kofi_s_logo_nolabel.png?_gl=1*pw0rap*_ga*MTA1OTg3NTgwMS4xNjkxNjc4ODU1*_ga_M13FZ7VQ2C*MTY5MTgxOTU2MS40LjEuMTY5MTgxOTgyOS41MC4wLjA.' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+          <a href='https://ko-fi.com/S6S1O2GTU' target='_blank' hreflang="{{ site.lang }}"><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/brandasset/kofi_s_logo_nolabel.png?_gl=1*pw0rap*_ga*MTA1OTg3NTgwMS4xNjkxNjc4ODU1*_ga_M13FZ7VQ2C*MTY5MTgxOTU2MS40LjEuMTY5MTgxOTgyOS41MC4wLjA.' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
         </li>
       </ul>
     </div>

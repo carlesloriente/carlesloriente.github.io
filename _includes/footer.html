@@ -9,7 +9,7 @@
         <ul class="list-inline text-center">
           {% if site.email %}
           <li class="list-inline-item">
-            <a href="mailto:{{ site.email | encode_email }}" hreflang="en" aria-label="{{ site.email }} address">
+            <a href="mailto:{{ site.email | encode_email }}" hreflang="{{ site.lang }}" aria-label="{{ site.email }} address">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
                 <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
@@ -19,7 +19,7 @@
           {% endif %}
           {% if site.twitter_username %}
           <li class="list-inline-item">
-            <a href="https://twitter.com/{{ site.twitter_username }}" hreflang="en" aria-label="{{ site.twitter_username }} Twitter">
+            <a href="https://twitter.com/{{ site.twitter_username }}" hreflang="{{ site.lang }}" aria-label="{{ site.twitter_username }} Twitter">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
                 <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
@@ -29,7 +29,7 @@
           {% endif %}
           {% if site.facebook_username %}
           <li class="list-inline-item">
-            <a href="https://www.facebook.com/{{ site.facebook_username }}" hreflang="en" aria-label="{{ site.facebook_username }} Facebook">
+            <a href="https://www.facebook.com/{{ site.facebook_username }}" hreflang="{{ site.lang }}" aria-label="{{ site.facebook_username }} Facebook">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
                 <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
@@ -39,7 +39,7 @@
           {% endif %}
           {% if site.linkedin_username %}
           <li class="list-inline-item">
-            <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" hreflang="en" aria-label="{{ site.linkedin_username }} Linkedin">
+            <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" hreflang="{{ site.lang }}" aria-label="{{ site.linkedin_username }} Linkedin">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
                 <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -49,7 +49,7 @@
           {% endif %}
           {% if site.github_username %}
           <li class="list-inline-item">
-            <a href="https://github.com/{{ site.github_username }}" hreflang="en" aria-label="{{ site.github_username }} GitHub">
+            <a href="https://github.com/{{ site.github_username }}" hreflang="{{ site.lang }}" aria-label="{{ site.github_username }} GitHub">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
                 <i class="fab fa-github fa-stack-1x fa-inverse"></i>
@@ -59,7 +59,7 @@
           {% endif %}
           {% if site.instagram_username %}
           <li class="list-inline-item">
-            <a href="https://instagram.com/{{ site.instagram_username }}" hreflang="en" aria-label="{{ site.instagram_username }} Instagram">
+            <a href="https://instagram.com/{{ site.instagram_username }}" hreflang="{{ site.lang }}" aria-label="{{ site.instagram_username }} Instagram">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
                 <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
@@ -68,9 +68,9 @@
           </li>
           {% endif %}
         </ul>
-        <p class="copyright text-muted">Copyright &copy; <a href="/about.html" hreflang="en" aria-label="{{ site.title }} author">{{ site.author }}</a> {{ 'now' | date: "%Y" }}<br />
-        Build with <a href="https://jekyllrb.com" hreflang="en" target="_blank" aria-label="Jekyll">Jekyll</a><br />
-        Proudly hosted by <a href="https://github.com" hreflang="en" target="_blank" aria-label="Github"><img src="/assets/images/github_logo.png" width="100" height="30" alt="GitHub • Social coding"></a>
+        <p class="copyright text-muted">Copyright &copy; <a href="/about/" hreflang="{{ site.lang }}" aria-label="{{ site.title }} author">{{ site.author }}</a> {{ 'now' | date: "%Y" }}<br />
+        Build with <a href="https://jekyllrb.com" hreflang="{{ site.lang }}" target="_blank" aria-label="Jekyll">Jekyll</a><br />
+        Proudly hosted by <a href="https://github.com" hreflang="{{ site.lang }}" target="_blank" aria-label="Github"><img src="/assets/images/github_logo.png" width="100" height="30" alt="GitHub • Social coding"></a>
       </div>
     </div>
   </div>
