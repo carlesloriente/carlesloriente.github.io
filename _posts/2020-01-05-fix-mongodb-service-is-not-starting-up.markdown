@@ -1,8 +1,8 @@
 ---
 layout: post
 comments: true
-title:  "Fix mongodb service is not starting up"
-date:   2020-01-05 8:33:23 +0200
+title: "Fix mongodb service is not starting up"
+date: 2020-01-05 8:33:23 +0200
 categories: faq mongodb
 background: '/assets/images/bg-mongodb.webp'
 ---

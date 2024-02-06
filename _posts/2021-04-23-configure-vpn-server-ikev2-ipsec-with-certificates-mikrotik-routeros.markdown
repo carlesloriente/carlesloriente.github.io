@@ -1,8 +1,8 @@
 ---
 layout: post
 comments: true
-title:  "VPN server using IKEv2 IPSec with certificates on RouterOS"
-date:   2021-04-23 14:43:23 +0200
+title: "VPN server using IKEv2 IPSec with certificates on RouterOS"
+date: 2021-04-23 14:43:23 +0200
 categories: routeros mikrotik vpn
 background: '/assets/images/bg-mikrotik.webp'
 ---

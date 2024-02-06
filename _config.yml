@@ -31,5 +31,6 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
+  - jekyll_version_plugin
 
 exclude: [resume.html, README.md, LICENSE, SECURITY.md, techstack.md]

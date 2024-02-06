@@ -1,8 +1,8 @@
 ---
 layout: post
 comments: true
-title:  "Using ephemeral volumes in EC2"
-date:   2019-12-25 09:43:45 +0200
+title: "Using ephemeral volumes in EC2"
+date: 2019-12-25 09:43:45 +0200
 categories: aws ec2
 background: '/assets/images/bg-aws-logo.webp'
 ---

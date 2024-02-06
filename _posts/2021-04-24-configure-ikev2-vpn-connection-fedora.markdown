@@ -1,8 +1,8 @@
 ---
 layout: post
 comments: true
-title:  "VPN connection using p12 cert on Fedora 31+"
-date:   2021-04-24 12:43:23 +KEv2 RoadWarrior 0200
+title: "VPN connection using p12 cert on Fedora 31+"
+date: 2021-04-24 12:43:23 +KEv2 RoadWarrior 0200
 categories: fedora vpn ikev2
 background: '/assets/images/bg-fedora.webp'
 ---

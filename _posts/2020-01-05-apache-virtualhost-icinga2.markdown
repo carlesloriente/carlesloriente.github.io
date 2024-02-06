@@ -1,8 +1,8 @@
 ---
 layout: post
 comments: true
-title:  "Apache Virtualhost for Icinga2"
-date:   2020-01-05 8:33:23 +0200
+title: "Apache Virtualhost for Icinga2"
+date: 2020-01-05 8:33:23 +0200
 categories: icinga2
 background: '/assets/images/bg-icinga2.webp'
 ---

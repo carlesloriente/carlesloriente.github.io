@@ -1,8 +1,8 @@
 ---
 layout: post
 comments: true
-title:  "RouterOS export and send by mail config file"
-date:   2019-12-27 12:43:23 +0200
+title: "RouterOS export and send by mail config file"
+date: 2019-12-27 12:43:23 +0200
 categories: routeros mikrotik
 background: '/assets/images/bg-mikrotik.webp'
 ---
