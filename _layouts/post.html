@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% if page.description %}<meta name="description" content="{{ page.excerpt | strip_html | normalize_whitespace | truncate: 160 | escape }}">{% endif %}
+<meta name="description" content="{{ page.excerpt | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
 <!-- Page Header -->
 {% if page.background %}
