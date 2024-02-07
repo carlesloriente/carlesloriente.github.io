@@ -19,9 +19,7 @@ layout: default
           {% endif -%}
           <span class="meta">Posted by
             {%- if page.author %} <a href="/about/" hreflang="{{ site.lang }}" aria-label="Author">{{ page.author }}</a>{% else %}<a href="/about/" hreflang="{{ site.lang }}" aria-label="Author">{{ site.author }}</a>{% endif %}
-            on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html
-            content=page.content -%}
-          </span>
+            on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=page.content -%}</span>
         </div>
       </div>
     </div>
@@ -38,17 +36,13 @@ layout: default
         <script type="text/javascript" src="{{"/assets/vendor/ko-fi/Widget_2.js" | relative_url }}"></script>
         <script type="text/javascript">kofiwidget2.init("Buy me a coffee", "#176391", "S6S1O2GTU");kofiwidget2.draw();</script>
       </div>
-      
       <hr>
-
       <div class="clearfix">
-
         {% if page.comments %}
           {% if site.disqus.shortname %}
             {% include disqus_comments.html %}
           {% endif %}
         {% endif %}
-
         {% if page.previous.url %}
         <a class="btn btn-primary float-left" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline">
             Note</span></a>
@@ -57,9 +51,7 @@ layout: default
         <a class="btn btn-primary float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline">
             Note</span> &rarr;</a>
         {% endif %}
-
       </div>
-
     </div>
   </div>
 </div>

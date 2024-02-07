@@ -34,18 +34,17 @@ layout: default
           <h2 class="post-title">{{ post.title }}</h2>
           {%- if post.subtitle %}
           <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-          {% else %}
+          {%- else %}
           <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
-          {% endif -%}
+          {%- endif -%}
         </a>
         <p class="post-meta">Posted by 
           {%- if post.author %}
           {{ post.author }}
           {%- else %}
           <a href="/about/" hreflang="{{ site.lang }}" aria-label="Author">{{ site.author }}</a>
-          {%- endif %}
-          on {{ post.date | date: '%B %d, %Y' }} &middot; {%- include read_time.html content=post.content -%}
-        </p>
+          {%- endif -%}
+          on {{ post.date | date: '%B %d, %Y' }} &middot; {%- include read_time.html content=post.content -%}</p>
       </article>
       <hr>
       {% endfor -%}
