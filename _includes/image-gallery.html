@@ -6,7 +6,7 @@
 </style>
   
 <div class="image-gallery">
-{% for file in site.static_files -%}
+{%- for file in site.static_files -%}
   {%- if file.path contains include.folder -%}
     {%- if file.extname == '.jpg' or 
       file.extname == '.jpeg' or 
@@ -22,7 +22,7 @@
         <img src="//images.weserv.nl/?url=www.notesoncloudcomputing.com/{{ file.path }}&w=300&h=300&output=jpg&q=50&t=square" alt="{{ filename }}" />
         <span style="font-size: small;">{{ filename }}</span>
       </a>
-    {% endif %}
-  {% endif %}
-{% endfor %}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor %}
 </div>
