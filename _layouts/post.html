@@ -14,13 +14,13 @@ layout: default
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="post-heading">
           <h1>{{ page.title }}</h1>
-          {% if page.subtitle %}
+          {%- if page.subtitle %}
           <h2 class="subheading">{{ page.subtitle }}</h2>
-          {% endif %}
+          {% endif -%}
           <span class="meta">Posted by
-            {% if page.author %}<a href="/about/" hreflang="{{ site.lang }}" aria-label="Author">{{ page.author }}</a>{% else %}<a href="/about/" hreflang="{{ site.lang }}" aria-label="Author">{{ site.author }}</a>{% endif %}
+            {%- if page.author %}<a href="/about/" hreflang="{{ site.lang }}" aria-label="Author">{{ page.author }}</a>{% else %}<a href="/about/" hreflang="{{ site.lang }}" aria-label="Author">{{ site.author }}</a>{% endif %}
             on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html
-            content=page.content %}
+            content=page.content -%}
           </span>
         </div>
       </div>
