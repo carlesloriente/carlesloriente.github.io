@@ -4,45 +4,37 @@ title: List of Notes of Cloud Computing articles
 background: '/assets/images/bg-post.webp'
 ---
 
-{% for post in paginator.posts %}
-
+{% for post in paginator.posts -%}
 <article class="post-preview">
   <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}">
     <h2 class="post-title">{{ post.title }}</h2>
-    {% if post.subtitle %}
+    {% if post.subtitle -%}
     <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-    {% else %}
+    {% else -%}
     <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
     {% endif %}
   </a>
   <p class="post-meta">Posted by
-    {% if post.author %}
+    {% if post.author -%}
     <a href="/about/" hreflang="{{ site.lang }}" aria-label="{{ post.author }} author">{{ post.author }}</a>
     {% else %}
     <a href="/about/" hreflang="{{ site.lang }}" aria-label="{{ site.author }} author">{{ site.author }}</a>
-    {% endif %}
+    {% endif -%}
     on {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
   </p>
 </article>
-
 <hr>
-
-{% endfor %}
+{% endfor -%}
 
 <!-- Pager -->
 {% if paginator.total_pages > 1 %}
-
 <div class="clearfix">
-
-  {% if paginator.previous_page %}
+  {% if paginator.previous_page -%}
   <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}">&larr;
     Newer<span class="d-none d-md-inline"> Notes</span></a>
   {% endif %}
-
-  {% if paginator.next_page %}
+  {% if paginator.next_page -%}
   <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}">Older<span class="d-none d-md-inline"> Notes</span> &rarr;</a>
-  {% endif %}
-
+  {% endif -%}
 </div>
-
-{% endif %}
+{% endif -%}
