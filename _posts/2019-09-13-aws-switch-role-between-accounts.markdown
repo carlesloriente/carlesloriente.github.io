@@ -29,7 +29,7 @@ Select the previously created role, click "Trust relationships", edit trust rela
 }
 ```
 
-Download GitHub Gist [IAM Policy account accessed ](https://gist.github.com/carlesloriente/69d9aa0ee17675def577727fd5829459){:target="_blank"}
+Download GitHub Gist [IAM Policy account accessed](https://gist.github.com/carlesloriente/69d9aa0ee17675def577727fd5829459){:target="_blank"}
 
 **Log the AWS Console with the account that you want to be the accessing account**
 
