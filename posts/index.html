@@ -16,9 +16,9 @@ background: '/assets/images/bg-post.webp'
   </a>
   <p class="post-meta">Posted by
     {% if post.author -%}
-    <a href="/about/" hreflang="{{ site.lang }}" aria-label="{{ post.author }} author">{{ post.author }}</a>
+    <a href="/about/" hreflang="{{ site.lang }}" aria-label="{{ post.author }} author">{{ post.author }}</a> 
     {% else %}
-    <a href="/about/" hreflang="{{ site.lang }}" aria-label="{{ site.author }} author">{{ site.author }}</a>
+    <a href="/about/" hreflang="{{ site.lang }}" aria-label="{{ site.author }} author">{{ site.author }}</a> 
     {% endif -%}
     on {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
   </p>
