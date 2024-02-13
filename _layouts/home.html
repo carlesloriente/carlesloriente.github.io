@@ -4,7 +4,7 @@ layout: default
 
 <!-- Page Header -->
 {% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+<header class="masthead" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.5)0%,rgba(0,0,0,0.5) 100%), url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
 {% else %}
 <header class="masthead">
 {% endif %}
@@ -30,7 +30,7 @@ layout: default
       <!-- Home Post List -->
       {%- for post in site.posts limit : 5 -%}
       <article class="post-preview">
-        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}">
+        <a class="text-decoration-none" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}">
           <h2 class="post-title">{{ post.title }}</h2>
           {%- if post.subtitle %}
           <h3 class="post-subtitle">{{ post.subtitle }}</h3>
@@ -42,8 +42,8 @@ layout: default
           {%- if post.author %}
           {{ post.author }} 
           {%- else %}
-          <a href="/about/" hreflang="{{ site.lang }}" aria-label="Author">{{ site.author }}</a> 
-          {%- endif -%}
+          <a href="/about/" hreflang="{{ site.lang }}" aria-label="Author">{{ site.author }} </a> 
+          {%- endif -%} 
           on {{ post.date | date: '%B %d, %Y' }} &middot; {%- include read_time.html content=post.content -%}</p>
       </article>
       <hr>

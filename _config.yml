@@ -1,10 +1,8 @@
 title:              Notes on cloud computing
 author:             Carles Loriente
 url:                "https://www.notesoncloudcomputing.com"
-#baseurl:            ""
-#url:                "http://localhost:4000"
 
-description:        A collection of curated opinions and code snippets on cloud tech. Bridging knowledge and implementation for enthusiasts and professionals alike
+description:        A collection of curated opinions and code snippets on cloud tech. <br>Bridging knowledge and implementation for enthusiasts and professionals alike
 
 encoding:           "utf-8"
 locale:             "en-US"
@@ -38,4 +36,10 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
-exclude: [resume.html, README.md, LICENSE, SECURITY.md, techstack.md, yandex_f833f55647ca1132.html]
+sass:
+  load_paths:
+    - ./_sass
+    - ./includes
+    - ./assets/vendor/startbootstrap-clean-blog/scss
+
+exclude: [resume.html, README.md, LICENSE, SECURITY.md, techstack.md, techstack.yml, bin, gists, node_modules, ahrefs_6f259190b96e078821b745c49ce5f85e18b0d0addfd0ea6778eeafc411f82bee, BingSiteAuth.xml, CNAME, yandex_f833f55647ca1132.html]
