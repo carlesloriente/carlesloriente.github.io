@@ -43,7 +43,7 @@ layout: default
           {{ post.author }} 
           {%- else %}
           <a href="/about/" hreflang="{{ site.lang }}" aria-label="Author">{{ site.author }}</a> 
-          {%- endif -%}
+          {%- endif %}
           on {{ post.date | date: '%B %d, %Y' }} &middot; {%- include read_time.html content=post.content -%}</p>
       </article>
       <hr>

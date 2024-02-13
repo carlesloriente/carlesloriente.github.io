@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: "When attributes shine: Fine-grained authorisation for cloud applications"
 date: 2024-02-13 11:40:05 +0200
-categories: opa, zanzibar, fine-grained authorisation, security
+categories: cloud-securyty opa zanzibar fine-grained authorisation
 background: '/assets/images/bg-fine-grained-permissions.webp'
 ---
 
