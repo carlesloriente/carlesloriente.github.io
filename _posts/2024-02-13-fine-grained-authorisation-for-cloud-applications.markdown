@@ -20,6 +20,7 @@ Fortunately, **fine-grained authorisation** offers a more granular approach, all
 ![Topez-architecture](/assets/images/topaz_arch.webp)
 
 ## Bibliography
-**[Notes on Cloud Computing](https://www.notesoncloudcomputing.com/){:target="_blank"}**: (my spam ;) A collection of curated opinions and code snippets on cloud tech, bridging knowledge and implementation for enthusiasts and professionals alike.
-**[Topaz](https://www.topaz.sh/){:target="_blank"}**: An open-source authorisation providing fine-grained, real-time, policy-based access control for applications and APIs.
-**[Aserto](https://www.aserto.com/){:target="_blank"}**: Fine-grained, scalable authorization in minutes.
+
+- **[Notes on Cloud Computing](https://www.notesoncloudcomputing.com/){:target="_blank"}**: (my spam ;) A collection of curated opinions and code snippets on cloud tech, bridging knowledge and - implementation for enthusiasts and professionals alike.
+- **[Topaz](https://www.topaz.sh/){:target="_blank"}**: An open-source authorisation providing fine-grained, real-time, policy-based access control for applications and APIs.
+- **[Aserto](https://www.aserto.com/){:target="_blank"}**: Fine-grained, scalable authorization in minutes.
