@@ -6,8 +6,8 @@ background: '/assets/images/bg-post.webp'
 
 {% for post in paginator.posts -%}
 <article class="post-preview">
-  <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}">
-    <h2 class="post-title">{{ post.title }}</h2>
+  <a class="text-decoration-none" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}">
+    <h2 class="post-title text-decoration-none">{{ post.title }}</h2>
     {% if post.subtitle -%}
     <h3 class="post-subtitle">{{ post.subtitle }}</h3>
     {% else -%}
@@ -16,10 +16,10 @@ background: '/assets/images/bg-post.webp'
   </a>
   <p class="post-meta">Posted by
     {% if post.author -%}
-    <a href="/about/" hreflang="{{ site.lang }}" aria-label="{{ post.author }} author">{{ post.author }}</a> 
+    <a href="/about/" hreflang="{{ site.lang }}" aria-label="{{ post.author }} author">{{ post.author }} </a> 
     {% else %}
-    <a href="/about/" hreflang="{{ site.lang }}" aria-label="{{ site.author }} author">{{ site.author }}</a> 
-    {% endif -%}
+    <a href="/about/" hreflang="{{ site.lang }}" aria-label="{{ site.author }} author">{{ site.author }} </a> 
+    {% endif -%} 
     on {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
   </p>
 </article>
@@ -30,11 +30,11 @@ background: '/assets/images/bg-post.webp'
 {% if paginator.total_pages > 1 %}
 <div class="clearfix">
   {% if paginator.previous_page -%}
-  <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}">&larr;
+  <a class="btn btn-primary float-start" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}">&larr;
     Newer<span class="d-none d-md-inline"> Notes</span></a>
   {% endif %}
   {% if paginator.next_page -%}
-  <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}">Older<span class="d-none d-md-inline"> Notes</span> &rarr;</a>
+  <a class="btn btn-primary float-end" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}">Older<span class="d-none d-md-inline"> Notes</span> &rarr;</a>
   {% endif -%}
 </div>
 {% endif -%}

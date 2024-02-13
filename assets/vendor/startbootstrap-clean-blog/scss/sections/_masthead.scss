@@ -3,7 +3,7 @@ header.masthead {
     // TIP: Background images are set within the HTML using inline CSS!
     margin-bottom: 50px;
     background: no-repeat center center;
-    background-color: $gray-600;
+    background-color: #6c757d;
     background-attachment: scroll;
     position: relative;
     background-size: cover;
@@ -14,33 +14,40 @@ header.masthead {
         left: 0;
         height: 100%;
         width: 100%;
-        background-color: $gray-900;
+        background-color: #212529;
         opacity: 0.5;
+        z-index: -20;
     }
 
     .page-heading,
     .post-heading,
     .site-heading {
         padding: 200px 0 150px;
-        color: white;
+        color: $white;
+        z-index: 15;
 
         @media only screen and (min-width: 768px) {
             padding: 200px 0;
+            color: $white;
         }
     }
 
     .page-heading,
     .site-heading {
         text-align: center;
-
+        padding:200px 0 150px;
+        color: $white;
+        
         h1 {
             font-size: 50px;
             margin-top: 0;
+            color: $white;
         }
 
         .subheading {
             font-size: 24px;
             font-weight: 300;
+            color: $white;
             line-height: 1.1;
             display: block;
             margin: 10px 0 0;
