@@ -4,6 +4,9 @@ comments: true
 title: "Install Nvidia drivers on EC2 Instances"
 date: 2020-01-14 15:23:25 +0200
 categories: aws nvidia
+tags:
+- aws
+- nvidia
 background: '/assets/images/bg-aws-logo.webp'
 ---
 
@@ -46,4 +49,3 @@ The output should be something like this:
 |=============================================================================|
 |    0     14402    C+G   ./yourproc                                  1425MiB |
 +-----------------------------------------------------------------------------+
-```

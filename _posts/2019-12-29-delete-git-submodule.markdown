@@ -3,7 +3,10 @@ layout: post
 comments: true
 title: "Delete submodule Git"
 date: 2019-12-29 10:53:23 +0200
-categories: git
+categories: git submodule
+tags:
+- git
+- submodule
 background: '/assets/images/bg-git.webp'
 ---
 

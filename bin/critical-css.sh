@@ -1,12 +1,9 @@
 #!/bin/bash
 
 # Install critical
-npm install critical --save-dev
-npm install scssify
-npm install dotenv
+npm install --save critical scssify dotenv
 
-
-# Create default gulpfile.js
+# Create config
 dd of=../includes/minimal_critical.scss << EOF
 // Import partials for critical css content
 @import "variables", "mixins", "base",

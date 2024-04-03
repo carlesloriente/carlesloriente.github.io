@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # Install rbenv
-bundle exec jekyll serve --incremental --verbose
+cp -TR node_modules/nocc-bootstrap-theme assets/vendor/nocc-bootstrap-theme/ && JEKYLL_ENV=production bundle exec jekyll build --incremental --verbose

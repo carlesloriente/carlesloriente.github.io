@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang }}">
-<head>
-  {% include head.html %}
-  {% include google_analytics.html %}
-</head>
-<body>
-  {% include navbar.html %}
-  {{ content }}
-  {% include footer.html %}
-  {% include scripts.html %}
-</body>
+<html class="h-100" lang="{{ site.lang }}" data-bs-theme="light">
+  <head>
+    {% include head.html %}
+    {%- if jekyll.environment != "development" -%}
+    {% include google_analytics.html %}
+    {%- endif -%}
+  </head>
+  <body class="d-flex flex-column h-100" style="overflow-x: hidden;">
+    <header>
+    {% include navbar.html %}
+    </header>
+    {{ content }}
+    {% include footer.html %}
+
+    {% include scripts.html %}
+  </body>
 </html>

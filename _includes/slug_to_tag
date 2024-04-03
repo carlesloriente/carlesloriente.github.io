@@ -1,0 +1,5 @@
+{%- assign post_tags = site.post_tags -%}
+{%- assign slug = include.slug -%}
+{%- for post_tag in site.post_tags -%}
+{%- if post_tag.slug == slug -%}{%- assign tag = post_tag.title -%}{%- endif -%}
+{%- endfor -%}

@@ -4,7 +4,11 @@ comments: true
 title: "VPN server using IKEv2 IPSec with certificates on RouterOS"
 date: 2021-04-23 14:43:23 +0200
 categories: routeros mikrotik vpn
+tags:
+- routeros
+- mikrotik
 background: '/assets/images/bg-mikrotik.webp'
+#redirect_from: "/routeros/mikrotik/vpn/2021/04/23/configure-vpn-server-ikev2-ipsec-with-certificates-mikrotik-routeros.html"
 ---
 
 The following file (rsc) for Mikrotik RouterOS v6.45+ configures an VPN usign IKEv2 IPSec

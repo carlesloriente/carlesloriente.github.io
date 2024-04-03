@@ -2,32 +2,61 @@
 layout: default
 ---
 
-<!-- Page Header -->
-{% if page.background -%}
-<header class="masthead" style="height:400px;background-image: linear-gradient(to bottom, rgba(0,0,0,0.5)0%,rgba(0,0,0,0.5) 100%), url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
-{% else %}
-<header class="mastheadsmall">
-{%- endif %}
+<section class="masthead sechead" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.5)0%,rgba(0,0,0,0.5) 100%), url('{{ page.background }}')">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="mx-auto">
         <div class="page-heading">
           <h1>{{ page.title }}</h1>
-          {% if page.description -%}
-          <span class="subheading">{{ page.description }}</span>
-          {%- endif %}
         </div>
       </div>
     </div>
   </div>
-</header>
-
+</section>
+<section>
 <div class="container">
   <div class="row">
-    <div class="col-lg-8 col-md-10 mx-auto">
-      <p>These images were created using <a href="https://dreamstudio.ai" hreflang="{{ site.lang }}" target="_blank" rel="noreferrer"  aria-label="Dreamstudio.ai">Dreamstudio.ai</a> with models; SDXL v1.0, SDXL beta or Stable Diffussion v2.1.</p>
-      {%- include image.html folder="/assets/images/dreamstudio/2K" -%}
+    <div class="mx-auto">
+      <p class="text-center">These images were created using <a href="https://dreamstudio.ai" hreflang="{{ site.lang }}" target="_blank" rel="noreferrer"  aria-label="Dreamstudio.ai">Dreamstudio.ai</a> with models; SDXL v1.0, SDXL beta of Stable Diffussion v2.1.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="image-gallery">
+      {% include image.html folder="/assets/images/dreamstudio/2K" %}
     </div>
   </div>
 </div>
+<div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="image-gallery-title"></h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img id="image-gallery-image" class="img-responsive col-md-12" src="">
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+ document.addEventListener('DOMContentLoaded', (event) => {
+    var buttons = document.getElementsByTagName("button");
+    var buttonsCount = buttons.length;
+    for (let i = 0; i < buttonsCount; i++) {
+      buttons[i].onclick = function(e) {
+        const img = document.getElementById(this.id);
+        var url = img.getAttribute('data-bs-image');
+        var name = img.getAttribute('data-bs-title');
+        var modal = document.getElementById("image-gallery-image");
+        modal.removeAttribute('src');
+        modal.setAttribute('src', url);
+        var title = document.getElementById("image-gallery-title");
+        title.textContent = name;
+      };
+    }
+  });
+</script> 
+<div class="divider"></div>
+</section>

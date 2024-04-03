@@ -4,7 +4,11 @@ comments: true
 title: "Compile and install GLIBC 2.18 in CentOS 7"
 date: 2019-12-28 16:10:23 +0200
 categories: fedora glibc
+tags:
+- fedora
+- glibc
 background: '/assets/images/bg-fedora.webp'
+#redirect_from: "/fedora/glibc/2019/12/28/compile-install-glibc-fedora.html"
 ---
 
 Download and compile GLIBC 2.18 in CentOS executing the following script.

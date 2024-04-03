@@ -1,0 +1,3 @@
+{%- assign tag = include.tag -%}
+{%- assign most_recent = site.tags[tag][0] -%}
+{% assign tag_last_modified = most_recent.last_modified_at | default: most_recent.date | default: site.date %}

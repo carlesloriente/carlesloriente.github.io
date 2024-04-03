@@ -1,35 +1,44 @@
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
-  <div class="container">
-    <a class="navbar-brand" hreflang="{{ site.lang }}" href="{{"/" | relative_url }}">{{ site.title | escape }}</a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      Menu
-      <i class="fa fa-bars"></i>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" hreflang="{{ site.lang }}" href="{{"/" | relative_url }}" aria-label="{{ site.title }} Home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" hreflang="{{ site.lang }}" href="{{"/about/" | relative_url }}" aria-label="{{ site.title }} About">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" hreflang="{{ site.lang }}" href="{{ "/posts/index.html" | relative_url }}" aria-label="{{ site.title }} Notes">Notes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" hreflang="{{ site.lang }}" href="{{ "/gallery/" | relative_url }}" aria-label="{{ site.title }} Gallery of images">Gallery</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" hreflang="{{ site.lang }}" href="{{"/contact/" | relative_url }}" aria-label="{{ site.title }} Contact form">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/carlesloriente/carlesloriente.github.io" target="_blank" hreflang="{{ site.lang }}" rel="noreferrer" class="nx-p-2 nx-text-current"><img alt="NotesOnCloudComputing Github repo stars" src="https://img.shields.io/github/stars/carlesloriente/carlesloriente.github.io?style=social"></a>
-        </li>
-        <li class="nav-item">
-          <a href="https://ko-fi.com/S6S1O2GTU" target="_blank" hreflang="{{ site.lang }}" rel="noopener" title="Support me on ko-fi.com"><img height="36" style="border:0px;height:36px;" src="/assets/images/kofi_s_logo_nolabel.webp" border="0" alt="Buy Me a Coffee at ko-fi.com" /></a>
-        </li>
-      </ul>
+    <div class="position-fixed bottom-0 end-0 mb-3 me-3">
+      <button class="btn-toggle py-2 d-flex align-items-center" id="bd-toggle" data-bs-toggle="button" type="button" aria-expanded="false" aria-label="Toggle theme color">
+        <span class="daylight filter-white"></span>
+      </button>
     </div>
-  </div>
-</nav>
+    <script type="text/javascript" src="{{"/assets/vendor/nocc-bootstrap-theme/js/theme-toggler.js" | relative_url }}"></script>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" hreflang="{{ site.lang }}" href="{{"/" | relative_url }}">{{ site.title | escape }}</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" hreflang="{{ site.lang }}" href="{{"/" | relative_url }}" aria-label="{{ site.title }} Home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" hreflang="{{ site.lang }}" href="{{"/about/" | relative_url }}" aria-label="{{ site.title }} About">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" hreflang="{{ site.lang }}" href="{{ "/posts/index.html" | relative_url }}" aria-label="{{ site.title }} Posts">Posts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" hreflang="{{ site.lang }}" href="{{ "/tags/" | relative_url }}" aria-label="{{ site.title }} Tags">Tags</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" hreflang="{{ site.lang }}" href="{{ "/gallery/" | relative_url }}" aria-label="{{ site.title }} Gallery of images">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" hreflang="{{ site.lang }}" href="{{"/contact/" | relative_url }}" aria-label="{{ site.title }} Contact form">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://github.com/carlesloriente/carlesloriente.github.io" target="_blank" hreflang="{{ site.lang }}" rel="noreferrer" class="nx-p-2 nx-text-current"><img class="nav-github" alt="NotesOnCloudComputing Github repo stars" src="https://img.shields.io/github/stars/carlesloriente/carlesloriente.github.io?style=social"></a>
+            </li>
+            <li class="nav-item">
+              <a href="https://ko-fi.com/S6S1O2GTU" target="_blank" hreflang="{{ site.lang }}" rel="noopener" title="Support me on ko-fi.com"><img class="nav-kofi" src="/assets/vendor/nocc-bootstrap-theme/images/nocc/kofi_s_logo_nolabel.webp" border="0" alt="Buy Me a Coffee at ko-fi.com" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>

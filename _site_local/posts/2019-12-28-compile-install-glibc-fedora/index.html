@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html class="h-100" lang="en" data-bs-theme="light">
+  <head>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Compile and install GLIBC 2.18 in CentOS 7</title>
+  <meta name="description" content="Download and compile GLIBC 2.18 in CentOS executing the following script.">
+  <meta name="google-site-verification" content="imA3xlKv43a50bTrOlAa3eWQ3VBCazAY4Y20KImDXOM">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="godarthvader">
+  <meta name="twitter:creator" content="godarthvader">
+  <meta property="og:url" content="https://www.notesoncloudcomputing.com/posts/2019-12-28-compile-install-glibc-fedora/">
+  <meta property="og:title" content="Compile and install GLIBC 2.18 in CentOS 7">
+  <meta property="og:description" content="Download and compile GLIBC 2.18 in CentOS executing the following script.">
+  <meta property="og:image" content="https://www.notesoncloudcomputing.com/assets/images/bg-fedora.webp">
+  <meta property="og:type" content="article">
+  <link rel="stylesheet" href="/assets/vendor/nocc-bootstrap-theme/css/nocc-theme.css" type="text/css">
+<link rel="stylesheet" href="/assets/css/styles.css" type="text/css">
+  <link rel="canonical" href="https://www.notesoncloudcomputing.com/posts/2019-12-28-compile-install-glibc-fedora/">
+  <link rel="alternate" type="application/rss+xml" title="Notes on Cloud Computing" href="/feed.xml">
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/images/favicon.png" type="image/png">
+  <link rel="manifest" href="/manifest.webmanifest"></head>
+  <body class="d-flex flex-column h-100" style="overflow-x: hidden;">
+    <header>
+        <div class="position-fixed bottom-0 end-0 mb-3 me-3">
+      <button class="btn-toggle py-2 d-flex align-items-center" id="bd-toggle" data-bs-toggle="button" type="button" aria-expanded="false" aria-label="Toggle theme color">
+        <span class="daylight filter-white"></span>
+      </button>
+    </div>
+    <script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/theme-toggler.js"></script>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" hreflang="en" href="/">Notes on Cloud Computing</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" hreflang="en" href="/" aria-label="Notes on Cloud Computing Home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" hreflang="en" href="/about/" aria-label="Notes on Cloud Computing About">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" hreflang="en" href="/posts/index.html" aria-label="Notes on Cloud Computing Posts">Posts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" hreflang="en" href="/tags/" aria-label="Notes on Cloud Computing Tags">Tags</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" hreflang="en" href="/gallery/" aria-label="Notes on Cloud Computing Gallery of images">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" hreflang="en" href="/contact/" aria-label="Notes on Cloud Computing Contact form">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://github.com/carlesloriente/carlesloriente.github.io" target="_blank" hreflang="en" rel="noreferrer" class="nx-p-2 nx-text-current"><img class="nav-github" alt="NotesOnCloudComputing Github repo stars" src="https://img.shields.io/github/stars/carlesloriente/carlesloriente.github.io?style=social"></a>
+            </li>
+            <li class="nav-item">
+              <a href="https://ko-fi.com/S6S1O2GTU" target="_blank" hreflang="en" rel="noopener" title="Support me on ko-fi.com"><img class="nav-kofi" src="/assets/vendor/nocc-bootstrap-theme/images/nocc/kofi_s_logo_nolabel.webp" border="0" alt="Buy Me a Coffee at ko-fi.com" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    </header>
+    <main class="flex-shrink-0">
+  
+  <section class="masthead sechead" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.5)0%,rgba(0,0,0,0.5) 100%), url('/assets/images/bg-fedora.webp')">
+  
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="post-heading">
+            <h1 class="mx-auto">Compile and install GLIBC 2.18 in CentOS 7</h1></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="meta text-center">Posted by
+            <a href="/about/" hreflang="en" aria-label="Author">Carles Loriente </a>  on December 28, 2019 &middot; <span class="reading-time" title="Estimated read time"> 1 min  read</span>
+</div>
+          <hr class="border border-primary opacity-25">
+          <p>Download and compile GLIBC 2.18 in CentOS executing the following script.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Check gist comments to verify system PATH and or adapt it.</span>
+wget https://ftp.gnu.org/gnu/glibc/glibc-2.18.tar.gz
+<span class="nb">tar </span>zxvf glibc-2.18.tar.gz
+<span class="nb">cd </span>glibc-2.18
+<span class="nb">mkdir </span>build
+<span class="nb">cd </span>build
+../configure <span class="nt">--prefix</span><span class="o">=</span>/opt/glibc-2.18
+make <span class="nt">-j4</span>
+<span class="nb">sudo </span>make <span class="nb">install
+export </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$LD_LIBRARY_PATH</span>:/opt/glibc-2.18/lib
+</code></pre></div></div>
+
+<p>Download GitHub Gist <a href="https://gist.github.com/carlesloriente/ab3387e7d035ed400dc2816873e9089e" target="_blank">compile-and-install-glibc_2.18-centos-7.sh</a></p>
+
+          <hr>
+          <div class="text-center">
+            <p><mark>Found a snippet that saved your day?</mark> Consider <a href="https://ko-fi.com/S6S1O2GTU" target="_blank" rel="noopener" title="Support me on ko-fi.com">dropping a tip!</a></p>
+            <script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/ko-fi/widget_2.min.js"></script>
+            <script type="text/javascript">kofiwidget2.init("Buy me a coffee", "#176391", "S6S1O2GTU");kofiwidget2.draw();</script>
+          </div>
+          <hr>
+          <div class="clearfix">
+            
+              
+                
+              
+            
+            
+            <a class="btn btn-primary float-start" href="/posts/2019-12-27-routeros-export-and-send-config/" hreflang="en" data-bs-toggle="tooltip" data-bs-placement="top" title="RouterOS export and send by mail config file">&larr; Previous<span class="d-none d-md-inline">
+                Post</span></a>
+            
+            
+            <a class="btn btn-primary float-end" href="/posts/2019-12-29-add-git-repo-as-submodule/" hreflang="en" data-bs-toggle="tooltip" data-bs-placement="top" title="Add submodule Git">Next<span class="d-none d-md-inline">
+                Post</span> &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="divider"></div>
+  </section>
+  </main>
+  
+    <!-- Footer -->
+<footer class="footer mt-auto">
+  <div class="container">
+    <ul class="list-inline text-center">
+      <li class="list-inline-item rounded-circle">
+        <a href="mailto:fi1nziulf@mozmail.com" hreflang="en" aria-label="fi1nziulf@mozmail.com address">
+          <img class="filter-white" src="/assets/vendor/nocc-bootstrap-theme/icons/1.11.0/envelope-at-fill.svg" width="32px" height="32px" aria-hidden="true">
+        </a>
+      </li><li class="list-inline-item rounded-circle">
+        <a href="https://twitter.com/godarthvader" hreflang="en" target="_blank" rel="noreferrer" aria-label="godarthvader Twitter">
+          <img class="filter-white" src="/assets/vendor/nocc-bootstrap-theme/icons/1.11.0/twitter-x.svg" width="32px" height="32px" aria-hidden="true">
+        </a>
+      </li><li class="list-inline-item rounded-circle">
+        <a href="https://www.linkedin.com/in/carles-loriente" hreflang="en" target="_blank" rel="noreferrer" aria-label="carles-loriente Linkedin">
+          <img class="filter-white" src="/assets/vendor/nocc-bootstrap-theme/icons/1.11.0/linkedin.svg" width="32px" height="32px" aria-hidden="true">
+        </a>
+      </li><li class="list-inline-item rounded-circle">
+        <a href="https://github.com/carlesloriente" hreflang="en" target="_blank" rel="noreferrer" aria-label="carlesloriente GitHub">
+          <img class="filter-white" src="/assets/vendor/nocc-bootstrap-theme/icons/1.11.0/github.svg" width="32px" height="32px" aria-hidden="true">
+        </a>
+      </li></ul>
+    <p class="copyright text-copyright">Copyright &copy; <a href="/about/" hreflang="en" aria-label="Notes on Cloud Computing author">Carles Loriente</a> 2024<br />
+      <a href="https://bootstrap-theme.notesoncloudcomputing.com/" hreflang="en" target="_blank" rel="noreferrer" aria-label="NOCC Bootstrap Theme">NOCC Bootstrap Theme</a> v.1.0.6 created by <a href="https://www.notesoncloudcomputing.com/about/" hreflang="en" target="_blank" rel="noreferrer" aria-label="Autor website https://www.notesoncloudcomputing.com/about/">Carles Loriente</a><br />
+      Build with <a href="https://jekyllrb.com" hreflang="en" target="_blank" rel="noreferrer" aria-label="Jekyll">Jekyll</a><br />
+      Proudly hosted by <a href="https://github.com" hreflang="en" target="_blank" rel="noreferrer" aria-label="Github"><strong>GitHub</strong></a>
+    </p>
+  </div>
+</footer>
+
+    
+<script type="text/javascript" rel="preload" src="/assets/vendor/nocc-bootstrap-theme/js/jquery/3.7.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/bootstrap/5.3.3/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

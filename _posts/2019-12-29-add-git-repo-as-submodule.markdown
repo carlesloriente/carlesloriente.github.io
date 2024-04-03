@@ -3,7 +3,10 @@ layout: post
 comments: true
 title: "Add submodule Git"
 date: 2019-12-29 9:53:23 +0200
-categories: git
+categories: git submodule
+tags:
+- git
+- submodule
 background: '/assets/images/bg-git.webp'
 ---
 
