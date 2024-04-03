@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html class="h-100" lang="en" data-bs-theme="light">
+  <head>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>VPN server using IKEv2 IPSec with certificates on RouterOS</title>
+  <meta name="description" content="The following file (rsc) for Mikrotik RouterOS v6.45+ configures an VPN usign IKEv2 IPSec">
+  <meta name="google-site-verification" content="imA3xlKv43a50bTrOlAa3eWQ3VBCazAY4Y20KImDXOM">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="godarthvader">
+  <meta name="twitter:creator" content="godarthvader">
+  <meta property="og:url" content="https://www.notesoncloudcomputing.com/posts/2021-04-23-configure-vpn-server-ikev2-ipsec-with-certificates-mikrotik-routeros/">
+  <meta property="og:title" content="VPN server using IKEv2 IPSec with certificates on RouterOS">
+  <meta property="og:description" content="The following file (rsc) for Mikrotik RouterOS v6.45+ configures an VPN usign IKEv2 IPSec">
+  <meta property="og:image" content="https://www.notesoncloudcomputing.com/assets/images/bg-mikrotik.webp">
+  <meta property="og:type" content="article">
+  <link rel="stylesheet" href="/assets/vendor/nocc-bootstrap-theme/css/nocc-theme.css" type="text/css">
+<link rel="stylesheet" href="/assets/css/styles.css" type="text/css">
+  <link rel="canonical" href="https://www.notesoncloudcomputing.com/posts/2021-04-23-configure-vpn-server-ikev2-ipsec-with-certificates-mikrotik-routeros/">
+  <link rel="alternate" type="application/rss+xml" title="Notes on Cloud Computing" href="/feed.xml">
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/images/favicon.png" type="image/png">
+  <link rel="manifest" href="/manifest.webmanifest"><!-- Global site tag (gtag.js) - Google Analytics -->
+<script type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id=G-YZN6D91Z4N" ></script>
+<script type="text/javascript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YZN6D91Z4N', {cookie_flags: 'SameSite=None;Secure'});
+</script>
+</head>
+  <body class="d-flex flex-column h-100" style="overflow-x: hidden;">
+    <header>
+        <div class="position-fixed bottom-0 end-0 mb-3 me-3">
+      <button class="btn-toggle py-2 d-flex align-items-center" id="bd-toggle" data-bs-toggle="button" type="button" aria-expanded="false" aria-label="Toggle theme color">
+        <span class="daylight filter-white"></span>
+      </button>
+    </div>
+    <script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/theme-toggler.js"></script>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" hreflang="en" href="/">Notes on Cloud Computing</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" hreflang="en" href="/" aria-label="Notes on Cloud Computing Home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" hreflang="en" href="/about/" aria-label="Notes on Cloud Computing About">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" hreflang="en" href="/posts/index.html" aria-label="Notes on Cloud Computing Posts">Posts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" hreflang="en" href="/tags/" aria-label="Notes on Cloud Computing Tags">Tags</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" hreflang="en" href="/gallery/" aria-label="Notes on Cloud Computing Gallery of images">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" hreflang="en" href="/contact/" aria-label="Notes on Cloud Computing Contact form">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://github.com/carlesloriente/carlesloriente.github.io" target="_blank" hreflang="en" rel="noreferrer" class="nx-p-2 nx-text-current"><img class="nav-github" alt="NotesOnCloudComputing Github repo stars" src="https://img.shields.io/github/stars/carlesloriente/carlesloriente.github.io?style=social"></a>
+            </li>
+            <li class="nav-item">
+              <a href="https://ko-fi.com/S6S1O2GTU" target="_blank" hreflang="en" rel="noopener" title="Support me on ko-fi.com"><img class="nav-kofi" src="/assets/vendor/nocc-bootstrap-theme/images/nocc/kofi_s_logo_nolabel.webp" border="0" alt="Buy Me a Coffee at ko-fi.com" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    </header>
+    <main class="flex-shrink-0">
+  
+  <section class="masthead sechead" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.5)0%,rgba(0,0,0,0.5) 100%), url('/assets/images/bg-mikrotik.webp')">
+  
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="post-heading">
+            <h1 class="mx-auto">VPN server using IKEv2 IPSec with certificates on RouterOS</h1></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="meta text-center">Posted by
+            <a href="/about/" hreflang="en" aria-label="Author">Carles Loriente </a>  on April 23, 2021 &middot; <span class="reading-time" title="Estimated read time"> 4 mins  read</span>
+</div>
+          <hr class="border border-primary opacity-25">
+          <p>The following file (rsc) for Mikrotik RouterOS v6.45+ configures an VPN usign IKEv2 IPSec</p>
+
+<p>Before use it, please replace the following values:</p>
+
+<ul>
+  <li>CA.yourdomain.com with the CA domain</li>
+  <li>YOURSTATE with the state (optional)</li>
+  <li>YOURORG with the name of the organization</li>
+  <li>YOURCOUNTRY with the country code (https://www.iban.com/country-codes){:target=”_blank”}</li>
+  <li>vpn.yourdomain.com with the VPN hostname</li>
+  <li>1.1.1.1 with the vpn IP</li>
+</ul>
+
+<pre><code class="language-rsc"># Mikrotik RouterOs IKEv2/IPSec VPN Full configuration
+# RouterOS v6.45+
+
+/system identity
+set name=mikrotik_aws_vpn_ikev2
+
+/system clock
+set time-zone-name=Europe/Dublin
+
+/system ntp client
+set enabled=yes server-dns-names=pool.ntp.org
+
+/system logging
+add topics=firewall action=memory
+
+/system logging 
+add topics=ipsec,!debug action=memory
+
+/interface bridge
+add name=bridge
+
+/interface wireless security-profiles
+set [ find default=yes ] supplicant-identity=MikroTik
+
+/interface bridge port
+add bridge=bridge interface=ether1
+
+/ip service
+set telnet disabled=yes
+set ftp disabled=yes
+set www disabled=yes
+set api disabled=yes
+set api-ssl disabled=yes
+
+/ip dhcp-client
+add dhcp-options=hostname,clientid disabled=no interface=bridge
+
+/ip pool
+add name=pool-vpn ranges=10.0.254.200-10.0.254.250
+
+#
+# CA Certificate
+
+/certificate add name=CA.yourdomain.com country=YOURCOUNTRY state=YOURSTATE locality=YOURSTATE organization=YOURORG common-name=CA.yourdomain.com subject-alt-name=DNS:CA.yourdomain.com key-size=2048 days-valid=3650 trusted=yes key-usage=digital-signature,key-encipherment,data-encipherment,key-cert-sign,crl-sign 
+
+/certificate sign CA.yourdomain.com
+
+/certificate add name=vpn.yourdomain.com country=ES state=YOURSTATE locality=YOURSTATE organization=YOURORG unit=VPN common-name=vpn.yourdomain.com subject-alt-name=DNS:vpn.yourdomain.com key-size=2048 days-valid=1095 trusted=yes key-usage=tls-server
+
+/certificate sign vpn.yourdomain.com ca=CA.yourdomain.com
+
+#
+# Client Certificate 
+
+certificate add name=~clienttemplate@vpn.yourdomain.com country=ES state=YOURSTATE locality=YOURSTATE organization=YOURORG common-name=~client-template@vpn.yourdomain.com subject-alt-name=email:~clienttemplate@vpn.yourdomain.com key-size=2048 days-valid=365 trusted=yes key-usage=tls-client
+
+#
+# IPSec
+
+/ip ipsec mode-config add address-pool=pool-vpn address-prefix-length=32 name="modeconf vpn.yourdomain.com" split-include=0.0.0.0/0 static-dns=8.8.8.8 system-dns=no 
+
+/ip ipsec proposal add auth-algorithms=sha512,sha256,sha1 enc-algorithms=aes-256-cbc,aes-256-ctr,aes-256-gcm,aes-192-ctr,aes-192-gcm,aes-128-cbc,aes-128-ctr,aes-128-gcm lifetime=8h name="proposal vpn.yourdomain.com" pfs-group=none
+
+/ip ipsec profile add dh-group=modp2048,modp1536,modp1024 enc-algorithm=aes-256,aes-192,aes-128 hash-algorithm=sha256 name="profile vpn.yourdomain.com" nat-traversal=yes proposal-check=obey 
+
+/ip ipsec policy group add name="group vpn.yourdomain.com"
+
+/ip ipsec policy add dst-address=10.0.254.0/24 group="group vpn.yourdomain.com" proposal="proposal vpn.yourdomain.com" src-address=0.0.0.0/0 template=yes sa-src-address=0.0.0.0 sa-dst-address=0.0.0.0 ipsec-protocols=esp level=require protocol=all action=encrypt
+
+/ip ipsec peer add exchange-mode=ike2 address=0.0.0.0/0 name="peer" passive=yes send-initial-contact=yes profile="profile vpn.yourdomain.com"
+
+#
+# Firewall
+
+/ip firewall nat
+add action=masquerade chain=srcnat out-interface=bridge src-address=10.0.254.200-10.0.254.250
+add chain=srcnat
+
+#Input Chain Rules
+/ip firewall filter 
+add action=accept chain=input connection-state=established,related,untracked comment="DEFAULT: Accept established, related, and untracked traffic." 
+add action=drop chain=input connection-state=invalid comment="DEFAULT: Drop invalid traffic 1." 
+add action=accept chain=input protocol=icmp comment="DEFAULT: Accept ICMP traffic." 
+
+#Forward Chain Rules
+/ip firewall filter 
+add action=accept chain=forward ipsec-policy=in,ipsec comment="DEFAULT: Accept In IPsec policy." 
+add action=accept chain=forward ipsec-policy=out,ipsec comment="DEFAULT: Accept Out IPsec policy." 
+add action=accept chain=forward connection-state=established,related,untracked comment="DEFAULT: Accept established, related, and untracked traffic." 
+add action=drop chain=forward connection-state=invalid comment="DEFAULT: Drop invalid traffic 2." 
+
+# No WAN network
+/ip firewall filter add place-before=1 protocol=udp dst-port=500,4500 dst-address=1.1.1.1 action=accept chain=input comment="Allow UDP 500,4500 IPSec for peer" 
+/ip firewall filter add place-before=1 protocol=ipsec-esp dst-address=1.1.1.1 action=accept chain=input comment="Allow IPSec-esp for peer"
+/ip firewall filter add chain=input src-address=10.0.254.0/24 ipsec-policy=in,ipsec action=accept place-before=1 disabled=no comment="IKE2: Allow ALL incoming traffic from 10.0.254.0/24 to this RouterOS"
+/ip firewall filter add chain=forward src-address=10.0.254.0/24 dst-address=10.2.0.0/16 ipsec-policy=in,ipsec action=accept place-before=1 disabled=no comment="IKE2: Allow ALL forward traffic from 10.0.254.0/24 to AWS IRELAND network"
+/ip firewall filter add chain=forward src-address=10.0.254.0/24 dst-address=0.0.0.0/0 ipsec-policy=in,ipsec action=accept place-before=1 disabled=no comment="IKE2: Allow ALL forward traffic from 10.0.254.0/24 to ANY network" 
+
+# WAN
+/ip firewall nat add place-before=0 chain=srcnat src-address=10.0.254.0/24 out-interface=ether1 ipsec-policy=out,none action=masquerade to-addresses=1.1.1.1 comment="SRC-NAT IKE2:10.0.254.0/24 --&gt; ether1 traffic"
+/ip firewall mangle add action=change-mss chain=forward new-mss=1360 src-address=10.0.254.0/24 protocol=tcp tcp-flags=syn tcp-mss=!0-1360 ipsec-policy=in,ipsec passthrough=yes comment="IKE2: Clamp TCP MSS from 10.0.254.0/24 to ANY"
+/ip firewall mangle add action=change-mss chain=forward new-mss=1360 dst-address=10.0.254.0/24 protocol=tcp tcp-flags=syn tcp-mss=!0-1360 ipsec-policy=out,ipsec passthrough=yes comment="IKE2: Clamp TCP MSS from ANY to 10.0.254.0/24"
+
+/certificate export-certificate CA.yourdomain.com 
+</code></pre>
+
+<p>Download GitHub Gist <a href="https://gist.github.com/carlesloriente/70fbc993e867f838f8d476097d372518" target="_blank">mikrotik_routeros_vpn-ikev2-ipsec.rsc</a></p>
+
+<p>Then you can use the following commands in routeros to create the user certificates, please remember to replace using your own values</p>
+
+<ul>
+  <li>CA.yourdomain.com with the CA domain</li>
+  <li>vpn.yourdomain.com with the VPN hostname</li>
+  <li>1.1.1.1 with the vpn IP</li>
+  <li>USERNAME with the username of the VPN connection</li>
+  <li>YOURPASSPHRASE with the passphrase of this certificate</li>
+</ul>
+
+<pre><code class="language-rsc"># Certificate creation for users
+
+/certificate add copy-from=~clienttemplate@vpn.yourdomain.com name=USERNAME@vpn.yourdomain.com common-name=USERNAME@vpn.yourdomain.com subject-alt-name=email:USERNAME@vpn.yourdomain.com
+/certificate sign USERNAME@vpn.yourdomain.com ca=CA.yourdomain.com
+/certificate export-certificate USERNAME@vpn.yourdomain.com type=pkcs12 export-passphrase=YOURPASSPHRASE
+/ip ipsec identity add auth-method=digital-signature certificate=vpn.yourdomain.com remote-certificate=USERNAME@vpn.yourdomain.com generate-policy=port-strict match-by=certificate mode-config="modeconf vpn.yourdomain.com" peer="peer 1.1.1.1" policy-template-group="group vpn.yourdomain.com" remote-id=user-fqdn:USERNAME@vpn.yourdomain.com
+</code></pre>
+
+<p>Download GitHub Gist <a href="https://gist.github.com/carlesloriente/94a203608009ee1bb3c6c335317e11a6" target="_blank">mikrotik-routeros_create-ipsec-ikev2-certificates_vpn_users.rsc</a></p>
+
+<p>The next step is download the certificates (e.g. using winbox) to your computer and set up the VPN connection.</p>
+<h2 id="related-articles">Related articles</h2>
+
+<p><a href="https://www.notesoncloudcomputing.com/fedora/vpn/ikev2/2021/04/24/configure-ikev2-vpn-connection-fedora/">IKEv2 RoadWarrior VPN connection using p12 certificate on Fedora 31+</a></p>
+
+          <hr>
+          <div class="text-center">
+            <p><mark>Found a snippet that saved your day?</mark> Consider <a href="https://ko-fi.com/S6S1O2GTU" target="_blank" rel="noopener" title="Support me on ko-fi.com">dropping a tip!</a></p>
+            <script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/ko-fi/widget_2.min.js"></script>
+            <script type="text/javascript">kofiwidget2.init("Buy me a coffee", "#176391", "S6S1O2GTU");kofiwidget2.draw();</script>
+          </div>
+          <hr>
+          <div class="clearfix">
+            
+              
+                
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_config = function () {
+      this.page.url = 'https://www.notesoncloudcomputing.com/posts/2021-04-23-configure-vpn-server-ikev2-ipsec-with-certificates-mikrotik-routeros/';
+      this.page.identifier = 'https://www.notesoncloudcomputing.com/posts/2021-04-23-configure-vpn-server-ikev2-ipsec-with-certificates-mikrotik-routeros/';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://notes-on-cloud-infrastructure.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+              
+            
+            
+            <a class="btn btn-primary float-start" href="/posts/2020-08-02-configure-vpn-server-l2tp-ipsec-mikrotik-routeros/" hreflang="en" data-bs-toggle="tooltip" data-bs-placement="top" title="Configure a VPN server using L2TP IPSec with Mikrotik RouterOS">&larr; Previous<span class="d-none d-md-inline">
+                Post</span></a>
+            
+            
+            <a class="btn btn-primary float-end" href="/posts/2021-04-24-configure-ikev2-vpn-connection-fedora/" hreflang="en" data-bs-toggle="tooltip" data-bs-placement="top" title="VPN connection using p12 cert on Fedora 31+">Next<span class="d-none d-md-inline">
+                Post</span> &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="divider"></div>
+  </section>
+  </main>
+  
+    <!-- Footer -->
+<footer class="footer mt-auto">
+  <div class="container">
+    <ul class="list-inline text-center">
+      <li class="list-inline-item rounded-circle">
+        <a href="mailto:fi1nziulf@mozmail.com" hreflang="en" aria-label="fi1nziulf@mozmail.com address">
+          <img class="filter-white" src="/assets/vendor/nocc-bootstrap-theme/icons/1.11.0/envelope-at-fill.svg" width="32px" height="32px" aria-hidden="true">
+        </a>
+      </li><li class="list-inline-item rounded-circle">
+        <a href="https://twitter.com/godarthvader" hreflang="en" target="_blank" rel="noreferrer" aria-label="godarthvader Twitter">
+          <img class="filter-white" src="/assets/vendor/nocc-bootstrap-theme/icons/1.11.0/twitter-x.svg" width="32px" height="32px" aria-hidden="true">
+        </a>
+      </li><li class="list-inline-item rounded-circle">
+        <a href="https://www.linkedin.com/in/carles-loriente" hreflang="en" target="_blank" rel="noreferrer" aria-label="carles-loriente Linkedin">
+          <img class="filter-white" src="/assets/vendor/nocc-bootstrap-theme/icons/1.11.0/linkedin.svg" width="32px" height="32px" aria-hidden="true">
+        </a>
+      </li><li class="list-inline-item rounded-circle">
+        <a href="https://github.com/carlesloriente" hreflang="en" target="_blank" rel="noreferrer" aria-label="carlesloriente GitHub">
+          <img class="filter-white" src="/assets/vendor/nocc-bootstrap-theme/icons/1.11.0/github.svg" width="32px" height="32px" aria-hidden="true">
+        </a>
+      </li></ul>
+    <p class="copyright text-copyright">Copyright &copy; <a href="/about/" hreflang="en" aria-label="Notes on Cloud Computing author">Carles Loriente</a> 2024<br />
+      <a href="https://bootstrap-theme.notesoncloudcomputing.com/" hreflang="en" target="_blank" rel="noreferrer" aria-label="NOCC Bootstrap Theme">NOCC Bootstrap Theme</a> v.1.0.6 created by <a href="https://www.notesoncloudcomputing.com/about/" hreflang="en" target="_blank" rel="noreferrer" aria-label="Autor website https://www.notesoncloudcomputing.com/about/">Carles Loriente</a><br />
+      Build with <a href="https://jekyllrb.com" hreflang="en" target="_blank" rel="noreferrer" aria-label="Jekyll">Jekyll</a><br />
+      Proudly hosted by <a href="https://github.com" hreflang="en" target="_blank" rel="noreferrer" aria-label="Github"><strong>GitHub</strong></a>
+    </p>
+  </div>
+</footer>
+
+    
+<script type="text/javascript" rel="preload" src="/assets/vendor/nocc-bootstrap-theme/js/jquery/3.7.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/bootstrap/5.3.3/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="https://notes-on-cloud-infrastructure.disqus.com/count.js" async id="dsq-count-scr"></script>
+  </body>
+</html>

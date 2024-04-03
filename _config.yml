@@ -43,18 +43,16 @@ google_analytics        : G-YZN6D91Z4N
 # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
 disqus_shortname        : notes-on-cloud-infrastructure
 
-layouts_dir             : _layouts
 data_dir                : _data
 includes_dir            : _includes
+layouts_dir             : _layouts
+plugins_dir            : _plugins
 tags_dir                : tags
 
 collections:
   posts:
     permalink           : /posts/:name/
     output              : true
-#  post_tags:
-#    permalink           : /tags/:name/
-#    output              : true
 
 defaults:
   - scope:
@@ -62,11 +60,6 @@ defaults:
       type              : posts
     values:
       layout            : post
-#  - scope:
-#      path              : "post_tags"
-#      type              : tags
-#    values:
-#      layout            : tag
   - scope:
       path              : 'assets/**'
     values:
@@ -94,10 +87,7 @@ plugins:
 sass:
   load_paths:
     - ./_sass
-#    - ./includes
-#    - ./node_modules/bootstrap/scss
-#    - ./assets/vendor/nocc-bootstrap-theme/styles
-  style:              compressed
+  style                 : compressed
 
 
-exclude: ["bd27dc68a01f40a4826fed8a45e2316e.txt", "AUTHORS.md", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md", "LICENSE", "manifest.webmanifest", "README.md", "resume.html", "SECURITY.md", "techstack.md", "techstack.yml", "WORKFLOW.md", "bin", "gists", "node_modules", "ahrefs_6f259190b96e078821b745c49ce5f85e18b0d0addfd0ea6778eeafc411f82bee", "BingSiteAuth.xml", "CNAME", "yandex_f833f55647ca1132.html", "Gemfile", "Gemfile.lock", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
+exclude: ["bd27dc68a01f40a4826fed8a45e2316e.txt", "AUTHORS.md", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md", "LICENSE", "manifest.webmanifest", "package.json", "package-lock.json", "README.md", "resume.html", "SECURITY.md", "techstack.md", "techstack.yml", "WORKFLOW.md", "bin", "gists", "node_modules", "ahrefs_6f259190b96e078821b745c49ce5f85e18b0d0addfd0ea6778eeafc411f82bee", "BingSiteAuth.xml", "CNAME", "yandex_f833f55647ca1132.html", "Gemfile", "Gemfile.lock", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
