@@ -31,8 +31,7 @@ tsconfig.json
 temp/*
 
 # Jekyll build
-_site/*
-_site_dev/*
+_site*
 
 # Exception
 !**/.gitkeep
