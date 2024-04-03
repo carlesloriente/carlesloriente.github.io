@@ -1,10 +1,14 @@
 ---
 layout: post
 comments: true
-title:  "How to sign kernel modules for SecureBoot in Virtualbox"
-date:   2024-01-30 11:23:45 +0200
+title: "How to sign kernel modules for SecureBoot in Virtualbox"
+date: 2024-01-30 11:23:45 +0200
 categories: virtualbox virtualization kernel-modules signing certificates uefi
+tags:
+- virtualbox
+- kernel-modules
 background: '/assets/images/bg-virtualbox.webp'
+#redirect_from: "/virtualbox/virtualization/kernel-modules/signing/certificates/uefi/2024/01/30/virtualbox-signing-kernel-modules-secureboot.html"
 ---
 
 ## Simplifying Secure Boot: Automating Kernel Module Signing with VirtualBox Support

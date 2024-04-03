@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<main class="flex-shrink-0">
+  <section class="smallhead sechead"></section>
+  <section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-header">
+            <h1 class="post-title">Notes with tag #{{ page.title | escape }}</h1>
+          </div>
+          <div class="post-content">
+            {{ content }}
+            <p class="fw-bolder text-uppercase">Number of articles: {{ site.posts | where_exp: 'posts', 'posts.tags contains page.title' | size }}</p>
+            <ul class="post-list">
+              {% assign tagpost = site.posts | where_exp: 'posts', 'posts.tags contains page.title' %}</p>
+              {%- for tag in tagpost -%}
+              <li>
+                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+                <p>
+                  <a href="{{ tag.url | relative_url }}" hreflang="{{ site.lang }}" aria-label="{{ tag.title | escape }}">{{ tag.title | escape }}</a>
+                </p>
+              </li>
+              {%- endfor -%}
+            </ul>
+            <p>Browse more <a href="/tags" hreflang="{{ site.lang }}" aria-label="Tags index">tags</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="divider"></div>
+  </section>
+</main>

@@ -4,6 +4,9 @@ comments: true
 title: "A simple PHP script for upload files to s3 using AWS SDK"
 date: 2020-01-04 11:23:25 +0200
 categories: aws php
+tags:
+- aws
+- php
 background: '/assets/images/bg-aws-logo.webp'
 ---
 

@@ -1,0 +1,14 @@
+---
+permalink: /_site_tags_missing.txt
+sitemap: false
+published: false
+---
+{% if jekyll.environment != 'production' %}
+{%- assign post_tags = site.post_tags | map: "title" -%}
+{%- for tag in site.tags -%}
+  {%- if post_tags contains tag[0] -%}
+  {% else %}
+{{ tag[0] }}
+  {%- endif -%}
+{%- endfor -%}
+{% endif %}

@@ -1,9 +1,12 @@
 ---
 layout: post
 comments: true
-title:  "Host a static website for free using Github Pages"
-date:   2019-12-30 12:23:45 +0200
-categories: website github
+title: "Host a static website for free using Github Pages"
+date: 2019-12-30 12:23:45 +0200
+categories: github website
+tags:
+- github
+- website
 background: '/assets/images/bg-github.webp'
 ---
 

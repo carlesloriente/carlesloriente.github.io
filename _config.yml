@@ -1,41 +1,103 @@
-title:              Notes on cloud computing
-author:             Carles Loriente
-url:                "https://www.notesoncloudcomputing.com"
-#baseurl:            ""
-#url:                "http://localhost:4000"
+landing                 : false
+title                   : Notes on Cloud Computing
+author                  : Carles Loriente
+url                     : "https://www.notesoncloudcomputing.com"
+timezone                : "Europe/Madrid"
+description             : A collection of curated opinions and code snippets on cloud tech <br>Bridging knowledge and implementation for enthusiasts and professionals alike
+full_description        : >
+ A collection of curated opinions and code snippets on cloud tech <br>Bridging knowledge and implementation for enthusiasts and professionals alike
+gh_repository           : https://github.com/carlesloriente/bootstrap-theme-jekyll/
+encoding                : "utf-8"
+locale                  : "en-US"
+lang                    : "en"
+formemail               : xwkglaqr
+permalink               : pretty
 
-description:        A collection of curated opinions and code snippets on cloud tech. Bridging knowledge and implementation for enthusiasts and professionals alike
+# Features
+critical_css            : false
 
-encoding:           "utf-8"
-locale:             "en-US"
-lang:               "en"
-email:              "fi1nziulf@mozmail.com"
-formemail:          xwkglaqr
-permalink:          pretty
+# Theme Notice (please don't remove it ;))
+theme_version           : v.1.0.6
+theme_name              : NOCC Bootstrap Theme
+theme_repo              : https://github.com/carlesloriente/bootstrap-theme-jekyll/
+theme_url               : https://bootstrap-theme.notesoncloudcomputing.com/
+theme_author            : Carles Loriente
+theme_author_url        : https://www.notesoncloudcomputing.com/about/
+theme_download          : https://github.com/carlesloriente/bootstrap-theme-jekyll/archive/refs/heads/main.zip
+theme_package           : https://www.npmjs.com/nocc-bootstrap-theme
+theme_logo              : "/assets/vendor/nocc-bootstrap-theme/images/nocc/nocc_logo.webp"
 
 # Social Profiles
-twitter_username:   godarthvader
-github_username:    carlesloriente
-facebook_username:  
-instagram_username:  
-linkedin_username:  carles-loriente
+email                   : "fi1nziulf@mozmail.com"
+twitter_username        : godarthvader
+github_username         : carlesloriente
+linkedin_username       : carles-loriente
+kofi                    : S6S1O2GTU
 
 # Add your google-analytics ID here to activate google analytics
-google_analytics:   G-YZN6D91Z4N
+google_site_verification: imA3xlKv43a50bTrOlAa3eWQ3VBCazAY4Y20KImDXOM
+google_analytics        : G-YZN6D91Z4N
 
 # Disqus Comments
 # Leave shortname blank to disable comments site-wide.
 # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
-disqus:
-    shortname: notes-on-cloud-infrastructure
+disqus_shortname        : notes-on-cloud-infrastructure
+
+layouts_dir             : _layouts
+data_dir                : _data
+includes_dir            : _includes
+tags_dir                : tags
+
+collections:
+  posts:
+    permalink           : /posts/:name/
+    output              : true
+#  post_tags:
+#    permalink           : /tags/:name/
+#    output              : true
+
+defaults:
+  - scope:
+      path              : "posts"
+      type              : posts
+    values:
+      layout            : post
+#  - scope:
+#      path              : "post_tags"
+#      type              : tags
+#    values:
+#      layout            : tag
+  - scope:
+      path              : 'assets/**'
+    values:
+      sitemap           : false
+
+# Markdown Processors
+kramdown:
+  auto_ids              : true
+  entity_output         : as_char
+  toc_levels            : [1, 2, 3, 4, 5, 6]
+  smart_quotes          : lsquo,rsquo,ldquo,rdquo
+  input                 : GFM
+  hard_wrap             : false
+  footnote_nr           : 1
+  show_warnings         : false
 
 # Build settings
-markdown:           kramdown
-paginate:           10
-paginate_path:      "/posts/page:num/"
+paginate                : 10
+paginate_path           : "/posts/page:num/"
 plugins:
   - jekyll-feed
   - jekyll-paginate
-  - jekyll-sitemap
+  - jekyll-redirect-from
 
-exclude: [resume.html, README.md, LICENSE, SECURITY.md, techstack.md, yandex_f833f55647ca1132.html]
+sass:
+  load_paths:
+    - ./_sass
+#    - ./includes
+#    - ./node_modules/bootstrap/scss
+#    - ./assets/vendor/nocc-bootstrap-theme/styles
+  style:              compressed
+
+
+exclude: ["bd27dc68a01f40a4826fed8a45e2316e.txt", "AUTHORS.md", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md", "LICENSE", "manifest.webmanifest", "README.md", "resume.html", "SECURITY.md", "techstack.md", "techstack.yml", "WORKFLOW.md", "bin", "gists", "node_modules", "ahrefs_6f259190b96e078821b745c49ce5f85e18b0d0addfd0ea6778eeafc411f82bee", "BingSiteAuth.xml", "CNAME", "yandex_f833f55647ca1132.html", "Gemfile", "Gemfile.lock", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]

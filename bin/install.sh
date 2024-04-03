@@ -1,5 +1,5 @@
 #!/bin/bash
 
+bundle config path 'vendor/bundle' --local
 bundle install
-sudo gem pristine ffi --version 1.11.3
-
+export GEM_PATH=$(pwd)/vendor/bundle

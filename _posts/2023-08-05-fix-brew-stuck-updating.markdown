@@ -4,13 +4,16 @@ comments: true
 title: "Fix Brew stuck/hangs updating in MacOs"
 date: 2023-08-05 10:53:45 +0200
 categories: fix brew update stuck cli macos
+tags:
+- macos
+- brew
 background: '/assets/images/2023-08-05-fix-brew-stuck-updating.webp'
 ---
 
 The [brew (Hombrebrew)](https://brew.sh/index){:target="_blank"} package manager is a mush have tool for developers using macOs. It enables you to install, update, and manage a wide range of software packages from the command line.
 However, sometimes you might encounter issues when updating. If brew update command get stuck you can execute the following commands to fix it.
 
-```
+```bash
 #!/bin/bash
 
 # Full script for fixing homebrew update error

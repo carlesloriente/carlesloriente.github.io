@@ -4,7 +4,11 @@ comments: true
 title: "Configure a VPN server using PPTP with Mikrotik RouterOS"
 date: 2020-08-01 10:23:33 +0200
 categories: routeros mikrotik vpn
+tags:
+- routeros
+- mikrotik
 background: '/assets/images/bg-mikrotik.webp'
+#redirect_from: "/routeros/mikrotik/vpn/2020/08/01/configure-vpn-server-pptp-mikrotik-routeros.html"
 ---
 
 The following file (rsc) for Mikrotik RouterOS v6.45+ configures an VPN usign PPTP
