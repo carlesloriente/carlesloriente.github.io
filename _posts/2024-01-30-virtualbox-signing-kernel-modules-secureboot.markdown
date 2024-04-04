@@ -8,7 +8,7 @@ tags:
 - virtualbox
 - kernel-modules
 background: '/assets/images/bg-virtualbox.webp'
-#redirect_from: "/virtualbox/virtualization/kernel-modules/signing/certificates/uefi/2024/01/30/virtualbox-signing-kernel-modules-secureboot.html"
+redirect_from: "/virtualbox/virtualization/kernel-modules/signing/certificates/uefi/2024/01/30/virtualbox-signing-kernel-modules-secureboot.html"
 ---
 
 ## Simplifying Secure Boot: Automating Kernel Module Signing with VirtualBox Support

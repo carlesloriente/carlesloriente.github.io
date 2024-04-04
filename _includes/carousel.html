@@ -1,38 +1,39 @@
-<section class="homehead">
-  <div class="mx-auto">
-    <div id="carouselRide" class="carousel slide carousel-fade" data-bs-ride="true">
-      <div class="carousel-inner">
-        <div class="overlay"></div>
-        <div class="page-heading">
-        {% if page.title %}
-          <h1 class="col-lg-6 mx-auto">{{ page.title }}</h1>
-        {% else %}
-          <h1 class="col-lg-6 mx-auto">{{ site.title }}</h1>
-        {% endif %}
-        {% if site.description %}
-          <h2 class="subheading col-lg-8 mx-auto">{{ site.description }}</h2>
-        {% endif %}
-        </div>
-        {% for image in page.carousel -%}
-          <div class="carousel-item" data-bs-interval="20000">
-            <img src="{{ image }}" class="d-block w-100" aria-hidden="true">
+      <section class="homehead">
+        <div class="mx-auto">
+          <div id="carouselRide" class="carousel slide carousel-fade" data-bs-ride="true">
+            <div class="carousel-inner">
+              <div class="overlay"></div>
+              <div class="page-heading">
+              {%- if page.title %}
+                <h1 class="col-lg-6 mx-auto">{{ page.title }}</h1>
+              {% else -%}
+                <h1 class="col-lg-6 mx-auto">{{ site.title }}</h1>
+              {% endif -%}
+              {%- if site.description %}
+                <h2 class="subheading col-lg-8 mx-auto">{{ site.description }}</h2>
+              {% endif -%}
+              </div>
+              {%- for image in page.carousel %}
+              <div class="carousel-item" data-bs-interval="20000">
+                <img src="{{ image }}" class="d-block w-100" aria-hidden="true">
+              </div>
+              {% endfor -%}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselRide" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselRide" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
-        {% endfor -%}
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselRide" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselRide" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
-    <script type="text/javascript">
-      document.addEventListener('DOMContentLoaded', (event) => {
-        var carouselInner = document.getElementsByClassName('carousel-item');
-        var carouselItem = carouselInner[0];
-        carouselItem.className += ' active';
-      });
-    </script>
+        <script type="text/javascript">
+          document.addEventListener('DOMContentLoaded', (event) => {
+            var carouselInner = document.getElementsByClassName('carousel-item');
+            var carouselItem = carouselInner[0];
+            carouselItem.className += ' active';
+          });
+        </script>
+      </section>

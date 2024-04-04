@@ -8,7 +8,7 @@ tags:
 - fedora
 - glibc
 background: '/assets/images/bg-fedora.webp'
-#redirect_from: "/fedora/glibc/2019/12/28/compile-install-glibc-fedora.html"
+redirect_from: "/fedora/glibc/2019/12/28/compile-install-glibc-fedora.html"
 ---
 
 Download and compile GLIBC 2.18 in CentOS executing the following script.

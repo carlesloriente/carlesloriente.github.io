@@ -2,6 +2,7 @@ landing                 : false
 title                   : Notes on Cloud Computing
 author                  : Carles Loriente
 url                     : "https://www.notesoncloudcomputing.com"
+baseurl                 : "/" 
 timezone                : "Europe/Madrid"
 description             : A collection of curated opinions and code snippets on cloud tech <br>Bridging knowledge and implementation for enthusiasts and professionals alike
 full_description        : >
@@ -46,12 +47,15 @@ disqus_shortname        : notes-on-cloud-infrastructure
 data_dir                : _data
 includes_dir            : _includes
 layouts_dir             : _layouts
-plugins_dir            : _plugins
+plugins_dir             : _plugins
 tags_dir                : tags
 
 collections:
   posts:
     permalink           : /posts/:name/
+    output              : true
+  tags:
+    permalink           : /tags/:name/
     output              : true
 
 defaults:

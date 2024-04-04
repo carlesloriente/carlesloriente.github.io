@@ -18,7 +18,7 @@ cert_file = OpenSSL::X509::Certificate.new File.read 'bin/certs/wildcard.local.c
 pkey_file = OpenSSL::PKey::RSA.new File.read 'bin/certs/wildcard.local.key'
 cert_name = [["CN", WEBrick::Utils::getservername]]
 
-server = Server.new(:Port => 8000,
+server = Server.new(:Port => 8001,
                     :DocumentRoot => webroot,
                     :SSLEnable => true,
                     :SSLVerifyClient => OpenSSL::SSL::VERIFY_NONE,
@@ -28,7 +28,7 @@ server = Server.new(:Port => 8000,
 
 trap 'INT' do server.shutdown end
 
-link = "https://www.notesoncloudcomputing.local:8000/"
+link = "https://www.notesoncloudcomputing.local:8001/"
 if RbConfig::CONFIG['host_os'] =~ /mswin|mingw|cygwin/
   system "start \"\" \"#{link}\""
 elsif RbConfig::CONFIG['host_os'] =~ /darwin/

@@ -11,15 +11,15 @@ background: '/assets/images/bg-post.webp'
         </a>
         <p class="post-meta">Posted by
           {% if post.author -%}
-          <a href="/about/" hreflang="{{ site.lang }}" aria-label="{{ post.author }} author">{{ post.author }}</a> 
+          <a href="{{ 'about' | relative_url }}" hreflang="{{ site.lang }}" aria-label="{{ post.author }} author">{{ post.author }}</a> 
           {% else %}
-          <a href="/about/" hreflang="{{ site.lang }}" aria-label="{{ site.author }} author">{{ site.author }}</a> 
+          <a href="{{ 'about' | relative_url }}" hreflang="{{ site.lang }}" aria-label="{{ site.author }} author">{{ site.author }}</a> 
           {%- endif %}
           on {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
           {%- if post.tags %}
           <span class="tags">
             {% for tag in post.tags %}
-              <a href="{% include tag_url tag=tag %}" class="fs-6 link-info" hreflang="{{ site.lang }}" aria-label="{{ tag }}">#{{ tag }}</a> 
+              <a href="{{ site.tags_dir  | append: '/' | append: tag | relative_url }}" class="fs-6 link-info" hreflang="{{ site.lang }}" aria-label="{{ tag }}">#{{ tag }}</a> 
             {% endfor %}
             </span>
           {%- endif -%}

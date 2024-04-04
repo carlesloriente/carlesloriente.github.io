@@ -73,7 +73,9 @@ Just follow the instructions below, and then you can change the content of the p
 
 ### Add your content
 
-You need to create new posts/articles inside the folder named `_blog`. The files should be in markdown format. Use one of the sample files to learn more about the syntax and [Front Matter](https://jekyllrb.com/docs/front-matter/) settings. Remove the unwanted files.
+You need to create new posts/articles inside the folder named `_posts`. The files should be in markdown format. Use one of the sample files to learn more about the syntax and [Front Matter](https://jekyllrb.com/docs/front-matter/) settings. Remove the unwanted files.
+
+> **&#9940;** Posts should be named YEAR-MONTH-DAY-title.MARKUP (Note the MARKUP extension, which is usually .md or .markdown).
 
 ### Test your site locally
 
@@ -94,8 +96,7 @@ openssl verify -CAfile ca_selfsigned.crt wildcard.local.crt && sudo cp ca_selfsi
 - For the first time only, you must make your browser trust the wildcard domain cert.
   - Mozilla Firefox: After opening the URL `https://bootstrap-theme.local:8000`, the message "Warning: Potential Security Risk Ahead" is shown; click the `Advanced` button and then `Accept Risk & Continue`.
 
-> [!IMPORTANT]
-> Check this gist to create your own CA and wildcard cert.
+> **&#9432;** Check this gist to create your own CA and wildcard cert.
 
 ### Host your site
 
@@ -103,8 +104,7 @@ openssl verify -CAfile ca_selfsigned.crt wildcard.local.crt && sudo cp ca_selfsi
 
 You can host your site using GitHub Pages. Follow the [official guide](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site).
 
-> [!IMPORTANT]
-> GitHub Pages hosting is free; you need an account and repository.
+> **&#9432;** GitHub Pages hosting is free; you need an account and repository.
 
 #### in Amazon S3 bucket
 
