@@ -153,4 +153,4 @@ Download GitHub Gist [mikrotik-routeros_create-ipsec-ikev2-certificates_vpn_user
 The next step is download the certificates (e.g. using winbox) to your computer and set up the VPN connection.
 ## Related articles
 
-[IKEv2 RoadWarrior VPN connection using p12 certificate on Fedora 31+](https://www.notesoncloudcomputing.com/fedora/vpn/ikev2/2021/04/24/configure-ikev2-vpn-connection-fedora/)
+[IKEv2 RoadWarrior VPN connection using p12 certificate on Fedora 31+](/posts/2021/04/23/configure-ikev2-vpn-connection-fedora/)
