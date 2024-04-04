@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "VPN connection using p12 cert on Fedora 31+"
-date: 2021-04-24 12:43:23 +KEv2 RoadWarrior 0200
+date: 2021-04-24 12:43:23 +0200
 categories: fedora vpn ikev2
 tags:
 - fedora
@@ -114,4 +114,4 @@ When the script has finished the message "Please reboot the system" will appear 
 
 ## Related articles
 
-[Configure a VPN server using IKEv2 IPSec with certificates on Mikrotik RouterOS](https://www.notesoncloudcomputing.com/routeros/mikrotik/vpn/2021/04/23/configure-vpn-server-ikev2-ipsec-with-certificates-mikrotik-routeros/)
+[Configure a VPN server using IKEv2 IPSec with certificates on Mikrotik RouterOS](/posts/2021-04-23-configure-vpn-server-ikev2-ipsec-with-certificates-mikrotik-routeros/)
