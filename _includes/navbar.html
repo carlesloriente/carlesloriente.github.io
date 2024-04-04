@@ -3,11 +3,11 @@
         <span class="daylight filter-white"></span>
       </button>
     </div>
-    <script type="text/javascript" src="{{"/assets/vendor/nocc-bootstrap-theme/js/theme-toggler.js" | relative_url }}"></script>
+    <script type="text/javascript" src="{{ '/assets/vendor/nocc-bootstrap-theme/js/theme-toggler.js' | relative_url }}"></script>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand" hreflang="{{ site.lang }}" href="{{"/" | relative_url }}">{{ site.title | escape }}</a>
+        <a class="navbar-brand" hreflang="{{ site.lang }}" href="{{ site.baseurl }}">{{ site.title | escape }}</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -15,22 +15,22 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" hreflang="{{ site.lang }}" href="{{"/" | relative_url }}" aria-label="{{ site.title }} Home">Home</a>
+              <a class="nav-link" hreflang="{{ site.lang }}" href="{{ site.baseurl }}" aria-label="{{ site.title }} Home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" hreflang="{{ site.lang }}" href="{{"/about/" | relative_url }}" aria-label="{{ site.title }} About">About</a>
+              <a class="nav-link" hreflang="{{ site.lang }}" href="{{ 'about' | relative_url }}" aria-label="{{ site.title }} About">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" hreflang="{{ site.lang }}" href="{{ "/posts/index.html" | relative_url }}" aria-label="{{ site.title }} Posts">Posts</a>
+              <a class="nav-link" hreflang="{{ site.lang }}" href="{{ 'posts' | relative_url }}" aria-label="{{ site.title }} Posts">Posts</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" hreflang="{{ site.lang }}" href="{{ "/tags/" | relative_url }}" aria-label="{{ site.title }} Tags">Tags</a>
+              <a class="nav-link" hreflang="{{ site.lang }}" href="{{ site.tags_dir | relative_url }}" aria-label="{{ site.title }} Tags">Tags</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" hreflang="{{ site.lang }}" href="{{ "/gallery/" | relative_url }}" aria-label="{{ site.title }} Gallery of images">Gallery</a>
+              <a class="nav-link" hreflang="{{ site.lang }}" href="{{ 'gallery' | relative_url }}" aria-label="{{ site.title }} Gallery of images">Gallery</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" hreflang="{{ site.lang }}" href="{{"/contact/" | relative_url }}" aria-label="{{ site.title }} Contact form">Contact</a>
+              <a class="nav-link" hreflang="{{ site.lang }}" href="{{ 'contact' | relative_url }}" aria-label="{{ site.title }} Contact form">Contact</a>
             </li>
             <li class="nav-item">
               <a href="https://github.com/carlesloriente/carlesloriente.github.io" target="_blank" hreflang="{{ site.lang }}" rel="noreferrer" class="nx-p-2 nx-text-current"><img class="nav-github" alt="NotesOnCloudComputing Github repo stars" src="https://img.shields.io/github/stars/carlesloriente/carlesloriente.github.io?style=social"></a>

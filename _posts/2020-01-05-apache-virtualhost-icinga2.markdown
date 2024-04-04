@@ -8,7 +8,7 @@ tags:
 - icinga2
 - apache
 background: '/assets/images/bg-icinga2.webp'
-#redirect_from: "/icinga2/2020/01/05/apache-virtualhost-icinga2.html"
+redirect_from: "/icinga2/2020/01/05/apache-virtualhost-icinga2.html"
 ---
 
 [Icinga2](https://icinga.com/docs/icinga-2/latest/doc/01-about/){:target="_blank"} is a very cool monitoring tool, we have used it in several projects with satisfactory results. You can practically monitor anything that is needed. Local or remote infrastructure, baremetal or virtual, etc.

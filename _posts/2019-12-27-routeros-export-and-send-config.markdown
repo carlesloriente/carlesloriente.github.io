@@ -8,7 +8,7 @@ tags:
 - routeros
 - mikrotik
 background: '/assets/images/bg-mikrotik.webp'
-#redirect_from: "/routeros/mikrotik/2019/12/27/routeros-export-and-send-config.html"
+redirect_from: "/routeros/mikrotik/2019/12/27/routeros-export-and-send-config.html"
 ---
 
 If you have some hardware from Mikrotik, or use some virtual/cloud appliance that runs RouterOS, this little script could be very handy, exports and send by email the device configuration.

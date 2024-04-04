@@ -2,8 +2,8 @@
 layout: default
 ---
 
-<main class="flex-shrink-0">
-  {% include carousel.html %}
+  <main class="flex-shrink-0">
+{% include carousel.html %}
   <section>
     <div class="container my-5">
       <div class="row">
@@ -17,7 +17,7 @@ layout: default
               <h2 class="post-title">{{ post.title }}</h2>
               {%- if post.subtitle %}
               <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-              {%- else %}
+              {% else -%}
               <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 25 }}</h3>
               {%- endif -%}
             </a>
@@ -25,13 +25,13 @@ layout: default
               {%- if post.author %}
               {{ post.author }} 
               {%- else %}
-              <a href="/about/" hreflang="{{ site.lang }}" aria-label="Author">{{ site.author }}</a> 
+              <a href="{{ 'about' | relative_url }}" hreflang="{{ site.lang }}" aria-label="Author">{{ site.author }}</a> 
               {%- endif %} 
               on {{ post.date | date: '%B %d, %Y' }} &middot; {%- include read_time.html content=post.content -%}
               {%- if post.tags %}
               <span class="tags">
                 {% for tag in post.tags %}
-                  <a href="{% include tag_url tag=tag %}" class="fs-6 link-info" hreflang="{{ site.lang }}" aria-label="{{ tag }}">#{{ tag }}</a> 
+                  <a href="{{ site.tags_dir  | append: '/' | append: tag | relative_url }}" class="fs-6 link-info" hreflang="{{ site.lang }}" aria-label="{{ tag }}">#{{ tag }}</a> 
                 {% endfor %}
                 </span>
               {%- endif -%}
@@ -41,7 +41,7 @@ layout: default
           {% endfor -%}
           <!-- Pager -->
           <div class="clearfix">
-            <a class="btn btn-primary float-end" href="{{"/posts/" | relative_url }}" hreflang="{{ site.lang }}">View All Notes &rarr;</a>
+            <a class="btn btn-primary float-end" href="{{ 'posts' | relative_url }}" hreflang="{{ site.lang }}">View All Notes &rarr;</a>
           </div>
        </div>
     </div>

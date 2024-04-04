@@ -7,7 +7,7 @@ categories: clear flushcache mDNSResponder
 tags:
 - flushcache
 background: '/assets/images/2023-08-06-flushcache-and-kill-mDNSResponder.webp'
-#redirect_from: "/clear/flushcache/mdnsresponder/2023/08/06/flushcache-and-kill-mDNSResponder.html"
+redirect_from: "/clear/flushcache/mdnsresponder/2023/08/06/flushcache-and-kill-mDNSResponder.html"
 ---
 
 The local cache contains files and data that your system has saved to speed up certain processes, but sometimes, you want to ensure you're seeing the most up-to-date version, which clearing the cache can help with.

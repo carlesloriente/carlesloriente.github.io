@@ -11,7 +11,7 @@ sitemap: false
     <div class="container">
       <div class="row">
         <div class="mx-auto">
-          {% assign tag = page.title | sluggify %}
+          {% assign tag = page.title %}
           <div class="post-heading">
             <h1>{{ page.title | escape }}</h1>
           </div>
@@ -24,7 +24,7 @@ sitemap: false
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-content">
-            <p>Please check the <a href="/posts/index.html" hreflang="{{ site.lang }}" aria-label="Notes index">index of posts</a>, or browse the <a href="/tags/" hreflang="{{ site.lang }}" aria-label="tags cloud">tags cloud</a> for more content.</p>
+            <p>Please check the <a href="{{ 'posts' | relative_url }}" hreflang="{{ site.lang }}" aria-label="Notes index">index of posts</a>, or browse the <a href="{{ site.tags_dir | relative_url }}" hreflang="{{ site.lang }}" aria-label="tags cloud">tags cloud</a> for more content.</p>
           </div>
         </div>
       </div>
