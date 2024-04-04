@@ -1,13 +1,16 @@
 ---
 layout: post
 comments: true
-title:  "Host a static website for free using Github Pages"
-date:   2019-12-30 12:23:45 +0200
-categories: website github
-background: '/assets/images/bg-github.jpg'
+title: "Host a static website for free using Github Pages"
+date: 2019-12-30 12:23:45 +0200
+categories: github website
+tags:
+- github
+- website
+background: '/assets/images/bg-github.webp'
 ---
 
-[GitHub](https://github.com/) provides hosting for software development version control using Git. If you don't have an account go and create one [it's free"](/assets/images/its-free.png){:target="_blank"}.
+[GitHub](https://github.com/){:target="_blank"} provides hosting for software development version control using Git. If you don't have an account go and create one [it's free"](/assets/images/its-free.png){:target="_blank"}.
 
 **Which type of website can host GitHub**
 Take in mind that we are going to store a website in a Git repo, so don't expect advaced functionaIlities beyond some javascript and images.
@@ -34,7 +37,7 @@ You can host a:
 
 6. Initialize a local Git repo and push it contents to GitHub
 
-```
+```bash
 git init
 git add README.md
 git commit -m "first commit"
@@ -50,6 +53,6 @@ git push -u origin master
 
 **References**
 
-[Jekyll](https://jekyllrb/)<br/>
-[Clean Blog - Jekyll](https://startbootstrap.com/themes/clean-blog-jekyll/)<br/>
-[Getting started with GitHub Pages](https://help.github.com/en/github/working-with-github-pages/getting-started-with-github-pages)
+[Jekyll](https://jekyllrb.com/){:target="_blank"}<br/>
+[Clean Blog - Jekyll](https://startbootstrap.com/themes/clean-blog-jekyll/){:target="_blank"}<br/>
+[Getting started with GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages){:target="_blank"}

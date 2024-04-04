@@ -4,15 +4,20 @@
 # Binaries
 submodules/*
 venv/*
+node_modules/*
+vendor/*
 
 #editor settings
 .vscode
 tsconfig.json
 
 # Temporary files
+.gem
+.bundle
 *.tar.gz
 *.zip
 *.box
+.sass-cache
 *~
 .idea/
 .project
@@ -26,10 +31,7 @@ tsconfig.json
 temp/*
 
 # Jekyll build
-_site/*
+_site*
 
 # Exception
 !**/.gitkeep
-
-
-node_modules

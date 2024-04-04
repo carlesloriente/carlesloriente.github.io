@@ -2,66 +2,61 @@
 layout: default
 ---
 
-<!-- Page Header -->
-{% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+<main class="flex-shrink-0">
+  {% if page.background %}
+  <section class="masthead sechead" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.5)0%,rgba(0,0,0,0.5) 100%), url('{{ page.background }}')">
   {% else %}
-  <header class="masthead">
-    {% endif %}
+  <section class="masthead sechead">
+  {% endif %}
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="col-lg-8 mx-auto">
           <div class="post-heading">
-            <h1>{{ page.title }}</h1>
-            {% if page.subtitle %}
-            <h2 class="subheading">{{ page.subtitle }}</h2>
-            {% endif %}
-            <span class="meta">Posted by
-              <a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a>
-              on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html
-              content=page.content %}
-            </span>
+            <h1 class="mx-auto">{{ page.title }}</h1>
+            {%- if page.description %}
+            <h2 class="subheading mx-auto">{{ page.description }}</h2>
+            {% endif -%}
           </div>
         </div>
       </div>
     </div>
-  </header>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-
-        {{ content }}
-
-        <hr>
-        <div class="text-center">
-          <p><mark>Found a snippet that saved your day?</mark> Consider <a href="https://ko-fi.com/S6S1O2GTU" target="_blank">dropping a tip!</a></p>     
-          <script type="text/javascript" src="{{"/assets/vendor/ko-fi/Widget_2.js" | relative_url }}"></script>
-          <script type="text/javascript">kofiwidget2.init("Buy me a coffee", "#176391", "S6S1O2GTU");kofiwidget2.draw();</script>
-        </div>
-        
-        <hr>
-
-        <div class="clearfix">
-
-          {% if page.comments %}
-            {% if site.disqus.shortname %}
-              {% include disqus_comments.html %}
+  </section>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="meta text-center">Posted by
+            {% if page.author %} <a href="/about/" hreflang="{{ site.lang }}" aria-label="Author">{{ page.author }} </a> {% else %}<a href="/about/" hreflang="{{ site.lang }}" aria-label="Author">{{ site.author }} </a> {% endif %} on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=page.content -%}
+          </div>
+          <hr class="border border-primary opacity-25">
+          {{ content }}
+          <hr>
+          <div class="text-center">
+            <p><mark>Found a snippet that saved your day?</mark> Consider <a href="https://ko-fi.com/S6S1O2GTU" target="_blank" rel="noopener" title="Support me on ko-fi.com">dropping a tip!</a></p>
+            <script type="text/javascript" src="{{"/assets/vendor/nocc-bootstrap-theme/js/ko-fi/widget_2.min.js" | relative_url }}"></script>
+            <script type="text/javascript">kofiwidget2.init("Buy me a coffee", "#176391", "S6S1O2GTU");kofiwidget2.draw();</script>
+          </div>
+          <hr>
+          <div class="clearfix">
+            {% if page.comments %}
+              {% if site.disqus_shortname %}
+                {% include disqus_comments.html %}
+              {% endif %}
             {% endif %}
-          {% endif %}
-
-          {% if page.previous.url %}
-          <a class="btn btn-primary float-left" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline">
-              Note</span></a>
-          {% endif %}
-          {% if page.next.url %}
-          <a class="btn btn-primary float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline">
-              Note</span> &rarr;</a>
-          {% endif %}
-
+            {% if page.previous.url %}
+            <a class="btn btn-primary float-start" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline">
+                Post</span></a>
+            {% endif %}
+            {% if page.next.url %}
+            <a class="btn btn-primary float-end" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline">
+                Post</span> &rarr;</a>
+            {% endif %}
+          </div>
         </div>
-
       </div>
     </div>
-  </div>
+    <div class="divider"></div>
+  </section>
+  </main>
+  

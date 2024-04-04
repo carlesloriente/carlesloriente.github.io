@@ -1,0 +1,42 @@
+---
+layout: default
+title: Service unavailable
+permalink: /503.html
+background: '/assets/images/503.webp'
+sitemap: false
+---
+
+<main class="flex-shrink-0">
+  <section class="masthead sechead" style="background-color:lightcoral;">
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto">
+          {% assign tag = page.title | sluggify %}
+          <div class="post-heading">
+            <h1>{{ page.title | escape }}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-content">
+            <p>Please try again in a few minutes, or check the <a href="/posts/index.html" hreflang="{{ site.lang }}" aria-label="Notes index">index of posts</a>, or browse the <a href="/tags/" hreflang="{{ site.lang }}" aria-label="tags cloud">tags cloud</a> for more content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="fixed-bottom-footer">
+          <div style="height:400px;background-repeat:no-repeat;background-position:center;background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}');"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

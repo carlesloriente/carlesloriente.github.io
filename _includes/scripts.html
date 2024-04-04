@@ -1,16 +1,17 @@
-<script type="text/javascript" src="{{"/assets/vendor/jquery/jquery.min.js" | relative_url }}"></script>
-<script type="text/javascript" src="{{"/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" | relative_url }}"></script>
-<script type="text/javascript" src="{{"/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js" | relative_url }}"></script>
 
-<script type="text/javascript" src="{{"/assets/scripts.js" | relative_url }}"></script>
-
-{% if page.url contains 'contact' %}
+{% unless page.tagsindex -%}
+<script type="text/javascript" rel="preload" src="{{"/assets/vendor/nocc-bootstrap-theme/js/jquery/3.7.1/jquery.min.js" | relative_url }}"></script>
+{% endunless %}
+<script type="text/javascript" src="{{"/assets/vendor/nocc-bootstrap-theme/js/bootstrap/5.3.3/bootstrap.bundle.min.js" | relative_url }}"></script>
+{%- if jekyll.environment != "development" %}
+<script type="text/javascript" src="https://notes-on-cloud-infrastructure.disqus.com/count.js" async id="dsq-count-scr"></script>
+{%- endif %}
+{%- if page.url contains 'contact' -%}
   <!-- Form Validation -->
-  <script src="{{"/assets/vendor/startbootstrap-clean-blog/js/jqBootstrapValidation.js" | relative_url }}"></script>
+  <script type="text/javascript" src="{{"/assets/vendor/nocc-bootstrap-theme/js/jq-bootstrap-validation.js" | relative_url }}"></script>
   <!-- Send Form -->
   <script>
     $(function () {
-
       $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function ($form, event, errors) {
@@ -21,7 +22,6 @@
           // get values from FORM
           var name = $("input#name").val();
           var email = $("input#email").val();
-          var phone = $("input#phone").val();
           var message = $("textarea#message").val();
           var firstName = name; // For Success/Failure Message
           // Check for white space in name for Success/Fail message
@@ -31,11 +31,10 @@
           $this = $("#sendMessageButton");
           $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
           $.ajax({
-            url: "//formspree.io/{{ site.formemail }}",
+            url: "//formspree.io/f/{{ site.formemail }}",
             type: "POST",
             data: {
               name: name,
-              phone: phone,
               email: email,
               message: message
             },
@@ -78,10 +77,9 @@
         $(this).tab("show");
       });
     });
-
     /*When clicking on Full hide fail/success boxes */
     $('#name').focus(function () {
       $('#success').html('');
     });
   </script>
-{% endif %}
+{%- endif -%}

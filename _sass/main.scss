@@ -1,0 +1,48 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: none !important;
+}
+h3 {
+  font-size: calc(0.7rem + 0.81vw);
+}
+@media only screen and (min-width: 1536px) {
+  h3 {
+    font-size: 1.2rem;
+  }
+  section.homehead .page-heading {
+    padding: 5rem 0;
+    h1 {
+      margin-top: 80px;
+    }
+  }
+  section.homehead .page-heading h1, section.homehead .page-heading .h1 {
+    font-size: 4rem;
+  }
+  section.homehead .page-heading .subheading {
+    font-size: 2rem;
+  }
+  section.masthead .page-heading .subheading {
+    padding: 6rem 0;
+  }
+}
+section.homehead .overlay {
+  height: 45vh;
+}
+.carousel .carousel-inner img {
+  height: 45vh;
+}
+@media only screen and (min-width: 990px) {
+  section.homehead .page-heading .subheading {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+}

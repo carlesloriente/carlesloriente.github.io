@@ -1,0 +1,58 @@
+{
+  "name": "nocc-bootstrap-theme",
+  "version": "1.0.6",
+  "description": "NOCC A responsive Bootstrap 5 theme",
+  "scripts": {
+    "dist": "./scripts/dist",
+    "start": "npm-run-all --parallel server-watch compile-watch",
+    "server-watch": "live-server ./demo",
+    "compile": "faucet",
+    "compile-watch": "faucet --watch --config=faucet.config.dev.js",
+    "build-demo": "./scripts/demo",
+    "test": "sass-lint -v -q",
+    "prepare": "npm run compile",
+    "prepublishOnly": "npm test",
+    "publish": "npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlesloriente/nocc-bootstrap-theme.git"
+  },
+  "keywords": [
+    "NOCC",
+    "Bootstrap",
+    "Theme"
+  ],
+  "author": "Carles Loriente (https://www.notesoncloudcomputing.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carlesloriente/nocc-bootstrap-theme/issues"
+  },
+  "homepage": "https://github.com/carlesloriente/nocc-bootstrap-theme#readme",
+  "style": "dist/nocc-bootstrap-theme/css/nocc-theme.css",
+  "sass": "src/styles/main.scss",
+  "funding": [
+    {
+      "type": "GitHub",
+      "url": "https://github.com/sponsors/carlesloriente"
+    },
+    {
+      "type": "ko-fi",
+      "url": "https://ko-fi.com/carlesloriente"
+    }
+  ],
+  "devDependencies": {
+    "faucet-pipeline-sass": "^1.8.0",
+    "faucet-pipeline-static": "^2.1.0",
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.72.0",
+    "sass-lint": "^1.13.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=20.10.0"
+  }
+}

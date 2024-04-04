@@ -1,25 +1,38 @@
 ---
 layout: post
 comments: true
-title:  "Install Nvidia drivers on EC2 Instances"
-date:   2020-01-14 15:23:25 +0200
+title: "Install Nvidia drivers on EC2 Instances"
+date: 2020-01-14 15:23:25 +0200
 categories: aws nvidia
-background: '/assets/images/aws_logo.jpg'
+tags:
+- aws
+- nvidia
+background: '/assets/images/bg-aws-logo.webp'
 ---
 
 You can install the AWS grid Nvidia drivers on EC2 Instances type G3 and G4 running CentOS using the following script:
 
-{% gist 2dc56c44afc4b8604f231d083268033f %}
+```bash
+#!/bin/bash
+
+sudo yum -y install gcc kernel kernel-devel tbb tbb-devel
+
+echo "Download and install AWS NVIDIA GPU Drivers";
+curl -o NVIDIA.run https://s3.amazonaws.com/ec2-linux-nvidia-drivers/grid-10.0/NVIDIA-Linux-x86_64-440.43-grid.run
+sudo /bin/sh ./NVIDIA.run
+```
+
+Download GitHub Gist [install_nvidia_drivers_ec2_centos.sh](https://gist.github.com/carlesloriente/2dc56c44afc4b8604f231d083268033f){:target="_blank"}
 
 Follow the installer instructions, when finished, check it using:
 
-```
+```bash
 nvidia-smi
 ```
 
 The output should be something like this:
 
-```
+```bash
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 440.43       Driver Version: 440.43       CUDA Version: 10.2     |
 |-------------------------------+----------------------+----------------------+
@@ -36,4 +49,3 @@ The output should be something like this:
 |=============================================================================|
 |    0     14402    C+G   ./yourproc                                  1425MiB |
 +-----------------------------------------------------------------------------+
-```
