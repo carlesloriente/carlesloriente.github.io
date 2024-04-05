@@ -8,6 +8,7 @@ tags:
 - github
 - website
 background: '/assets/images/bg-github.webp'
+redirect_from: "/website/github/2019/12/30/host-a-static-website-at-github/"
 ---
 
 [GitHub](https://github.com/){:target="_blank"} provides hosting for software development version control using Git. If you don't have an account go and create one [it's free"](/assets/images/its-free.png){:target="_blank"}.

@@ -8,6 +8,7 @@ tags:
 - cloud-security 
 - fga
 background: '/assets/images/bg-fine-grained-permissions.webp'
+redirect_from: "/cloud-securyty/opa/zanzibar/fine-grained/authorisation/2024/02/13/fine-grained-authorisation-for-cloud-applications/"
 ---
 
 As cloud applications grow in complexity, managing who has access to what can become a security nightmare. Traditional, role-based authorisation often results in **overly broad permissions**, granting access beyond what is necessary. This introduces unnecessary risk and makes compliance a constant struggle.

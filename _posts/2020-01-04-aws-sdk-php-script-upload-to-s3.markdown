@@ -8,6 +8,7 @@ tags:
 - aws
 - php
 background: '/assets/images/bg-aws-logo.webp'
+redirect_from: "/aws/php/2020/01/04/aws-sdk-php-script-upload-to-s3/"
 ---
 
 Before use it you should have installed and configured the [AWS SDK for PHP](https://docs.aws.amazon.com/aws-sdk-php/v2/guide/quick-start.html){:target="_blank"}.

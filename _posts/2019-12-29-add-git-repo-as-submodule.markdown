@@ -8,6 +8,7 @@ tags:
 - git
 - submodule
 background: '/assets/images/bg-git.webp'
+redirect_from: "/git/2019/12/29/add-git-repo-as-submodule/"
 ---
 
 Using Git submodules you can attach other Git repositories to your current Git repostory at a specific path. This allows you to commit, pull, and push there repositories independently. You can add as many Git submodules as you need.

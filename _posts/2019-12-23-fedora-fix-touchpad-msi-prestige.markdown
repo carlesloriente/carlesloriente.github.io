@@ -8,7 +8,9 @@ tags:
 - fedora
 - msi
 background: '/assets/images/bg-fedora.webp'
-redirect_from: "/fedora/msi/2019/12/23/fedora-fix-touchpad-msi-prestige.html"
+redirect_from:
+- "/fedora/msi/2019/12/23/fedora-fix-touchpad-msi-prestige.html"
+- "/fedora/msi/2019/12/23/fedora-fix-touchpad-msi-prestige/"
 ---
 
 Seems that there is a problem in the latest versions of Fedora, when the computer wakes up after sleep mode or hibernate mode, the MSI Prestige touchpad freezes and didn't respond until OS is restarted.
