@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * NOCC Bootstrap theme 1.0.6 (https://github.com/carlesloriente/nocc-bootstrap-theme/)
+ * NOCC Bootstrap theme 1.0.7 (https://github.com/carlesloriente/nocc-bootstrap-theme/)
  * Copyright 2024 Carles Loriente
  * A Responsive Bootstrap 5 dual Theme
  */
@@ -11539,7 +11539,7 @@ small a:focus, .small a:focus, small a:hover, .small a:hover {
 
 .image-gallery {
   margin-bottom: 4rem;
-  text-align: center;
+  padding-left: 5em;
 }
 
 .thumbnail {
@@ -13025,6 +13025,7 @@ section.masthead .post-heading .meta {
   section.masthead .post-heading .tags-heading,
   section.masthead .post-heading .meta {
     display: block;
+    text-transform: none;
     line-height: 1.1;
     font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 1.2rem;
