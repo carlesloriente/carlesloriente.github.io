@@ -1,5 +1,7 @@
 ---
 layout: default
+title: 
+description: 
 ---
 
 <main class="flex-shrink-0">
@@ -25,7 +27,7 @@ layout: default
               </li>
               {%- endfor -%}
             </ul>
-            <p>Browse more <a href="{{ site.tags_dir | relative_url }}" hreflang="{{ site.lang }}" aria-label="Tags index">tags</a>.</p>
+            <p>Browse more <a href="{{ site.tags_dir | append: '/' | relative_url }}" hreflang="{{ site.lang }}" aria-label="Tags index">tags</a>.</p>
           </div>
         </div>
       </div>

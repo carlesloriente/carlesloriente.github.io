@@ -9,6 +9,8 @@ module Jekyll
       self.read_yaml(File.join(base, '_layouts'), 'tag.html')
       self.data['tag'] = tag
       self.data['title'] = "#{tag}"
+      self.data['description'] = "List of posts with tag #{tag}."
+      self.data['og:description'] = "List of posts with tag #{tag}."
     end
   end
   class TagGenerator < Generator

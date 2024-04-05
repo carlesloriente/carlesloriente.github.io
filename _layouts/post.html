@@ -27,7 +27,7 @@ layout: default
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="meta text-center">Posted by
-            {% if page.author %} <a href="{{ 'about' | relative_url }}" hreflang="{{ site.lang }}" aria-label="Author">{{ page.author }} </a> {% else %}<a href="{{ 'about' | relative_url }}" hreflang="{{ site.lang }}" aria-label="Author">{{ site.author }} </a> {% endif %} on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=page.content -%}
+            {% if page.author %} <a href="{{ 'about/' | relative_url }}" hreflang="{{ site.lang }}" aria-label="Author">{{ page.author }} </a> {% else %}<a href="{{ 'about/' | relative_url }}" hreflang="{{ site.lang }}" aria-label="Author">{{ site.author }} </a> {% endif %} on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=page.content -%}
           </div>
           <hr class="border border-primary opacity-25">
           {{ content }}
