@@ -121,23 +121,23 @@ curl <span class="nt">-o</span> NVIDIA.run https://s3.amazonaws.com/ec2-linux-nv
 
 <p>The output should be something like this:</p>
 
-<p>```bash
-+—————————————————————————–+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+-----------------------------------------------------------------------------+
 | NVIDIA-SMI 440.43       Driver Version: 440.43       CUDA Version: 10.2     |
-|——————————-+———————-+———————-+
+|-------------------------------+----------------------+----------------------+
 | GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
 | Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
-|===============================+======================+======================|
+|<span class="o">===============================</span>+<span class="o">======================</span>+<span class="o">======================</span>|
 |   0  Tesla T4            On   | 00000000:00:1E.0 Off |                    0 |
 | N/A   36C    P8    15W /  70W |   1430MiB / 15109MiB |      0%      Default |
-+——————————-+———————-+———————-+</p>
-
-<p>+—————————————————————————–+
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
 | Processes:                                                       GPU Memory |
 |  GPU       PID   Type   Process name                             Usage      |
-|=============================================================================|
+|<span class="o">=============================================================================</span>|
 |    0     14402    C+G   ./yourproc                                  1425MiB |
-+—————————————————————————–+</p>
++-----------------------------------------------------------------------------+
+</code></pre></div></div>
 
           <hr>
           <div class="text-center">
