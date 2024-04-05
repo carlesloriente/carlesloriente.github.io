@@ -47,7 +47,7 @@ tagsindex: true
               {%- for tag in tags_uniq %}
                 {% assign tag_count = site.posts | where_exp: 'posts', 'posts.tags contains tag' %} 
                 <li>
-                  <a href="{{ tag }}" hreflang="{{ site.lang }}" aria-label="{{ tag }}">{{ tag }} ({{ tag_count | size }})</a>
+                  <a href="{{ tag | append: '/' }}" hreflang="{{ site.lang }}" aria-label="{{ tag }}">{{ tag }} ({{ tag_count | size }})</a>
                 </li>
               {%- endfor %}
             </ul>
@@ -63,7 +63,7 @@ tagsindex: true
                   tags.push({
                     text: "{{ name }}",
                     weight: '{{ weight }}',
-                    link: { href:'{{ site.tags_dir  | append: '/' | append: name | relative_url }}', title: '{{ tag }}' }
+                    link: { href:'{{ site.tags_dir  | append: '/' | append: name | append: '/' | relative_url }}', title: '{{ tag }}' }
                   });
                 {%- endfor -%}
                 $('.wordcloud').jQCloud(tags, {
