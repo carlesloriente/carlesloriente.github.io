@@ -8,6 +8,7 @@ tags:
 - linux
 - swap
 background: '/assets/images/bg-post.webp'
+redirect_From: "/linux/swap/2019/12/26/create-swap-file/"
 ---
 
 Create a swap file executing the following script.

@@ -8,6 +8,7 @@ tags:
 - fedora
 - vpn
 background: '/assets/images/bg-fedora.webp'
+redirect_from: "/fedora/vpn/ikev2/2021/04/24/configure-ikev2-vpn-connection-fedora/"
 ---
 
 Using the following script you can install all the libraries needed for IKEv2 IPSec VPNs and configure a roadwarrior connection.
