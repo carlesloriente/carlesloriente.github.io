@@ -26,26 +26,24 @@ The primary goal of this script is to provide a hassle-free method for signing k
 #### Key Features
 
 1. **Automation:** The script automates the entire signing process, saving users from the complexities of manual intervention.
-
 2. **VirtualBox Support:** Ensures compatibility with VirtualBox, making it easier for users to run secure, signed kernel modules within virtualized environments.
-
 3. **Prerequisites Review:** The script conducts a thorough review of system prerequisites, checking for required packages and missing folders. It ensures that your system is ready for the Secure Boot signing process.
-
 4. **Key Generation:** Creates the necessary signing keys, streamlining the essential management process.
 
 #### How to
 
-*Clone the repository*:\
-<code>git clone https://github.com/carlesloriente/sign-kernel-modules-secureboot</code>
+*Clone the repository*:
 
-*Navigate to the downloaded content*:\
-<code>cd sign-kernel-modules-secureboot</code>
+{% include code_block.html lang="bash" content='git clone https://github.com/carlesloriente/sign-kernel-modules-secureboot' %}
 
-*Add execution permissions to the script*:\
-<code>chmod +x signing-kernel-modules.sh</code>
+*Navigate to the downloaded content*:
+{% include code_block.html lang="bash" content='cd sign-kernel-modules-secureboot' %}
 
-*Run the script with sudo*:\
-<code>sudo ./signing-kernel-modules.sh</code>
+*Add execution permissions to the script*:
+{% include code_block.html lang="bash" content='chmod +x signing-kernel-modules.sh' %}
+
+*Run the script with sudo*:
+{% include code_block.html lang="bash" content='sudo ./signing-kernel-modules.sh' %}
 
 #### Contribution and Support
 

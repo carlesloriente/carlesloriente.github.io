@@ -14,14 +14,14 @@
   <meta property="og:description" content="You can install the AWS grid Nvidia drivers on EC2 Instances type G3 and G4 running CentOS using the following script:">
   <meta property="og:image" content="https://www.notesoncloudcomputing.com/assets/images/bg-aws-logo.webp">
   <meta property="og:type" content="article">
-  <link rel="stylesheet" href="/assets/vendor/nocc-bootstrap-theme/css/nocc-theme.css" type="text/css">
+  <link rel="stylesheet" href="/assets/vendor/nocc-bootstrap-theme/css/nocc-theme.min.css" type="text/css">
 <link rel="stylesheet" href="/assets/css/styles.css" type="text/css">
   <link rel="canonical" href="https://www.notesoncloudcomputing.com/posts/2020-01-14-install-nvidia-drivers-ec2-instances/">
   <link rel="alternate" type="application/rss+xml" title="Notes on Cloud Computing" href="/feed.xml">
-  <link rel="shortcut icon" href="/assets/images/favicon.ico">
-  <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
-  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/assets/images/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="/assets/images/favicon_io/favicon.ico">
+  <link rel="icon" href="/assets/images/favicon_io/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/images/favicon_io/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/images/favicon_io/favicon.png" type="image/png">
   <link rel="manifest" href="/manifest.webmanifest"><!-- Global site tag (gtag.js) - Google Analytics -->
 <script type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id=G-YZN6D91Z4N" ></script>
 <script type="text/javascript">
@@ -39,7 +39,7 @@
         <span class="daylight filter-white"></span>
       </button>
     </div>
-    <script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/theme-toggler.js"></script>
+    <script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/theme-toggler.min.js"></script>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
       <div class="container">
@@ -86,38 +86,41 @@
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
+        <div class=" mx-auto">
           <div class="post-heading">
-            <h1 class="mx-auto">Install Nvidia drivers on EC2 Instances</h1></div>
+            <h1 class="mx-auto">Install Nvidia drivers on EC2 Instances</h1>
+          </div>
         </div>
       </div>
     </div>
   </section>
   <section>
-    <div class="container">
+    <div class="container my-4">
       <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="col-lg-8 mx-auto">
           <div class="meta text-center">Posted by
             <a href="/about/" hreflang="en" aria-label="Author">Carles Loriente </a>  on January 14, 2020 &middot; <span class="reading-time" title="Estimated read time"> 1 min  read</span>
 </div>
           <hr class="border border-primary opacity-25">
           <p>You can install the AWS grid Nvidia drivers on EC2 Instances type G3 and G4 running CentOS using the following script:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<div class="language-bash highlighter-rouge"><pre class="highlight "><button type="button" class="btn-clipboard float-end tooltip" aria-label="Copy to clipboard" data-bs-original-title="Copy to clipboard"><span class="tooltiptext">Copy to clipboard</span><span class="clipboard filter-white"></span></button>
+<code>#!/bin/bash
 
-<span class="nb">sudo </span>yum <span class="nt">-y</span> <span class="nb">install </span>gcc kernel kernel-devel tbb tbb-devel
+sudo yum -y install gcc kernel kernel-devel tbb tbb-devel
 
-<span class="nb">echo</span> <span class="s2">"Download and install AWS NVIDIA GPU Drivers"</span><span class="p">;</span>
-curl <span class="nt">-o</span> NVIDIA.run https://s3.amazonaws.com/ec2-linux-nvidia-drivers/grid-10.0/NVIDIA-Linux-x86_64-440.43-grid.run
-<span class="nb">sudo</span> /bin/sh ./NVIDIA.run
-</code></pre></div></div>
+echo "Download and install AWS NVIDIA GPU Drivers";
+curl -o NVIDIA.run https://s3.amazonaws.com/ec2-linux-nvidia-drivers/grid-10.0/NVIDIA-Linux-x86_64-440.43-grid.run
+sudo /bin/sh ./NVIDIA.run</code>
+</pre></div>
 
-<p>Download GitHub Gist <a href="https://gist.github.com/carlesloriente/2dc56c44afc4b8604f231d083268033f" target="_blank">install_nvidia_drivers_ec2_centos.sh</a></p>
+<p>Download the GitHub Gist <a href="https://gist.github.com/carlesloriente/2dc56c44afc4b8604f231d083268033f" target="_blank">install_nvidia_drivers_ec2_centos.sh</a></p>
 
 <p>Follow the installer instructions, when finished, check it using:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvidia-smi
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><pre class="highlight "><button type="button" class="btn-clipboard float-end tooltip" aria-label="Copy to clipboard" data-bs-original-title="Copy to clipboard"><span class="tooltiptext">Copy to clipboard</span><span class="clipboard filter-white"></span></button>
+<code>nvidia-smi</code>
+</pre></div>
 
 <p>The output should be something like this:</p>
 
@@ -207,7 +210,7 @@ curl <span class="nt">-o</span> NVIDIA.run https://s3.amazonaws.com/ec2-linux-nv
         </a>
       </li></ul>
     <p class="copyright text-copyright">Copyright &copy; <a href="/about/" hreflang="en" aria-label="Notes on Cloud Computing author">Carles Loriente</a> 2024<br />
-      <a href="https://bootstrap-theme.notesoncloudcomputing.com/" hreflang="en" target="_blank" rel="noreferrer" aria-label="NOCC Bootstrap Theme">NOCC Bootstrap Theme</a> v.1.0.7 created by <a href="https://www.notesoncloudcomputing.com/about/" hreflang="en" target="_blank" rel="noreferrer" aria-label="Autor website https://www.notesoncloudcomputing.com/about/">Carles Loriente</a><br />
+      <a href="https://bootstrap-theme.notesoncloudcomputing.com/" hreflang="en" target="_blank" rel="noreferrer" aria-label="NOCC Bootstrap Theme">NOCC Bootstrap Theme</a> v.1.2.0 created by <a href="https://www.notesoncloudcomputing.com/about/" hreflang="en" target="_blank" rel="noreferrer" aria-label="Autor website https://www.notesoncloudcomputing.com/about/">Carles Loriente</a><br />
       Build with <a href="https://jekyllrb.com" hreflang="en" target="_blank" rel="noreferrer" aria-label="Jekyll">Jekyll</a><br />
       Proudly hosted by <a href="https://github.com" hreflang="en" target="_blank" rel="noreferrer" aria-label="Github"><strong>GitHub</strong></a>
     </p>
@@ -215,6 +218,8 @@ curl <span class="nt">-o</span> NVIDIA.run https://s3.amazonaws.com/ec2-linux-nv
 </footer>
     
 <script type="text/javascript" rel="preload" src="/assets/vendor/nocc-bootstrap-theme/js/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/clipboardjs/clipboard.min.js"></script>
+<script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/copy-clipboard.js"></script>
 <script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/bootstrap/5.3.3/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="https://notes-on-cloud-infrastructure.disqus.com/count.js" async id="dsq-count-scr"></script>
   </body>

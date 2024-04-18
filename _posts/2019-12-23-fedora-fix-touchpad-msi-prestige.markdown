@@ -17,12 +17,10 @@ Seems that there is a problem in the latest versions of Fedora, when the compute
 
 There are several ways to fix that.
 
-**Create an alias inside your .bashrc file
+### Create an alias inside your .bashrc file
 
-```bash
-alias fixtouchpad='sudo rmmod i2c_hid; sudo modprobe i2c_hid'
-```
+{% include code_block.html lang="bash" content='alias fixtouchpad="sudo rmmod i2c_hid; sudo modprobe i2c_hid"' %}
 
-Download GitHub Gist [Fedora Fix Touchpad MSI Prestige](https://gist.github.com/carlesloriente/cc701a468c7e402e757a2d2198bcfafd){:target="_blank"}
+Download the GitHub Gist [Fedora Fix Touchpad MSI Prestige](https://gist.github.com/carlesloriente/cc701a468c7e402e757a2d2198bcfafd){:target="_blank"}
 
 Everytime your computer wakes up you can call from terminal 'fixtouchpad'.

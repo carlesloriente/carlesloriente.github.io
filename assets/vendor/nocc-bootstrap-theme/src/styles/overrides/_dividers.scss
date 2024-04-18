@@ -1,0 +1,13 @@
+.home-divider {
+  border: solid $nocc-divider-end;
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em $nocc-divider-start, inset 0 .125em .5em $nocc-divider-end;
+  background-color: $nocc-divider-start;
+  width: 100%;
+  height: 3rem;
+}
+
+.divider {
+  width: 100%;
+  height: 3rem;
+}

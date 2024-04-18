@@ -1,0 +1,128 @@
+// Styling for the navbar
+nav {
+  position: absolute;
+  border-bottom: 1px solid $nocc-nav-white;
+  background-color: $nocc-nav-white-2;
+  font-family: $headings-font-family;
+
+  .navbar-brand {
+    text-decoration: none;
+    text-shadow: 1px 1px $white;
+    color: $gray-800;
+    font-size: medium;
+    font-weight: 800;
+  }
+
+  .navbar-toggler {
+    padding: 13px;
+    text-transform: uppercase;
+    color: $gray-800;
+    font-size: .75rem;
+    font-weight: 800;
+  }
+
+  .nav-item {
+
+    a {
+      text-transform: uppercase;
+      text-decoration: $link-decoration;
+      text-shadow: 1px 1px $white;
+      letter-spacing: 1px;
+      color: $gray-900;
+      font-size: .75rem;
+      font-weight: 800;
+
+      &:focus,
+      &:hover {
+        color: fade-out($bronze, .3);
+      }
+    }
+
+    &:last-child  {
+      margin: 12px 0 18px;
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+    transform: translate3d(0, 0, 0);
+    transition: background-color .2s;
+    border-bottom: 1px solid transparent;
+    background: transparent;
+    backface-visibility: hidden;
+
+    .navbar-brand {
+      padding: 10px 20px;
+      text-decoration: $link-decoration;
+      text-shadow: 1px 1px $black;
+      color: $white;
+      font-size: large;
+
+      &:focus,
+      &:hover {
+        color: fade-out($white, .3);
+      }
+    }
+
+    .nav-item {
+      padding: 5px 10px;
+
+      a {
+        text-transform: uppercase;
+        text-decoration: $link-decoration;
+        text-shadow: 1px 1px $black;
+        letter-spacing: 1px;
+        color: $white;
+        font-size: .75rem;
+        font-weight: 800;
+
+        &:focus,
+        &:hover {
+          color: fade-out($white, .3);
+        }
+      }
+
+      &:last-child  {
+        margin: 0;
+      }
+    }
+
+    &.is-fixed {
+      position: fixed;
+      top: -67px;
+      transition: transform .2s;
+      border-bottom: 1px solid darken($white, .05);
+      background-color: fade-out($white, .1);
+
+      .navbar-brand {
+        color: $gray-900;
+
+        &:focus,
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+
+    &.is-visible {
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+}
+
+.navbar {
+  height: auto;
+
+  @media only screen and (min-width: 990px) {
+    height: 4rem;
+  }
+}
+
+.nav-kofi {
+  border: 0;
+  padding-top: 3px;
+  height: 26px;
+}
+
+.nav-github {
+  padding-top: 5px;
+}

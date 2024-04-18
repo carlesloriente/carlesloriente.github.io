@@ -18,9 +18,7 @@ I'm excited to announce the release of sign-kernel-modules-secureboot v0.1, the 
 ## What's Changed
 
 1. **Updated Documentation**
-
 2. **Streamlined Dependencies Install**
-
 3. **Minor Restyling**
 
 ## Changelog

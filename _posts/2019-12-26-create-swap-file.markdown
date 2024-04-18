@@ -13,4 +13,4 @@ redirect_From: "/linux/swap/2019/12/26/create-swap-file/"
 
 Create a swap file executing the following script.
 
-If you want to automount the swap file on boot, add to /etc/fstab <code>/swapfile swap swap defaults 0 0</code>
+If you want to automount the swap file on boot, add to /etc/fstab `/swapfile swap swap defaults 0 0`

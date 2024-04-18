@@ -14,14 +14,14 @@
   <meta property="og:description" content="Using the following script you can install all the libraries needed for IKEv2 IPSec VPNs and configure a roadwarrior connection.">
   <meta property="og:image" content="https://www.notesoncloudcomputing.com/assets/images/bg-fedora.webp">
   <meta property="og:type" content="article">
-  <link rel="stylesheet" href="/assets/vendor/nocc-bootstrap-theme/css/nocc-theme.css" type="text/css">
+  <link rel="stylesheet" href="/assets/vendor/nocc-bootstrap-theme/css/nocc-theme.min.css" type="text/css">
 <link rel="stylesheet" href="/assets/css/styles.css" type="text/css">
   <link rel="canonical" href="https://www.notesoncloudcomputing.com/posts/2021-04-24-configure-ikev2-vpn-connection-fedora/">
   <link rel="alternate" type="application/rss+xml" title="Notes on Cloud Computing" href="/feed.xml">
-  <link rel="shortcut icon" href="/assets/images/favicon.ico">
-  <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
-  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/assets/images/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="/assets/images/favicon_io/favicon.ico">
+  <link rel="icon" href="/assets/images/favicon_io/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/images/favicon_io/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/images/favicon_io/favicon.png" type="image/png">
   <link rel="manifest" href="/manifest.webmanifest"><!-- Global site tag (gtag.js) - Google Analytics -->
 <script type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id=G-YZN6D91Z4N" ></script>
 <script type="text/javascript">
@@ -39,7 +39,7 @@
         <span class="daylight filter-white"></span>
       </button>
     </div>
-    <script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/theme-toggler.js"></script>
+    <script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/theme-toggler.min.js"></script>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
       <div class="container">
@@ -86,19 +86,20 @@
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
+        <div class=" mx-auto">
           <div class="post-heading">
-            <h1 class="mx-auto">VPN connection using p12 cert on Fedora 31+</h1></div>
+            <h1 class="mx-auto">VPN connection using p12 cert on Fedora 31+</h1>
+          </div>
         </div>
       </div>
     </div>
   </section>
   <section>
-    <div class="container">
+    <div class="container my-4">
       <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="col-lg-8 mx-auto">
           <div class="meta text-center">Posted by
-            <a href="/about/" hreflang="en" aria-label="Author">Carles Loriente </a>  on April 24, 2021 &middot; <span class="reading-time" title="Estimated read time"> 4 mins  read</span>
+            <a href="/about/" hreflang="en" aria-label="Author">Carles Loriente </a>  on April 24, 2021 &middot; <span class="reading-time" title="Estimated read time"> 2 mins  read</span>
 </div>
           <hr class="border border-primary opacity-25">
           <p>Using the following script you can install all the libraries needed for IKEv2 IPSec VPNs and configure a roadwarrior connection.</p>
@@ -111,63 +112,64 @@
   <li>Your Fedora OS should be in english language</li>
 </ul>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<div class="language-bash highlighter-rouge"><pre class="highlight "><button type="button" class="btn-clipboard float-end tooltip" aria-label="Copy to clipboard" data-bs-original-title="Copy to clipboard"><span class="tooltiptext">Copy to clipboard</span><span class="clipboard filter-white"></span></button>
+<code>#!/bin/bash
 
-<span class="nb">sudo </span>dnf remove <span class="nt">-y</span> strongswan NetworkManager-strongswan NetworkManager-strongswan-gnome strongswan-libipsec
-<span class="nb">sudo </span>dnf <span class="nb">install</span> <span class="nt">-y</span> libreswan NetworkManager-libreswan NetworkManager-libreswan-gnome ldns nss-tools firewall-config
+sudo dnf remove -y strongswan NetworkManager-strongswan NetworkManager-strongswan-gnome strongswan-libipsec
+sudo dnf install -y libreswan NetworkManager-libreswan NetworkManager-libreswan-gnome ldns nss-tools firewall-config
 
-<span class="nb">echo</span> <span class="s2">"Changing ipsec.conf"</span>
-<span class="nb">sudo sed</span> <span class="nt">-i</span> <span class="s1">'s/# dnssec-enable=no/dnssec-enable=no/g'</span> /etc/ipsec.conf
-<span class="nb">sudo sed</span> <span class="nt">-i</span> <span class="s1">'s/#DNSSEC=allow-downgrade/DNSSEC=false/g'</span> /etc/systemd/resolved.conf
+echo 'Changing ipsec.conf'
+sudo sed -i 's/# dnssec-enable=no/dnssec-enable=no/g' /etc/ipsec.conf
+sudo sed -i 's/#DNSSEC=allow-downgrade/DNSSEC=false/g' /etc/systemd/resolved.conf
 
-<span class="nb">echo</span> <span class="s2">"Configuring Firewall"</span>
-<span class="nb">sudo </span>firewall-cmd <span class="nt">--permanent</span> <span class="nt">--zone</span><span class="o">=</span>FedoraWorkstation <span class="nt">--add-service</span> ipsec 
-<span class="nb">sudo </span>firewall-cmd <span class="nt">--permanent</span> <span class="nt">--add-port</span><span class="o">=</span>500/udp
-<span class="nb">sudo </span>firewall-cmd <span class="nt">--permanent</span> <span class="nt">--add-port</span><span class="o">=</span>4500/udp
-<span class="nb">sudo </span>firewall-cmd <span class="nt">--reload</span>
+echo 'Configuring Firewall'
+sudo firewall-cmd --permanent --zone=FedoraWorkstation --add-service ipsec
+sudo firewall-cmd --permanent --add-port=500/udp
+sudo firewall-cmd --permanent --add-port=4500/udp
+sudo firewall-cmd --reload
 
-<span class="nb">sudo mkdir</span> <span class="nt">-p</span> /var/lib/ipsec/nss
-<span class="c">#sudo chmod 755 /var/lib/ipsec/nss/ /etc/ipsec.d/</span>
-<span class="c">#sudo chown ${name}:${name} /var/lib/ipsec/nss/</span>
-<span class="c">#sudo chmod 644 /var/lib/ipsec/nss/*.*</span>
-<span class="nb">sudo </span>ipsec initnss
+sudo mkdir -p /var/lib/ipsec/nss
+sudo chmod 755 /var/lib/ipsec/nss/ /etc/ipsec.d/
+sudo chown ${name}:${name} /var/lib/ipsec/nss/
+sudo chmod 644 /var/lib/ipsec/nss/*.*
+sudo ipsec initnss
 
-<span class="nb">echo</span> <span class="s2">""</span>
-<span class="nb">read</span> <span class="nt">-p</span> <span class="s2">"Enter your username: "</span> name
-<span class="nv">name</span><span class="o">=</span><span class="k">${</span><span class="nv">name</span><span class="k">}</span>
+echo ''
+read -p 'Enter your username: ' name
+name=${name}
 
-<span class="nb">echo</span> <span class="s2">""</span>
-<span class="nb">read</span> <span class="nt">-p</span> <span class="s2">"Enter the VPN gateway: "</span> vpn
-<span class="nv">vpn</span><span class="o">=</span><span class="k">${</span><span class="nv">vpn</span><span class="k">}</span>
-<span class="nb">echo</span> <span class="s2">"Your ID is </span><span class="k">${</span><span class="nv">name</span><span class="k">}</span><span class="s2">@</span><span class="k">${</span><span class="nv">vpn</span><span class="k">}</span><span class="s2">"</span>
+echo ''
+read -p 'Enter the VPN gateway: ' vpn
+vpn=${vpn}
+echo 'Your ID is ${name}@${vpn}'
 
-<span class="nb">echo</span> <span class="s2">""</span>
-<span class="nb">echo</span> <span class="s2">"Rename your cert file to </span><span class="k">${</span><span class="nv">name</span><span class="k">}</span><span class="s2">@</span><span class="k">${</span><span class="nv">vpn</span><span class="k">}</span><span class="s2">.p12"</span>
-<span class="nb">echo</span> <span class="s2">"and save it to your ~/Documents folder"</span>
+echo ''
+echo 'Rename your cert file to ${name}@${vpn}.p12'
+echo 'and save it to your ~/Documents folder'
 
-<span class="nb">read</span> <span class="nt">-p</span> <span class="s2">"Press [Enter] to continue..."</span>
+read -p 'Press [Enter] to continue...'
 
-<span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-f</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/Documents/<span class="k">${</span><span class="nv">name</span><span class="k">}</span>@<span class="k">${</span><span class="nv">vpn</span><span class="k">}</span>.p12 <span class="o">]</span>
-<span class="k">then
-    </span><span class="nb">echo</span> <span class="s2">"~/Documents/</span><span class="k">${</span><span class="nv">name</span><span class="k">}</span><span class="s2">@</span><span class="k">${</span><span class="nv">vpn</span><span class="k">}</span><span class="s2">.p12 does not exist, error"</span>
-    <span class="nb">exit </span>0
-<span class="k">else
-    </span><span class="nb">echo</span> <span class="s2">""</span>
-    <span class="nb">echo</span> <span class="s2">"Now you need the VPN password to import the certificate"</span>
-    <span class="nb">sudo </span>ipsec import ~/Documents/<span class="k">${</span><span class="nv">name</span><span class="k">}</span>@<span class="k">${</span><span class="nv">vpn</span><span class="k">}</span>.p12
-<span class="k">fi
+if [ ! -f ${HOME}/Documents/${name}@${vpn}.p12 ]
+then
+    echo '~/Documents/${name}@${vpn}.p12 does not exist, error'
+    exit 0
+else
+    echo ''
+    echo 'Now you need the VPN password to import the certificate'
+    sudo ipsec import ~/Documents/${name}@${vpn}.p12
+fi
 
-</span><span class="nb">echo</span> <span class="s2">"Create configuration file for IPSec connection, connection name awsibikev2"</span>
+echo 'Create configuration file for IPSec connection, connection name awsibikev2'
 
-<span class="nb">sudo dd </span><span class="nv">of</span><span class="o">=</span>/etc/ipsec.d/roadwarriorclient.conf <span class="o">&lt;&lt;</span> <span class="no">EOF</span><span class="sh">
+sudo dd of=/etc/ipsec.d/roadwarriorclient.conf &lt;&lt; EOF
 conn roadwarriorvpn
     ikev2=insist
     left=%defaultroute
     leftsubnet=0.0.0.0/0
-    leftcert=</span><span class="k">${</span><span class="nv">name</span><span class="k">}</span><span class="sh">@</span><span class="k">${</span><span class="nv">vpn</span><span class="k">}</span><span class="sh">
+    leftcert=${name}@${vpn}
     leftid=%fromcert
     leftmodecfgclient=yes
-    right=</span><span class="k">${</span><span class="nv">vpn</span><span class="k">}</span><span class="sh">
+    right=${vpn}
     rightid=%fromcert
     rightsubnet=0.0.0.0/0
     rightca=%same
@@ -175,10 +177,10 @@ conn roadwarriorvpn
     narrowing=yes
     mobike=yes
     auto=add
-</span><span class="no">EOF
+EOF
 
-</span><span class="nb">echo</span> <span class="s2">"Added to .bashrc start_vpn and stop_vpn commands"</span>
-<span class="nb">cat</span> <span class="o">&lt;&lt;</span><span class="no">EOT</span><span class="sh"> &gt;&gt; </span><span class="nv">$HOME</span><span class="sh">/.bashrc
+echo 'Added to .bashrc start_vpn and stop_vpn commands'
+cat &lt;<EOT>&gt; $HOME/.bashrc
 function start_vpn()
 {
     sudo ipsec auto --up roadwarriorvpn
@@ -187,26 +189,27 @@ function stop_vpn()
 {
     sudo ipsec auto --down roadwarriorvpn
 }
-</span><span class="no">EOT
+EOT
 
-</span><span class="nb">sudo </span>semanage fcontext <span class="nt">-a</span> <span class="nt">-t</span> ipsec_key_file_t <span class="s1">'/var/lib/ipsec/nss'</span>
-<span class="nb">sudo </span>restorecon <span class="nt">-v</span> /var/lib/ipsec/<span class="k">*</span>
+sudo semanage fcontext -a -t ipsec_key_file_t '/var/lib/ipsec/nss'
+sudo restorecon -v /var/lib/ipsec/*
 
-<span class="nb">sudo </span>systemctl <span class="nb">enable </span>ipsec
-<span class="nb">sudo </span>ipsec pluto <span class="nt">--stderrlog</span> <span class="nt">--config</span> /etc/ipsec.conf
+sudo systemctl enable ipsec
+sudo ipsec pluto --stderrlog --config /etc/ipsec.conf
 
-<span class="nb">echo</span> <span class="s2">"Please reboot the system"</span>
-</code></pre></div></div>
+echo 'Please reboot the system'&lt;/code&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
-<p>Download GitHub Gist <a href="https://gist.github.com/carlesloriente/4496fa54e444456435ec7e7e897a28e3" target="_blank">fedora-configure-and-setup-ikev2.sh</a></p>
+Download the GitHub Gist [fedora-configure-and-setup-ikev2.sh](https://gist.github.com/carlesloriente/4496fa54e444456435ec7e7e897a28e3){:target="_blank"}
 
-<p>Save the script to your $HOME folder and execute it in shell using the command: <code>sudo sh configure-and-setup-ikev2.sh</code></p>
+Save the script to your $HOME folder and execute it in shell using the command: `sudo sh configure-and-setup-ikev2.sh`
 
-<p>When the script has finished the message “Please reboot the system” will appear on your terminal, please reboot it. After that your IKEv2 connection will be configured, you can start the connection using shell typing in “start_vpn” (without quotes), or stop it typing in “stop_vpn” (without quotes).</p>
+When the script has finished the message "Please reboot the system" will appear on your terminal, please reboot it. After that your IKEv2 connection will be configured, you can start the connection using shell typing in "start_vpn" (without quotes), or stop it typing in "stop_vpn" (without quotes).' %}
 
-<h2 id="related-articles">Related articles</h2>
+## Related articles
 
-<p><a href="/posts/2021-04-23-configure-vpn-server-ikev2-ipsec-with-certificates-mikrotik-routeros/">Configure a VPN server using IKEv2 IPSec with certificates on Mikrotik RouterOS</a></p>
+[Configure a VPN server using IKEv2 IPSec with certificates on Mikrotik RouterOS](/posts/2021-04-23-configure-vpn-server-ikev2-ipsec-with-certificates-mikrotik-routeros/)
+</EOT></code></pre></div>
 
           <hr>
           <div class="text-center">
@@ -276,7 +279,7 @@ function stop_vpn()
         </a>
       </li></ul>
     <p class="copyright text-copyright">Copyright &copy; <a href="/about/" hreflang="en" aria-label="Notes on Cloud Computing author">Carles Loriente</a> 2024<br />
-      <a href="https://bootstrap-theme.notesoncloudcomputing.com/" hreflang="en" target="_blank" rel="noreferrer" aria-label="NOCC Bootstrap Theme">NOCC Bootstrap Theme</a> v.1.0.7 created by <a href="https://www.notesoncloudcomputing.com/about/" hreflang="en" target="_blank" rel="noreferrer" aria-label="Autor website https://www.notesoncloudcomputing.com/about/">Carles Loriente</a><br />
+      <a href="https://bootstrap-theme.notesoncloudcomputing.com/" hreflang="en" target="_blank" rel="noreferrer" aria-label="NOCC Bootstrap Theme">NOCC Bootstrap Theme</a> v.1.2.0 created by <a href="https://www.notesoncloudcomputing.com/about/" hreflang="en" target="_blank" rel="noreferrer" aria-label="Autor website https://www.notesoncloudcomputing.com/about/">Carles Loriente</a><br />
       Build with <a href="https://jekyllrb.com" hreflang="en" target="_blank" rel="noreferrer" aria-label="Jekyll">Jekyll</a><br />
       Proudly hosted by <a href="https://github.com" hreflang="en" target="_blank" rel="noreferrer" aria-label="Github"><strong>GitHub</strong></a>
     </p>
@@ -284,6 +287,8 @@ function stop_vpn()
 </footer>
     
 <script type="text/javascript" rel="preload" src="/assets/vendor/nocc-bootstrap-theme/js/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/clipboardjs/clipboard.min.js"></script>
+<script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/copy-clipboard.js"></script>
 <script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/bootstrap/5.3.3/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="https://notes-on-cloud-infrastructure.disqus.com/count.js" async id="dsq-count-scr"></script>
   </body>

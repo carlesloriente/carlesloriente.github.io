@@ -38,13 +38,11 @@ You can host a:
 
 6. Initialize a local Git repo and push it contents to GitHub
 
-```bash
-git init
+{% include code_block.html lang="bash" content='git init
 git add README.md
 git commit -m "first commit"
 git remote add origin https://github.com/username/username.github.io.git
-git push -u origin master
-```
+git push -u origin master' %}
 
 7. Wait a bit and check the section "GitHub Pages" inside settings of the repo at the GitHub panel
 

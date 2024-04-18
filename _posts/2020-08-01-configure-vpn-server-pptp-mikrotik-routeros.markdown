@@ -13,9 +13,7 @@ redirect_from: "/routeros/mikrotik/vpn/2020/08/01/configure-vpn-server-pptp-mikr
 
 The following file (rsc) for Mikrotik RouterOS v6.45+ configures an VPN usign PPTP
 
-```rsc
-# Mikrotik RouterOs PPTP VPN Full configuration
-#
+{% include code_block.html lang="rsc" content='# Mikrotik RouterOs PPTP VPN Full configuration
 
 /interface bridge
 add fast-forward=no name=bridge
@@ -64,7 +62,6 @@ add action=masquerade chain=srcnat out-interface=bridge src-address=10.1.1.2-10.
 add chain=srcnat
 
 /ppp secret
-add name=vpn_user password="ChangeThisPasword" profile=profile-vpn service=any
-```
+add name=vpn_user password="ChangeThisPasword" profile=profile-vpn service=any' %}
 
-Download GitHub Gist [mikrotik_routeros_vpn-pptp.rsc](https://gist.github.com/carlesloriente/3ba0d4e9902cd517c76415786fca11cd){:target="_blank"}
+Download the GitHub Gist [mikrotik_routeros_vpn-pptp.rsc](https://gist.github.com/carlesloriente/3ba0d4e9902cd517c76415786fca11cd){:target="_blank"}

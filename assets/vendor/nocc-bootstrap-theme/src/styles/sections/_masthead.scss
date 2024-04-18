@@ -1,0 +1,201 @@
+// Styling for the masthead
+section {
+
+  &.masthead {
+    // TIP: Background images are set within the HTML using inline CSS!
+    position: relative;
+    background: no-repeat center;
+    background-attachment: scroll;
+    background-color: transparent;
+    background-size: cover;
+    width: 100%;
+    height: 22vh;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: .5;
+      z-index: -20;
+      background-color: var(--#{$prefix}overlay-bg);
+      width: 100%;
+      height: 22vh;
+    }
+
+    @media only screen and (min-width: 990px) {
+      &.masthead {
+        height: 28vh;
+
+        .overlay {
+          height: 28vh;
+        }
+      }
+    }
+
+    .page-heading,
+    .post-heading {
+      padding: 8rem  0;
+      text-align: center;
+      text-transform: lowercase;
+      color: $white;
+      font-family: $headings-font-family;
+      @media only screen and (min-width: 990px) {
+        color: $white;
+      }
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    .page-heading {
+
+      h1 {
+        margin-top: 0;
+        color: $white;
+        font-size: 2rem;
+        font-weight: 900;
+      }
+
+      .subheading {
+        display: block;
+        margin: 10px 0 0;
+        line-height: 1.1;
+        color: $white;
+        font-family: $headings-font-family;
+        font-size: 1.2rem;
+        font-weight: 300;
+
+        &::first-letter {
+          text-transform: uppercase;
+        }
+      }
+
+      @media only screen and (min-width: 990px) {
+        h1 {
+          font-size: 4rem;
+        }
+
+        .subheading {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .post-heading {
+
+      a {
+        color: $white;
+      }
+
+      .subheading {
+        display: block;
+        margin: 10px 0 30px;
+        line-height: 1.1;
+        font-family: $headings-font-family;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .tags-heading,
+      .meta {
+        display: none;
+      }
+
+      @media only screen and (min-width: 990px) {
+        .tags-heading,
+        .meta {
+          display: block;
+          text-transform: none;
+          line-height: 1.1;
+          font-family: $headings-font-family;
+          font-size: 1.2rem;
+          font-weight: 300;
+          font-style: italic;
+        }
+      }
+    }
+  }
+
+  &.sechead {
+    margin-bottom: 1.5rem;
+
+    @media only screen and (min-width: 990px) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &.smallhead {
+    margin-bottom: 3rem;
+    background-color: var(--#{$prefix}small-head-color);
+    height: 65px;
+  }
+
+  &.homehead {
+    color: $white;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: .6;
+      z-index: 900;
+      background-color: var(--#{$prefix}overlay-bg);
+      width: 100%;
+      height: 35vh;
+    }
+
+    .page-heading {
+      position: absolute;
+      z-index: 901;
+      margin: auto;
+      padding: 10rem 0;
+      width: 100%;
+      text-align: center;
+      color: $white;
+      font-family: $headings-font-family;
+
+      h1 {
+        margin-top: 30px;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 900;
+      }
+
+      .subheading {
+        display: block;
+        margin: 10px 0 0;
+        line-height: 1.1;
+        font-size: 1rem;
+        font-weight: 300;
+
+        &::first-letter {
+          text-transform: uppercase;
+        }
+      }
+
+      @media only screen and (min-width: 990px) {
+        padding: 6rem 0;
+
+        h1 {
+          font-size: 4rem;
+        }
+
+        .subheading {
+          font-size: 2rem;
+        }
+      }
+      @media only screen and (min-width: 1536px) {
+        padding: 6rem 0;
+
+        h1 {
+          font-size: 5rem;
+        }
+
+        .subheading {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}

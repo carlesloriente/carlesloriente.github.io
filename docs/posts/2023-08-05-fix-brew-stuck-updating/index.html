@@ -14,14 +14,14 @@
   <meta property="og:description" content="The brew (Hombrebrew) package manager is a mush have tool for developers using macOs. It enables you to install, update, and manage a wide range of software ...">
   <meta property="og:image" content="https://www.notesoncloudcomputing.com/assets/images/2023-08-05-fix-brew-stuck-updating.webp">
   <meta property="og:type" content="article">
-  <link rel="stylesheet" href="/assets/vendor/nocc-bootstrap-theme/css/nocc-theme.css" type="text/css">
+  <link rel="stylesheet" href="/assets/vendor/nocc-bootstrap-theme/css/nocc-theme.min.css" type="text/css">
 <link rel="stylesheet" href="/assets/css/styles.css" type="text/css">
   <link rel="canonical" href="https://www.notesoncloudcomputing.com/posts/2023-08-05-fix-brew-stuck-updating/">
   <link rel="alternate" type="application/rss+xml" title="Notes on Cloud Computing" href="/feed.xml">
-  <link rel="shortcut icon" href="/assets/images/favicon.ico">
-  <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
-  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/assets/images/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="/assets/images/favicon_io/favicon.ico">
+  <link rel="icon" href="/assets/images/favicon_io/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/images/favicon_io/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/images/favicon_io/favicon.png" type="image/png">
   <link rel="manifest" href="/manifest.webmanifest"><!-- Global site tag (gtag.js) - Google Analytics -->
 <script type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id=G-YZN6D91Z4N" ></script>
 <script type="text/javascript">
@@ -39,7 +39,7 @@
         <span class="daylight filter-white"></span>
       </button>
     </div>
-    <script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/theme-toggler.js"></script>
+    <script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/theme-toggler.min.js"></script>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
       <div class="container">
@@ -86,17 +86,18 @@
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
+        <div class=" mx-auto">
           <div class="post-heading">
-            <h1 class="mx-auto">Fix Brew stuck/hangs updating in MacOs</h1></div>
+            <h1 class="mx-auto">Fix Brew stuck/hangs updating in MacOs</h1>
+          </div>
         </div>
       </div>
     </div>
   </section>
   <section>
-    <div class="container">
+    <div class="container my-4">
       <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="col-lg-8 mx-auto">
           <div class="meta text-center">Posted by
             <a href="/about/" hreflang="en" aria-label="Author">Carles Loriente </a>  on August 05, 2023 &middot; <span class="reading-time" title="Estimated read time"> 1 min  read</span>
 </div>
@@ -104,28 +105,28 @@
           <p>The <a href="https://brew.sh/index" target="_blank">brew (Hombrebrew)</a> package manager is a mush have tool for developers using macOs. It enables you to install, update, and manage a wide range of software packages from the command line.
 However, sometimes you might encounter issues when updating. If brew update command get stuck you can execute the following commands to fix it.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<div class="language-rsc highlighter-rouge"><pre class="highlight "><button type="button" class="btn-clipboard float-end tooltip" aria-label="Copy to clipboard" data-bs-original-title="Copy to clipboard"><span class="tooltiptext">Copy to clipboard</span><span class="clipboard filter-white"></span></button>
+<code>#!/bin/bash
 
-<span class="c"># Full script for fixing homebrew update error</span>
-<span class="c"># Reset</span>
-<span class="nb">sudo rm</span> <span class="nt">-rf</span> /Library/Developer/CommandLineTools
-xcode-select <span class="nt">--install</span>
+# Full script for fixing homebrew update error
+# Reset
+sudo rm -rf /Library/Developer/CommandLineTools
+xcode-select --install
 
-<span class="c"># Reset homebrew-cask</span>
-brew untap homebrew/homebrew-cask - <span class="nt">-force</span>
+# Reset homebrew-cask
+brew untap homebrew/homebrew-cask --force
 brew reinstall cask
 
-<span class="c"># Reset homebrew-core</span>
-brew update-reset <span class="nt">-d</span> <span class="nt">-v</span>
-</code></pre></div></div>
+# Reset homebrew-core
+brew update-reset -d -v</code>
+</pre></div>
 
-<p>Download GitHub Gist <a href="https://gist.github.com/carlesloriente/d565db45a60dd91a41be5bb9eb68079c" target="_blank">fix_brew_stuck_updating.bash</a></p>
+<p>Download the GitHub Gist <a href="https://gist.github.com/carlesloriente/d565db45a60dd91a41be5bb9eb68079c" target="_blank">fix_brew_stuck_updating.bash</a></p>
 
 <p>Background header image created using <a href="https://dreamstudio.ai" target="_blank">Dream Studio by stability.ai</a>.</p>
 
-<p><em>Prompt</em>:</p>
 <blockquote>
-  <p>Create an illustration of fixing Brew updating in MacOs</p>
+  <p><em>Prompt</em>: Create an illustration of fixing Brew updating in MacOs</p>
 </blockquote>
 
 <p><a href="/assets/images/dreamstudio/2K/Fix-Brew-stuck-updating.webp" target="_blank">Download Full size image 2K</a></p>
@@ -198,7 +199,7 @@ brew update-reset <span class="nt">-d</span> <span class="nt">-v</span>
         </a>
       </li></ul>
     <p class="copyright text-copyright">Copyright &copy; <a href="/about/" hreflang="en" aria-label="Notes on Cloud Computing author">Carles Loriente</a> 2024<br />
-      <a href="https://bootstrap-theme.notesoncloudcomputing.com/" hreflang="en" target="_blank" rel="noreferrer" aria-label="NOCC Bootstrap Theme">NOCC Bootstrap Theme</a> v.1.0.7 created by <a href="https://www.notesoncloudcomputing.com/about/" hreflang="en" target="_blank" rel="noreferrer" aria-label="Autor website https://www.notesoncloudcomputing.com/about/">Carles Loriente</a><br />
+      <a href="https://bootstrap-theme.notesoncloudcomputing.com/" hreflang="en" target="_blank" rel="noreferrer" aria-label="NOCC Bootstrap Theme">NOCC Bootstrap Theme</a> v.1.2.0 created by <a href="https://www.notesoncloudcomputing.com/about/" hreflang="en" target="_blank" rel="noreferrer" aria-label="Autor website https://www.notesoncloudcomputing.com/about/">Carles Loriente</a><br />
       Build with <a href="https://jekyllrb.com" hreflang="en" target="_blank" rel="noreferrer" aria-label="Jekyll">Jekyll</a><br />
       Proudly hosted by <a href="https://github.com" hreflang="en" target="_blank" rel="noreferrer" aria-label="Github"><strong>GitHub</strong></a>
     </p>
@@ -206,6 +207,8 @@ brew update-reset <span class="nt">-d</span> <span class="nt">-v</span>
 </footer>
     
 <script type="text/javascript" rel="preload" src="/assets/vendor/nocc-bootstrap-theme/js/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/clipboardjs/clipboard.min.js"></script>
+<script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/copy-clipboard.js"></script>
 <script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/bootstrap/5.3.3/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="https://notes-on-cloud-infrastructure.disqus.com/count.js" async id="dsq-count-scr"></script>
   </body>

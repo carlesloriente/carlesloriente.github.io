@@ -14,14 +14,14 @@
   <meta property="og:description" content="Before use it you should have installed and configured the AWS SDK for PHP.">
   <meta property="og:image" content="https://www.notesoncloudcomputing.com/assets/images/bg-aws-logo.webp">
   <meta property="og:type" content="article">
-  <link rel="stylesheet" href="/assets/vendor/nocc-bootstrap-theme/css/nocc-theme.css" type="text/css">
+  <link rel="stylesheet" href="/assets/vendor/nocc-bootstrap-theme/css/nocc-theme.min.css" type="text/css">
 <link rel="stylesheet" href="/assets/css/styles.css" type="text/css">
   <link rel="canonical" href="https://www.notesoncloudcomputing.com/posts/2020-01-04-aws-sdk-php-script-upload-to-s3/">
   <link rel="alternate" type="application/rss+xml" title="Notes on Cloud Computing" href="/feed.xml">
-  <link rel="shortcut icon" href="/assets/images/favicon.ico">
-  <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
-  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/assets/images/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="/assets/images/favicon_io/favicon.ico">
+  <link rel="icon" href="/assets/images/favicon_io/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/images/favicon_io/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/images/favicon_io/favicon.png" type="image/png">
   <link rel="manifest" href="/manifest.webmanifest"><!-- Global site tag (gtag.js) - Google Analytics -->
 <script type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id=G-YZN6D91Z4N" ></script>
 <script type="text/javascript">
@@ -39,7 +39,7 @@
         <span class="daylight filter-white"></span>
       </button>
     </div>
-    <script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/theme-toggler.js"></script>
+    <script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/theme-toggler.min.js"></script>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
       <div class="container">
@@ -86,17 +86,18 @@
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
+        <div class=" mx-auto">
           <div class="post-heading">
-            <h1 class="mx-auto">A simple PHP script for upload files to s3 using AWS SDK</h1></div>
+            <h1 class="mx-auto">A simple PHP script for upload files to s3 using AWS SDK</h1>
+          </div>
         </div>
       </div>
     </div>
   </section>
   <section>
-    <div class="container">
+    <div class="container my-4">
       <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="col-lg-8 mx-auto">
           <div class="meta text-center">Posted by
             <a href="/about/" hreflang="en" aria-label="Author">Carles Loriente </a>  on January 04, 2020 &middot; <span class="reading-time" title="Estimated read time"> 1 min  read</span>
 </div>
@@ -105,33 +106,34 @@
 
 <p><em>Don’t use in production environments</em>.</p>
 
-<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<div class="language-php highlighter-rouge"><pre class="highlight "><button type="button" class="btn-clipboard float-end tooltip" aria-label="Copy to clipboard" data-bs-original-title="Copy to clipboard"><span class="tooltiptext">Copy to clipboard</span><span class="clipboard filter-white"></span></button>
+<code>&lt;?php
 
-<span class="k">require_once</span> <span class="s1">'../private/config.php'</span><span class="p">;</span>
-<span class="k">require_once</span> <span class="nv">$CONF</span><span class="o">-&gt;</span><span class="k">private</span> <span class="mf">.</span> <span class="s1">'Project.php'</span><span class="p">;</span>
-<span class="k">require_once</span> <span class="nv">$CONF</span><span class="o">-&gt;</span><span class="n">lib</span> <span class="mf">.</span> <span class="s1">'aws/aws-autoloader.php'</span><span class="p">;</span>
-<span class="nb">define</span><span class="p">(</span><span class="s1">'AWS_KEY'</span><span class="p">,</span> <span class="nv">$CONF</span><span class="o">-&gt;</span><span class="no">AWS_KEY</span><span class="p">);</span>
-<span class="nb">define</span><span class="p">(</span><span class="s1">'AWS_SECRET_KEY'</span><span class="p">,</span> <span class="nv">$CONF</span><span class="o">-&gt;</span><span class="no">AWS_SECRET_KEY</span><span class="p">);</span>
-<span class="nb">define</span><span class="p">(</span><span class="s1">'HOST'</span><span class="p">,</span> <span class="s1">'https://s3.amazonaws.com/'</span><span class="p">);</span>
+require_once '../private/config.php';
+require_once $CONF-&gt;private . 'Project.php';
+require_once $CONF-&gt;lib . 'aws/aws-autoloader.php';
+define('AWS_KEY', $CONF-&gt;AWS_KEY);
+define('AWS_SECRET_KEY', $CONF-&gt;AWS_SECRET_KEY);
+define('HOST', 'https://s3.amazonaws.com/');
 
-<span class="kn">use</span> <span class="nc">Aws\S3\S3Client</span><span class="p">;</span>
+use Aws\S3\S3Client;
 
-<span class="c1">// Establish connection with DreamObjects with an S3 client.</span>
-<span class="nv">$client</span> <span class="o">=</span> <span class="nc">S3Client</span><span class="o">::</span><span class="nf">factory</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
-    <span class="s1">'base_url'</span> <span class="o">=&gt;</span> <span class="no">HOST</span><span class="p">,</span>
-    <span class="s1">'key'</span>      <span class="o">=&gt;</span> <span class="no">AWS_KEY</span><span class="p">,</span>
-    <span class="s1">'secret'</span>   <span class="o">=&gt;</span> <span class="no">AWS_SECRET_KEY</span><span class="p">,</span>
-<span class="p">));</span>
+// Establish connection with DreamObjects with an S3 client.
+$client = S3Client::factory(array(
+    'base_url' =&gt; HOST,
+    'key'      =&gt; AWS_KEY,
+    'secret'   =&gt; AWS_SECRET_KEY,
+));
 
-<span class="nv">$bucket</span> <span class="o">=</span> <span class="s1">'YOUR-S3-BUCKET'</span><span class="p">;</span>
-<span class="nv">$keyname</span> <span class="o">=</span> <span class="s1">'FILETOUPLOAD.ext'</span><span class="p">;</span>
+$bucket   = 'YOUR-S3-BUCKET';
+$keyname  = 'FILETOUPLOAD.ext';
 
-<span class="nv">$filepath</span> <span class="o">=</span> <span class="nv">$keyname</span><span class="p">;</span>
-<span class="nv">$acl</span>         <span class="o">=</span> <span class="s1">'private'</span><span class="p">;</span>
-<span class="nv">$client</span><span class="o">-&gt;</span><span class="nf">upload</span><span class="p">(</span><span class="nv">$bucket</span><span class="p">,</span> <span class="nv">$keyname</span><span class="p">,</span> <span class="nb">fopen</span><span class="p">(</span><span class="nv">$filepath</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">),</span> <span class="nv">$acl</span><span class="p">);</span>
-</code></pre></div></div>
+$filepath = $keyname;
+$acl      = 'private';
+$client-&gt;upload($bucket, $keyname, fopen($filepath, 'r'), $acl);</code>
+</pre></div>
 
-<p>Download GitHub Gist <a href="https://gist.github.com/carlesloriente/70c6691cd8647cfa03bfda0f39cac681" target="_blank">upload_files_to_s3_using_aws_sdk.php</a></p>
+<p>Download the GitHub Gist <a href="https://gist.github.com/carlesloriente/70c6691cd8647cfa03bfda0f39cac681" target="_blank">upload_files_to_s3_using_aws_sdk.php</a></p>
 
           <hr>
           <div class="text-center">
@@ -201,7 +203,7 @@
         </a>
       </li></ul>
     <p class="copyright text-copyright">Copyright &copy; <a href="/about/" hreflang="en" aria-label="Notes on Cloud Computing author">Carles Loriente</a> 2024<br />
-      <a href="https://bootstrap-theme.notesoncloudcomputing.com/" hreflang="en" target="_blank" rel="noreferrer" aria-label="NOCC Bootstrap Theme">NOCC Bootstrap Theme</a> v.1.0.7 created by <a href="https://www.notesoncloudcomputing.com/about/" hreflang="en" target="_blank" rel="noreferrer" aria-label="Autor website https://www.notesoncloudcomputing.com/about/">Carles Loriente</a><br />
+      <a href="https://bootstrap-theme.notesoncloudcomputing.com/" hreflang="en" target="_blank" rel="noreferrer" aria-label="NOCC Bootstrap Theme">NOCC Bootstrap Theme</a> v.1.2.0 created by <a href="https://www.notesoncloudcomputing.com/about/" hreflang="en" target="_blank" rel="noreferrer" aria-label="Autor website https://www.notesoncloudcomputing.com/about/">Carles Loriente</a><br />
       Build with <a href="https://jekyllrb.com" hreflang="en" target="_blank" rel="noreferrer" aria-label="Jekyll">Jekyll</a><br />
       Proudly hosted by <a href="https://github.com" hreflang="en" target="_blank" rel="noreferrer" aria-label="Github"><strong>GitHub</strong></a>
     </p>
@@ -209,6 +211,8 @@
 </footer>
     
 <script type="text/javascript" rel="preload" src="/assets/vendor/nocc-bootstrap-theme/js/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/clipboardjs/clipboard.min.js"></script>
+<script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/copy-clipboard.js"></script>
 <script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/bootstrap/5.3.3/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="https://notes-on-cloud-infrastructure.disqus.com/count.js" async id="dsq-count-scr"></script>
   </body>

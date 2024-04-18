@@ -1,4 +1,18 @@
 #!/bin/bash
 
-export GEM_PATH=$(pwd)/vendor/bundle
-cp -TR node_modules/nocc-bootstrap-theme assets/vendor/nocc-bootstrap-theme/ && JEKYLL_ENV=production bundle exec jekyll build --incremental --verbose --trace --destination docs --config _config.yml
+INPUT_DIR="node_modules/nocc-bootstrap-theme"
+WEBROOT="docs"
+OUTPUT_DIR="assets/vendor"
+
+if [ ! -d $INPUT_DIR ]; then
+  echo "Nocc node_module directory not found, please install the package";
+  exit 0;
+fi
+
+build_site() {
+  JEKYLL_ENV=production bundle exec jekyll build --incremental --verbose --trace --destination ${WEBROOT} --config _config.yml;
+  mkdir -p ${WEBROOT}/${OUTPUT_DIR};
+  rsync -avz --progress ${INPUT_DIR} ${WEBROOT}/${OUTPUT_DIR} --exclude src;
+}
+
+build_site;

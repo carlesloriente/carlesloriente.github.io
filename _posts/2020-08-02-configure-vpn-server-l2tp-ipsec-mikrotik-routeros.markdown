@@ -15,9 +15,7 @@ redirect_from:
 
 The following file (rsc) for Mikrotik RouterOS v6.45+ configures an VPN usign L2TP
 
-```rsc
-# Mikrotik RouterOs L2TP/IPSec VPN Full configuration
-#
+{% include code_block.html lang="rsc" content='# Mikrotik RouterOs L2TP/IPSec VPN Full configuration
 
 /interface bridge
 add fast-forward=no name=bridge
@@ -81,7 +79,6 @@ add action=accept chain=srcnat
 add generate-policy=port-override peer=l2tpserver secret="ChangeThisSecret"
 
 /ppp secret
-add name=vpn_user password="ChangeThisPasword" profile=profile-vpn service=any
-```
+add name=vpn_user password="ChangeThisPasword" profile=profile-vpn service=any' %}
 
-Download GitHub Gist [mikrotik_routeros_vpn-l2tp-ipsec.rsc](https://gist.github.com/carlesloriente/ee82901e3a67844eaca3097c2352bc03){:target="_blank"}
+Download the GitHub Gist [mikrotik_routeros_vpn-l2tp-ipsec.rsc](https://gist.github.com/carlesloriente/ee82901e3a67844eaca3097c2352bc03){:target="_blank"}

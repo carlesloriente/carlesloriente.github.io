@@ -21,13 +21,13 @@
   {{ critical | scssify }}
   </style>
 {% else %}
-  <link rel="stylesheet" href="{{ '/assets/vendor/nocc-bootstrap-theme/css/nocc-theme.css' | relative_url }}" type="text/css">
+  <link rel="stylesheet" href="{{ '/assets/vendor/nocc-bootstrap-theme/css/nocc-theme.min.css' | relative_url }}" type="text/css">
 {% endif -%}
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" type="text/css">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ 'feed.xml' | relative_url }}">
-  <link rel="shortcut icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
-  <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" sizes="any">
-  <link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="{{ '/assets/images/favicon.png' | relative_url }}" type="image/png">
+  <link rel="shortcut icon" href="{{ '/assets/images/favicon_io/favicon.ico' | relative_url }}">
+  <link rel="icon" href="{{ '/assets/images/favicon_io/favicon.ico' | relative_url }}" sizes="any">
+  <link rel="icon" href="{{ '/assets/images/favicon_io/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ '/assets/images/favicon_io/favicon.png' | relative_url }}" type="image/png">
   <link rel="manifest" href="/manifest.webmanifest">

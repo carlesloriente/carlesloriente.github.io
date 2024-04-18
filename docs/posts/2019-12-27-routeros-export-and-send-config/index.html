@@ -4,24 +4,24 @@
       <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>RouterOS export and send by mail config file</title>
-  <meta name="description" content="If you have some hardware from Mikrotik, or use some virtual/cloud appliance that runs RouterOS, this little script could be very handy, exports and send by ...">
+  <meta name="description" content="If you have some hardware from Mikrotik, or use a virtual/cloud appliance that runs RouterOS, this little script could be very handy, exports and send by ema...">
   <meta name="google-site-verification" content="imA3xlKv43a50bTrOlAa3eWQ3VBCazAY4Y20KImDXOM">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="godarthvader">
   <meta name="twitter:creator" content="godarthvader">
   <meta property="og:url" content="https://www.notesoncloudcomputing.com/posts/2019-12-27-routeros-export-and-send-config/">
   <meta property="og:title" content="RouterOS export and send by mail config file">
-  <meta property="og:description" content="If you have some hardware from Mikrotik, or use some virtual/cloud appliance that runs RouterOS, this little script could be very handy, exports and send by ...">
+  <meta property="og:description" content="If you have some hardware from Mikrotik, or use a virtual/cloud appliance that runs RouterOS, this little script could be very handy, exports and send by ema...">
   <meta property="og:image" content="https://www.notesoncloudcomputing.com/assets/images/bg-mikrotik.webp">
   <meta property="og:type" content="article">
-  <link rel="stylesheet" href="/assets/vendor/nocc-bootstrap-theme/css/nocc-theme.css" type="text/css">
+  <link rel="stylesheet" href="/assets/vendor/nocc-bootstrap-theme/css/nocc-theme.min.css" type="text/css">
 <link rel="stylesheet" href="/assets/css/styles.css" type="text/css">
   <link rel="canonical" href="https://www.notesoncloudcomputing.com/posts/2019-12-27-routeros-export-and-send-config/">
   <link rel="alternate" type="application/rss+xml" title="Notes on Cloud Computing" href="/feed.xml">
-  <link rel="shortcut icon" href="/assets/images/favicon.ico">
-  <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
-  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/assets/images/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="/assets/images/favicon_io/favicon.ico">
+  <link rel="icon" href="/assets/images/favicon_io/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/images/favicon_io/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/images/favicon_io/favicon.png" type="image/png">
   <link rel="manifest" href="/manifest.webmanifest"><!-- Global site tag (gtag.js) - Google Analytics -->
 <script type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id=G-YZN6D91Z4N" ></script>
 <script type="text/javascript">
@@ -39,7 +39,7 @@
         <span class="daylight filter-white"></span>
       </button>
     </div>
-    <script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/theme-toggler.js"></script>
+    <script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/theme-toggler.min.js"></script>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
       <div class="container">
@@ -86,28 +86,30 @@
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
+        <div class=" mx-auto">
           <div class="post-heading">
-            <h1 class="mx-auto">RouterOS export and send by mail config file</h1></div>
+            <h1 class="mx-auto">RouterOS export and send by mail config file</h1>
+          </div>
         </div>
       </div>
     </div>
   </section>
   <section>
-    <div class="container">
+    <div class="container my-4">
       <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="col-lg-8 mx-auto">
           <div class="meta text-center">Posted by
             <a href="/about/" hreflang="en" aria-label="Author">Carles Loriente </a>  on December 27, 2019 &middot; <span class="reading-time" title="Estimated read time"> 1 min  read</span>
 </div>
           <hr class="border border-primary opacity-25">
-          <p>If you have some hardware from Mikrotik, or use some virtual/cloud appliance that runs RouterOS, this little script could be very handy, exports and send by email the device configuration.</p>
+          <p>If you have some hardware from Mikrotik, or use a virtual/cloud appliance that runs RouterOS, this little script could be very handy, exports and send by email the device configuration.</p>
 
-<pre><code class="language-rsc">/export file=export
-/tool e-mail send to="REPLACEME@WITHYOURMAIL.COM" subject=([/system identity get name] . " Export " . [/system clock get date]) body="([/system clock get date] configuration file)" file=export.rsc
-</code></pre>
+<div class="language-rsc highlighter-rouge"><pre class="highlight "><button type="button" class="btn-clipboard float-end tooltip" aria-label="Copy to clipboard" data-bs-original-title="Copy to clipboard"><span class="tooltiptext">Copy to clipboard</span><span class="clipboard filter-white"></span></button>
+<code>/export file=export
+/tool e-mail send to="REPLACEME@WITHYOURMAIL.COM" subject=([/system identity get name] . " Export " . [/system clock get date]) body="([/system clock get date] configuration file)" file=export.rsc</code>
+</pre></div>
 
-<p>Download GitHub Gist <a href="https://gist.github.com/carlesloriente/e83e61f883fab90c2ea9e16d08df7413" target="_blank">mikrotik-routeros_export-config-file-and-sent-email.rsc</a></p>
+<p>Download the GitHub Gist <a href="https://gist.github.com/carlesloriente/e83e61f883fab90c2ea9e16d08df7413" target="_blank">mikrotik-routeros_export-config-file-and-sent-email.rsc</a></p>
 
           <hr>
           <div class="text-center">
@@ -177,7 +179,7 @@
         </a>
       </li></ul>
     <p class="copyright text-copyright">Copyright &copy; <a href="/about/" hreflang="en" aria-label="Notes on Cloud Computing author">Carles Loriente</a> 2024<br />
-      <a href="https://bootstrap-theme.notesoncloudcomputing.com/" hreflang="en" target="_blank" rel="noreferrer" aria-label="NOCC Bootstrap Theme">NOCC Bootstrap Theme</a> v.1.0.7 created by <a href="https://www.notesoncloudcomputing.com/about/" hreflang="en" target="_blank" rel="noreferrer" aria-label="Autor website https://www.notesoncloudcomputing.com/about/">Carles Loriente</a><br />
+      <a href="https://bootstrap-theme.notesoncloudcomputing.com/" hreflang="en" target="_blank" rel="noreferrer" aria-label="NOCC Bootstrap Theme">NOCC Bootstrap Theme</a> v.1.2.0 created by <a href="https://www.notesoncloudcomputing.com/about/" hreflang="en" target="_blank" rel="noreferrer" aria-label="Autor website https://www.notesoncloudcomputing.com/about/">Carles Loriente</a><br />
       Build with <a href="https://jekyllrb.com" hreflang="en" target="_blank" rel="noreferrer" aria-label="Jekyll">Jekyll</a><br />
       Proudly hosted by <a href="https://github.com" hreflang="en" target="_blank" rel="noreferrer" aria-label="Github"><strong>GitHub</strong></a>
     </p>
@@ -185,6 +187,8 @@
 </footer>
     
 <script type="text/javascript" rel="preload" src="/assets/vendor/nocc-bootstrap-theme/js/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/clipboardjs/clipboard.min.js"></script>
+<script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/copy-clipboard.js"></script>
 <script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/bootstrap/5.3.3/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="https://notes-on-cloud-infrastructure.disqus.com/count.js" async id="dsq-count-scr"></script>
   </body>

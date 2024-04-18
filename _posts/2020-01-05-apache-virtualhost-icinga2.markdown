@@ -17,51 +17,42 @@ redirect_from:
 
 You can configure to use Apache and Icinga2 using the following Virtualhost.
 
-```conf
-<VirtualHost *:80>
-    ServerName yourdomain.com
-    DocumentRoot /usr/share/icingaweb2/public
-    RedirectMatch permanent "^/$"   "http://yourdomain.com/icingaweb2/"
+{% include code_block.html lang="conf" content='<VirtualHost *:80>
+  ServerName yourdomain.com
+  DocumentRoot /usr/share/icingaweb2/public
+  RedirectMatch permanent "^/$"   "http://yourdomain.com/icingaweb2/"
+  Alias /icingaweb2 "/usr/share/icingaweb2/public"
 
-    Alias /icingaweb2 "/usr/share/icingaweb2/public"
+  <Directory "/usr/share/icingaweb2/public">
+    Options SymLinksIfOwnerMatch
+    AllowOverride None
+    <IfModule mod_authz_core.c>
+      # Apache 2.4
+      <RequireAll>
+        Require all granted
+      </RequireAll>
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+      # Apache 2.2
+      Order allow,deny
+      Allow from all
+    </IfModule>
+    SetEnv ICINGAWEB_CONFIGDIR "/etc/icingaweb2"
+    EnableSendfile Off
+    <IfModule mod_rewrite.c>
+      RewriteEngine on
+      RewriteBase /icingaweb2/
+      RewriteCond %{REQUEST_FILENAME} -s [OR]
+      RewriteCond %{REQUEST_FILENAME} -l [OR]
+      RewriteCond %{REQUEST_FILENAME} -d
+      RewriteRule ^.*$ - [NC,L]
+      RewriteRule ^.*$ index.php [NC,L]
+    </IfModule>
+    <IfModule !mod_rewrite.c>
+      DirectoryIndex error_norewrite.html
+      ErrorDocument 404 /error_norewrite.html
+    </IfModule>
+  </Directory>
+</VirtualHost>' %}
 
-    <Directory "/usr/share/icingaweb2/public">
-        Options SymLinksIfOwnerMatch
-        AllowOverride None
-
-        <IfModule mod_authz_core.c>
-            # Apache 2.4
-            <RequireAll>
-                Require all granted
-            </RequireAll>
-        </IfModule>
-
-        <IfModule !mod_authz_core.c>
-            # Apache 2.2
-            Order allow,deny
-            Allow from all
-        </IfModule>
-
-        SetEnv ICINGAWEB_CONFIGDIR "/etc/icingaweb2"
-
-        EnableSendfile Off
-
-        <IfModule mod_rewrite.c>
-            RewriteEngine on
-            RewriteBase /icingaweb2/
-            RewriteCond %{REQUEST_FILENAME} -s [OR]
-            RewriteCond %{REQUEST_FILENAME} -l [OR]
-            RewriteCond %{REQUEST_FILENAME} -d
-            RewriteRule ^.*$ - [NC,L]
-            RewriteRule ^.*$ index.php [NC,L]
-        </IfModule>
-
-        <IfModule !mod_rewrite.c>
-            DirectoryIndex error_norewrite.html
-            ErrorDocument 404 /error_norewrite.html
-        </IfModule>
-    </Directory>
-</VirtualHost>
-```
-
-Download GitHub Gist [icinga_apache_vhost.conf](https://gist.github.com/carlesloriente/e208a167ac882f30ee745659d8ae9f21){:target="_blank"}
+Download the GitHub Gist [icinga_apache_vhost.conf](https://gist.github.com/carlesloriente/e208a167ac882f30ee745659d8ae9f21){:target="_blank"}

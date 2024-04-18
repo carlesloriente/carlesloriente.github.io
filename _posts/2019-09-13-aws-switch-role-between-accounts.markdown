@@ -17,8 +17,7 @@ Select IAM -> Roles, create a new role, attach the policy "AdministratorAccess",
 
 Select the previously created role, click "Trust relationships", edit trust relationship, paste the following policy:
 
-```json
-{
+{% include code_block.html lang="json" content='{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -30,11 +29,10 @@ Select the previously created role, click "Trust relationships", edit trust rela
       "Condition": {}
     }
   ]
-}
-```
+}' %}
 
-Download GitHub Gist [IAM Policy account accessed](https://gist.github.com/carlesloriente/69d9aa0ee17675def577727fd5829459){:target="_blank"}
+Download the GitHub Gist [IAM Policy account accessed](https://gist.github.com/carlesloriente/69d9aa0ee17675def577727fd5829459){:target="_blank"}
 
-**Log the AWS Console with the account that you want to be the accessing account**
+## Log the AWS Console with the account that you want to be the accessing account
 
 Click in your user id, select switch role, fill in with the Account name and role (from accessed account), click switch role and that's it.

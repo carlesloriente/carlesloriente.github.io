@@ -1,6 +1,14 @@
 #!/bin/bash
 
 export GEM_PATH=$(pwd)/vendor/bundle
+INPUT_DIR="node_modules/nocc-bootstrap-theme"
+WEBROOT="_site_local"
+OUTPUT_DIR="assets/vendor"
+
+if [ ! -d $INPUT_DIR ]; then
+  echo "Nocc node_module directory not found, please install the package";
+  exit 0;
+fi
 
 test_bin() {
   echo -n "Checking xsg-utils package: "
@@ -25,7 +33,9 @@ test_fail() {
 
 build_site() {
   echo "Building local site: "
-  cp -TR node_modules/nocc-bootstrap-theme assets/vendor/nocc-bootstrap-theme/ && JEKYLL_ENV=development bundle exec jekyll build --incremental --verbose --destination _site_local --config _config.yml && ruby bin/webserver.rb
+  JEKYLL_ENV=development bundle exec jekyll build --incremental --verbose --destination ${WEBROOT} --config _config.yml;
+  mkdir -p ${WEBROOT}/${OUTPUT_DIR};
+  rsync -avz --progress ${INPUT_DIR} ${WEBROOT}/${OUTPUT_DIR} --exclude src && ruby bin/webserver.rb;
 }
 
 test_bin

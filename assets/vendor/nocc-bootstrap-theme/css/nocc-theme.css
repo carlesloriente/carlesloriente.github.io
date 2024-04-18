@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * NOCC Bootstrap theme 1.0.7 (https://github.com/carlesloriente/nocc-bootstrap-theme/)
+ * NOCC Bootstrap theme 1.2.0 (https://github.com/carlesloriente/nocc-bootstrap-theme/)
  * Copyright 2024 Carles Loriente
  * A Responsive Bootstrap 5 dual Theme
  */
@@ -80,7 +80,7 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-font-sans-serif: "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: "Oxygen Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.05));
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: "Lora", "Times New Roman", "Georgia", "Palatino", "Baskerville", -apple-system, BlinkMacSystemFont, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-body-font-size: 1.1rem;
   --bs-body-font-weight: 400;
@@ -181,7 +181,6 @@
   --bs-code-color: #f18bba;
   --bs-highlight-color: #fff;
   --bs-highlight-bg: #fd7e14;
-  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.05));
   --bs-border-color: #495057;
   --bs-border-color-translucent: rgba(255, 255, 255, 0.15);
   --bs-form-valid-color: #28a745;
@@ -4496,10 +4495,9 @@ textarea.form-control-lg {
 .accordion-flush > .accordion-item:last-child {
   border-bottom: 0;
 }
-.accordion-flush > .accordion-item > .accordion-header .accordion-button, .accordion-flush > .accordion-item > .accordion-header .accordion-button.collapsed {
-  border-radius: 0;
-}
-.accordion-flush > .accordion-item > .accordion-collapse {
+.accordion-flush > .accordion-item > .accordion-collapse,
+.accordion-flush > .accordion-item > .accordion-header .accordion-button,
+.accordion-flush > .accordion-item > .accordion-header .accordion-button.collapsed {
   border-radius: 0;
 }
 

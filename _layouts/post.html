@@ -11,21 +11,18 @@ layout: default
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
+        <div class=" mx-auto">
           <div class="post-heading">
             <h1 class="mx-auto">{{ page.title }}</h1>
-            {%- if page.description %}
-            <h2 class="subheading mx-auto">{{ page.description }}</h2>
-            {% endif -%}
           </div>
         </div>
       </div>
     </div>
   </section>
   <section>
-    <div class="container">
+    <div class="container my-4">
       <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="col-lg-8 mx-auto">
           <div class="meta text-center">Posted by
             {% if page.author %} <a href="{{ 'about/' | relative_url }}" hreflang="{{ site.lang }}" aria-label="Author">{{ page.author }} </a> {% else %}<a href="{{ 'about/' | relative_url }}" hreflang="{{ site.lang }}" aria-label="Author">{{ site.author }} </a> {% endif %} on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=page.content -%}
           </div>

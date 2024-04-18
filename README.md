@@ -12,7 +12,7 @@ Enjoy! 😃
 
 # NOCC Jekyll Bundle
 
-![NOCC Jekyll Bundle webshots](/assets/images/nocc-showcase.webp)
+![NOCC Jekyll Bundle webshots](/assets/images/nocc-theme-showroom.png)
 
 [NOCC Jekyll Bundle](https://bootstrap-theme.notesoncloudcomputing.com/). A fully featured bundle site for [Jekyll](https://jekyllrb.com/) created by [Carles Loriente](https://github.com/carlesloriente).
 Features a homepage, about page, tags cloud page, gallery of images page, examples post pages with comments powered by [Disqus](https://disqus.com/) and a contact form powered by [Formspree](https://formspree.io/).
