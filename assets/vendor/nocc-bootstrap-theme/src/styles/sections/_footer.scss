@@ -1,0 +1,20 @@
+// Styling for the footer
+.footer {
+  border: solid $nocc-divider-end;
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em $nocc-divider-start, inset 0 .125em .5em $nocc-divider-end;
+  background-color: $nocc-divider-start;
+  padding: 5rem 0;
+
+  .list-inline {
+    margin: 0;
+    padding: 0;
+  }
+
+  .copyright {
+    margin-top: 1.2em;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: $font-size-sm;
+  }
+}

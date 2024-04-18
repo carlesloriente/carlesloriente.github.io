@@ -14,14 +14,14 @@
   <meta property="og:description" content="Icinga2 is a very cool monitoring tool, we have used it in several projects with satisfactory results. You can practically monitor anything that is needed. L...">
   <meta property="og:image" content="https://www.notesoncloudcomputing.com/assets/images/bg-icinga2.webp">
   <meta property="og:type" content="article">
-  <link rel="stylesheet" href="/assets/vendor/nocc-bootstrap-theme/css/nocc-theme.css" type="text/css">
+  <link rel="stylesheet" href="/assets/vendor/nocc-bootstrap-theme/css/nocc-theme.min.css" type="text/css">
 <link rel="stylesheet" href="/assets/css/styles.css" type="text/css">
   <link rel="canonical" href="https://www.notesoncloudcomputing.com/posts/2020-01-05-apache-virtualhost-icinga2/">
   <link rel="alternate" type="application/rss+xml" title="Notes on Cloud Computing" href="/feed.xml">
-  <link rel="shortcut icon" href="/assets/images/favicon.ico">
-  <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
-  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/assets/images/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="/assets/images/favicon_io/favicon.ico">
+  <link rel="icon" href="/assets/images/favicon_io/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/images/favicon_io/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/images/favicon_io/favicon.png" type="image/png">
   <link rel="manifest" href="/manifest.webmanifest"><!-- Global site tag (gtag.js) - Google Analytics -->
 <script type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id=G-YZN6D91Z4N" ></script>
 <script type="text/javascript">
@@ -39,7 +39,7 @@
         <span class="daylight filter-white"></span>
       </button>
     </div>
-    <script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/theme-toggler.js"></script>
+    <script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/theme-toggler.min.js"></script>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
       <div class="container">
@@ -86,17 +86,18 @@
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
+        <div class=" mx-auto">
           <div class="post-heading">
-            <h1 class="mx-auto">Apache Virtualhost for Icinga2</h1></div>
+            <h1 class="mx-auto">Apache Virtualhost for Icinga2</h1>
+          </div>
         </div>
       </div>
     </div>
   </section>
   <section>
-    <div class="container">
+    <div class="container my-4">
       <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="col-lg-8 mx-auto">
           <div class="meta text-center">Posted by
             <a href="/about/" hreflang="en" aria-label="Author">Carles Loriente </a>  on January 05, 2020 &middot; <span class="reading-time" title="Estimated read time"> 1 min  read</span>
 </div>
@@ -105,53 +106,47 @@
 
 <p>You can configure to use Apache and Icinga2 using the following Virtualhost.</p>
 
-<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;<span class="n">VirtualHost</span> *:<span class="m">80</span>&gt;
-    <span class="n">ServerName</span> <span class="n">yourdomain</span>.<span class="n">com</span>
-    <span class="n">DocumentRoot</span> /<span class="n">usr</span>/<span class="n">share</span>/<span class="n">icingaweb2</span>/<span class="n">public</span>
-    <span class="n">RedirectMatch</span> <span class="n">permanent</span> <span class="s2">"^/$"</span>   <span class="s2">"http://yourdomain.com/icingaweb2/"</span>
+<div class="language-conf highlighter-rouge"><pre class="highlight "><button type="button" class="btn-clipboard float-end tooltip" aria-label="Copy to clipboard" data-bs-original-title="Copy to clipboard"><span class="tooltiptext">Copy to clipboard</span><span class="clipboard filter-white"></span></button>
+<code>&lt;VirtualHost *:80&gt;
+  ServerName yourdomain.com
+  DocumentRoot /usr/share/icingaweb2/public
+  RedirectMatch permanent "^/$"   "http://yourdomain.com/icingaweb2/"
+  Alias /icingaweb2 "/usr/share/icingaweb2/public"
 
-    <span class="n">Alias</span> /<span class="n">icingaweb2</span> <span class="s2">"/usr/share/icingaweb2/public"</span>
+  &lt;Directory "/usr/share/icingaweb2/public"&gt;
+    Options SymLinksIfOwnerMatch
+    AllowOverride None
+    <IfModule mod_authz_core.c="">
+      # Apache 2.4
+      <RequireAll>
+        Require all granted
+      </RequireAll>
+    </IfModule>
+    &lt;IfModule !mod_authz_core.c&gt;
+      # Apache 2.2
+      Order allow,deny
+      Allow from all
+    &lt;/IfModule&gt;
+    SetEnv ICINGAWEB_CONFIGDIR "/etc/icingaweb2"
+    EnableSendfile Off
+    <IfModule mod_rewrite.c="">
+      RewriteEngine on
+      RewriteBase /icingaweb2/
+      RewriteCond %{REQUEST_FILENAME} -s [OR]
+      RewriteCond %{REQUEST_FILENAME} -l [OR]
+      RewriteCond %{REQUEST_FILENAME} -d
+      RewriteRule ^.*$ - [NC,L]
+      RewriteRule ^.*$ index.php [NC,L]
+    </IfModule>
+    &lt;IfModule !mod_rewrite.c&gt;
+      DirectoryIndex error_norewrite.html
+      ErrorDocument 404 /error_norewrite.html
+    &lt;/IfModule&gt;
+  &lt;/Directory&gt;
+&lt;/VirtualHost&gt;</code>
+</pre></div>
 
-    &lt;<span class="n">Directory</span> <span class="s2">"/usr/share/icingaweb2/public"</span>&gt;
-        <span class="n">Options</span> <span class="n">SymLinksIfOwnerMatch</span>
-        <span class="n">AllowOverride</span> <span class="n">None</span>
-
-        &lt;<span class="n">IfModule</span> <span class="n">mod_authz_core</span>.<span class="n">c</span>&gt;
-            <span class="c"># Apache 2.4
-</span>            &lt;<span class="n">RequireAll</span>&gt;
-                <span class="n">Require</span> <span class="n">all</span> <span class="n">granted</span>
-            &lt;/<span class="n">RequireAll</span>&gt;
-        &lt;/<span class="n">IfModule</span>&gt;
-
-        &lt;<span class="n">IfModule</span> !<span class="n">mod_authz_core</span>.<span class="n">c</span>&gt;
-            <span class="c"># Apache 2.2
-</span>            <span class="n">Order</span> <span class="n">allow</span>,<span class="n">deny</span>
-            <span class="n">Allow</span> <span class="n">from</span> <span class="n">all</span>
-        &lt;/<span class="n">IfModule</span>&gt;
-
-        <span class="n">SetEnv</span> <span class="n">ICINGAWEB_CONFIGDIR</span> <span class="s2">"/etc/icingaweb2"</span>
-
-        <span class="n">EnableSendfile</span> <span class="n">Off</span>
-
-        &lt;<span class="n">IfModule</span> <span class="n">mod_rewrite</span>.<span class="n">c</span>&gt;
-            <span class="n">RewriteEngine</span> <span class="n">on</span>
-            <span class="n">RewriteBase</span> /<span class="n">icingaweb2</span>/
-            <span class="n">RewriteCond</span> %{<span class="n">REQUEST_FILENAME</span>} -<span class="n">s</span> [<span class="n">OR</span>]
-            <span class="n">RewriteCond</span> %{<span class="n">REQUEST_FILENAME</span>} -<span class="n">l</span> [<span class="n">OR</span>]
-            <span class="n">RewriteCond</span> %{<span class="n">REQUEST_FILENAME</span>} -<span class="n">d</span>
-            <span class="n">RewriteRule</span> ^.*$ - [<span class="n">NC</span>,<span class="n">L</span>]
-            <span class="n">RewriteRule</span> ^.*$ <span class="n">index</span>.<span class="n">php</span> [<span class="n">NC</span>,<span class="n">L</span>]
-        &lt;/<span class="n">IfModule</span>&gt;
-
-        &lt;<span class="n">IfModule</span> !<span class="n">mod_rewrite</span>.<span class="n">c</span>&gt;
-            <span class="n">DirectoryIndex</span> <span class="n">error_norewrite</span>.<span class="n">html</span>
-            <span class="n">ErrorDocument</span> <span class="m">404</span> /<span class="n">error_norewrite</span>.<span class="n">html</span>
-        &lt;/<span class="n">IfModule</span>&gt;
-    &lt;/<span class="n">Directory</span>&gt;
-&lt;/<span class="n">VirtualHost</span>&gt;
-</code></pre></div></div>
-
-<p>Download GitHub Gist <a href="https://gist.github.com/carlesloriente/e208a167ac882f30ee745659d8ae9f21" target="_blank">icinga_apache_vhost.conf</a></p>
+<p>Download the GitHub Gist <a href="https://gist.github.com/carlesloriente/e208a167ac882f30ee745659d8ae9f21" target="_blank">icinga_apache_vhost.conf</a></p>
 
           <hr>
           <div class="text-center">
@@ -221,7 +216,7 @@
         </a>
       </li></ul>
     <p class="copyright text-copyright">Copyright &copy; <a href="/about/" hreflang="en" aria-label="Notes on Cloud Computing author">Carles Loriente</a> 2024<br />
-      <a href="https://bootstrap-theme.notesoncloudcomputing.com/" hreflang="en" target="_blank" rel="noreferrer" aria-label="NOCC Bootstrap Theme">NOCC Bootstrap Theme</a> v.1.0.7 created by <a href="https://www.notesoncloudcomputing.com/about/" hreflang="en" target="_blank" rel="noreferrer" aria-label="Autor website https://www.notesoncloudcomputing.com/about/">Carles Loriente</a><br />
+      <a href="https://bootstrap-theme.notesoncloudcomputing.com/" hreflang="en" target="_blank" rel="noreferrer" aria-label="NOCC Bootstrap Theme">NOCC Bootstrap Theme</a> v.1.2.0 created by <a href="https://www.notesoncloudcomputing.com/about/" hreflang="en" target="_blank" rel="noreferrer" aria-label="Autor website https://www.notesoncloudcomputing.com/about/">Carles Loriente</a><br />
       Build with <a href="https://jekyllrb.com" hreflang="en" target="_blank" rel="noreferrer" aria-label="Jekyll">Jekyll</a><br />
       Proudly hosted by <a href="https://github.com" hreflang="en" target="_blank" rel="noreferrer" aria-label="Github"><strong>GitHub</strong></a>
     </p>
@@ -229,6 +224,8 @@
 </footer>
     
 <script type="text/javascript" rel="preload" src="/assets/vendor/nocc-bootstrap-theme/js/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/clipboardjs/clipboard.min.js"></script>
+<script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/copy-clipboard.js"></script>
 <script type="text/javascript" src="/assets/vendor/nocc-bootstrap-theme/js/bootstrap/5.3.3/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="https://notes-on-cloud-infrastructure.disqus.com/count.js" async id="dsq-count-scr"></script>
   </body>

@@ -1,0 +1,66 @@
+
+.filter-white {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(110deg) brightness(106%) contrast(106%);
+}
+
+.features-icon {
+  border-radius: .25rem;
+  width: 2rem;
+  height: 2rem;
+
+  p {
+    margin-top: 10px;
+  }
+
+  img {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  @media only screen and (min-width: 768px) {
+    border-radius: .8rem;
+    width: 4rem;
+    height: 4rem;
+
+    img {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+  }
+}
+
+icon-grid {
+  .col {
+    margin-bottom: $grid-columns-margin;
+  }
+}
+
+.row-cols-2 {
+  min-width: 100%;
+  @media only screen and (min-width: 420px) {
+    min-width: 45%;
+  }
+  @media only screen and (min-width: 922px) {
+    min-width: 35%;
+  }
+}
+
+.features-icon-gradient {
+  background-image: linear-gradient(180deg, $nocc-icon-gradient-start, $nocc-icon-gradient-end);
+}
+
+.rounded-circle {
+  border-radius: 50%;
+  background-color: $black;
+  width: 3.5rem;
+  height: 3.5rem;
+
+  img {
+    margin: 12px -12px;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: $bronze;
+  }
+}

@@ -15,8 +15,7 @@ Before use it you should have installed and configured the [AWS SDK for PHP](htt
 
 *Don't use in production environments*.
 
-```php
-<?php
+{% include code_block.html lang="php" content="<?php
 
 require_once '../private/config.php';
 require_once $CONF->private . 'Project.php';
@@ -34,12 +33,11 @@ $client = S3Client::factory(array(
     'secret'   => AWS_SECRET_KEY,
 ));
 
-$bucket = 'YOUR-S3-BUCKET';
-$keyname = 'FILETOUPLOAD.ext';
+$bucket   = 'YOUR-S3-BUCKET';
+$keyname  = 'FILETOUPLOAD.ext';
 
 $filepath = $keyname;
-$acl         = 'private';
-$client->upload($bucket, $keyname, fopen($filepath, 'r'), $acl);
-```
+$acl      = 'private';
+$client->upload($bucket, $keyname, fopen($filepath, 'r'), $acl);" %}
 
-Download GitHub Gist [upload_files_to_s3_using_aws_sdk.php](https://gist.github.com/carlesloriente/70c6691cd8647cfa03bfda0f39cac681){:target="_blank"}
+Download the GitHub Gist [upload_files_to_s3_using_aws_sdk.php](https://gist.github.com/carlesloriente/70c6691cd8647cfa03bfda0f39cac681){:target="_blank"}

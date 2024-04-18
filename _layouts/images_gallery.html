@@ -54,11 +54,11 @@ layout: default
         var modal = document.getElementById("image-gallery-image");
         modal.removeAttribute('src');
         modal.setAttribute('src', url);
+        modal.setAttribute("disabled", "");
         var title = document.getElementById("image-gallery-title");
         title.textContent = name;
       };
     }
   });
-</script> 
-<div class="divider"></div>
+</script>
 </section>

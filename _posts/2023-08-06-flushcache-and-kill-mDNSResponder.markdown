@@ -16,25 +16,19 @@ The local cache contains files and data that your system has saved to speed up c
 
 *Mac*:
 
-```bash
-#!/bin/bash
-
+{% include code_block.html lang="bash" content='#!/bin/bash
 sudo dscacheutil -flushcache;
 sudo killall -HUP mDNSResponder;
-sleep 2;
-```
+sleep 2;' %}
 
-Download GitHub Gist [fedora-configure-and-setup-ikev2.sh](https://gist.github.com/carlesloriente/1cf094165955b85617cd917573df65e1){:target="_blank"}
+Download the GitHub Gist [fedora-configure-and-setup-ikev2.sh](https://gist.github.com/carlesloriente/1cf094165955b85617cd917573df65e1){:target="_blank"}
 
 *Linux*:
 
-```bash
-sudo /etc/init.d/nscd restart
-```
+{% include code_block.html lang="bash" content='sudo /etc/init.d/nscd restart' %}
 
 Background header image created using [Dream Studio by stability.ai](https://dreamstudio.ai){:target="_blank"}.
 
-*Prompt*:
-> Create an image portraying a Clear local cache memory using the command line interface in macos computer
+> *Prompt*: Create an image portraying a Clear local cache memory using the command line interface in macos computer
 
 [Download Full size image 2K](/assets/images/dreamstudio/2K/Flushcache.webp){:target="_blank"}

@@ -1,0 +1,25 @@
+
+$theme-colors-dark: ();
+$theme-colors-dark: map-merge(
+  (
+    'primary':    $primary,
+    'secondary':  $secondary,
+    'download':   $download,
+    'success':    $success,
+    'info':       $info,
+    'warning':    $warning,
+    'danger':     $danger,
+    'light':      $light,
+    'dark':       $dark
+  ),
+    $theme-colors-dark
+);
+
+$theme-colors-text-dark: ();
+$theme-colors-dark: map-merge($theme-colors-text-dark, $theme-colors-text-dark);
+
+$theme-colors-bg-subtle-dark: ();
+$theme-colors-bg-subtle-dark: map-merge($theme-colors-bg-subtle-dark, $theme-colors-bg-subtle-dark);
+
+$theme-colors-border-subtle-dark: ();
+$theme-colors-border-subtle-dark: map-merge($theme-colors-border-subtle-dark, $theme-colors-border-subtle-dark);

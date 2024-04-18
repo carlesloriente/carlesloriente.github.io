@@ -6,8 +6,8 @@ baseurl                 : "/"
 timezone                : "Europe/Madrid"
 description             : A collection of curated opinions and code snippets on cloud tech <br>Bridging knowledge and implementation for enthusiasts and professionals alike
 full_description        : >
- A collection of curated opinions and code snippets on cloud tech <br>Bridging knowledge and implementation for enthusiasts and professionals alike
-gh_repository           : https://github.com/carlesloriente/bootstrap-theme-jekyll/
+ A collection of curated opinions and code snippets on cloud tech. <br>Bridging knowledge and implementation for enthusiasts and professionals alike.
+gh_repository           : https://github.com/carlesloriente/carlesloriente.github.io/
 encoding                : "utf-8"
 locale                  : "en-US"
 lang                    : "en"
@@ -18,7 +18,7 @@ permalink               : pretty
 critical_css            : false
 
 # Theme Notice (please don't remove it ;))
-theme_version           : v.1.0.7
+theme_version           : v.1.2.0
 theme_name              : NOCC Bootstrap Theme
 theme_repo              : https://github.com/carlesloriente/bootstrap-theme-jekyll/
 theme_url               : https://bootstrap-theme.notesoncloudcomputing.com/
@@ -93,5 +93,4 @@ sass:
     - ./_sass
   style                 : compressed
 
-
-exclude: ["bd27dc68a01f40a4826fed8a45e2316e.txt", "AUTHORS.md", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md", "LICENSE", "manifest.webmanifest", "package.json", "package-lock.json", "README.md", "resume.html", "SECURITY.md", "techstack.md", "techstack.yml", "WORKFLOW.md", "bin", "gists", "node_modules", "ahrefs_6f259190b96e078821b745c49ce5f85e18b0d0addfd0ea6778eeafc411f82bee", "BingSiteAuth.xml", "CNAME", "yandex_f833f55647ca1132.html", "Gemfile", "Gemfile.lock", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
+exclude: ["bd27dc68a01f40a4826fed8a45e2316e.txt", "AUTHORS.md", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md", "CODEOWNERS", "LICENSE", "manifest.webmanifest", "package.json", "package-lock.json", "README.md", "resume.html", "SECURITY.md", "techstack.md", "techstack.yml", "WORKFLOW.md", "bin", "gists", "node_modules", "ahrefs_6f259190b96e078821b745c49ce5f85e18b0d0addfd0ea6778eeafc411f82bee", "BingSiteAuth.xml", "CNAME", "yandex_f833f55647ca1132.html", "Gemfile", "Gemfile.lock", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]

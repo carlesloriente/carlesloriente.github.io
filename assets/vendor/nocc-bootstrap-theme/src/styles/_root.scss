@@ -1,0 +1,115 @@
+$color-mode-type: data;
+
+:root {
+  &[data-bs-theme='light'] {
+    #{--#{$prefix}}body-color: #{$body-color};
+    #{--#{$prefix}}body-color-rgb: #{$body-color};
+    #{--#{$prefix}}body-bg: #{$body-bg};
+    #{--#{$prefix}}body-bg-rgb: #{$body-bg};
+    #{--#{$prefix}}bg-opacity: #{$opacity-bg};
+    #{--#{$prefix}}overlay-bg: #{$overlay-bg-light};
+    #{--#{$prefix}}emphasis-color: #{$body-emphasis-color};
+    #{--#{$prefix}}emphasis-color-rgb: #{$body-emphasis-color};
+    #{--#{$prefix}}primary-color: #{$body-primary-color};
+    #{--#{$prefix}}secondary-color: #{$body-secondary-color};
+    #{--#{$prefix}}secondary-color-rgb: #{$body-secondary-color};
+    #{--#{$prefix}}secondary-bg: #{$body-secondary-bg};
+    #{--#{$prefix}}secondary-bg-rgb: #{$body-secondary-bg};
+    #{--#{$prefix}}small-head-color: #{$small-head-color-light};
+    #{--#{$prefix}}form-control-color: #{$form-control-color};
+    #{--#{$prefix}}tertiary-color: #{$body-tertiary-color};
+    #{--#{$prefix}}tertiary-color-rgb: #{$body-tertiary-color};
+    #{--#{$prefix}}tertiary-bg: #{$body-tertiary-bg};
+    #{--#{$prefix}}tertiary-bg-rgb: #{$body-tertiary-bg};
+    #{--#{$prefix}}badge-font-family: #{$headings-font-family};
+    #{--#{$prefix}}badge-font-weight: #{$font-weight-normal};
+
+    @each $color, $value in $colors {
+      #{--#{$prefix}}#{$color}: #{$value};
+    }
+
+    @each $color, $value in $theme-colors {
+      #{--#{$prefix}}#{$color}: #{$value};
+    }
+
+    @each $bp, $value in $grid-breakpoints {
+      #{--#{$prefix}}breakpoint-#{$bp}: #{$value};
+    }
+
+    #{--#{$prefix}}heading-color: #{$headings-color};
+    #{--#{$prefix}}link-color-base: #{$link-color};
+    #{--#{$prefix}}link-hover-color: #{$link-hover-color};
+    #{--#{$prefix}}link-color-rgb: #{$link-color};
+    #{--#{$prefix}}link-hover-color-rgb: #{$link-hover-color};
+    #{--#{$prefix}}code-color: #{$code-color};
+    #{--#{$prefix}}highlight-color: #{$mark-color};
+    #{--#{$prefix}}highlight-bg: #{$mark-bg};
+    #{--#{$prefix}}modal-body-color: #{$modal-body-color-light};
+    #{--#{$prefix}}modal-header-color: #{$modal-header-color-light};
+    #{--#{$prefix}}border-color-base: #{$border-color};
+    #{--#{$prefix}}box-shadow-base: #{$box-shadow};
+    #{--#{$prefix}}form-label-color: #{$body-emphasis-color};
+    #{--#{$prefix}}form-valid-color: #{$form-valid-color};
+    #{--#{$prefix}}form-valid-border-color: #{$form-valid-border-color};
+    #{--#{$prefix}}form-invalid-color: #{$form-invalid-color};
+    #{--#{$prefix}}form-invalid-border-color: #{$form-invalid-border-color};
+    #{--#{$prefix}}font-family-sans-serif: #{inspect($font-family-sans-serif)};
+    #{--#{$prefix}}font-family-monospace: #{inspect($font-family-monospace)};
+
+  }
+}
+
+
+@include color-mode(dark, true) {
+  #{--#{$prefix}}body-color: #{$body-color-dark};
+  #{--#{$prefix}}body-color-rgb: #{$body-color-dark};
+  #{--#{$prefix}}body-bg: #{$body-bg-dark};
+  #{--#{$prefix}}body-bg-rgb: #{$body-bg-dark};
+  #{--#{$prefix}}bg-opacity: #{$opacity-bg};
+  #{--#{$prefix}}overlay-bg: #{$overlay-bg-dark};
+  #{--#{$prefix}}emphasis-color: #{$body-emphasis-color-dark};
+  #{--#{$prefix}}emphasis-color-rgb: #{$body-emphasis-color-dark};
+  #{--#{$prefix}}primary-color: #{$body-primary-color-dark};
+  #{--#{$prefix}}secondary-color: #{$body-secondary-color-dark};
+  #{--#{$prefix}}secondary-color-rgb: #{$body-secondary-color-dark};
+  #{--#{$prefix}}secondary-bg: #{$body-secondary-bg-dark};
+  #{--#{$prefix}}secondary-bg-rgb: #{$body-secondary-bg-dark};
+  #{--#{$prefix}}small-head-color: #{$small-head-color-dark};
+  #{--#{$prefix}}form-control-color: #{$form-control-color-dark};
+  #{--#{$prefix}}tertiary-color: #{$body-tertiary-color-dark};
+  #{--#{$prefix}}tertiary-color-rgb: #{$body-tertiary-color-dark};
+  #{--#{$prefix}}tertiary-bg: #{$body-tertiary-bg-dark};
+  #{--#{$prefix}}tertiary-bg-rgb: #{$body-tertiary-bg-dark};
+  #{--#{$prefix}}badge-font-family: #{$headings-font-family};
+  #{--#{$prefix}}badge-font-weight: #{$font-weight-normal};
+
+  @each $color, $value in $theme-colors-text-dark {
+    #{--#{$prefix}}#{$color}-text-emphasis: #{$value};
+  }
+
+  @each $color, $value in $theme-colors-bg-subtle-dark {
+    #{--#{$prefix}}#{$color}-bg-subtle: #{$value};
+  }
+
+  @each $color, $value in $theme-colors-border-subtle-dark {
+    #{--#{$prefix}}#{$color}-border-subtle: #{$value};
+  }
+
+  #{--#{$prefix}}heading-color: #{$headings-color-dark};
+  #{--#{$prefix}}link-color-base: #{$link-color-dark};
+  #{--#{$prefix}}link-hover-color: #{$link-hover-color-dark};
+  #{--#{$prefix}}link-color-rgb: #{$link-color-dark};
+  #{--#{$prefix}}link-hover-color-rgb: #{$link-hover-color-dark};
+  #{--#{$prefix}}code-color: #{$code-color-dark};
+  #{--#{$prefix}}highlight-color: #{$mark-color-dark};
+  #{--#{$prefix}}highlight-bg: #{$mark-bg-dark};
+  #{--#{$prefix}}modal-body-color: #{$modal-body-color-dark};
+  #{--#{$prefix}}modal-header-color: #{$modal-header-color-dark};
+  #{--#{$prefix}}border-color-base: #{$border-color-dark};
+  #{--#{$prefix}}box-shadow-base: #{$box-shadow-dark};
+  #{--#{$prefix}}form-label-color: #{$body-emphasis-color-dark};
+  #{--#{$prefix}}form-valid-color: #{$form-valid-color-dark};
+  #{--#{$prefix}}form-valid-border-color: #{$form-valid-border-color-dark};
+  #{--#{$prefix}}form-invalid-color: #{$form-invalid-color-dark};
+  #{--#{$prefix}}form-invalid-border-color: #{$form-invalid-border-color-dark};
+}
