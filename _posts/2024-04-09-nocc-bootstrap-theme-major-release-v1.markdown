@@ -12,6 +12,10 @@ tags:
 background: '/assets/images/bg-nocc.webp'
 ---
 
+**Are you tired of outdated Bootstrap themes?** Say hello to NOCC 🎉: A Modern Bootstrap 5 Theme!
+
+An NPM Package that brings the power of NOCC directly to your NodeJS project. [Get it now!](https://www.npmjs.com/package/nocc-bootstrap-theme).
+
 {:.text-center}
 ![NOCC Thene](/assets/images/nocc-theme-showroom.png){:.img-fluid}
 
