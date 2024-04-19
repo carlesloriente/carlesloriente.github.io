@@ -89,16 +89,6 @@ section.masthead {
     font-size: 1.5rem;
   }
 
-  section.homehead .overlay,
-  .carousel .carousel-inner img {
-    height: 40vh;
-  }
-
-  section.homehead .page-heading {
-    height: 40vh;
-    padding: 7rem 0;
-  }
-
   section.homehead .page-heading h1,
   section.homehead .page-heading .h1 {
     font-size: 4rem;
@@ -106,12 +96,14 @@ section.masthead {
 }
 
 .nlogo {
-  width: 12px;
-  height: 12px;
+  display: inline-block;
 
-  background-image: url("../images/nocc_logo.png");
+  width: 45px;
+  height: 30px;
+
+  background-image: url("/assets/images/nocc_icon.png");
   background-repeat: no-repeat;
-  background-size: 12px auto;
+  background-size: 30px auto;
 }
 
 .npm-logo {
@@ -121,7 +113,7 @@ section.masthead {
   height: 24px;
   margin-right: 10px;
 
-  background-image: url("../images/npm-logo.svg");
+  background-image: url("/assets/images/npm-logo.svg");
   background-repeat: no-repeat;
   background-size: 26px auto;
 }
@@ -133,7 +125,7 @@ section.masthead {
   height: 27px;
   margin-right: 5px;
 
-  background-image: url("../images/jekyll-logo.svg");
+  background-image: url("/assets/images/jekyll-logo.svg");
   background-repeat: no-repeat;
   background-size: 28px auto;
 }
