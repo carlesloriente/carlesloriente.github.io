@@ -19,7 +19,36 @@ h3 {
   transform: rotate(-90deg);
   display: flex;
   justify-content: flex-end;
-  color: #fff;
+  color: var(--bs-body-bg);
+
+  @media only screen and (width <= 764px) {
+    transform: rotate(-360deg);
+    display: flex;
+    justify-content: flex-start;
+    height: 0;
+  }
+}
+
+.projects {
+  opacity: .8;
+  
+  &:hover {
+    cursor: pointer;
+    border-color: var(--bs-primary-color);
+    border-width: 2px;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.35);
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+section.smallhead {
+  height: 63px;
+  @media only screen and (width <= 992px) {
+    height: 99px;
+  }
 }
 
 section.homehead .overlay {
@@ -62,7 +91,14 @@ section.masthead {
   opacity: 0.8;
 }
 @media only screen and (width >= 990px) {
+  section.homehead .page-heading h1 {
+    padding-top: 5rem;
+  }
+  section.masthead .page-heading h1 {
+    padding-top: 2rem;
+  }
   section.homehead .page-heading .subheading {
+    padding-top: 3rem;
     font-size: 1.3rem;
   }
 
@@ -75,8 +111,12 @@ section.masthead {
   }
 }
 @media only screen and (width <= 990px) {
-  h1 {
-    font-size: 1.7rem;
+
+  section.homehead .page-heading h1 {
+    padding-top: 3rem !important;
+  }
+  section.masthead .page-heading h1 {
+    padding-top: 2rem !important;
   }
 
   .carousel-control-next-icon,
