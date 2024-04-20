@@ -174,7 +174,7 @@ Have a bug or an issue with this package? [Open a new issue](https://github.com/
 
 ## Contributing
 
-New contributors are always welcome! Check out [CONTRIBUTING.md](https://github.com/carlesloriente/nocc-bootstrap-theme/blob/master/CONTRIBUTING.md) to get involved.
+New contributors are always welcome! Check out [CONTRIBUTING.md](https://github.com/carlesloriente/nocc-bootstrap-theme/blob/main/CONTRIBUTING.md) to get involved.
 
 ## Creator
 
@@ -190,4 +190,4 @@ New contributors are always welcome! Check out [CONTRIBUTING.md](https://github.
 
 ## Copyright and License
 
-Copyright (c) 2024 Carles Loriente. Code released under the [MIT](https://github.com/carlesloriente/nocc-bootstrap-theme/blob/master/LICENSE) license.
+Copyright (c) 2024 Carles Loriente. Code released under the [MIT](https://github.com/carlesloriente/nocc-bootstrap-theme/blob/main/LICENSE) license.

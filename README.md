@@ -16,7 +16,7 @@ Enjoy! 😃
 
 [NOCC Jekyll Bundle](https://bootstrap-theme.notesoncloudcomputing.com/). A fully featured bundle site for [Jekyll](https://jekyllrb.com/) created by [Carles Loriente](https://github.com/carlesloriente).
 Features a homepage, about page, tags cloud page, gallery of images page, examples post pages with comments powered by [Disqus](https://disqus.com/) and a contact form powered by [Formspree](https://formspree.io/).
-Using the [NOCC Bootstrap theme](https://www.npmjs.com/nocc-bootstrap-theme) npm package.
+Using the [NOCC Bootstrap theme](https://www.npmjs.com/package/nocc-bootstrap-theme) npm package.
 
 ## Features
 
@@ -116,7 +116,7 @@ Have a bug or an issue with this template? [Open a new issue](https://github.com
 
 ## Contributing
 
-New contributors are always welcome! Check out [CONTRIBUTING.md](https://github.com/carlesloriente/bootstrap-theme-jekyll/blob/master/CONTRIBUTING.md) to get involved.
+New contributors are always welcome! Check out [CONTRIBUTING.md](https://github.com/carlesloriente/bootstrap-theme-jekyll/blob/main/CONTRIBUTING.md) to get involved.
 
 ## About
 
@@ -130,4 +130,4 @@ New contributors are always welcome! Check out [CONTRIBUTING.md](https://github.
 
 ## Copyright and License
 
-Copyright (c) 2024 Carles Loriente. The code released under the [MIT](https://github.com/carlesloriente/bootstrap-theme-jekyll/blob/master/LICENSE) license.
+Copyright (c) 2024 Carles Loriente. The code released under the [MIT](https://github.com/carlesloriente/bootstrap-theme-jekyll/blob/main/LICENSE) license.
