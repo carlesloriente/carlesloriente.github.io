@@ -47,11 +47,6 @@ layout: default
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <div class="clearfix">
-            {% if page.comments %}
-              {% if site.disqus_shortname %}
-                {% include disqus_comments.html %}
-              {% endif %}
-            {% endif %}
             {% if page.previous.url %}
             <a class="btn btn-primary float-start" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline">
                 Post</span></a>
@@ -59,6 +54,22 @@ layout: default
             {% if page.next.url %}
             <a class="btn btn-primary float-end" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline">
                 Post</span> &rarr;</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="home-divider"></div>
+  </section>
+  <section>
+    <div class="container my-4">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="clearfix">
+            {% if page.comments %}
+              {% if site.disqus_shortname %}
+                {% include disqus_comments.html %}
+              {% endif %}
             {% endif %}
           </div>
         </div>
