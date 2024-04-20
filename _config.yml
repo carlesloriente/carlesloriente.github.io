@@ -18,7 +18,7 @@ permalink               : pretty
 critical_css            : false
 
 # Theme Notice (please don't remove it ;))
-theme_version           : v.1.2.0
+theme_version           : v1.2.2
 theme_name              : NOCC Bootstrap Theme
 theme_repo              : https://github.com/carlesloriente/bootstrap-theme-jekyll/
 theme_url               : https://bootstrap-theme.notesoncloudcomputing.com/

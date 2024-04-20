@@ -20,7 +20,7 @@ Before use it, please replace the following values:
 - `CA.yourdomain.com` with the CA domain
 - `YOURSTATE` with the state (optional)
 - `YOURORG` with the name of the organization
-- `YOURCOUNTRY` with the country code (https://www.iban.com/country-codes){:target="_blank"}
+- `YOURCOUNTRY` with the [country code](https://www.iban.com/country-codes){:target="_blank"}
 - `vpn.yourdomain.com` with the VPN hostname
 - `1.1.1.1` with the vpn IP
 
