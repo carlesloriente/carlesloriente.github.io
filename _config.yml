@@ -25,7 +25,7 @@ theme_url               : https://bootstrap-theme.notesoncloudcomputing.com/
 theme_author            : Carles Loriente
 theme_author_url        : https://www.notesoncloudcomputing.com/about/
 theme_download          : https://github.com/carlesloriente/bootstrap-theme-jekyll/archive/refs/heads/main.zip
-theme_package           : https://www.npmjs.com/nocc-bootstrap-theme
+theme_package           : https://www.npmjs.com/package/nocc-bootstrap-theme
 theme_logo              : "/assets/vendor/nocc-bootstrap-theme/images/nocc/nocc_logo.webp"
 
 # Social Profiles

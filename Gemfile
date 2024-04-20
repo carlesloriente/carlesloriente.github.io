@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 3.9.5", group: :jekyll_plugins
+gem "jekyll", "~> 4.3.3", group: :jekyll_plugins
 gem "jekyll-feed"
 gem "jekyll-redirect-from"
 gem "jekyll-seo-tag"
