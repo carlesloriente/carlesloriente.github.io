@@ -15,6 +15,10 @@ h3 {
   height: 100%;
 }
 
+.row-heading {
+  background-color: #aaa;
+}
+
 .subheading {
   transform: rotate(-90deg);
   display: flex;
@@ -30,13 +34,14 @@ h3 {
 }
 
 .projects {
-  opacity: .8;
+  opacity: .9;
   
   &:hover {
     cursor: pointer;
     border-color: var(--bs-primary-color);
     border-width: 2px;
     box-shadow: 0 1rem 3rem rgba(0,0,0,.35);
+    opacity: 1;
   }
 
   h3 {
@@ -96,6 +101,9 @@ section.masthead {
   }
   section.masthead .page-heading h1 {
     padding-top: 2rem;
+  }
+  section.masthead .post-heading h1 {
+    padding-top: 3rem;
   }
   section.homehead .page-heading .subheading {
     padding-top: 3rem;
