@@ -8,6 +8,7 @@ tags:
 - aws
 - nvidia
 background: '/assets/images/bg-aws-logo.webp'
+redirect_from: "/aws/nvidia/2020/01/14/install-nvidia-drivers-ec2-instances.html"
 ---
 
 You can install the AWS grid Nvidia drivers on EC2 Instances type G3 and G4 running CentOS using the following script:
