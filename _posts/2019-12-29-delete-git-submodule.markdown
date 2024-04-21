@@ -8,7 +8,9 @@ tags:
 - git
 - submodule
 background: '/assets/images/bg-git.webp'
-redirect_from: "/git/2019/12/29/delete-git-submodule/"
+redirect_from: 
+- "/git/2019/12/29/delete-git-submodule/"
+- "/git/2019/12/29/delete-git-submodule.html"
 ---
 
 How to delete a Git submodule.
