@@ -2,7 +2,7 @@ name: "IndexNow"
 on:
   schedule:
   # Scheduled in UTC.
-  - cron:  '0 0,12 * * *'
+  - cron:  '0 0 * * 0'
   
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -16,5 +16,5 @@ jobs:
         with:
           sitemap-location: "https://www.notesoncloudcomputing.com/sitemap.xml"
           since: 1
-          since-unit: "year"
+          since-unit: "week"
           key: ${{ secrets.INDEXNOW_KEY }}
