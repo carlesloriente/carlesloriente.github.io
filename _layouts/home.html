@@ -10,11 +10,11 @@ layout: default
   <section>
     <div class="container my-4">
       <div class="row">
-        <div class="mx-auto">
+        <div class="col-md-9" style="padding:10px 10px;">
           <p class="lead fw-bolder text-uppercase">Recent notes</p>
           <!-- Home Post List -->
           {%- for post in site.posts limit : 5 -%}
-          <article class="post-preview">
+          <article class="home-post-preview">
             <a class="text-decoration-none" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}">
               <h2 class="post-title">{{ post.title }}</h2>
               {%- if post.subtitle %}
@@ -26,13 +26,33 @@ layout: default
               {%- endif -%}
             </a>
           </article>
-          <hr>
           {% endfor -%}
+          <hr>
           <!-- Pager -->
           <div class="clearfix">
             <a class="btn btn-primary float-end" href="{{ 'posts/' | relative_url }}" hreflang="{{ site.lang }}">View All Notes &rarr;</a>
           </div>
-       </div>
+        </div>
+        <div class="col-md-3 heading-projects">
+          <p class="lead fw-bolder text-uppercase">Top Tags</p>
+          <ul class="tag-list">
+          {% assign tags_list = "" | split: ',' %}
+          {%- for page in site.posts %}
+            {% assign weight = site.posts | where_exp: 'posts', 'posts.tags contains tag' %}
+            {%- for tag in page.tags %}
+              {% assign tags_list = tags_list | push: tag %}
+            {%- endfor %}
+          {%- endfor %}
+          {% assign tags_uniq = tags_list | uniq | sort: 'weight' %}
+          {%- for tag in tags_uniq limit : 5 %}
+            {% assign tag_count = site.posts | where_exp: 'posts', 'posts.tags contains tag' | reverse %} 
+            <li>
+              <a href="{{ tag | append: '/' }}" hreflang="{{ site.lang }}" aria-label="{{ tag }}">{{ tag }} ({{ tag_count | size }})</a>
+            </li>
+          {%- endfor %}
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 </main>
