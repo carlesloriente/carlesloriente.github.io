@@ -23,6 +23,7 @@ tsconfig.json
 temp/*
 
 # Jekyll build
+docs/*
 _site*
 
 # Exception
