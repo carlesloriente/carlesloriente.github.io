@@ -16,5 +16,5 @@ jobs:
         with:
           sitemap-location: "https://www.notesoncloudcomputing.com/sitemap.xml"
           since: 1
-          since-unit: "day"
+          since-unit: "year"
           key: ${{ secrets.INDEXNOW_KEY }}
