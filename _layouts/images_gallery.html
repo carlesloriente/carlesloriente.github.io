@@ -51,11 +51,12 @@ layout: default
         const img = document.getElementById(this.id);
         if (img) {
           var url = img.getAttribute('data-bs-image');
+          var uri = encodeURI(url);
           var name = img.getAttribute('data-bs-title');
         }
         const modal = document.querySelector("#image-gallery-image");
         modal.removeAttribute('src');
-        modal.setAttribute('src', url);
+        modal.setAttribute('src', decodeURI(uri));
         modal.setAttribute("disabled", "");
         var title = document.getElementById("image-gallery-title");
         title.textContent = name;
