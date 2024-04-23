@@ -49,9 +49,11 @@ layout: default
     for (let i = 0; i < buttonsCount; i++) {
       buttons[i].onclick = function(e) {
         const img = document.getElementById(this.id);
-        var url = img.getAttribute('data-bs-image');
-        var name = img.getAttribute('data-bs-title');
-        var modal = document.getElementById("image-gallery-image");
+        if (img) {
+          var url = img.getAttribute('data-bs-image');
+          var name = img.getAttribute('data-bs-title');
+        }
+        const modal = document.querySelector("#image-gallery-image");
         modal.removeAttribute('src');
         modal.setAttribute('src', url);
         modal.setAttribute("disabled", "");
