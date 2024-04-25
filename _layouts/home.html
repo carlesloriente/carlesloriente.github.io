@@ -47,7 +47,7 @@ layout: default
           {%- for tag in tags_uniq limit : 5 %}
             {% assign tag_count = site.posts | where_exp: 'posts', 'posts.tags contains tag' | reverse %} 
             <li>
-              <a href="{{ tag | append: '/' }}" hreflang="{{ site.lang }}" aria-label="{{ tag }}">{{ tag }} ({{ tag_count | size }})</a>
+              <a href="{{ 'tags/' | append: tag | append: '/' }}" hreflang="{{ site.lang }}" aria-label="{{ tag }}">{{ tag }} ({{ tag_count | size }})</a>
             </li>
           {%- endfor %}
           </ul>

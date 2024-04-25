@@ -1,4 +1,4 @@
-name: Deploy site
+name: CI/CD
 
 on:
   # Runs on pushes targeting the default branch
