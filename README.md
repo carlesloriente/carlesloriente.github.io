@@ -1,16 +1,18 @@
-## 🎉 Was this repo helpful? Help me raise these numbers.
+# Let's make this project even better for everyone. Sponsorship fuels new features! 🎉
 
-[![CarlesLoriente - carlesloriente.github.io](https://img.shields.io/static/v1?label=carlesloriente&message=carlesloriente.github.io&color=blue&logo=github)](https://github.com/carlesloriente/carlesloriente.github.io)
-[![GitHub's followers](https://img.shields.io/github/followers/carlesloriente.svg?style=social)](https://github.com/carlesloriente)
-[![GitHub stars](https://img.shields.io/github/stars/carlesloriente/carlesloriente.github.io?style=social)](https://github.com/carlesloriente/carlesloriente.github.io/stargazers)
-[![GitHub watchers](https://img.shields.io/github/watchers/carlesloriente/carlesloriente.github.io?style=social)](https://github.com/carlesloriente/carlesloriente.github.io/watchers)
-[![GitHub forks](https://img.shields.io/github/forks/carlesloriente/carlesloriente.github.io?style=social)](https://github.com/carlesloriente/carlesloriente.github.io/network/members)
+[![Become a sponsor today](https://img.shields.io/static/v1?label=Become&#160;a&#160;sponsor&#160;today&message=❤&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/carlesloriente/sponsorships?sponsor=carlesloriente&preview=true&frequency=recurring&amount=5)
+
+## Help me raise these numbers
+
+[![Stars](https://img.shields.io/github/stars/carlesloriente/carlesloriente.github.io?style=social)](https://github.com/carlesloriente/carlesloriente.github.io/stargazers)
+[![Followers](https://img.shields.io/github/followers/carlesloriente.svg?style=social)](https://github.com/carlesloriente)
+[![Sponsors](https://img.shields.io/github/sponsors/carlesloriente?style=social)](https://github.com/sponsors/carlesloriente)
 
 Enjoy! 😃
 
 ---
 
-# NOCC Jekyll Bundle
+## NOCC Jekyll Bundle
 
 ![NOCC Jekyll Bundle webshots](/assets/images/nocc-theme-showroom.png)
 
