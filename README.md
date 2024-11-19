@@ -1,4 +1,8 @@
-# Let's make this project even better for everyone. Sponsorship fuels new features! 🎉
+# The notesoncloudcomputing.com website source
+
+The website is created using the NOCC Jekyll Bundle and hosted on GitHub pages. This repository contains all the website's files.
+
+## Let's make this project even better for everyone. Sponsorship fuels new features! 🎉
 
 [![Become a sponsor today](https://img.shields.io/static/v1?label=Become&#160;a&#160;sponsor&#160;today&message=❤&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/carlesloriente/sponsorships?sponsor=carlesloriente&preview=true&frequency=recurring&amount=5)
 
