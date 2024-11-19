@@ -25,9 +25,18 @@ layout: default
   <section>
     <div class="container my-4">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
+      {% if page.two_cols %}
+        <div class="col-lg-9">
           {{ content }}
         </div>
+        <div class="col-lg-3 mx-auto">
+          {{ page.content_two }}
+        </div>
+      {% else %}
+        <div class="col-lg-10 mx-auto">
+          {{ content }}
+        </div>
+      {% endif %}
       </div>
     </div>
     <div class="divider"></div>

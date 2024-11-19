@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "nocc-bootstrap-theme": "^1.2.0"
+  },
+  "devDependencies": {
+    "https": "^1.0.0"
   }
 }
