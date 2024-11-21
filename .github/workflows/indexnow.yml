@@ -1,9 +1,8 @@
 name: "IndexNow"
 on:
-  schedule:
-  # Scheduled in UTC.
-  - cron:  '0 0 * * 0'
-  
+  schedule: # Run workflow automatically
+  - cron: '0 0 * * *' # Runs every day at 0, on the hour. Scheduled in UTC.
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 

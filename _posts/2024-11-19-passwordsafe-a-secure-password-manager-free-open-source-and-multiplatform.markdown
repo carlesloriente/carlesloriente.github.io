@@ -17,7 +17,8 @@ background: '/assets/images/bg-safe.webp'
 ---
 
 **Passwordsafe**: leaving your passwords in good hands
-*A secure password manager free, open source and multiplatform*
+
+### A secure password manager free, open source and multiplatform
 
 More than 15 years ago I started looking for a password manager because I didn't think it was a good idea to use the same password in multiple places, memorize hundreds or store them in a text document, the latter being a common practice in many companies, even software development companies -sic.
 
@@ -25,7 +26,8 @@ More than 15 years ago I started looking for a password manager because I didn't
 
 My requirements were clear, it had to be free, open source and multiplatform. I found [Passwordsafe](https://pwsafe.org/){:target="_blank"} that met all my needs adding some very interesting features such as the use of hardware keys as a 2FA method, and a multitude of [versions and projects for different operating systems and programming languages ​​of Passwordsafe](https://pwsafe.org/relatedprojects.shtml){:target="_blank"}.
 
-![Passwordsafe](/assets/images/2024-11-19-passwordsafe-a-secure-password-manager-free-open-source-and-multiplatform.webp)
+{:.text-center}
+![Passwordsafe](/assets/images/2024-11-19-passwordsafe-a-secure-password-manager-free-open-source-and-multiplatform.webp){:.img-fluid}
 
 For all these years [Passwordsafe](https://pwsafe.org/){:target="_blank"} has been with me on my numerous transitions from Windows to MacOS, to Fedora, back to MacOS and back to Fedora. It also accompanies me on my mobile, currently on iOS using [pwSafe](https://pwsafe.app/ios/){:target="_blank"} a paid version in this case.
 
@@ -64,4 +66,3 @@ Now, the last step,
 
 *In your terminal and type*:
 {% include code_block.html lang="bash" content='sudo dnf -y install passwordsafe' %}
-

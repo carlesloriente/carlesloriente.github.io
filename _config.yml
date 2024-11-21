@@ -15,6 +15,13 @@ formemail               : xwkglaqr
 permalink               : pretty
 date                    : 2024-04-20 12:10:45 +0200
 
+# Manifest
+name                    : "Notes on Cloud Computing"
+short_name              : "NOCC"
+language                : "en"
+lang_direction          : "ltr"
+color                   : "#FFFFFF"
+
 # Features
 critical_css            : false
 
@@ -94,4 +101,4 @@ sass:
     - ./_sass
   style                 : compressed
 
-exclude: ["bd27dc68a01f40a4826fed8a45e2316e.txt", "AUTHORS.md", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md", "CODEOWNERS", "LICENSE", "manifest.webmanifest", "package.json", "package-lock.json", "README.md", "resume.html", "SECURITY.md", "techstack.md", "techstack.yml", "WORKFLOW.md", "bin", "gists", "node_modules", "ahrefs_6f259190b96e078821b745c49ce5f85e18b0d0addfd0ea6778eeafc411f82bee", "BingSiteAuth.xml", "CNAME", "yandex_f833f55647ca1132.html", "Gemfile", "Gemfile.lock", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
+exclude: ["bd27dc68a01f40a4826fed8a45e2316e.txt", "AUTHORS.md", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md", "CODEOWNERS", "LICENSE", "package.json", "package-lock.json", "README.md", "resume.html", "SECURITY.md", "techstack.md", "techstack.yml", "WORKFLOW.md", "bin", "gists", "node_modules", "ahrefs_6f259190b96e078821b745c49ce5f85e18b0d0addfd0ea6778eeafc411f82bee", "BingSiteAuth.xml", "CNAME", "yandex_f833f55647ca1132.html", "Gemfile", "Gemfile.lock", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]

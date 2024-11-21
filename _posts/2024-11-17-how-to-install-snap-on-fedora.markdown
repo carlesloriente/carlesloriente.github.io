@@ -22,7 +22,7 @@ What is [Snap](https://snapcraft.io/){:target="_blank"}? From Wikipedia, Snap is
 
 The command will download and install the snapd daemon.
 
-Now, log out and log from your system or restart the computer.
+Now, log out and log in from your system or restart the computer.
 
 ![Snapcraft logo](/assets/images/2024-11-17-how-to-install-snap-on-fedora.png)
 
