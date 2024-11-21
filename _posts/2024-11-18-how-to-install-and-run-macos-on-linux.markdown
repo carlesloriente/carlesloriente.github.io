@@ -41,47 +41,57 @@ Let's start Sosumi for the first time:
 
 The command will download all the needed resources and when ready, will open QEMU and the Clover bootloader.
 
-![sosumi-sc-1](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-1.png)
+{:.text-center}
+![sosumi-sc-1](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-1.png){:.img-fluid}
 
 ### Installing MacOS
 
 In the QEMU window, click "Boot macOS Install from macOS Base System"
 
-![sosumi-sc-1-5](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-1-5.png)
+{:.text-center}
+![sosumi-sc-1-5](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-1-5.png){:.img-fluid}
 
 ### Step by step setup
 
 1. Select Disk Utility option in the dialog and click Continue
-![sosumi-sc-2](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-2.png)
+{:.text-center}
+![sosumi-sc-2](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-2.png){:.img-fluid}
 
 2. Choose the volume Apple Inc. Virtio Block Media (There are two volumes, so choose the bigger one)
-![sosumi-sc-3](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-3.png)
+{:.text-center}
+![sosumi-sc-3](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-3.png){:.img-fluid}
 
 3. Click Erase from the top bar menu to format the disk
-![sosumi-sc-4](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-4.png)
+{:.text-center}
+![sosumi-sc-4](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-4.png){:.img-fluid}
 
 4. Click Done in the new dialog
-![sosumi-sc-5](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-5.png)
+{:.text-center}
+![sosumi-sc-5](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-5.png){:.img-fluid}
 
 5. Quit Disk Utility
-![sosumi-sc-5-5](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-5-5.png)
+{:.text-center}
+![sosumi-sc-5-5](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-5-5.png){:.img-fluid}
 
 6. Now, choose Reinstall macOS and click Continue
 
 7. The installer will appears, click Continue, read the terms and license agreement, Click Agree.
-![sosumi-sc-6](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-6.png)
+{:.text-center}
+![sosumi-sc-6](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-6.png){:.img-fluid}
 
 8. Select the destination disk
-![sosumi-sc-7](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-7.png)
+{:.text-center}
+![sosumi-sc-7](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-7.png){:.img-fluid}
 
 9. The installation begans
-![sosumi-sc-8](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-8.png)
+{:.text-center}
+![sosumi-sc-8](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-8.png){:.img-fluid}
 
-10. After the completed, the last step is to create your user and set some additional settings.
+10. One more thing, the last step is to create your user and set some additional settings.
 
 ## Increasing the MacOS volume size
 
-if you need to resize the volume used by MacOS, goto `$HOME/snap/sosumi/common`, among other files you will find `macos.qcow2`.
+if you need to resize the volume used by MacOS, go to `$HOME/snap/sosumi/common`, among other files you will find `macos.qcow2`.
 
 *To increase the size, type in terminal*:
 {% include code_block.html lang="bash" content='sudo qemu-img resize --shrink macos.qcow2 +20G' %}

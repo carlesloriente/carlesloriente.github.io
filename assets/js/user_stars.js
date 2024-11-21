@@ -4,7 +4,6 @@ var opts = 10
 request('/users/' + user, function (res) {
   if (!res.public_repos) {
     console.log(res.message)
-    console.log("hola")
     return
   }
   console.log(user)
@@ -16,7 +15,6 @@ request('/users/' + user, function (res) {
   function check (res) {
     repos = repos.concat(res)
     pages--
-    console.log("hola2")
     if (!pages) output(repos)
   }
 })
@@ -35,8 +33,6 @@ function request (url, cb) {
       cb(JSON.parse(body))
     })
   })
-  console.log("hola3")
-
 }
 
  
