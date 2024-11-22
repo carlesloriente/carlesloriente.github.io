@@ -9,14 +9,28 @@ layout: none
   "short_name": {{ site.short_name | smartify | jsonify }},
   "icons": [
       {
-      "src": "\/assets\/images\/tofavicon_iouch\/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image\/png"
+        "src": "\/assets\/images\/favicon_io\/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image\/png"
       }
   ],
+  "screenshots": [
+    {
+      "src": "\/assets\/images\/nocc-theme-showroom.png",
+      "sizes": "1280x720",
+      "type": "image\/png"
+    }
+  ],
+  "launch_handler": {
+    "client_mode": ["focus-existing", "auto"]
+  },
   "theme_color": "{{ site.color }}",
   "background_color": "{{ site.color }}",
   "start_url": "{{ site.url }}",
   "display": "standalone",
-  "orientation": "natural"
+  "orientation": "natural",
+  "description": "{{ site.description }}",
+  "launch_handler": {
+    "client_mode": ["focus-existing", "auto"]
+  }
 }
