@@ -3,13 +3,13 @@ layout: post
 comments: true
 title: "Improve your Jekyll site ranking (SEO) turning into PWA"
 description: "A step by step guide to turn your Jekyll site into a Progressive Web Application"
-date: 2024-11-21 12:11:02 +0200
+date: 2024-11-22 01:11:02 +0200
 categories: jekyll pwa seo
 tags:
 - jekyll
 - pwa
 - seo
-background: '/assets/images/2024-11-21-improve-site-ranking-seo-enabling-pwa-on-jekyll.webp'
+background: '/assets/images/2024-11-22-improve-site-ranking-seo-enabling-pwa-on-jekyll.webp'
 ---
 
 ## Turning your Website into a Progressive Web App ##
@@ -141,17 +141,29 @@ layout: none
 &dash;&dash;&dash;
 
 {
+  "id": "nocc_id",
   "lang": "&#123;&#123; site.language &#125;&#125;",
   "dir": "&#123;&#123; site.lang_direction &#125;&#125;",
   "name": &#123;&#123; site.name | smartify | jsonify &#125;&#125;,
   "short_name": &#123;&#123; site.short_name | smartify | jsonify &#125;&#125;,
+  "description": "&#123;&#123; site.description &#125;&#125;",
   "icons": [
-      {
-      "src": "\/assets\/images\/tofavicon_iouch\/android-chrome-192x192.png",
-      "sizes": "192x192",
+    {
+      "src": "\/assets\/images\/android-chrome-512x512.png",
+      "sizes": "512x512",
       "type": "image\/png"
-      }
+    }
   ],
+  "screenshots": [
+    {
+      "src": "\/assets\/images\/screenshot.png",
+      "sizes": "1280x720",
+      "type": "image\/png"
+    }
+  ],
+  "launch_handler": {
+    "client_mode": ["focus-existing", "auto"]
+  },
   "theme_color": "&#123;&#123; site.color &#125;&#125;",
   "background_color": "&#123;&#123; site.color &#125;&#125;",
   "start_url": "&#123;&#123; site.url &#125;&#125;",
@@ -163,7 +175,7 @@ Link the manifest.json in your header template
 
 {% include code_block.html lang="javascript" content='&lt;link rel="manifest" href="/manifest.json"&gt;' %}
 
-## Bibliography ###
+## Resources ###
 
 - **[PWA builder](https://www.pwabuilder.com/){:target="_blank"}**
 - **[Jekyll website to progressive web app](https://svrooij.io/2022/01/29/jekyll-pwa/){:target="_blank"}**
