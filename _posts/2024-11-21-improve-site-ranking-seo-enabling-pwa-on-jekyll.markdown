@@ -3,13 +3,13 @@ layout: post
 comments: true
 title: "Improve your Jekyll site ranking (SEO) turning into PWA"
 description: "A step by step guide to turn your Jekyll site into a Progressive Web Application"
-date: 2024-11-22 01:11:02 +0200
+date: 2024-11-21 01:11:02 +0200
 categories: jekyll pwa seo
 tags:
 - jekyll
 - pwa
 - seo
-background: '/assets/images/2024-11-22-improve-site-ranking-seo-enabling-pwa-on-jekyll.webp'
+background: '/assets/images/2024-11-21-improve-site-ranking-seo-enabling-pwa-on-jekyll.webp'
 ---
 
 ## Turning your Website into a Progressive Web App ##
@@ -173,7 +173,7 @@ layout: none
   "theme_color": "&#123;&#123; site.color &#125;&#125;",
   "background_color": "&#123;&#123; site.color &#125;&#125;",
   "start_url": "&#123;&#123; site.url &#125;&#125;",
-  "scope": "&#123;&#123; site.url &#125;&#125;",
+  "scope": "/",
   "display": "standalone",
   "orientation": "natural"
 }' %}

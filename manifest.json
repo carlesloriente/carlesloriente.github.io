@@ -30,7 +30,7 @@ layout: none
   "theme_color": "{{ site.color }}",
   "background_color": "{{ site.color }}",
   "start_url": "{{ site.url }}",
-  "scope": "{{ site.url }}",
+  "scope": "/",
   "scope_extensions": [
     {
       "origin": "{{ site.url }}"
