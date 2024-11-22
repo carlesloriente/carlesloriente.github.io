@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: "Auto-indexing URLs with IndexNow & GitHub Actions"
 description: "Submit automatically new URLs to search engines with IndexNow and Github Actions"
-date: 2024-11-22 00:01:02 +0200
+date: 2024-11-22 01:01:02 +0200
 categories: jekyll indexnow github-actions search-engines
 tags:
 - jekyll
