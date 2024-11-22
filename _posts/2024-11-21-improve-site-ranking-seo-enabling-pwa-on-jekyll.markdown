@@ -141,12 +141,13 @@ layout: none
 &dash;&dash;&dash;
 
 {
-  "id": "nocc_id",
+  "id": "/index.html",
   "lang": "&#123;&#123; site.language &#125;&#125;",
   "dir": "&#123;&#123; site.lang_direction &#125;&#125;",
   "name": &#123;&#123; site.name | smartify | jsonify &#125;&#125;,
   "short_name": &#123;&#123; site.short_name | smartify | jsonify &#125;&#125;,
   "description": "&#123;&#123; site.description &#125;&#125;",
+  "categories": ["cat_1", "cat_2", "cat_3"],
   "icons": [
     {
       "src": "\/assets\/images\/android-chrome-512x512.png",
@@ -164,9 +165,15 @@ layout: none
   "launch_handler": {
     "client_mode": ["focus-existing", "auto"]
   },
+  "scope_extensions": [
+    {
+      "origin": "&#123;&#123; site.url &#125;&#125;"
+    }
+  ],
   "theme_color": "&#123;&#123; site.color &#125;&#125;",
   "background_color": "&#123;&#123; site.color &#125;&#125;",
   "start_url": "&#123;&#123; site.url &#125;&#125;",
+  "scope": "&#123;&#123; site.url &#125;&#125;",
   "display": "standalone",
   "orientation": "natural"
 }' %}
