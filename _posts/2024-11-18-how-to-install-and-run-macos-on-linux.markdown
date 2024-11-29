@@ -53,41 +53,49 @@ In the QEMU window, click "Boot macOS Install from macOS Base System"
 
 ### Step by step setup
 
-1. Select Disk Utility option in the dialog and click Continue
+1.- Select Disk Utility option in the dialog and click Continue
+
 {:.text-center}
 ![sosumi-sc-2](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-2.png){:.img-fluid}
 
-2. Choose the volume Apple Inc. Virtio Block Media (There are two volumes, so choose the bigger one)
+2.- Choose the volume Apple Inc. Virtio Block Media (There are two volumes, so choose the bigger one)
+
 {:.text-center}
 ![sosumi-sc-3](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-3.png){:.img-fluid}
 
-3. Click Erase from the top bar menu to format the disk
+3.- Click Erase from the top bar menu to format the disk
+
 {:.text-center}
 ![sosumi-sc-4](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-4.png){:.img-fluid}
 
-4. Click Done in the new dialog
+4.- Click Done in the new dialog
+
 {:.text-center}
 ![sosumi-sc-5](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-5.png){:.img-fluid}
 
-5. Quit Disk Utility
+5.- Quit Disk Utility
+
 {:.text-center}
 ![sosumi-sc-5-5](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-5-5.png){:.img-fluid}
 
-6. Now, choose Reinstall macOS and click Continue
+6.- Now, choose Reinstall macOS and click Continue
 
-7. The installer will appears, click Continue, read the terms and license agreement, Click Agree.
+7.- The installer will appears, click Continue, read the terms and license agreement, Click Agree.
+
 {:.text-center}
 ![sosumi-sc-6](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-6.png){:.img-fluid}
 
-8. Select the destination disk
+8.- Select the destination disk
+
 {:.text-center}
 ![sosumi-sc-7](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-7.png){:.img-fluid}
 
-9. The installation begans
+9.- The installation begans
+
 {:.text-center}
 ![sosumi-sc-8](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-8.png){:.img-fluid}
 
-10. One more thing, the last step is to create your user and set some additional settings.
+10.- One more thing, the last step is to create your user and set some additional settings.
 
 ## Increasing the MacOS volume size
 

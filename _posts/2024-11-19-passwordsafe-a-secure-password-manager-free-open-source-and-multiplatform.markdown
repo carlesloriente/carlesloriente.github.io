@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "Passwordsafe a secure password manager free open source and multiplatform"
+title: "Passwordsafe a secure password manager"
 description: "A guide to install and use Passwordsafe"
 date: 2024-11-19 10:11:02 +0200
 categories: install guide passwordsafe fedora macos android ios passwordmanager
