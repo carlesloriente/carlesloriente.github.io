@@ -36,20 +36,27 @@ layout: default
         <div class="col-md-3 heading-projects">
           <p class="lead fw-bolder text-uppercase">Top Tags</p>
           <ul class="tag-list">
-          {% assign tags_list = "" | split: ',' %}
+          {% assign delimiter = ',' %}
+          {% assign tag_arr = '' %}
           {%- for page in site.posts %}
-            {% assign weight = site.posts | where_exp: 'posts', 'posts.tags contains tag' %}
             {%- for tag in page.tags %}
-              {% assign tags_list = tags_list | push: tag %}
+              {% unless tag_arr == '' %}
+                {% assign tag_arr = tag_arr | append: delimiter %}
+              {% endunless %}
+              {% assign count = site.posts | where_exp: 'posts', 'posts.tags contains tag' | size %} 
+              {% assign tag_arr = tag_arr | append: count | append: ' ' | append: tag %}
             {%- endfor %}
           {%- endfor %}
-          {% assign tags_uniq = tags_list | uniq | sort: 'weight' %}
-          {%- for tag in tags_uniq limit : 5 %}
-            {% assign tag_count = site.posts | where_exp: 'posts', 'posts.tags contains tag' | reverse %} 
+
+          {% assign tags_list = tag_arr | split: delimiter | sort | reverse | uniq %}
+
+          {%- for tags in tags_list limit : 5 %}
+            {% assign tag = tags | split: ' ' %}
             <li>
-              <a href="{{ 'tags/' | append: tag | append: '/' }}" hreflang="{{ site.lang }}" aria-label="{{ tag }}">{{ tag }} ({{ tag_count | size }})</a>
+              <a href="{{ 'tags/' | append: tag.last | append: '/' }}" hreflang="{{ site.lang }}" aria-label="{{ tag.last }}">{{ tag.last | capitalize }} ({{ tag.first }})</a>
             </li>
           {%- endfor %}
+
           </ul>
         </div>
       </div>

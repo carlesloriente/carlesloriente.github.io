@@ -10,7 +10,7 @@ tags:
 - indexnow
 - github-actions
 - search-engines
-background: '/assets/images/2024-11-22-auto-indexing-urls-with-indexnow-and-gitHub-actions.webp'
+background: '/assets/images/bg-robot-hand.webp'
 ---
 
 ## IndexNow **Take Control of Your Website's Search Engine Visibility** ##
@@ -55,6 +55,9 @@ Create a workflow that triggers on specific events, such as a push to the main b
 - Submit URLs to IndexNow
 
 Set the IndexNow API secret in your repository, go to `Settings -> Secrets and Variables -> Actions -> Repository secrets`. Click on `New repository secret` paste the key and save it. You can call it `INDEXNOW_KEY`.
+
+{:.text-center}
+![Repository Secret](/assets/images/2024-11-22-auto-indexing-urls-with-indexnow-and-gitHub-actions.png){:.img-fluid}
 
 Create a new Github workflow for sending automatically URLs every day at 11am.
 

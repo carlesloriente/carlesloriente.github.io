@@ -22,12 +22,12 @@ A [Progressive Web App](https://en.wikipedia.org/wiki/Progressive_web_app){:targ
 
 There are numerous benefits to transforming your website into a [PWA](https://en.wikipedia.org/wiki/Progressive_web_app){:target="_blank"}:
 
-- Faster, More Secure User Experience: PWAs load quickly, even on slow networks, and provide a secure browsing experience.
-- Improved Google Ranking: Google prioritizes PWAs in search results, leading to increased visibility and organic traffic.
-- Enhanced Usability: PWAs offer a seamless user experience across devices, including smartphones, tablets, and desktops.
-- Superior Performance: PWAs deliver lightning-fast performance, ensuring a smooth and responsive user interface.
-- Offline Access: Users can access your website's content even when they're offline, boosting user engagement and retention.
-- Home Screen Shortcut: PWAs can be added to the device's home screen, providing quick and easy access.
+- **Faster, More Secure User Experience**: PWAs load quickly, even on slow networks, and provide a secure browsing experience.
+- **Improved Google Ranking**: Google prioritizes PWAs in search results, leading to increased visibility and organic traffic.
+- **Enhanced Usability**: PWAs offer a seamless user experience across devices, including smartphones, tablets, and desktops.
+- **Superior Performance**: PWAs deliver lightning-fast performance, ensuring a smooth and responsive user interface.
+- **Offline Access**: Users can access your website's content even when they're offline, boosting user engagement and retention.
+- **Home Screen Shortcut**: PWAs can be added to the device's home screen, providing quick and easy access.
 
 ### PWA ready in 3 easy steps ###
 
