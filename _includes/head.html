@@ -2,9 +2,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | normalize_whitespace | truncate: 160 | escape | page.title }}{% elsif page.description %}{{ page.description | strip_html | normalize_whitespace | truncate: 160 | escape | page.title }}{% else %}{{ site.description | strip_html | normalize_whitespace | truncate: 160 | escape | page.title }}{% endif %}">
-  <meta name="google-site-verification" content="{{ site.google_site_verification }}">
   <meta name="author" content="{{ site.author }}">
-  <meta name="google-site-verification" content="FOgdVCuoL8lBB0LjlVT7D-R-vavtFjwbRGc85DbJLfE" />
+  <meta name="google-site-verification" content="{{ site.google_site_verification }}">
+  <meta name="google-adsense-account" content="{{ site.google_adsense_account }}">
   <!-- Twitter Meta Tags -->
   {%- if site.twitter_username %}
   <meta name="twitter:site" content="{{ site.twitter_username }}">
