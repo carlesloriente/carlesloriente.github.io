@@ -8,7 +8,7 @@ on:
 
 jobs:
   check-and-submit:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: indexnow-action
         uses: bojieyang/indexnow-action@v2

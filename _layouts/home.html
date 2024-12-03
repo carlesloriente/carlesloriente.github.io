@@ -3,63 +3,63 @@ layout: default
 ---
 
   <main class="flex-shrink-0">
-{% include carousel.html %}
-  <section class="homehead">
-  {{ content }}
-  </section>
-  <section>
-    <div class="container my-4">
-      <div class="row">
-        <div class="col-md-9" style="padding:10px 10px;">
-          <p class="lead fw-bolder text-uppercase">Recent notes</p>
-          <!-- Home Post List -->
-          {%- for post in site.posts limit : 5 -%}
-          <article class="home-post-preview">
-            <a class="text-decoration-none" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}">
-              <h2 class="post-title">{{ post.title }}</h2>
-              {%- if post.subtitle %}
-              <p class="post-abstract">{{ post.subtitle }}</pS>
-              {%- elsif post.description %}
-              <p class="post-abstract">{{ post.description }}</p>
-              {% else -%}
-              <p class="post-abstract">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
-              {%- endif -%}
-            </a>
-          </article>
-          {% endfor -%}
-          <hr>
-          <!-- Pager -->
-          <div class="clearfix">
-            <a class="btn btn-primary float-end" href="{{ 'posts/' | relative_url }}" hreflang="{{ site.lang }}">View All Notes &rarr;</a>
+  {% include carousel.html %}
+    <section class="homehead">
+    {{ content }}
+    </section>
+    <section>
+      <div class="container my-4">
+        <div class="row">
+          <div class="col-md-9" style="padding:10px 10px;">
+            <p class="lead fw-bolder text-uppercase">Recent notes</p>
+            <!-- Home Post List -->
+            {%- for post in site.posts limit : 5 -%}
+            <article class="home-post-preview">
+              <a class="text-decoration-none" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}">
+                <h2 class="post-title">{{ post.title }}</h2>
+                {%- if post.subtitle %}
+                <p class="post-abstract">{{ post.subtitle }}</pS>
+                {%- elsif post.description %}
+                <p class="post-abstract">{{ post.description }}</p>
+                {% else -%}
+                <p class="post-abstract">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+                {%- endif -%}
+              </a>
+            </article>
+            {% endfor -%}
+            <hr>
+            <!-- Pager -->
+            <div class="clearfix">
+              <a class="btn btn-primary float-end" href="{{ 'posts/' | relative_url }}" hreflang="{{ site.lang }}">View All Notes &rarr;</a>
+            </div>
+          </div>
+          <div class="col-md-3 heading-projects">
+            <p class="lead fw-bolder text-uppercase">Top Tags</p>
+            <ul class="tag-list">
+            {% assign delimiter = ',' %}
+            {% assign tag_arr = '' %}
+            {%- for page in site.posts %}
+              {%- for tag in page.tags %}
+                {% unless tag_arr == '' %}
+                  {% assign tag_arr = tag_arr | append: delimiter %}
+                {% endunless %}
+                {% assign count = site.posts | where_exp: 'posts', 'posts.tags contains tag' | size %} 
+                {% assign tag_arr = tag_arr | append: count | append: ' ' | append: tag %}
+              {%- endfor %}
+            {%- endfor %}
+
+            {% assign tags_list = tag_arr | split: delimiter | sort | reverse | uniq %}
+
+            {%- for tags in tags_list limit : 5 %}
+              {% assign tag = tags | split: ' ' %}
+              <li>
+                <a href="{{ 'tags/' | append: tag.last | append: '/' }}" hreflang="{{ site.lang }}" aria-label="{{ tag.last }}">{{ tag.last | capitalize }} ({{ tag.first }})</a>
+              </li>
+            {%- endfor %}
+
+            </ul>
           </div>
         </div>
-        <div class="col-md-3 heading-projects">
-          <p class="lead fw-bolder text-uppercase">Top Tags</p>
-          <ul class="tag-list">
-          {% assign delimiter = ',' %}
-          {% assign tag_arr = '' %}
-          {%- for page in site.posts %}
-            {%- for tag in page.tags %}
-              {% unless tag_arr == '' %}
-                {% assign tag_arr = tag_arr | append: delimiter %}
-              {% endunless %}
-              {% assign count = site.posts | where_exp: 'posts', 'posts.tags contains tag' | size %} 
-              {% assign tag_arr = tag_arr | append: count | append: ' ' | append: tag %}
-            {%- endfor %}
-          {%- endfor %}
-
-          {% assign tags_list = tag_arr | split: delimiter | sort | reverse | uniq %}
-
-          {%- for tags in tags_list limit : 5 %}
-            {% assign tag = tags | split: ' ' %}
-            <li>
-              <a href="{{ 'tags/' | append: tag.last | append: '/' }}" hreflang="{{ site.lang }}" aria-label="{{ tag.last }}">{{ tag.last | capitalize }} ({{ tag.first }})</a>
-            </li>
-          {%- endfor %}
-
-          </ul>
-        </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
