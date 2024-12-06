@@ -53,19 +53,15 @@ We are going to use the Bing IndexNow endpoint (feel free to use any of the SE e
 
 *Now, let's create a file named data-to-submit.json and paste the following code:*:
 {% include code_block.html lang="json" content='name: "Payload"
-
-```json
- `{
-    "host": "yoursite.com",
-    "key": "yourapikey",
-    "keyLocation": "https://www.yoursite.com/yourapikey.txt",
-    "urlList": [
-      "https://www.yoursite.com/url/",
-      "https://www.yoursite.com/url2/"
-    ]
-  }
-```
-
+{
+  "host": "yoursite.com",
+  "key": "yourapikey",
+  "keyLocation": "https://www.yoursite.com/yourapikey.txt",
+  "urlList": [
+    "https://www.yoursite.com/url/",
+    "https://www.yoursite.com/url2/"
+  ]
+}
 ' %}
 
 **Replace the placeholders**:
@@ -79,17 +75,7 @@ We are going to use the Bing IndexNow endpoint (feel free to use any of the SE e
 
 Next, we'll use cURL to send this JSON data to the IndexNow API using a POST request.
 
-{% include code_block.html lang="json" content='name: "cURL command"
-
-```json
-
-  curl -v -X POST https://www.bing.com/indexnow \
-  -H "Content-Type: application/json; charset=utf-8" \
-  -d @data-to-submit.json
-
-```
-
-' %}
+`curl -v -X POST https://www.bing.com/indexnow -H "Content-Type: application/json; charset=utf-8" -d @data-to-submit.json`
 
 After sending the cURL request, examine the server's response. If everything is successful, you should receive an HTTP status code of 200 OK.
 
