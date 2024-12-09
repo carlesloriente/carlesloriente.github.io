@@ -24,7 +24,7 @@ layout: default
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <div class="meta text-center">Posted by
-            {% if page.author %} <a href="{{ 'about/' | relative_url }}" hreflang="{{ site.lang }}" aria-label="Author">{{ page.author }} </a> {% else %}<a href="{{ 'about/' | relative_url }}" hreflang="{{ site.lang }}" aria-label="Author">{{ site.author }} </a> {% endif %} on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=page.content -%}
+            {% if page.author %} <a href="{{ 'about/' | relative_url }}" hreflang="{{ site.lang }}" aria-label="Author">{{ page.author }} </a> {% else %}<a href="{{ 'about/' | relative_url }}" hreflang="{{ site.lang }}" aria-label="Author">{{ site.author }} </a> {% endif %} on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=page.content -%}<br><span class="text-start">Updated on {{ page.last_modified_at | date: '%B %d, %Y' }}</span>
           </div>
           <hr class="border border-primary opacity-25">
           {{ content }}
@@ -34,8 +34,8 @@ layout: default
         <div class="col-lg-8 mx-auto">
           <div class="text-center">
             <p><mark>Found a snippet that saved your day?</mark> Consider <a href="https://ko-fi.com/S6S1O2GTU" target="_blank" rel="noopener" title="Support me on ko-fi.com">dropping a tip!</a></p>
-            <script type="text/javascript" src="{{ '/assets/vendor/nocc-bootstrap-theme/js/ko-fi/widget_2.min.js' | relative_url }}"></script>
-            <script type="text/javascript">kofiwidget2.init("Buy me a coffee", "#176391", "S6S1O2GTU");kofiwidget2.draw();</script>
+            <script src="{{ '/assets/vendor/nocc-bootstrap-theme/js/ko-fi/widget_2.min.js' | relative_url }}"></script>
+            <script>kofiwidget2.init("Buy me a coffee", "#176391", "S6S1O2GTU");kofiwidget2.draw();</script>
           </div>
         </div>
       </div>

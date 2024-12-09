@@ -53,7 +53,7 @@
     </p>
   </div>
 </footer>
-<script type="text/javascript">
+<script>
 if (!navigator.serviceWorker.controller) {
   navigator.serviceWorker.register("{{ '/assets/js/serviceworker.js' | relative_url }}").then(function(reg) {
     console.log("Service worker has been registered for scope: " + reg.scope);

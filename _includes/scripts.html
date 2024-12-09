@@ -1,17 +1,17 @@
 
 {% unless page.tagsindex -%}
-<script type="text/javascript" rel="preload" src="{{ '/assets/vendor/nocc-bootstrap-theme/js/jquery/3.7.1/jquery.min.js' | relative_url }}"></script>
+<script rel="preload" src="{{ '/assets/vendor/nocc-bootstrap-theme/js/jquery/3.7.1/jquery.min.js' | relative_url }}"></script>
 {% endunless -%}
-<script type="text/javascript" src="{{ '/assets/vendor/nocc-bootstrap-theme/js/clipboardjs/clipboard.min.js' | relative_url }}"></script>
-<script type="text/javascript" src="{{ '/assets/vendor/nocc-bootstrap-theme/js/copy-clipboard.js' | relative_url }}"></script>
-<script type="text/javascript" src="{{ '/assets/vendor/nocc-bootstrap-theme/js/bootstrap/5.3.3/bootstrap.bundle.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/vendor/nocc-bootstrap-theme/js/clipboardjs/clipboard.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/vendor/nocc-bootstrap-theme/js/copy-clipboard.js' | relative_url }}"></script>
+<script src="{{ '/assets/vendor/nocc-bootstrap-theme/js/bootstrap/5.3.3/bootstrap.bundle.min.js' | relative_url }}"></script>
 {%- if jekyll.environment != "development" %}
-<script type="text/javascript" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4415526626304056" crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://notes-on-cloud-infrastructure.disqus.com/count.js" async id="dsq-count-scr"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4415526626304056" crossorigin="anonymous"></script>
+<script async src="https://notes-on-cloud-infrastructure.disqus.com/count.js" id="dsq-count-scr"></script>
 {%- endif %}
 {%- if page.url contains 'contact' -%}
   <!-- Form Validation -->
-  <script type="text/javascript" src="{{ '/assets/vendor/nocc-bootstrap-theme/js/jq-bootstrap-validation.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/vendor/nocc-bootstrap-theme/js/jq-bootstrap-validation.min.js' | relative_url }}"></script>
   <!-- Send Form -->
   <script>
     $(function () {

@@ -1,11 +1,14 @@
 ---
 layout: posts_index
-title: The collection of Notes on Cloud Computing | Page: paginator.page
+title: The collection of Notes on Cloud Computing articles
 description:  Explore the curated collection of Notes on Cloud Computing that can save your day.
 background: '/assets/images/bg-post.webp'
 ---
 
-{{ paginator.page }} {{ paginator.per_page }}
+      <div class="callout border-2 border-bottom border-info">
+<span>Page <strong>{{ paginator.page }}</strong> of <strong>{{paginator.total_pages}}</strong></span><span class="float-end">Showing {% if paginator.page > 1 %}<strong>{{ paginator.posts | size | plus:paginator.per_page }}</strong>{% else %}<strong>{{ paginator.posts | size }}</strong>{% endif %} of <strong>{{ paginator.total_posts }}</strong> Notes</span>
+      </div>
+
 {% for post in paginator.posts -%}
       <article class="post-preview">
         <a class="text-decoration-none" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}">
@@ -26,8 +29,10 @@ background: '/assets/images/bg-post.webp'
             </span>
           {%- endif -%}
         </p>
+        <hr class="bg-info border-2 border-top border-info" />
       </article>
 {% endfor -%}
+
 <!-- Pager -->
 {% if paginator.total_pages > 1 %}
       <div class="clearfix">
