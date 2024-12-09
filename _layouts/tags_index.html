@@ -23,8 +23,8 @@ tagsindex: true
       <div class="container">
         <div class="row">
           <div class="text-align-center">
-            <script type="text/javascript" src="{{ '/assets/vendor/nocc-bootstrap-theme/js/jquery/3.7.1/jquery.min.js' | relative_url }}"></script>
-            <script type="text/javascript" src="{{ 'assets/vendor/nocc-bootstrap-theme/js/jquery/jqcloud/2.0.3/jqcloud.min.js' | relative_url }}"></script>
+            <script src="{{ '/assets/vendor/nocc-bootstrap-theme/js/jquery/3.7.1/jquery.min.js' | relative_url }}"></script>
+            <script src="{{ 'assets/vendor/nocc-bootstrap-theme/js/jquery/jqcloud/2.0.3/jqcloud.min.js' | relative_url }}"></script>
             <div class="wordcloud"></div>
           </div>
         </div>
@@ -51,7 +51,7 @@ tagsindex: true
                 </li>
               {%- endfor %}
             </ul>
-            <script type="text/javascript">
+            <script>
               $(document).ready(tagscloud);
               $(window).on('resize',tagscloud);
               function tagscloud() {

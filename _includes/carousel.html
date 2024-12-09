@@ -5,6 +5,7 @@
               <div class="overlay"></div>
               <div class="col-lg-6 page-heading">
                 <h1 class="col-lg-6 mx-auto">Notes on Cloud<br>Computing</h1>
+                <span class="head-last-date">Site updated on {{ site.time | date: '%B %d, %Y' }}</span>
               </div>
               {%- for image in page.carousel %}
               <div class="carousel-item" data-bs-interval="20000">
@@ -22,7 +23,7 @@
             </button>
           </div>
         </div>
-        <script type="text/javascript">
+        <script>
           document.addEventListener('DOMContentLoaded', (event) => {
             var carouselInner = document.getElementsByClassName('carousel-item');
             var carouselItem = carouselInner[0];

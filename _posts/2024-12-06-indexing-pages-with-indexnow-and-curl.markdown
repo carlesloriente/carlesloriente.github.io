@@ -79,7 +79,7 @@ Next, we'll use cURL to send this JSON data to the IndexNow API using a POST req
 
 After sending the cURL request, examine the server's response. If everything is successful, you should receive an HTTP status code of 200 OK.
 
-Full list of Response Codes you may receive.
+#### Full list of Response Codes you may receive ####
 
 | HTTP CODE | RESPONSE             | REASON                                                                                               |
 |-----------|----------------------|------------------------------------------------------------------------------------------------------|
@@ -90,7 +90,7 @@ Full list of Response Codes you may receive.
 | 422       | Unprocessable Entity | In case of URLs which don’t belong to the host or the key is not matching the schema in the protocol |
 | 429       | Too Many Requests    | Too Many Requests (potential Spam)                                                                   |
 
-## Conclusion ##
+### Conclusion ###
 
 cURL is a powerful tool that allows you to directly interact with web servers. When used with IndexNow, it empowers you to:
 

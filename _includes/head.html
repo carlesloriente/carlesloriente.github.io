@@ -1,36 +1,37 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}{% if paginator %} - Page {{ paginator.page }} / Number of Notes shown {{ paginator.posts | size }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | normalize_whitespace | truncate: 160 | escape | page.title }}{% elsif page.description %}{{ page.description | strip_html | normalize_whitespace | truncate: 160 | escape | page.title }}{% else %}{{ site.description | strip_html | normalize_whitespace | truncate: 160 | escape | page.title }}{% endif %}">
   <meta name="author" content="{{ site.author }}">
   <meta name="google-site-verification" content="{{ site.google_site_verification }}">
   <meta name="google-adsense-account" content="{{ site.google_adsense_account }}">
+  <meta name="Last-Modified" content="{{ page.last_modified_at | date: date_format }}">
   <!-- Twitter Meta Tags -->
   {%- if site.twitter_username %}
   <meta name="twitter:site" content="{{ site.twitter_username }}">
   <meta name="twitter:creator" content="{{ site.twitter_username }}">
   {% endif -%}
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="{{ page.background | absolute_url }}">
   <meta property="twitter:domain" content='{{ site.url | split: "//" | last | split: "/" | first }}'>
   <meta property="twitter:url" content="{{ page.url | absolute_url }}">
-  <meta name="twitter:title" content="{{ page.title | escape }}">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}{% if paginator %} - page {{ paginator.page }}{% endif %}">
   <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | normalize_whitespace | truncate: 160 | escape | page.title }}{% elsif page.description %}{{ page.description | strip_html | normalize_whitespace | truncate: 160 | escape | page.title }}{% else %}{{ site.description | strip_html | normalize_whitespace | truncate: 160 | escape | page.title }}{% endif %}">
   <meta name="twitter:image" content="{{ page.background | absolute_url }}">
   <!-- Open Graph Meta Tags -->
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="{{ page.title | escape }}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}{% if paginator %} - page {{ paginator.page }}{% endif %}">
   <meta property="og:locale" content="{{ site.locale }}">
-  <meta property="og:published_time" content="{% if page.date %}{{ page.date }}{% else %}{{ site.date }}{% endif %}">
-  <!-- meta property="og:updated_time" content="2020-11-12T00:03:50+01:00" -->
+  <meta property="og:published_time" content="{% if page.date %}{{ page.date }}{% else %}{{ site.time }}{% endif %}">
+  <meta property="og:updated_time" content="{{ page.last_modified_at | date: date_format }}">
   <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | normalize_whitespace | truncate: 160 | escape | page.title }}{% elsif page.description %}{{ page.description | strip_html | normalize_whitespace | truncate: 160 | escape | page.title }}{% else %}{{ site.description | strip_html | normalize_whitespace | truncate: 160 | escape | page.title }}{% endif %}">
   <meta property="og:image" content="{{ page.background | absolute_url }}">
-  <!-- meta property="og:image:secure_url" content="">
-  <meta property="og:image:alt" content="">
-  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:secure_url" content="{{ page.background | absolute_url }}">
+  <meta property="og:image:alt" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %} main image">
+  <meta property="og:image:type" content="{{ page.background | absolute_url | split: '.' | last }}">
   <meta property="og:image:width" content="1792">
-  <meta property="og:image:height" content="1024" -->
+  <meta property="og:image:height" content="1024">
 {%- if site.critical_css == true %}
   <style type="text/css">
   {%- capture critical -%}
@@ -47,5 +48,4 @@
   <link rel="shortcut icon" href="{{ '/assets/images/favicon_io/favicon.ico' | relative_url }}">
   <link rel="icon" href="{{ '/assets/images/favicon_io/favicon.ico' | relative_url }}" sizes="any">
   <link rel="icon" href="{{ '/assets/images/favicon_io/favicon.svg' | relative_url }}" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="{{ '/assets/images/favicon_io/favicon.png' | relative_url }}" type="image/png">
-  <link rel="manifest" href="/manifest.json">
+  <link rel="webmanifest" href="/manifest.json">

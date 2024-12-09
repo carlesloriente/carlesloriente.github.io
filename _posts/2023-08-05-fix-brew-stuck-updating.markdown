@@ -18,16 +18,18 @@ However, sometimes you might encounter issues when updating. If brew update comm
 
 {% include code_block.html lang="rsc" content='#!/bin/bash
 
-# Full script for fixing homebrew update error
-# Reset
+## Full script for fixing homebrew update error
+
 sudo rm -rf /Library/Developer/CommandLineTools
 xcode-select --install
 
-# Reset homebrew-cask
+## Reset homebrew-cask
+
 brew untap homebrew/homebrew-cask --force
 brew reinstall cask
 
-# Reset homebrew-core
+## Reset homebrew-core
+
 brew update-reset -d -v' %}
 
 Download the GitHub Gist [fix_brew_stuck_updating.bash](https://gist.github.com/carlesloriente/d565db45a60dd91a41be5bb9eb68079c){:target="_blank"}

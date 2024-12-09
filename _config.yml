@@ -13,7 +13,6 @@ locale                  : "en-US"
 lang                    : "en"
 formemail               : xwkglaqr
 permalink               : pretty
-date                    : 2024-04-20 12:10:45 +0200
 
 # Manifest
 name                    : "Notes on Cloud Computing"
@@ -90,12 +89,13 @@ kramdown:
   show_warnings         : false
 
 # Build settings
-paginate                : 10
-paginate_path           : "/posts/page:num/"
+paginate                : 20
+paginate_path           : "/notes/page:num/"
 plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-redirect-from
+  - jekyll-last-modified-at
 
 sass:
   load_paths:
