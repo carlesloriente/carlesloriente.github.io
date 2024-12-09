@@ -49,7 +49,7 @@ The command will download all the needed resources and when ready, will open QEM
 In the QEMU window, click "Boot macOS Install from macOS Base System"
 
 {:.text-center}
-![sosumi-sc-1-5](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-1-5.webp){:.img-fluid}
+![sosumi-sc-1-5](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-1-5.png){:.img-fluid}
 
 ### Step by step setup
 
@@ -76,7 +76,7 @@ In the QEMU window, click "Boot macOS Install from macOS Base System"
 5.- Quit Disk Utility
 
 {:.text-center}
-![sosumi-sc-5-5](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-5-5.png){:.img-fluid}
+![sosumi-sc-5-5](/assets/images/2024-11-18-how-to-install-and-run-macos-on-linux-5-5.webp){:.img-fluid}
 
 6.- Now, choose Reinstall macOS and click Continue
 
