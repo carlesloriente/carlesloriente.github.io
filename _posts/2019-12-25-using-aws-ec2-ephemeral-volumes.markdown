@@ -19,7 +19,8 @@ Some of them will require to install an additinal package to use it.
 
 For this example we are going to launch a g4dn.xlarge with CentOS 7 using the AWS Console, as you can see in "Step 7: Review Instance Launch".
 
-![Storage](/assets/images/instance-storage-disk.jpg)
+{:.text-center}
+![Storage](/assets/images/instance-storage-disk.jpg){:.img-fluid}
 
 There are two volumes, one EBS and one Ephemeral.
 
