@@ -21,7 +21,8 @@ Fortunately, **fine-grained authorisation** offers a more granular approach, all
 
 **[When do you need attributes in fine-grained authorisation?](https://www.aserto.com/blog/attributes-authorization-when-to-use){:target="_blank"}** It is a good introduction article with examples from **Omri Gazitt**.
 
-![Topez-architecture](/assets/images/topaz_arch.webp)
+{:.text-center}
+![Topez-architecture](/assets/images/topaz_arch.webp){:.img-fluid}
 
 ## Bibliography
 
