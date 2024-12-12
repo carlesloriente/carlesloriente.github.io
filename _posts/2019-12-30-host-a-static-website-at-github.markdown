@@ -28,7 +28,8 @@ You can host a:
 ⋅⋅1. As you can see the name of the repo should be the same as the user
 ⋅⋅2. After the repo name add .github.io
 
-![New repo](/assets/images/repo-created.png)
+{:.text-center}
+![New repo](/assets/images/repo-created.png){:.img-fluid}
 
 3. Download the [zip file](https://github.com/hostwebsite/hostwebsite.github.io/archive/master.zip) containing the required files.
 
@@ -46,7 +47,8 @@ git push -u origin master' %}
 
 7. Wait a bit and check the section "GitHub Pages" inside settings of the repo at the GitHub panel
 
-![GitHub Pages settings](/assets/images/githubpages.png)
+{:.text-center}
+![GitHub Pages settings](/assets/images/githubpages.png){:.img-fluid}
 
 8.- Done! now you can browse the website
 
