@@ -5,7 +5,7 @@
     </div>
     <script src="{{ '/assets/vendor/nocc-bootstrap-theme/js/theme-toggler.min.js' | relative_url }}"></script>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-xl fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand" hreflang="{{ site.lang }}" href="{{ site.baseurl }}">
           <div class="d-flex justify-items-center" style="margin-top:2px;font-size:1.25rem;">
@@ -25,6 +25,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" hreflang="{{ site.lang }}" href="{{ 'notes/' | relative_url }}" aria-label="{{ site.title }} Notes">Notes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" hreflang="{{ site.lang }}" href="{{ 'archive/' | relative_url }}" aria-label="{{ site.title }} Archive">Archive</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" hreflang="{{ site.lang }}" href="{{ site.tags_dir | append: '/' | relative_url }}" aria-label="{{ site.title }} Tags">Tags</a>
