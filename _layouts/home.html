@@ -11,9 +11,9 @@ layout: default
       <div class="container my-4">
         <div class="row">
           <div class="col-md-9" style="padding:10px 10px;">
-            <p class="lead fw-bolder text-uppercase">Recent notes</p>
+            <p class="lead fw-bolder text-uppercase title-sidebar">Recent notes</p>
             <!-- Home Post List -->
-            {%- for post in site.posts limit : 5 -%}
+            {%- for post in site.posts limit : 10 -%}
             <article class="home-post-preview">
               <a class="text-decoration-none" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}">
                 <h2 class="post-title">{{ post.title }}</h2>
@@ -34,8 +34,7 @@ layout: default
             </div>
           </div>
           <div class="col-md-3 heading-projects">
-            <p class="lead fw-bolder text-uppercase">Top Tags</p>
-            <ul class="tag-list">
+            <p class="lead fw-bolder text-uppercase title-sidebar">Top Tags</p>
             {% assign delimiter = ',' %}
             {% assign tag_arr = '' %}
             {%- for page in site.posts %}
@@ -47,16 +46,35 @@ layout: default
                 {% assign tag_arr = tag_arr | append: count | append: ' ' | append: tag %}
               {%- endfor %}
             {%- endfor %}
-
             {% assign tags_list = tag_arr | split: delimiter | sort | reverse | uniq %}
-
-            {%- for tags in tags_list limit : 5 %}
+            <ul>
+              {%- for tags in tags_list limit : 5 %}
               {% assign tag = tags | split: ' ' %}
               <li>
-                <a href="{{ 'tags/' | append: tag.last | append: '/' }}" hreflang="{{ site.lang }}" aria-label="{{ tag.last }}">{{ tag.last | capitalize }} ({{ tag.first }})</a>
+                <a href="{{ 'tags/' | append: tag.last | append: '/' }}" hreflang="{{ site.lang }}" aria-label="{{ tag.last }}">{{ tag.last | capitalize }}</a><span class="badge rounded-pill" tabindex="0" data-toggle="tooltip" title="{{ tag.first }} Notes">{{ tag.first }}</span>
               </li>
-            {%- endfor %}
+              {%- endfor %}
+            </ul>
 
+            <p class="lead fw-bolder text-uppercase title-sidebar">Top Notes</p>
+            <ul>
+              {%- for post in site.posts reversed %}
+              {%- if post.top %}
+              <li>
+                <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}" aria-label="{{ post.title }} views {{ post.top }}">{{ post.title }}</a><span class="badge rounded-pill" tabindex="0" data-toggle="tooltip" title="{{ post.top }} Views">{{ post.top }}</span>
+              </li>
+              {%- endif %}
+              {%- endfor %}
+            </ul>
+
+            <p class="lead fw-bolder text-uppercase title-sidebar">Yearly Notes</p>
+            <ul>
+              {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+              {% for year in years %}
+              <li>
+                <a href="{{ 'archive/index.html' | append: '#' | append: year.name }}" hreflang="{{ site.lang }}" aria-label="{{ year.name }} Notes">{{ year.name }}</a><span class="badge rounded-pill" tabindex="0" data-toggle="tooltip" title="{{ year.items | size }} Notes">{{ year.items | size }}</span>
+              </li>
+              {% endfor %}
             </ul>
           </div>
         </div>
