@@ -11,6 +11,7 @@ background: '/assets/images/bg-mikrotik.webp'
 redirect_from:
 - "/routeros/mikrotik/vpn/2020/08/02/configure-vpn-server-l2tp-ipsec-mikrotik-routeros.html"
 - "/routeros/mikrotik/vpn/2020/08/02/configure-vpn-server-l2tp-ipsec-mikrotik-routeros/"
+top: "637"
 ---
 
 The following file (rsc) for Mikrotik RouterOS v6.45+ configures an VPN usign L2TP

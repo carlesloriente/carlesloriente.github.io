@@ -25,7 +25,7 @@ color                   : "#FFFFFF"
 critical_css            : false
 
 # Theme Notice (please don't remove it ;))
-theme_version           : v1.2.2
+theme_version           : v1.3.8
 theme_name              : NOCC Bootstrap Theme
 theme_repo              : https://github.com/carlesloriente/bootstrap-theme-jekyll/
 theme_url               : https://bootstrap-theme.notesoncloudcomputing.com/
@@ -34,6 +34,7 @@ theme_author_url        : https://www.notesoncloudcomputing.com/about/
 theme_download          : https://github.com/carlesloriente/bootstrap-theme-jekyll/archive/refs/heads/main.zip
 theme_package           : https://www.npmjs.com/package/nocc-bootstrap-theme
 theme_logo              : "/assets/vendor/nocc-bootstrap-theme/images/nocc/nocc_logo.webp"
+bundle_version          : v1.1.9
 
 # Social Profiles
 email                   : "fi1nziulf@mozmail.com"

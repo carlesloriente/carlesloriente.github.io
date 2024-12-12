@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<main class="flex-shrink-0">
+  {% if page.background %}
+  <section class="masthead sechead" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.5)0%,rgba(0,0,0,0.5) 100%), url('{{ page.background }}')">
+  {% else %}
+  <section class="masthead sechead">
+  {% endif %}
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto">
+          <div class="page-heading">
+            <h1>Archive of Notes</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container my-4">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+    
+    <div class="divider"></div>
+  </section>
+  </main>
