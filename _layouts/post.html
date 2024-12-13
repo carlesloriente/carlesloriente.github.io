@@ -26,8 +26,11 @@ layout: default
           <div class="meta text-center">Posted by
             {% if page.author %} <a href="{{ 'about/' | relative_url }}" hreflang="{{ site.lang }}" aria-label="Author">{{ page.author }} </a> {% else %}<a href="{{ 'about/' | relative_url }}" hreflang="{{ site.lang }}" aria-label="Author">{{ site.author }} </a> {% endif %} on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=page.content -%}<br><span class="text-start">Updated on {{ page.last_modified_at | date: '%B %d, %Y' }}</span>
           </div>
-          <hr class="border border-primary opacity-25">
           {{ content }}
+          {% if page.tags %}
+          <p class="text-center">Tags: {%- for tag in page.tags -%} <span class="badge-tags rounded-pill" tabindex="0" data-toggle="tooltip" title="{{ tag }}"><a href="{{ 'tags/' | append: tag | relative_url }}" hreflang="{{ site.lang }}" aria-label="{{ tag | escape }}">#{{ tag }}</a></span> {%- endfor -%}</p>
+          <hr class="border border-primary opacity-25">
+          {% endif %}
         </div>
       </div>
       <div class="row">
