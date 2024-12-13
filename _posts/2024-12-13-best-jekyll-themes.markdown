@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: "Calling All Jekyll Enthusiasts: BestJekyllThemes Has Landed!"
 description: "Best Jekyll Themes, the best resource to find top-quality Jekyll templates for static and dynamic websites"
-date: 2024-12-13 14:10:02 +0200
+date: 2024-12-13 11:10:02 +0200
 categories: jekyll-themes jekyll side-project
 tags:
 - jekyll-themes
