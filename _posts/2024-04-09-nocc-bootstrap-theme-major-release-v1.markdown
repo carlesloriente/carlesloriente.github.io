@@ -4,11 +4,12 @@ comments: true
 title: "NOCC Bootstrap Theme Major Release v1"
 description: "An NPM Package that brings the power of NOCC directly to your NodeJS project"
 date: 2024-04-09 20:40:05 +0200
-categories: nocc npm bootstrap
+categories: nocc npm bootstrap side-project
 tags:
 - nocc
 - npm
 - bootstrap
+- side-project
 background: '/assets/images/bg-nocc.webp'
 ---
 

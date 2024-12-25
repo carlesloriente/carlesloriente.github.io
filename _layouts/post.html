@@ -3,80 +3,82 @@ layout: default
 ---
 
 <main class="flex-shrink-0">
-  {% if page.background %}
-  <section class="masthead sechead" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.5)0%,rgba(0,0,0,0.5) 100%), url('{{ page.background }}')">
-  {% else %}
-  <section class="masthead sechead">
-  {% endif %}
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class=" mx-auto">
-          <div class="post-heading">
-            <h1 class="mx-auto">{{ page.title }}</h1>
+  <article>
+    {% if page.background %}
+    <section class="masthead sechead" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.5)0%,rgba(0,0,0,0.5) 100%), url('{{ page.background }}')">
+    {% else %}
+    <section class="masthead sechead">
+    {% endif %}
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class=" mx-auto">
+            <div class="post-heading">
+              <h1 class="mx-auto">{{ page.title }}</h1>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section>
-    <div class="container my-4">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <div class="meta text-center">Posted by
-            {% if page.author %} <a href="{{ 'about/' | relative_url }}" hreflang="{{ site.lang }}" aria-label="Author">{{ page.author }} </a> {% else %}<a href="{{ 'about/' | relative_url }}" hreflang="{{ site.lang }}" aria-label="Author">{{ site.author }} </a> {% endif %} on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=page.content -%}<br><span class="text-start">Updated on {{ page.last_modified_at | date: '%B %d, %Y' }}</span>
-          </div>
-          {{ content }}
-          {% if page.tags %}
-          <p class="text-center">Tags: {%- for tag in page.tags -%} <span class="badge-tags rounded-pill" tabindex="0" data-toggle="tooltip" title="{{ tag }}"><a href="{{ 'tags/' | append: tag | relative_url }}" hreflang="{{ site.lang }}" aria-label="{{ tag | escape }}">#{{ tag }}</a></span> {%- endfor -%}</p>
-          <hr class="border border-primary opacity-25">
-          {% endif %}
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <div class="text-center">
-            <p><mark>Found a snippet that saved your day?</mark> Consider <a href="https://ko-fi.com/S6S1O2GTU" target="_blank" rel="noopener" title="Support me on ko-fi.com">dropping a tip!</a></p>
-            <script src="{{ '/assets/vendor/nocc-bootstrap-theme/js/ko-fi/widget_2.min.js' | relative_url }}"></script>
-            <script>kofiwidget2.init("Buy me a coffee", "#176391", "S6S1O2GTU");kofiwidget2.draw();</script>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="home-divider"></div>
-  </section>
-  <section>
-    <div class="container my-4">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <div class="clearfix">
-            {% if page.previous.url %}
-            <a class="btn btn-primary float-start" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline">
-                Post</span></a>
-            {% endif %}
-            {% if page.next.url %}
-            <a class="btn btn-primary float-end" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline">
-                Post</span> &rarr;</a>
+    </section>
+    <section>
+      <div class="container my-4">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="meta text-center">Posted by
+              {% if page.author %} <a href="{{ 'about/' | relative_url }}" hreflang="{{ site.lang }}" aria-label="Author">{{ page.author }} </a> {% else %}<a href="{{ 'about/' | relative_url }}" hreflang="{{ site.lang }}" aria-label="Author">{{ site.author }} </a> {% endif %} on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=page.content -%}<br><span class="text-start">Updated on {{ page.last_modified_at | date: '%B %d, %Y' }}</span>
+            </div>
+            {{ content }}
+            {% if page.tags %}
+            <p class="text-center">Tags: {%- for tag in page.tags -%} <span class="badge-tags rounded-pill" tabindex="0" data-toggle="tooltip" title="{{ tag }}"><a href="{{ 'tags/' | append: tag | relative_url }}" hreflang="{{ site.lang }}" aria-label="{{ tag | escape }}">#{{ tag }}</a></span> {%- endfor -%}</p>
+            <hr class="border border-primary opacity-25">
             {% endif %}
           </div>
         </div>
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="text-center">
+              <p><mark>Found a snippet that saved your day?</mark> Consider <a href="https://ko-fi.com/S6S1O2GTU" target="_blank" rel="noopener" title="Support me on ko-fi.com">dropping a tip!</a></p>
+              <script src="{{ '/assets/vendor/nocc-bootstrap-theme/js/ko-fi/widget_2.min.js' | relative_url }}"></script>
+              <script>kofiwidget2.init("Buy me a coffee", "#176391", "S6S1O2GTU");kofiwidget2.draw();</script>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="home-divider"></div>
-  </section>
-  <section class="disqus-section">
-    <div class="container my-4">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <div class="clearfix">
-            {% if page.comments %}
-              {% if site.disqus_shortname %}
-                {% include disqus_comments.html %}
+      <div class="home-divider"></div>
+    </section>
+    <section>
+      <div class="container my-4">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="clearfix">
+              {% if page.previous.url %}
+              <a class="btn btn-primary float-start" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline">
+                  Post</span></a>
               {% endif %}
-            {% endif %}
+              {% if page.next.url %}
+              <a class="btn btn-primary float-end" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline">
+                  Post</span> &rarr;</a>
+              {% endif %}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  </main>
+      <div class="home-divider"></div>
+    </section>
+    <section class="disqus-section">
+      <div class="container my-4">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="clearfix">
+              {% if page.comments %}
+                {% if site.disqus_shortname %}
+                  {% include disqus_comments.html %}
+                {% endif %}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
