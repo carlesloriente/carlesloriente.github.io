@@ -9500,6 +9500,7 @@ input[type=submit].btn-block, input[type=reset].btn-block, input[type=button].bt
 .card-columns .card {
   margin-bottom: 0.75rem;
 }
+
 @media (min-width: 576px) {
   .card-columns {
     column-gap: 1.25rem;

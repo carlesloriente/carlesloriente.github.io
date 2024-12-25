@@ -1,6 +1,6 @@
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}{% if paginator %} - Page {{ paginator.page }} / Number of Notes shown {{ paginator.posts | size }}{% endif %}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}{% if paginator %} - Page {{ paginator.page }} / Number of Notes shown {{ paginator.posts | size }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | normalize_whitespace | truncate: 160 | escape | page.title }}{% elsif page.description %}{{ page.description | strip_html | normalize_whitespace | truncate: 160 | escape | page.title }}{% else %}{{ site.description | strip_html | normalize_whitespace | truncate: 160 | escape | page.title }}{% endif %}">
   <meta name="author" content="{{ site.author }}">
   <meta name="google-site-verification" content="{{ site.google_site_verification }}">
