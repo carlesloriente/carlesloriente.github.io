@@ -11,7 +11,7 @@
   <meta name="twitter:site" content="{{ site.twitter_username }}">
   <meta name="twitter:creator" content="{{ site.twitter_username }}">
   {% endif -%}
-  <meta name="twitter:card" content="{{ page.background | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
   <meta property="twitter:domain" content='{{ site.url | split: "//" | last | split: "/" | first }}'>
   <meta property="twitter:url" content="{{ page.url | absolute_url }}">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}{% if paginator %} - page {{ paginator.page }}{% endif %}">
