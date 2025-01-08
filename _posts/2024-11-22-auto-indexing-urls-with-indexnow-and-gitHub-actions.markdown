@@ -11,6 +11,7 @@ tags:
 - github-actions
 - search-engines
 background: '/assets/images/bg-robot-hand.webp'
+redirect_from: "/posts/2024-11-22-auto-indexing-urls-with-indexnow-and-gitHub-actions/
 ---
 
 ## IndexNow **Take Control of Your Website's Search Engine Visibility** ##
