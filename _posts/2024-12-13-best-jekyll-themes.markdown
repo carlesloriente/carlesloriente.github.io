@@ -18,16 +18,19 @@ Do you dream in clean code and crave the simplicity of static websites? Then buc
 
 For years, [JekyllThemes](https://github.com/mattvh/jekyllthemes/){:target="_blank"} has been the go-to resource for stunning [Jekyll](https://jekyllrb.com/){:target="_blank"} themes. But sadly, it went a bit quiet.  However, fear not! As a long-time Jekyll user (and huge admirer of [Matt Harzewski's](https://github.com/mattvh/){:target="_blank"} work!), I couldn't let this treasure trove fade away.
 
+> **&#9432;** This post was edited due to a later change of domain name, in favour of [TopJekyllThemes](https://www.topjekyllthemes.com/){:target="_blank"}. The original domain was [BestJekyllThemes](https://www.bestjekyllthemes.site/){:target="_blank"}.
+{:.alert .alert-info}
+
 {:.text-center}
-![BestJekyllThemes site](/assets/images/2024-12-12-best-jekyll-themes.webp){:.img-fluid}
+![TopJekyllThemes site](/assets/images/2024-12-12-best-jekyll-themes.webp){:.img-fluid}
 
-That's why I'm thrilled to announce the launch of [BestJekyllThemes](https://www.bestjekyllthemes.site/){:target="_blank"}, the reborn and revamped directory featuring over 500 of the BEST Jekyll themes, templates, and resources  to supercharge your website building experience!
+That's why I'm thrilled to announce the launch of [~~Best~~TopJekyllThemes](https://www.topjekyllthemes.com/){:target="_blank"}, the reborn and revamped directory featuring over 500 of the BEST Jekyll themes, templates, and resources  to supercharge your website building experience!
 
-> **[BestJekyllThemes](https://www.bestjekyllthemes.site/){:target="_blank"}**, the best resource to find top-quality Jekyll templates for static and dynamic websites
+> **[~~Best~~TopJekyllThemes](https://www.topjekyllthemes.com/){:target="_blank"}**, the best resource to find top-quality Jekyll templates for static and dynamic websites
 
 ### Building on a Legacy
 
-The amazing work of the previous maintainers is the foundation for [BestJekyllThemes](https://www.bestjekyllthemes.site/){:target="_blank"}. Now, we're taking things to the next level with some exciting new goals:
+The amazing work of the previous maintainers is the foundation for [~~Best~~TopJekyllThemes](https://www.topjekyllthemes.com/){:target="_blank"}. Now, we're taking things to the next level with some exciting new goals:
 
 * Constant Curation: We'll be actively seeking out the freshest, most innovative Jekyll themes to keep your website looking ahead of the curve.
 * Community Corner: We're building a vibrant community hub where you can share ideas, get support, and collaborate with fellow Jekyll wizards!
@@ -37,6 +40,11 @@ The amazing work of the previous maintainers is the foundation for [BestJekyllTh
 
 The first iteration of BestJekyllThemes is already live at [shortened URL]. We'd be absolutely ecstatic to hear your feedback on the design and see what you think!
 
-Head over to the official project on GitHub: [BestJekyllThemes](https://github.com/carlesloriente/jekyllthemes/){:target="_blank"}
+Head over to the official project on GitHub: [~~Best~~TopJekyllThemes](https://github.com/carlesloriente/jekyllthemes/){:target="_blank"}
 
-Don't be shy – share your thoughts, suggestions, and contributions! Together, let's make [BestJekyllThemes](https://www.bestjekyllthemes.site/){:target="_blank"} the ultimate destination for building breathtaking static and dynamic websites with Jekyll! ✨
+Don't be shy – share your thoughts, suggestions, and contributions! Together, let's make [TopJekyllThemes](https://www.topjekyllthemes.com/){:target="_blank"} the ultimate destination for building breathtaking static and dynamic websites with Jekyll! ✨
+
+## Related articles
+
+- [BestJekyllThemes has been moved to TopJekyllThemes](/posts/2025-01-13-best-jekyll-themes-is-now-top-jekyll-themes/)
+- [Domain Name Dilemma: Avoiding Common Pitfalls](/posts/2025-01-08-choosing-the-right-domain-name/)
