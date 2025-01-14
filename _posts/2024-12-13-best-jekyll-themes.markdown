@@ -38,7 +38,7 @@ The amazing work of the previous maintainers is the foundation for [~~Best~~TopJ
 
 ### Ready to Dive In?
 
-The first iteration of BestJekyllThemes is already live at [shortened URL]. We'd be absolutely ecstatic to hear your feedback on the design and see what you think!
+The first iteration of TopJekyllThemes is already live at [shortened URL]. We'd be absolutely ecstatic to hear your feedback on the design and see what you think!
 
 Head over to the official project on GitHub: [~~Best~~TopJekyllThemes](https://github.com/carlesloriente/jekyllthemes/){:target="_blank"}
 
@@ -46,5 +46,5 @@ Don't be shy – share your thoughts, suggestions, and contributions! Together, 
 
 ## Related articles
 
-- [BestJekyllThemes has been moved to TopJekyllThemes](/posts/2025-01-13-best-jekyll-themes-is-now-top-jekyll-themes/)
-- [Domain Name Dilemma: Avoiding Common Pitfalls](/posts/2025-01-08-choosing-the-right-domain-name/)
+* [BestJekyllThemes has been moved to TopJekyllThemes](/posts/2025-01-13-best-jekyll-themes-is-now-top-jekyll-themes/)
+* [Domain Name Dilemma: Avoiding Common Pitfalls](/posts/2025-01-08-choosing-the-right-domain-name/)
