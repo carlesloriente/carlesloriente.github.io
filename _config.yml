@@ -24,9 +24,15 @@ color                   : "#FFFFFF"
 # Features
 critical_css            : false
 
+#SideProjects
+tjt_version             : v2.2.3
+tjt_name                : TopJekyllThemes
+tjt_url                 : https://www.topjekyllthemes.com
+
 # Theme Notice (please don't remove it ;))
-theme_version           : v1.3.8
+theme_version           : v1.3.9
 theme_name              : NOCC Bootstrap Theme
+theme_bundle_name       : Site Bundle for Jekyll
 theme_repo              : https://github.com/carlesloriente/bootstrap-theme-jekyll/
 theme_url               : https://bootstrap-theme.notesoncloudcomputing.com/
 theme_author            : Carles Loriente
