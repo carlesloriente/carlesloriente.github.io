@@ -21,30 +21,42 @@ carousel:
 <div class="home-divider"></div>
 <div class="container my-4">
   <div class="row">
-    <div class="col-md-2 heading-projects" style="padding:10px 10px;">
+    <div class="col-md-1 heading-projects" style="padding:10px 10px;">
       <div class="row row-heading g-0 overflow-hidden flex-md-row mb-4 rounded-hero border shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static" style="white-space: nowrap; padding: 3rem;">
           <h3 class="subheading">Side Projects</h3>
         </div>
       </div>
     </div>
-    <div class="col-md-5" style="padding:10px 10px;">
+    <div class="col-md-4" style="padding:10px 10px;">
       <div class="row g-0 overflow-hidden flex-md-row mb-4 rounded-hero border shadow-sm h-md-250 position-relative projects">
         <div class="col p-4 d-flex flex-column position-static">
-          <h3><span class="npm-logo"></span>NOCC Bootstrap Theme</h3>
+          <h3><span class="tjt-logo"></span>{{ site.tjt_name }}</h3>
+          <div class="mb-1 text-body-secondary">{{ site.tjt_version }}</div>
+          <p class="card-text mb-auto">Your resource to find top-quality Jekyll templates for static and dynamic websites.<br>
+            More than 500 Jekyll themes and counting!</p>
+            <a href="{{ site.tjt_url }}" class="stretched-link" hreflang="en" aria-label="TopJekyllThemes.com link">Check it now!</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4" style="padding:10px 10px;">
+      <div class="row g-0 overflow-hidden flex-md-row mb-4 rounded-hero border shadow-sm h-md-250 position-relative projects">
+        <div class="col p-4 d-flex flex-column position-static">
+          <h3><span class="npm-logo"></span>{{ site.theme_name }}</h3>
           <div class="mb-1 text-body-secondary">{{ site.theme_version }}</div>
-          <p class="card-text mb-auto">Are you tired of outdated Bootstrap themes?<br>
-            Say hello to NOCC: An NPM Package that brings the power of NOCC directly to your NodeJS project.</p>
+          <p class="card-text mb-auto">Are you tired of outdated themes?<br>
+            The NPM Package that brings the power of NOCC directly to your NodeJS project.</p>
             <a href="{{ site.theme_package }}" class="stretched-link" hreflang="en" aria-label="NOCC Bootstrap Theme npm package">Get it now!</a>
         </div>
       </div>
     </div>
-    <div class="col-md-5" style="padding:10px 10px;">
+    <div class="col-md-4" style="padding:10px 10px;">
       <div class="row g-0 overflow-hidden flex-md-row mb-4 h-md-250 rounded-hero border shadow-sm position-relative projects">
         <div class="col p-4 d-flex flex-column position-static">
-          <h3><span class="jekyll-logo"></span>Site Bundle for Jekyll</h3>
+          <h3><span class="jekyll-logo"></span>{{ site.theme_bundle_name }}</h3>
           <div class="mb-1 text-body-secondary">{{ site.bundle_version }}</div>
-          <p class="mb-auto">A complete static website showcasing NOCC's seamless integration.<br>Featuring a beautifully designed homepage, dynamic tag cloud, image gallery, and more.</p>
+          <p class="mb-auto">A complete static website template.<br>
+            Featuring a beautifully designed homepage, dynamic tag cloud, image gallery, and more.</p>
           <a href="{{ site.theme_url }}" class="stretched-link" hreflang="en" aria-label="Site Bundle for Jekyll">Read more!</a>
         </div>
       </div>

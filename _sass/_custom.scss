@@ -25,7 +25,7 @@ h3 {
   justify-content: flex-end;
   color: var(--bs-body-bg);
 
-  @media only screen and (width <= 764px) {
+  @media only screen and (width <= 1020px) {
     transform: rotate(-360deg);
     display: flex;
     justify-content: flex-start;
@@ -45,7 +45,7 @@ h3 {
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -239,28 +239,37 @@ section.masthead {
   background-size: 30px auto;
 }
 
+.tjt-logo {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  background-image: url("/assets/images/tjt-logo.svg");
+  background-repeat: no-repeat;
+  background-size: 30px auto;
+  vertical-align: middle;
+}
+
 .npm-logo {
   display: inline-block;
-
-  width: 26px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   margin-right: 10px;
-
   background-image: url("/assets/images/npm-logo.svg");
   background-repeat: no-repeat;
-  background-size: 26px auto;
+  background-size: 30px auto;
+  vertical-align: middle;
 }
 
 .jekyll-logo {
   display: inline-block;
-
-  width: 26px;
-  height: 27px;
+  width: 30px;
+  height: 30px;
   margin-right: 5px;
-
   background-image: url("/assets/images/jekyll-logo.svg");
   background-repeat: no-repeat;
-  background-size: 28px auto;
+  background-size: 30px auto;
+  vertical-align: middle;
 }
 
 .callout {
@@ -270,4 +279,19 @@ section.masthead {
 
 .head-last-date {
   color: var(--bs-white);
+}
+
+@media (max-width: 1020px) {
+  .col-md-1,
+  .col-md-4 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .col-md-4 {
+    flex: 0 0 auto;
+    width: 30%;
+  }
 }
