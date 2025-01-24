@@ -8,7 +8,7 @@ h6 {
 }
 
 h3 {
-  font-size: calc(1.31rem + 0.81vw);
+  font-size: calc(1.3rem + 0.81vw);
 }
 
 .row {
@@ -96,6 +96,7 @@ section.masthead {
   margin-right: 0.5em;
   padding: 0 1em 0.3em 1em;
   background: linear-gradient(rgba(0,123,255,.5),rgba(0,123,255,.2));
+  display: inline-block;
   a {
     font-size: smaller;
     font-weight: 400;
@@ -106,6 +107,11 @@ section.masthead {
    }
   }
 }
+
+.meta {
+  margin-bottom: 3em;
+}
+
 
 .home-post-preview {
   border: 1px solid var(--bs-border-color-base);
@@ -219,7 +225,7 @@ section.masthead {
 }
 @media only screen and (width >= 1536px) {
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   section.homehead .page-heading h1,
