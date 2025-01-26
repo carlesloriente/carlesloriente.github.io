@@ -107,6 +107,8 @@ Go to repository settings, Click on `Actions-> General` and enable the following
 
 And click on the "Save changes" button.
 
+![Repository permissions](/assets/images/2025-01-26-make-a-dynamic-github-profile-with-github-actions-2-permissions.png){:.img-fluid}
+
 ### Workflow explanation
 
 - The workflow is triggered every hour using the cron syntax `0 * * * *`, and also includes a manual trigger using `workflow_dispatch`.
@@ -121,19 +123,19 @@ Go to the Actions tab of your repository and you will see the workflow `Update R
 
 After the workflow finishes, go to the main branch of your repository and you the README file will be updated with the latest blog posts list.
 
-![Updated README with latest posts list](/assets/images/2025-01-26-make-a-dynamic-github-profile-with-github-actions-2.png){:.img-fluid}
+![Updated README file](/assets/images/2025-01-26-make-a-dynamic-github-profile-with-github-actions-3-readme-updated.png){:.img-fluid}
 
 ## Bonus: GitHub Stats
 
 You can also add your GitHub stats to your profile README. This includes your GitHub activity, top languages, and more. The [anuraghazra/github-readme-stats](https://github-readme-stats.vercel.app/){:target="_blank"} action created by [Anurag Hazra](https://github.com/anuraghazra){:="_blank"} fetches the data from the GitHub API and generates a dynamic image that you can include in your README file.
 
-![GitHub stats](/assets/images/2025-01-26-make-a-dynamic-github-profile-with-github-actions-3.png){:.img-fluid}
+![GitHub stats](/assets/images/2025-01-26-make-a-dynamic-github-profile-with-github-actions-4-stats.png){:.img-fluid}
 
 ### Add GitHub Stats to your profile
 
 Edit the `README.md` file and add the following content:
-{% include code_block.html lang="markdown" content="## My GitHub Stats
-[![My GitHub stats](https://github-readme-stats.vercel.app/api?username=myusername)](https://github.com/anuraghazra/github-readme-stats)" %}
+{% include code_block.html lang="markdown" content="## GitHub Stats
+&#91;!&#91;My Stats&#93;&#40;https://github-readme-stats.vercel.app/api?username=myusername&#41;&#93;&#40;https://github.com/anuraghazra/github-readme-stats&#41;" %}
 
 > **&#9432;** Replace *myusername* with your GitHub username.
 {:.alert .alert-info}
