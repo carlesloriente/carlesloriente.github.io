@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "Make your GitHub Profile shine with dynamic updates"
-description: "Enhance your development practices by automating git submodule updates using GitHub Actions. This guide provides a step-by-step approach to configuring workflows, managing secrets, and ensuring secure and reliable updates for your private projects."
+description: "Level up your GitHub presence with automated profile updates! In this article, we'll explore how to use GitHub Actions to dynamically display your latest contributions, project statistics, and more.."
 date: 2025-01-26 00:11:02 +0200
 categories: github-profile github-actions automation profile github-stats
 tags:
