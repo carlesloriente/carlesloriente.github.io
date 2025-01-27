@@ -45,7 +45,7 @@ layout: default
               {% endfor %}
             </ul>
 
-            <p class="lead fw-bolder text-uppercase title-sidebar">Most Searchs</p>
+            <p class="lead fw-bolder text-uppercase title-sidebar">Most Searched</p>
             <ul>
               {%- assign posts_searchs = site.posts | where_exp: 'post', 'post.searchs' | sort:"searchs" | reverse -%}
               {% for post in posts_searchs %}
