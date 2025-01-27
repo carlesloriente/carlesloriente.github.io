@@ -11,6 +11,7 @@ background: '/assets/images/2023-08-05-fix-brew-stuck-updating.webp'
 redirect_from: 
 - "/fix/brew/update/stuck/cli/macos/2023/08/05/fix-brew-stuck-updating.html"
 - "/fix/brew/update/stuck/cli/macos/2023/08/05/fix-brew-stuck-updating/"
+searchs: "3189"
 ---
 
 The [brew (Hombrebrew)](https://brew.sh/index){:target="_blank"} package manager is a mush have tool for developers using macOs. It enables you to install, update, and manage a wide range of software packages from the command line.

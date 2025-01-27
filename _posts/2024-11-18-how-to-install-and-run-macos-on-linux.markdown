@@ -13,6 +13,7 @@ tags:
 - fedora
 - sosumi
 background: '/assets/images/bg-macos.webp'
+searchs: "0768"
 ---
 
 **Running MacOS on Linux**: made it easy
