@@ -4,7 +4,7 @@ comments: true
 title: "Domain Name Dilemma: Avoiding Common Pitfalls"
 description: "Your domain name is your digital address. This guide helps you choose a name that's not just catchy, but also search engine friendly and aligns with your project goals."
 date: 2025-01-08 00:50:02 +0200
-categories: domain name, domain registration, SEO, branding, online presence, domain selection
+categories: domain domain-registration SEO branding online-presence
 tags:
 - seo
 - branding
