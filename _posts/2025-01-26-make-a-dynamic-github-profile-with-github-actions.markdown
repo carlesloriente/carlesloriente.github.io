@@ -7,7 +7,7 @@ date: 2025-01-26 00:11:02 +0200
 categories: github-profile github-actions automation profile github-stats
 tags:
 - github-profile
-- github-actions 
+- github-actions
 - automation 
 - profile
 - github-stats

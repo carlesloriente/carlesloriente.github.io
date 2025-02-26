@@ -7,10 +7,10 @@ date: 2025-01-25 00:23:02 +0200
 categories: git submodule github-actions automation workflow CI/CD
 tags:
 - git
-- submodule 
-- github-actions 
-- automation 
-- workflow 
+- submodule
+- github-actions
+- automation
+- workflow
 - CI/CD
 background: '/assets/images/bg-github.webp'
 ---
