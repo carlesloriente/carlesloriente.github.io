@@ -40,7 +40,7 @@ rbenv --version # Check rbenv installation" %}
 
 ### Windows
 
-1. Download the RubyInstaller from the official [RubyInstaller website](https://rubyinstaller.org/downloads/).
+1. Download the RubyInstaller from the official [RubyInstaller website](https://rubyinstaller.org/downloads/){:="_blank"}.
 2. Ensure you download the installer that includes DevKit. The DevKit is essential for compiling native extensions.
 3. Follow the installer's instructions.
 
