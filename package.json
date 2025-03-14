@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "nocc-bootstrap-theme": "^2.0.0"
+    "nocc-bootstrap-theme": "^2.0.1"
   },
   "devDependencies": {
     "https": "^1.0.0"
