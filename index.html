@@ -19,47 +19,33 @@ carousel:
   </div>
 </div>
 <div class="home-divider"></div>
-<div class="container my-4">
-  <div class="row">
-    <div class="col-md-1 heading-projects side-projects-col">
-      <div class="row row-heading g-0 overflow-hidden flex-md-row mb-4 rounded-hero border shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static" style="white-space: nowrap; padding: 3rem;">
-          <h3 class="subheading">Side Projects</h3>
-        </div>
-      </div>
+<div class="container">
+  <div class="row row-cols-auto row-projects">
+    <div class="col-sm-1 projects side-project-banner border">
+      <h3 class="subheading">Side Projects</h3>
     </div>
-    <div class="col-md-4 side-projects-col">
-      <div class="row g-0 overflow-hidden flex-md-row mb-4 rounded-hero border shadow-sm h-md-250 position-relative projects">
-        <div class="col p-4 d-flex flex-column position-static">
-          <h3><span class="tjt-logo"></span>{{ site.tjt_name }}</h3>
-          <div class="mb-1 text-body-secondary">{{ site.tjt_version }}</div>
-          <p class="card-text mb-auto">Your resource to find top-quality Jekyll templates for static and dynamic websites.<br>
-            More than 500 Jekyll themes and counting!</p>
-            <a href="{{ site.tjt_url }}" class="stretched-link" hreflang="en" aria-label="TopJekyllThemes.com link">Check it now!</a>
-        </div>
-      </div>
+    <div class="col col-sm-3 projects side-projects-col rounded-hero shadow-sm border position-relative">
+      <img id="ribbon" src="{{ '/assets/images/ribbon-new.svg' | relative_url }}" width="72px" height="72px" aria-hidden="true" alt="New project">
+      <h4><span class="tjt-logo"></span>{{ site.tjt_name }}</h4>
+      <div class="mb-1 text-body-secondary">{{ site.tjt_version }}</div>
+      <p class="card-text mb-auto">Your resource to find top-quality Jekyll templates for static and dynamic websites.<br>
+      More than 500 Jekyll themes and counting!</p>
+      <a href="{{ site.tjt_url }}" class="side-project-link stretched-link" hreflang="en" aria-label="TopJekyllThemes.com link" target="_blank">Check it now!</a>
     </div>
-    <div class="col-md-4 side-projects-col">
-      <div class="row g-0 overflow-hidden flex-md-row mb-4 rounded-hero border shadow-sm h-md-250 position-relative projects">
-        <div class="col p-4 d-flex flex-column position-static">
-          <h3><span class="npm-logo"></span>{{ site.theme_name }}</h3>
-          <div class="mb-1 text-body-secondary">{{ site.theme_version }}</div>
-          <p class="card-text mb-auto">Are you tired of outdated themes?<br>
-            The NPM Package that brings the power of NOCC directly to your NodeJS project.</p>
-            <a href="{{ site.theme_package }}" class="stretched-link" hreflang="en" aria-label="NOCC Bootstrap Theme npm package">Get it now!</a>
-        </div>
-      </div>
+    <div class="col col-sm-3 projects side-projects-col rounded-hero shadow-sm border position-relative">
+      <img id="ribbon" src="{{ '/assets/images/ribbon-updated.svg' | relative_url }}" width="72px" height="72px" aria-hidden="true" alt="Updated project">
+      <h4><span class="npm-logo"></span>{{ site.theme_name }}</h4>
+      <div class="mb-1 text-body-secondary">{{ site.theme_npm_version }}</div>
+      <p class="card-text mb-auto">A Modern Bootstrap 5 Theme!<br>
+        Available as; NPM package, Ruby Gem and a complete Site Bundle for Jekyll.</p>
+      <a href="{{ site.theme_url }}" class="side-project-link stretched-link" hreflang="en" aria-label="NOCC Bootstrap Theme npm package" target="_blank">Get it now!</a>
     </div>
-    <div class="col-md-4 side-project-col">
-      <div class="row g-0 overflow-hidden flex-md-row mb-4 h-md-250 rounded-hero border shadow-sm position-relative projects">
-        <div class="col p-4 d-flex flex-column position-static">
-          <h3><span class="jekyll-logo"></span>{{ site.theme_bundle_name }}</h3>
-          <div class="mb-1 text-body-secondary">{{ site.bundle_version }}</div>
-          <p class="mb-auto">A complete static website template.<br>
-            Featuring a beautifully designed homepage, dynamic tag cloud, image gallery, and more.</p>
-          <a href="{{ site.theme_url }}" class="stretched-link" hreflang="en" aria-label="Site Bundle for Jekyll">Read more!</a>
-        </div>
-      </div>
+    <div class="col col-sm-3 projects side-projects-col rounded-hero shadow-sm border position-relative">
+      <h4><span class="jekyll-logo"></span>{{ site.theme_bundle_name }}</h4>
+      <div class="mb-1 text-body-secondary">{{ site.theme_bundle_version }}</div>
+      <p class="mb-auto">A complete site bundle.<br>
+      Featuring a beautifully designed homepage, dynamic tag cloud, image gallery, contact form and more.</p>
+      <a href="{{ site.theme_url }}" class="side-project-link stretched-link" hreflang="en" aria-label="Site Bundle for Jekyll" target="_blank">Read more!</a> 
     </div>
   </div>
 </div>
