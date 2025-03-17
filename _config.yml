@@ -25,22 +25,24 @@ color                   : "#FFFFFF"
 critical_css            : false
 
 #SideProjects
-tjt_version             : v2.2.3
-tjt_name                : TopJekyllThemes
+tjt_version             : v2.4.0
+tjt_name                : Top Jekyll Themes
 tjt_url                 : https://www.topjekyllthemes.com
 
 # Theme Notice (please don't remove it ;))
-theme_version           : v1.3.9
-theme_name              : NOCC Bootstrap Theme
-theme_bundle_name       : Site Bundle for Jekyll
-theme_repo              : https://github.com/carlesloriente/bootstrap-theme-jekyll/
+theme_name              : Nocc Bootstrap Theme
 theme_url               : https://bootstrap-theme.notesoncloudcomputing.com/
+theme_logo              : "/assets/vendor/nocc-bootstrap-theme/images/nocc/nocc_logo.webp"
 theme_author            : Carles Loriente
 theme_author_url        : https://www.notesoncloudcomputing.com/about/
-theme_download          : https://github.com/carlesloriente/bootstrap-theme-jekyll/archive/refs/heads/main.zip
-theme_package           : https://www.npmjs.com/package/nocc-bootstrap-theme
-theme_logo              : "/assets/vendor/nocc-bootstrap-theme/images/nocc/nocc_logo.webp"
-bundle_version          : v1.1.9
+theme_npm_version       : v2.0.2
+theme_npm_package       : https://www.npmjs.com/package/nocc-bootstrap-theme
+theme_gem_version       : v2.0.2
+theme gem_package       : https://rubygems.org/gems/jekyll-theme-nocc/
+theme_bundle_version    : v1.3.9
+theme_bundle_name       : Site Bundle for Jekyll
+theme_bundle_repo       : https://github.com/carlesloriente/bootstrap-theme-jekyll/
+theme_bundle_download   : https://github.com/carlesloriente/bootstrap-theme-jekyll/archive/refs/heads/main.zip
 
 # Social Profiles
 email                   : "fi1nziulf@mozmail.com"

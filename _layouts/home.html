@@ -10,7 +10,7 @@ layout: default
     <section>
       <div class="container my-4">
         <div class="row">
-          <div class="col-md-9 side-projects-col">
+          <div class="col-md-8">
             <p class="lead fw-bolder text-uppercase title-sidebar">Recent notes</p>
             <!-- Home Post List -->
             {%- for post in site.posts limit : 10 -%}
@@ -33,7 +33,7 @@ layout: default
               <a class="btn btn-primary float-end" href="{{ 'notes/' | relative_url }}" hreflang="{{ site.lang }}">View All Notes &rarr;</a>
             </div>
           </div>
-          <div class="col-md-3 heading-projects">
+          <div class="col-sm-4 heading-projects">
             <p class="lead fw-bolder text-uppercase title-sidebar">Most Viewed</p>
             <ul>
               {%- assign posts_views = site.posts | where_exp: 'post', 'post.views' | sort:"views" | reverse -%}

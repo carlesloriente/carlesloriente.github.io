@@ -15,6 +15,10 @@ h3 {
   height: 100%;
 }
 
+.row-projects {
+  margin-right: 2rem;
+}
+
 .row-heading {
   background-color: #aaa;
 }
@@ -25,7 +29,7 @@ h3 {
   justify-content: flex-end;
   color: var(--bs-body-bg);
 
-  @media only screen and (width <= 1020px) {
+  @media only screen and (width <= 576px) {
     transform: rotate(-360deg);
     display: flex;
     justify-content: flex-start;
@@ -45,8 +49,34 @@ h3 {
   }
 
   h3 {
-    font-size: 1.3rem;
+    font-family: RobotoCondensed;
+    font-size: calc(1.2rem + 0.8vw);
   }
+  h4 {
+    font-family: RobotoCondensed;
+    font-size: calc(0.8rem + 0.5vw);
+    padding-top: 5px;
+  }
+  .mb-1 {
+    font-family: RobotoCondensed;
+    font-size: calc(0.7rem + 0.5vw);
+    margin-bottom: 5px;
+  }
+  p {
+    font-size: calc(0.65rem + 0.6vw);
+  }
+}
+
+.rounded-hero img {
+  display:flex;
+  visibility: visible;
+}
+
+#ribbon {
+  float: right;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 section.smallhead {
@@ -184,15 +214,32 @@ section.masthead {
 }
 
 .side-projects-col {
-  padding: 0 1rem 0 1rem;
+  padding: 1rem !important;
+  margin: 1rem 0.5rem 1rem 0.5rem;
+}
+
+.side-project-link {
+  opacity: 0;
+  overflow: hidden;
+  height: 0;
+  width: 0;
+  display: block;
+}
+
+.side-project-banner {
+  padding: 1rem;
+  margin-right: 1rem;
+  white-space: nowrap; 
+  background-color: #aaa
 }
 
 .fade.modal-backdrop.show {
   opacity: 0.8;
 }
+
 @media only screen and (width >= 990px) {
   section.homehead .page-heading h1 {
-    padding-top: 5rem;
+    padding-top: 2rem;
   }
   section.masthead .page-heading h1 {
     padding-top: 2rem;
@@ -216,7 +263,7 @@ section.masthead {
 @media only screen and (width <= 990px) {
 
   section.homehead .page-heading h1 {
-    padding-top: 3rem !important;
+    padding-top: 0 !important;
   }
   section.masthead .page-heading h1 {
     padding-top: 2rem !important;
@@ -240,10 +287,8 @@ section.masthead {
 
 .nlogo {
   display: inline-block;
-
   width: 45px;
   height: 30px;
-
   background-image: url("/assets/images/nocc_icon.png");
   background-repeat: no-repeat;
   background-size: 30px auto;
@@ -251,19 +296,19 @@ section.masthead {
 
 .tjt-logo {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 42px;
+  height: 42px;
   margin-right: 10px;
   background-image: url("/assets/images/tjt-logo.svg");
   background-repeat: no-repeat;
-  background-size: 30px auto;
+  background-size: 42px auto;
   vertical-align: middle;
 }
 
 .npm-logo {
   display: inline-block;
   width: 30px;
-  height: 30px;
+  height: 42px;
   margin-right: 10px;
   background-image: url("/assets/images/npm-logo.svg");
   background-repeat: no-repeat;
@@ -274,11 +319,11 @@ section.masthead {
 .jekyll-logo {
   display: inline-block;
   width: 30px;
-  height: 30px;
+  height: 42px;
   margin-right: 5px;
   background-image: url("/assets/images/jekyll-logo.svg");
   background-repeat: no-repeat;
-  background-size: 30px auto;
+  background-size: 40px auto;
   vertical-align: middle;
 }
 
@@ -304,4 +349,17 @@ section.masthead {
     flex: 0 0 auto;
     width: 30%;
   }
+}
+
+@media (max-width: 991px) {
+  .tjt-logo, .npm-logo, .jekyll-logo {
+    display: none;
+  }
+}
+
+@font-face {
+  font-family: RobotoCondensed;
+  font-weight: 700;
+  font-style: normal;
+  src: url("/assets/fonts/RobotoCondensed-Bold.woff2") format("woff2");
 }

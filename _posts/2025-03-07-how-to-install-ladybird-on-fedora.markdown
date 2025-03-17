@@ -56,7 +56,7 @@ You can now run Ladybird like an standard application or by typing `ladybird` in
 If you encounter any errors during the build process, you can run the following command to clean up the build directory and start over:
 {% include code_block.html lang="bash" content="sh Meta/ladybird.sh clean" %}
 
-> **&#9432;** Check the [official Ladybird documentation](https://ladybird.org/docs/){:target="_blank"} for more information
+> **&#9432;** Check the [official Ladybird documentation](https://github.com/LadybirdBrowser/ladybird?tab=readme-ov-file){:target="_blank"} for more information
 {:.alert .alert-info}
 
 ## Conclusion
