@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: false
 title: "VPN connection using p12 cert on Fedora 31+"
 date: 2021-04-24 12:43:23 +0200
 categories: fedora vpn ikev2

@@ -12,7 +12,7 @@ layout: default
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
-          <div class=" mx-auto">
+          <div class="mx-auto">
             <div class="post-heading">
               <h1 class="mx-auto">{{ page.title }}</h1>
             </div>
@@ -23,19 +23,32 @@ layout: default
     <section>
       <div class="container my-4">
         <div class="row">
-          <div class="col-lg-8 mx-auto">
+          <div class="col-12 col-lg-12 mx-auto">
             <div class="meta text-center">Posted by
               {% if page.author %} <a href="{{ 'about/' | relative_url }}" hreflang="{{ site.lang }}" aria-label="Author">{{ page.author }} </a> {% else %}<a href="{{ 'about/' | relative_url }}" hreflang="{{ site.lang }}" aria-label="Author">{{ site.author }} </a> {% endif %} on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=page.content -%}<br><span class="text-start">Updated on {{ page.last_modified_at | date: '%B %d, %Y' }}</span>
             </div>
-            {{ content }}
-            {% if page.tags %}
-            <p class="text-center">Tags: {%- for tag in page.tags -%} <span class="badge-tags rounded-pill" tabindex="0" data-toggle="tooltip" title="{{ tag }}"><a href="{{ 'tags/' | append: tag | relative_url }}" hreflang="{{ site.lang }}" aria-label="{{ tag | escape }}">#{{ tag }}</a></span> {%- endfor -%}</p>
-            <hr class="border border-primary opacity-25">
-            {% endif %}
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-8 mx-auto">
+          <div class="col-9 col-lg-9 mx-auto content" role="main">
+            {{ content }}
+            {% if page.tags %}
+            <p class="text-center">Tags: {%- for tag in page.tags -%} <span class="badge-tags rounded-pill" tabindex="0" data-toggle="tooltip" title="{{ tag }}"><a href="{{ 'tags/' | append: tag | relative_url }}" hreflang="{{ site.lang }}" aria-label="{{ tag | escape }}">#{{ tag }}</a></span> {%- endfor -%}</p>
+            {% endif %}
+          </div>
+          {% if page.toc %}
+          <div class="col-3 col-sm-3 mx-auto sidebar" role="complementary">
+            <div class="sticky-md-top">
+              <nav id="table-of-contents" class="hidden-print hidden-xs hidden-sm">
+                {% toc %}
+              </nav>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+        <div class="row">
+          <div class="col-lg-12 mx-auto">
+            <hr class="border border-primary opacity-25">
             <div class="text-center">
               <p><mark>Found a snippet that saved your day?</mark> Consider <a href="https://ko-fi.com/S6S1O2GTU" target="_blank" rel="noopener" title="Support me on ko-fi.com">dropping a tip!</a></p>
               <script src="{{ '/assets/vendor/nocc-bootstrap-theme/js/ko-fi/widget_2.min.js' | relative_url }}"></script>
@@ -49,7 +62,7 @@ layout: default
     <section>
       <div class="container my-4">
         <div class="row">
-          <div class="col-lg-8 mx-auto">
+          <div class="col-lg-12 mx-auto">
             <div class="clearfix">
               {% if page.previous.url %}
               <a class="btn btn-primary float-start" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" hreflang="{{ site.lang }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline">
@@ -68,7 +81,7 @@ layout: default
     <section class="disqus-section">
       <div class="container my-4">
         <div class="row">
-          <div class="col-lg-8 mx-auto">
+          <div class="col-lg-12 mx-auto">
             <div class="clearfix">
               {% if page.comments %}
                 {% if site.disqus_shortname %}

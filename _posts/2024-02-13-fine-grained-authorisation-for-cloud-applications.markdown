@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: false
 title: "Fine-grained authorisation for cloud applications"
 date: 2024-02-13 11:40:05 +0200
 categories: cloud-security opa zanzibar fine-grained authorisation

@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: true
 title: "How to install Ladybird on Fedora"
 description: "A step-by-step guide on how to install and run Ladybird on Fedora."
 date: 2025-03-07 21:51:02 +0200
@@ -20,7 +21,7 @@ background: '/assets/images/bg-ladybird.webp'
 
 [Andreas Kling](https://awesomekling.github.io/){:target="_blank"} the creator of [Ladybird](https://ladybird.org/){:target="_blank"}, is also the creator of the [SerenityOS](https://serenityos.org/){:target="_blank"}.
 
-## Download and Install Ladybird on Fedora
+## Download and Install on Fedora
 
 Ladybird it's on development, so you can download the latest version from the [official GitHub repo](https://github.com/LadybirdBrowser/ladybird){:target="_blank"}.
 

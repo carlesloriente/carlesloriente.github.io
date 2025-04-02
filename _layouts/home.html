@@ -78,7 +78,7 @@ layout: default
               {%- endfor %}
             </ul>
 
-            <p class="lead fw-bolder text-uppercase title-sidebar">Yearly Notes</p>
+            <p class="lead fw-bolder text-uppercase title-sidebar">Per year</p>
             <ul>
               {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
               {% for year in years %}

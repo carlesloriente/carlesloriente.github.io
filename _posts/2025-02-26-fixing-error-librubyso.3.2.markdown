@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: true
 title: "Fixing error libruby.so.3.2: cannot open shared object file: No such file or directory"
 description: "How to fix a missing or misconfigured Ruby Installation.."
 date: 2025-02-26 21:11:02 +0200

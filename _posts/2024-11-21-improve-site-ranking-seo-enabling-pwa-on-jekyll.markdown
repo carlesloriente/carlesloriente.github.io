@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: true
 title: "Improve your Jekyll site ranking (SEO) turning into PWA"
 description: "A step by step guide to turn your Jekyll site into a Progressive Web Application"
 date: 2024-11-21 01:11:02 +0200

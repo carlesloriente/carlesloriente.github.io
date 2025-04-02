@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: false
 title: "Release of sign-kernel-modules-secureboot v0.1"
 date: 2024-01-31 18:10:05 +0200
 categories: virtualbox virtualization kernel-modules signing certificates uefi v0.1

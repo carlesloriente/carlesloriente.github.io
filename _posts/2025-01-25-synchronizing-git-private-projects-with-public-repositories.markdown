@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: true
 title: "GitHub Actions for Updating Git Submodules in Private Repos"
 description: "Enhance your development practices by automating git submodule updates using GitHub Actions. This guide provides a step-by-step approach to configuring workflows, managing secrets, and ensuring secure and reliable updates for your private projects."
 date: 2025-01-25 00:23:02 +0200
@@ -50,6 +51,7 @@ git commit -m "Add file.txt"
 git push -u origin main' %}
 
 #### Action sending repository event
+{:.no_toc}
 
 Back to your local machine, go to `my-public-repo` and create the github workflows folder:
 {% include code_block.html lang="bash" content="mkdir -p .github/workflows" %}
@@ -81,6 +83,7 @@ git push origin main' %}
 Now, go to your public repo at github.com and click the Actions tab, you will see the new workflow `Dispatch Updates`.
 
 ##### Updates_dispatch action explanation
+{:.no_toc}
 
 The workflow is triggered by a push event specifically to the main branch of the current repository (my-public-repo).
 
@@ -159,6 +162,7 @@ Copy the token and go to `Settings-> Secrets and Variables-> Actions` of `m̀y-p
 Now, go to `Settings-> Secrets and Variables-> Actions` of `my-public-repo` and add the same secrets.
 
 #### Action triggered by repository event
+{:.no_toc}
 
 Go to `Settings-> Actions-> General` of `my-private-repo` on github.com and enable the following permissions:
 
@@ -229,6 +233,7 @@ git push origin develop' %}
 Go to github.com and create a pull request to merge the branch develop to main. Click the Actions tab, you will see the new workflow `Updating Submodule`.
 
 ##### Update_on_event action explanation
+{:.no_toc}
 
 The workflow is triggered by a custom repository_dispatch event named "updating". This allows you to manually initiate the update process from within your repository (my-private-repo).
 

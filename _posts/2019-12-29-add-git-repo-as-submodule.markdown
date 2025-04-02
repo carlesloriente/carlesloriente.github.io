@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: false
 title: "Add submodule Git"
 date: 2019-12-29 9:53:23 +0200
 categories: git submodule

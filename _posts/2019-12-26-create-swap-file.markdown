@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: false
 title: "Create swap file in linux"
 date: 2019-12-26 11:43:45 +0200
 categories: linux swap

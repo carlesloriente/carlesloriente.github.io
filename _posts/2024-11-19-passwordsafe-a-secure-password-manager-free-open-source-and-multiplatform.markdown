@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: true
 title: "Passwordsafe a secure password manager"
 description: "A guide to install and use Passwordsafe"
 date: 2024-11-19 10:11:02 +0200
@@ -18,13 +19,13 @@ background: '/assets/images/bg-safe.webp'
 
 **Passwordsafe**: leaving your passwords in good hands
 
-### A secure password manager free, open source and multiplatform
-
 More than 15 years ago I started looking for a password manager because I didn't think it was a good idea to use the same password in multiple places, memorize hundreds or store them in a text document, the latter being a common practice in many companies, even software development companies -sic.
 
 > I've been using [Passwordsafe](https://pwsafe.org/){:target="_blank"} for more than 15 years for managing and storing my sensitive data
 
 My requirements were clear, it had to be free, open source and multiplatform. I found [Passwordsafe](https://pwsafe.org/){:target="_blank"} that met all my needs adding some very interesting features such as the use of hardware keys as a 2FA method, and a multitude of [versions and projects for different operating systems and programming languages ​​of Passwordsafe](https://pwsafe.org/relatedprojects.shtml){:target="_blank"}.
+
+## A secure password manager free, open source and multiplatform
 
 {:.text-center}
 ![Passwordsafe](/assets/images/2024-11-19-passwordsafe-a-secure-password-manager-free-open-source-and-multiplatform.webp){:.img-fluid}

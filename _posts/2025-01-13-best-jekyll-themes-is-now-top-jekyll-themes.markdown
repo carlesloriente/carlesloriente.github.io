@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: false
 title: "BestJekyllThemes has been moved to TopJekyllThemes"
 description: "Find BestJekyllThemes.site at the new domain TopJekyllThemes.com! Discover the benefits of this change and explore the exciting features of our updated site."
 date: 2025-01-13 19:10:02 +0200

@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: true
 title: "Auto-indexing URLs with IndexNow & GitHub Actions"
 description: "Submit automatically new URLs to search engines with IndexNow and Github Actions"
 date: 2024-11-22 01:01:02 +0200

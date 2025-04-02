@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: true
 title: "Indexing new pages using IndexNow and cURL"
 description: "A step by step guide to send new URLs to search engines with IndexNow and cURL"
 date: 2024-12-06 03:10:02 +0200
@@ -12,7 +13,7 @@ tags:
 background: '/assets/images/bg-robot-hand.webp'
 ---
 
-## IndexNow **Take Control of Your Website's Search Engine Visibility** Part 2 ##
+## IndexNow **Take Control of Your Website's Search Engine Visibility** Part 2
 
 Tired of waiting for search engines to crawl and index your latest content? Then this is for you.
 
@@ -20,7 +21,7 @@ IndexNow is an open-source protocol that allows you to directly notify search en
 
 In our previous article, "[Auto-indexing URLs with IndexNow & GitHub Actions](/posts/2024-11-22-auto-indexing-urls-with-indexnow-and-gitHub-actions/)," we explored how to automate the IndexNow process using GitHub Actions. This tutorial builds upon that knowledge, focusing on manual URL submission using cURL.
 
-### Your Secret Weapon for Web Development ###
+### Your Secret Weapon for Web Development
 
 [cURL](https://curl.se/){:target="_blank"}, a powerful command-line tool allows you to talk to servers like a pro, simply by specifying a URL and the data you want to send.
 
@@ -30,12 +31,12 @@ Why [cURL](https://curl.se/){:target="_blank"} is a Developer's Best Friend:
 * Platform Independence: It runs on almost every platform, allowing you to test communication from any device with a command line and network connectivity.
 * Simplicity: Its straightforward syntax makes it easy to learn and use, even for beginners.
 
-### Beyond the Command Line ###
+### Beyond the Command Line
 
 [cURL](https://curl.se/){:target="_blank"} is more than just a command-line tool. It's also a robust development library that powers countless applications.
 So, the next time you need to test an API, download a file, or simply interact with a server, remember [cURL](https://curl.se/){:target="_blank"}.
 
-## Obtaining your IndexNow API Key ##
+## Obtaining your IndexNow API Key
 
 We are going to use the Bing IndexNow endpoint (feel free to use any of the SE endpoints)
 
@@ -47,9 +48,9 @@ We are going to use the Bing IndexNow endpoint (feel free to use any of the SE e
 {:.text-center}
 ![Repository Secret](/assets/images/2024-12-06-indexing-pages-with-indexnow-and-curl.png){:.img-fluid}
 
-## Preparing and sending URLs to crawl ##
+## Preparing and sending URLs to crawl
 
-### Craft Your JSON Payload ###
+### Craft Your JSON Payload
 
 *Now, let's create a file named data-to-submit.json and paste the following code:*:
 {% include code_block.html lang="json" content='name: "Payload"
@@ -71,7 +72,7 @@ We are going to use the Bing IndexNow endpoint (feel free to use any of the SE e
 * `yourapikey`.txt: Update the filename and place it at the root of your website.
 * urlList: Add the URLs you want to submit for indexing.
 
-### Sending the Data with cURL ###
+### Sending the Data with cURL
 
 Next, we'll use cURL to send this JSON data to the IndexNow API using a POST request.
 
@@ -79,7 +80,7 @@ Next, we'll use cURL to send this JSON data to the IndexNow API using a POST req
 
 After sending the cURL request, examine the server's response. If everything is successful, you should receive an HTTP status code of 200 OK.
 
-#### Full list of Response Codes you may receive ####
+#### Full list of Response Codes you may receive
 
 | HTTP CODE | RESPONSE             | REASON                                                                                               |
 |-----------|----------------------|------------------------------------------------------------------------------------------------------|
@@ -90,7 +91,7 @@ After sending the cURL request, examine the server's response. If everything is 
 | 422       | Unprocessable Entity | In case of URLs which don’t belong to the host or the key is not matching the schema in the protocol |
 | 429       | Too Many Requests    | Too Many Requests (potential Spam)                                                                   |
 
-### Conclusion ###
+### Conclusion
 
 cURL is a powerful tool that allows you to directly interact with web servers. When used with IndexNow, it empowers you to:
 

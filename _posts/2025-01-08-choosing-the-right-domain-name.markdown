@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: false
 title: "Domain Name Dilemma: Avoiding Common Pitfalls"
 description: "Your domain name is your digital address. This guide helps you choose a name that's not just catchy, but also search engine friendly and aligns with your project goals."
 date: 2025-01-08 00:50:02 +0200
@@ -12,7 +13,7 @@ tags:
 background: '/assets/images/bg-domain-registration.webp'
 ---
 
-### Choosing the Right Domain Name
+## Choosing the Right Domain Name
 
 So, you're diving into the web and need a digital home for your project? Choosing the right domain name is like picking the perfect street address – it sets the tone, influences how people find you, and impacts your brand. Let's break down some common pitfalls to avoid:
 
