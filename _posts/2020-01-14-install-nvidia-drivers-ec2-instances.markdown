@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: false
 title: "Install Nvidia drivers on EC2 Instances"
 date: 2020-01-14 15:23:25 +0200
 categories: aws nvidia

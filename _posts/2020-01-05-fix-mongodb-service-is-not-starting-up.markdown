@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: false
 title: "Fix mongodb service is not starting up"
 date: 2020-01-05 8:33:23 +0200
 categories: faq mongodb

@@ -106,6 +106,7 @@ plugins:
   - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-last-modified-at
+  - jekyll-toc
 
 sass:
   load_paths:

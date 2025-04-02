@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: true
 title: "Host a static website for free using Github Pages"
 date: 2019-12-30 12:23:45 +0200
 categories: github website

@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: true
 title: "Announcing the Release of TopJekyllThemes v2"
 description: "Discover the latest updates to TopJekyllThemes! This major release includes significant improvements, such as enhanced performance, improved documentation, and a refined user interface. Explore the new features and experience a smoother, more enjoyable user experience."
 date: 2025-01-14 01:34:02 +0200

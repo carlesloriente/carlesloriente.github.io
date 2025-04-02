@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: true
 title: "How to install MacOS on Linux with Sosumi"
 description: "A guide to install and run MacOS in a Virtual Machine on Fedora or any linux using Sosumi"
 date: 2024-11-18 9:20:05 +0200

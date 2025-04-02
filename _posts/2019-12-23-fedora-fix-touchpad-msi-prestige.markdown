@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: true
 title: "Fedora Fix touchpad MSI Prestige"
 date: 2019-12-23 11:10:45 +0200
 categories: fedora msi

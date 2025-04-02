@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: false
 title: "Configure a VPN server using PPTP with Mikrotik RouterOS"
 date: 2020-08-01 10:23:33 +0200
 categories: routeros mikrotik vpn

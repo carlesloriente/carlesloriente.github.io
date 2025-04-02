@@ -7,8 +7,15 @@ h6 {
   text-transform: none !important;
 }
 
+.content {
+  h2, h3, h4, h5, h6 {
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+  }
+}
+
 h3 {
-  font-size: calc(1.3rem + 0.81vw);
+  font-size: calc(1.1rem + 0.81vw);
 }
 
 .row {
@@ -54,7 +61,7 @@ h3 {
   }
   h4 {
     font-family: RobotoCondensed;
-    font-size: calc(0.8rem + 0.5vw);
+    font-size: calc(0.7rem + 0.4vw);
     padding-top: 5px;
   }
   .mb-1 {
@@ -142,7 +149,6 @@ section.masthead {
   margin-bottom: 3em;
 }
 
-
 .home-post-preview {
   border: 1px solid var(--bs-border-color-base);
   border-radius: 1em;
@@ -209,7 +215,6 @@ section.masthead {
 .modal {
   --bs-modal-margin: 3.75rem;
   --bs-modal-box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 50%);
-
   background-color: rgba(100, 100, 100, 50%);
 }
 
@@ -237,6 +242,53 @@ section.masthead {
   opacity: 0.8;
 }
 
+.sidebar {
+  background-color: rgba(150,150,150,0.1);
+  ol {
+    padding-left: 1rem;
+  }
+}
+
+.sidebar {
+  padding: 1em;
+}
+
+.sticky-md-top {
+  top: 75px;
+  nav {
+    position: relative;
+    ul {
+      padding-left: 1rem;
+      list-style: none;
+    }
+  }
+}
+
+#toc {
+  padding-left: 0;
+  list-style: none;
+}
+
+.toc-entry {
+  a {
+    display: inline-flex;
+    text-decoration: none;
+    padding: .1875rem .5rem;
+    margin-top: .125rem;
+  }
+  a:hover {
+    cursor: pointer;
+    background-color: var(--bs-body-bg);
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
+
 @media only screen and (width >= 990px) {
   section.homehead .page-heading h1 {
     padding-top: 2rem;
@@ -260,8 +312,8 @@ section.masthead {
     }
   }
 }
-@media only screen and (width <= 990px) {
 
+@media only screen and (width <= 990px) {
   section.homehead .page-heading h1 {
     padding-top: 0 !important;
   }
@@ -274,9 +326,13 @@ section.masthead {
     margin-top: 4em;
   }
 }
+
 @media only screen and (width >= 1536px) {
+  h2 {
+    font-size: calc(1.4rem + 0.81vw);
+  }
   h3 {
-    font-size: 1.3rem;
+    font-size: calc(1rem + 0.81vw);
   }
 
   section.homehead .page-heading h1,

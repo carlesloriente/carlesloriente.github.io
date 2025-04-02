@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: true
 title: "Make your GitHub Profile shine with dynamic updates"
 description: "Level up your GitHub presence with automated profile updates! In this article, we'll explore how to use GitHub Actions to dynamically display your latest contributions, project statistics, and more.."
 date: 2025-01-26 00:11:02 +0200
@@ -99,6 +100,7 @@ git commit -m "Add update-readme.yml"
 git push origin main' %}
 
 #### Configure GitHub Actions permissions
+{:.no_toc}
 
 Go to repository settings, Click on `Actions-> General` and enable the following permissions:
 

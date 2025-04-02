@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: false
 title: "Configure a VPN server using L2TP IPSec with Mikrotik RouterOS"
 date: 2020-08-02 12:43:23 +0200
 categories: routeros mikrotik vpn

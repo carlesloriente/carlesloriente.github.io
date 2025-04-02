@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: false
 title: "How to install Snap on Fedora"
 description: "A guide to install and run Snap on Fedora"
 date: 2024-11-17 23:40:05 +0200

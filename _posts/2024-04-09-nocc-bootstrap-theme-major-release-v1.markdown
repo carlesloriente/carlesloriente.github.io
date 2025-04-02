@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: true
 title: "NOCC Bootstrap Theme Major Release v1"
 description: "An NPM Package that brings the power of NOCC directly to your NodeJS project"
 date: 2024-04-09 20:40:05 +0200

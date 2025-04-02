@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: false
 title: "Fix Brew stuck/hangs updating in MacOs"
 date: 2023-08-05 10:53:45 +0200
 categories: fix brew update stuck cli macos

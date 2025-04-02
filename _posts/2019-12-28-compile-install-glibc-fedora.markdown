@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+toc: false
 title: "Compile and install GLIBC 2.18 in CentOS 7"
 date: 2019-12-28 16:10:23 +0200
 categories: fedora glibc
