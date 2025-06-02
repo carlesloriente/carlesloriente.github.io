@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem "jekyll", "~> 4.4.0", group: :jekyll_plugins
-gem "base64", "~> 0.2.0"
+gem "base64", "~> 0.3.0"
 gem "bigdecimal"
 gem "csv", "~> 3.3"
 gem "faraday-retry"
