@@ -6,7 +6,7 @@ gem "bigdecimal"
 gem "csv", "~> 3.3"
 gem "faraday-retry"
 gem "kramdown-parser-gfm", "~> 1.1.0"
-gem "kramdown-syntax-coderay"
+gem "kramdown-syntax-coderay", "~> 1.1.0"
 gem "openssl", "~> 3.2.2"
 gem "webrick", "~> 1.8.2"
 
