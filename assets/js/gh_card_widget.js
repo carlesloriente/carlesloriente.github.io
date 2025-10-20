@@ -25,6 +25,8 @@
       window.addEventListener(
         "message",
         function (e) {
+          if (e.origin !== "http://example.org") // OK: origin checked
+            return;
           if (t.id === e.data.sender) {
             t.height = e.data.height;
           }
