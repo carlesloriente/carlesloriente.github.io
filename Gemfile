@@ -7,7 +7,7 @@ gem "csv", "~> 3.3"
 gem "faraday-retry"
 gem "kramdown-parser-gfm", "~> 1.1.0"
 gem "kramdown-syntax-coderay", "~> 1.0.1"
-gem "openssl", "~> 3.2.2"
+gem "openssl", "~> 3.3.1"
 gem "webrick", "~> 1.8.2"
 
 group :jekyll_plugins do
