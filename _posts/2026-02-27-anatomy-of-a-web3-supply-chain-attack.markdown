@@ -5,11 +5,13 @@ toc: true
 title: "Anatomy of a Web3 Supply Chain Attack"
 description: "How a Fake Polymarket Bot Drained My Wallet"
 date: 2026-02-27 16:51:02 +0200
-categories: polymarket chain-attack trading-bot
+categories: polymarket chain-attack trading-bot wallet polymarket-copy-bot-ts
 tags:
 - polymarket
 - chain-attack
 - trading-bot
+- polymarket-copy-bot-ts
+- wallet
 background: '/assets/images/bg-chain-attack.webp'
 ---
 
