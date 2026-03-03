@@ -5,11 +5,13 @@ toc: true
 title: "Anatomy of a Web3 Supply Chain Attack"
 description: "How a Fake Polymarket Bot Drained My Wallet"
 date: 2026-02-27 16:51:02 +0200
-categories: polymarket chain-attack trading-bot
+categories: polymarket chain-attack trading-bot wallet polymarket-copy-bot-ts
 tags:
 - polymarket
 - chain-attack
 - trading-bot
+- polymarket-copy-bot-ts
+- wallet
 background: '/assets/images/bg-chain-attack.webp'
 ---
 
@@ -135,4 +137,6 @@ Be careful! There is currently a ton of these fake Polymarket/crypto trading bot
 
 *If you found this breakdown helpful, feel free to share it to warn others, and subscribe to Notes on Cloud Computing for more security deep-dives.*
 
-**P.S.** After compiling these findings, I immediately reported the repository and the malicious user account to GitHub's Trust & Safety team. I'm happy to report that a few days later, they took action and deleted the entire repository and the scammer's account from the platform. While my funds are unfortunately gone, at least this specific trap has been dismantled and can't harm anyone else!
+### Kudos to GitHub Trust & Safety team
+
+**P.S.** After compiling these findings, I immediately reported the repository and the malicious user account to GitHub's Trust & Safety team. I'm happy to report that a few hours later, they took action and deleted the entire repository and the scammer's account from the platform. While my funds are unfortunately gone, at least this specific trap has been dismantled and can't harm anyone else!
