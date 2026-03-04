@@ -66,4 +66,4 @@ Ladybird it's on development, so you can expect some bugs and missing features. 
 
 Consider supporting the Ladybird project donating on [donorbox](https://donorbox.org/ladybird){:target="_blank"}. Donors can also contribute to the development of the browser.
 
-If you have any questions or suggestions, feel free to leave a comment below.
+*If you have any questions or suggestions, feel free to leave a comment below, and [sponsor](https://github.com/sponsors/carlesloriente){:target="_blank"} me for more security deep-dives and tools.*

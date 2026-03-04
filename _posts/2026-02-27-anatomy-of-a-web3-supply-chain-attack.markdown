@@ -49,8 +49,7 @@ Attackers know that Web3 developers use `keccak256` (a popular hashing algorithm
 
 If you look at the package's `README.md` and `package.json`, it looks completely legitimate:
 
-```json
-{
+{% include code_block.html lang="json" content='{
   "name": "keccak256-helper",
   "version": "1.3.2",
   "description": "Tools for secure encryption and format validation",
@@ -58,8 +57,7 @@ If you look at the package's `README.md` and `package.json`, it looks completely
   "types": "index.d.ts",
   "author": "rabby",
   "license": "MIT"
-}
-```
+}' %}
 
 They even included an `index.d.ts` file exporting a fake `initializeSession(key: any)` function so that TypeScript compilers wouldn't throw any errors during development!
 
@@ -79,11 +77,9 @@ Instead of the traditional attack vectors used by older trading bots in the past
 
 To execute this, the attacker invokes the malicious function (carefully hidden with excessive spacing in the bot's source files) silently like this:
 
-```js
-try {
+{% include code_block.html lang="js" content="try {
   require('keccak256-helper').initializeSession(PRIVATE_KEY);
-} catch (_) {}
-```
+} catch (_) {}" %}
 
 Because of the `try/catch` block, if the malware crashes (for example, if `window` is undefined in a pure Node environment, or if the network request fails), the error is swallowed entirely. You would never even know the exfiltration attempt happened until your funds were already gone.
 
@@ -95,8 +91,7 @@ I wrote an interceptor script (`analyzer.js`) to mock the browser environment an
 
 To beat this, I updated my script to write the intercepted HTTP request directly to a file on my disk before intentionally crashing the process to prevent the data from escaping:
 
-```js
-// A snippet of my final dynamic analysis script
+{% include code_block.html lang="js" content="// A snippet of my final dynamic analysis script
 https.request = function(...args) {
     const targetUrl = parseRequestTarget(args);
     const options = JSON.stringify(args[0], null, 2);
@@ -106,8 +101,7 @@ https.request = function(...args) {
     fs.writeFileSync('./exfiltration_data.txt', output, 'utf8');
 
     throw new Error('Successfully blocked HTTPS exfiltration');
-};
-```
+};" %}
 
 By feeding the script a fake `DUMMY_PRIVATE_KEY_DEADBEEF`, I finally forced the malware to reveal its Command and Control (C2) server inside my `exfiltration_data.txt` file!
 
@@ -135,7 +129,7 @@ If you have downloaded any Web3 bots recently, check your repositories for these
 
 Be careful! There is currently a ton of these fake Polymarket/crypto trading bots flooding GitHub. Always audit your dependencies, and never hand over your private keys.
 
-*If you found this breakdown helpful, feel free to share it to warn others, and subscribe to Notes on Cloud Computing for more security deep-dives.*
+*If you found this breakdown helpful, feel free to share it to warn others, and [sponsor](https://github.com/sponsors/carlesloriente){:target="_blank"} me for more security deep-dives and tools.*
 
 ### Kudos to GitHub Trust & Safety team
 
